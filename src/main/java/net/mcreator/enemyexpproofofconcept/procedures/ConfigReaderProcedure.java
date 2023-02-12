@@ -29,15 +29,9 @@ public class ConfigReaderProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if ((EnemyexpansionModVariables.WorldVariables.get(world).returnConfig).equals("petrimanSpawningDepth")) {
-					if (y < mainjsonobject.get("petrimanSpawningDepth").getAsDouble()) {
-						spawning = true;
-					} else {
-						spawning = false;
-					}
-				}
-				if ((EnemyexpansionModVariables.WorldVariables.get(world).returnConfig).equals("silverkingSpawningDepth")) {
-					if (y < mainjsonobject.get("silverkingSpawningDepth").getAsDouble()) {
+				if ((EnemyexpansionModVariables.WorldVariables.get(world).returnConfig).equals("SpawningDepth")) {
+					if (y < mainjsonobject.get((EnemyexpansionModVariables.WorldVariables.get(world).configMob + ""
+							+ EnemyexpansionModVariables.WorldVariables.get(world).returnConfig)).getAsDouble()) {
 						spawning = true;
 					} else {
 						spawning = false;
