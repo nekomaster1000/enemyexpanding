@@ -1,0 +1,39 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Sprinter"
+      },
+      {
+        "value": "CUSTOM:Slugger"
+      },
+      {
+        "value": "CUSTOM:Senior"
+      },
+      {
+        "value": "CUSTOM:Equestrian"
+      },
+      {
+        "value": "CUSTOM:Frigid"
+      },
+      {
+        "value": "CUSTOM:Meature"
+      },
+      {
+        "value": "CUSTOM:Ghoul"
+      },
+      {
+        "value": "CUSTOM:Zogoblin"
+      }
+    ],
+    "biomes": [],
+    "name": "zombievariants",
+    "namespace": "mod"
+  }
+}

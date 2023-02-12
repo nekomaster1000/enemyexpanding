@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "1": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "2": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "3": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "4": {
+      "item": "minecraft:redstone"
+    },
+    "5": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "6": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "7": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "8": {
+      "item": "enemyexpansion:suspicious_slice"
+    }
+  },
+  "result": {
+    "item": "minecraft:cake",
+    "count": 1
+  }
+}

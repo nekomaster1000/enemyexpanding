@@ -1,0 +1,65 @@
+{
+  "_fv": 34,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "spiderlatch",
+    "enableBody": false,
+    "textureBody": "phantasmcape",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": false,
+    "textureBoots": "",
+    "onHelmetTick": {
+      "name": "SpiderlatchTick"
+    },
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "cinder_",
+    "helmetName": "Spiderlatch",
+    "bodyName": "Phantasm Cape",
+    "leggingsName": "Phantasm Leggings",
+    "bootsName": "Phantasm Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Modelspiderlatch",
+    "helmetModelPart": "spiderhat",
+    "helmetModelTexture": "spiderlatch.png",
+    "bodyModelName": "Modelphantasm",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "phantom_cape.png",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 7,
+    "damageValueHelmet": 0,
+    "damageValueBody": 3,
+    "damageValueLeggings": 3,
+    "damageValueBoots": 2,
+    "enchantability": 10,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "entity.parrot.imitate.spider"
+    },
+    "repairItems": [
+      {
+        "value": "Items.SPIDER_EYE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Goblin"
+      },
+      {
+        "value": "CUSTOM:Zogoblin"
+      },
+      {
+        "value": "CUSTOM:Bouncer"
+      },
+      {
+        "value": "CUSTOM:Baker"
+      },
+      {
+        "value": "CUSTOM:Errant"
+      },
+      {
+        "value": "CUSTOM:Caster"
+      },
+      {
+        "value": "CUSTOM:Rancher"
+      },
+      {
+        "value": "CUSTOM:Gabble"
+      }
+    ],
+    "biomes": [],
+    "name": "goblins",
+    "namespace": "mod"
+  }
+}

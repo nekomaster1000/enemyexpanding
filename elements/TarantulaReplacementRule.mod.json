@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "increaseddripstonetarantulas",
+    "description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
+    "category": "SPAWNING",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

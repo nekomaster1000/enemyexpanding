@@ -1,0 +1,25 @@
+{
+  "_fv": 34,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "\"I'm on my Wasp Bizz\"",
+    "achievementDescription": "Summon a Wasp Drone",
+    "achievementIcon": {
+      "value": "CUSTOM:PheromoneProjectile"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": true,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 10,
+    "achievementType": "task",
+    "parent": {
+      "value": "story/root"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"106\" y=\"-2\"><next><block type=\"advancement_trigger\"></block></next></block></xml>"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Vampires replace Skeletons below Deepslate",
+    "description": "Vampires will replace 3/4s of Skeletons that spawn in caves below Y-30.",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

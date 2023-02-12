@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "particle",
+  "definition": {
+    "texture": "resistance.png",
+    "animate": false,
+    "frameDuration": 1,
+    "width": 1.0,
+    "height": 1.0,
+    "scale": 1.0,
+    "speedFactor": 0.0,
+    "gravity": -0.1,
+    "maxAge": 50,
+    "maxAgeDiff": 6,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
+    "canCollide": false,
+    "alwaysShow": false,
+    "renderType": "TRANSLUCENT"
+  }
+}

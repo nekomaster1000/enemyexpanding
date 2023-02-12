@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "scorpionsreplacedesertspiders",
+    "description": "Enables Scorpions to replace 3/4rds of Spider spawns in Desert and Mesa biomes.",
+    "category": "SPAWNING",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

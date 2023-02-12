@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:headbiter_helmet"
+    },
+    "title": {
+      "translate": "advancements.bro_think_he_carti.title"
+    },
+    "description": {
+      "translate": "advancements.bro_think_he_carti.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bro_think_he_carti": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "minecraft:story/root"
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Random Petriman",
+    "description": "Petrimen will also randomly spawn Petricrawlers and Petriboulders, too.",
+    "category": "SPAWNING",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

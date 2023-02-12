@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Petrimen replace Zombies underground",
+    "description": "Petrimen will replace Zombies that spawn in caves.",
+    "category": "SPAWNING",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

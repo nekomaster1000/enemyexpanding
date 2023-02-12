@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Crawlers replace Creepers below Deepslate",
+    "description": "Crawlers will replace Creepers that spawn in caves below Y-15.",
+    "category": "SPAWNING",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

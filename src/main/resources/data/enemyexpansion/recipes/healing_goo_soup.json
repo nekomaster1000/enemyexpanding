@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "enemyexpansion:healing_goo_item"
+    },
+    "1": {
+      "item": "enemyexpansion:healing_goo_item"
+    },
+    "2": {
+      "item": "enemyexpansion:healing_goo_item"
+    },
+    "3": {
+      "item": "enemyexpansion:healing_goo_item"
+    },
+    "4": {
+      "item": "enemyexpansion:healing_goo_item"
+    },
+    "5": {
+      "item": "enemyexpansion:healing_goo_item"
+    },
+    "7": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "enemyexpansion:healing_goo_soup",
+    "count": 1
+  }
+}

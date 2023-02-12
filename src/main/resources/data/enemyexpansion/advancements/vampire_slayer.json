@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:phantasm_helmet"
+    },
+    "title": {
+      "translate": "advancements.vampire_slayer.title"
+    },
+    "description": {
+      "translate": "advancements.vampire_slayer.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "vampire_slayer": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "minecraft:story/root"
+}

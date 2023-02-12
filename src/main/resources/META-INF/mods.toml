@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="Apache License version 2.0"
+
+[[mods]]
+modId="enemyexpansion"
+version="1.10.0"
+displayName="Enemy Expansion"
+credits="Nekomaster, FoshyJoshy, EB Mario"
+displayURL="https://mcreator.net"
+logoFile="logo.png"
+authors="nekomaster"
+description='''
+Adding variety to combat encounters!
+'''
+
+[[dependencies.enemyexpansion]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+[[dependencies.enemyexpansion]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.enemyexpansion]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "1": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "2": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "3": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "4": {
+      "item": "minecraft:netherite_helmet"
+    },
+    "5": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "6": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "7": {
+      "item": "enemyexpansion:cinder_scrap"
+    },
+    "8": {
+      "item": "enemyexpansion:cinder_scrap"
+    }
+  },
+  "result": {
+    "item": "enemyexpansion:cinder_helm_helmet",
+    "count": 1
+  }
+}

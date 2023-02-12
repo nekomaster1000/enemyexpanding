@@ -1,0 +1,61 @@
+{
+  "silentstep": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "enemyexpansion:silent",
+        "stream": false
+      }
+    ]
+  },
+  "troll.roar": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.roar",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.roar",
+        "stream": false
+      }
+    ]
+  },
+  "troll.hurt.2": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.hurt.2",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.hurt.2",
+        "stream": false
+      }
+    ]
+  },
+  "troll.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.death",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.death",
+        "stream": false
+      }
+    ]
+  },
+  "troll.idle.1": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.idle.1",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.idle.1",
+        "stream": false
+      }
+    ]
+  },
+  "troll.hurt.1": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.hurt.1",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.hurt.1",
+        "stream": false
+      }
+    ]
+  }
+}

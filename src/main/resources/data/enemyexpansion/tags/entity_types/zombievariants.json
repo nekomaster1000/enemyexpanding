@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "enemyexpansion:meature",
+    "enemyexpansion:ghoul",
+    "enemyexpansion:frigid",
+    "enemyexpansion:slugger",
+    "enemyexpansion:equestrian",
+    "enemyexpansion:senior",
+    "enemyexpansion:sprinter"
+  ]
+}

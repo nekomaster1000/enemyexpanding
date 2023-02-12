@@ -1,0 +1,82 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.cakerover",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "cake",
+					"parent": "all",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [-7, 0, -7], "size": [14, 8, 14], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "treads",
+					"parent": "all",
+					"pivot": [0, 5, 0]
+				},
+				{
+					"name": "treadleft",
+					"parent": "treads",
+					"pivot": [8, 3, 0],
+					"cubes": [
+						{"origin": [6, 0, -6], "size": [3, 5, 12], "uv": [0, 47]}
+					]
+				},
+				{
+					"name": "leftwheel1",
+					"parent": "treadleft",
+					"pivot": [7.5, 2, -3],
+					"cubes": [
+						{"origin": [5.5, 0, -5], "size": [3, 4, 4], "inflate": 0.01, "uv": [30, 56]}
+					]
+				},
+				{
+					"name": "leftwheel2",
+					"parent": "treadleft",
+					"pivot": [7.5, 2, 3],
+					"cubes": [
+						{"origin": [5.5, 0, 1], "size": [3, 4, 4], "inflate": 0.01, "uv": [30, 56]}
+					]
+				},
+				{
+					"name": "treadright",
+					"parent": "treads",
+					"pivot": [-8, 3, 0],
+					"cubes": [
+						{"origin": [-9, 0, -6], "size": [3, 5, 12], "uv": [0, 47], "mirror": true}
+					]
+				},
+				{
+					"name": "rightwheel1",
+					"parent": "treadright",
+					"pivot": [-7.5, 2, -3],
+					"cubes": [
+						{"origin": [-8.5, 0, -5], "size": [3, 4, 4], "inflate": 0.01, "uv": [30, 56], "mirror": true}
+					]
+				},
+				{
+					"name": "rightwheel2",
+					"parent": "treadright",
+					"pivot": [-7.5, 2, 3],
+					"cubes": [
+						{"origin": [-8.5, 0, 1], "size": [3, 4, 4], "inflate": 0.01, "uv": [30, 56], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "enemyexpansion:bouncer",
+    "enemyexpansion:rancher",
+    "enemyexpansion:gabble",
+    "enemyexpansion:errant",
+    "enemyexpansion:baker",
+    "enemyexpansion:caster",
+    "enemyexpansion:goblin"
+  ]
+}

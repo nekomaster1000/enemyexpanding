@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "1": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "2": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "3": {
+      "item": "minecraft:slime_ball"
+    },
+    "4": {
+      "item": "minecraft:bone"
+    },
+    "5": {
+      "item": "minecraft:slime_ball"
+    },
+    "6": {
+      "item": "minecraft:golden_carrot"
+    },
+    "8": {
+      "item": "minecraft:golden_carrot"
+    }
+  },
+  "result": {
+    "item": "enemyexpansion:phantasm_helmet",
+    "count": 1
+  }
+}

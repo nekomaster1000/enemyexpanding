@@ -1,0 +1,5949 @@
+{
+  "mod_elements": [
+    {
+      "name": "SluggerzombieEntityIsHurt",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sluggerzombie_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Meature",
+      "type": "livingentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Tarantula",
+      "type": "livingentity",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tarantula",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "TarantulaEntityIsHurt",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "Scorpion",
+      "type": "livingentity",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "ScorpionEntityIsHurt",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "MeatheadArmor",
+      "type": "armor",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead_armor",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MeatheadSpawn",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Meatmanzombie",
+      "type": "livingentity",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meatmanzombie",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SeniorzombieEntityIsHurt",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "seniorzombie_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SprinterzombieEntityIsHurt",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinterzombie_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "MeatheadArmorHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead_armor_helmet_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Slugvest",
+      "type": "armor",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slugvest",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": false,
+        "ec": true
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SluggerLootTable",
+      "type": "loottable",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "slugger_loot_table",
+      "path": "~/Items"
+    },
+    {
+      "name": "Sprintshorts",
+      "type": "armor",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprintshorts",
+      "metadata": {
+        "eh": false,
+        "el": true,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SprinterLootTable",
+      "type": "loottable",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sprinter_loot_table",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Sluggerverticalknockback",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sluggerverticalknockback",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "EatMeatball",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eat_meatball",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MeatureMeatball",
+      "type": "item",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_meatball",
+      "path": "~/Items"
+    },
+    {
+      "name": "HatIntoMeatball",
+      "type": "recipe",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hat_into_meatball",
+      "path": "~/Items"
+    },
+    {
+      "name": "Huntsmanskeleton",
+      "type": "livingentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsmanskeleton",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "HuntsmanPunch",
+      "type": "rangeditem",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsman_punch",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "HuntsmanGetAway",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsman_get_away",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "HuntPunchSound",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunt_punch_sound",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Wasp",
+      "type": "livingentity",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wasp",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "WaspModel",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "WaspDodgePattern",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_dodge_pattern",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "WaspSlowFalling",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_slow_falling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "MeatheadObtained",
+      "type": "achievement",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead_obtained",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "PheromoneSummon",
+      "type": "livingentity",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pheromone_summon",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PheromoneSummonModel",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pheromone_summon_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PheroTimer",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phero_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PheromoneHits",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pheromone_hits",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PheromoneProjectile",
+      "type": "rangeditem",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pheromone_projectile",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PheroSting",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phero_sting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "OnMyWaspBiz",
+      "type": "achievement",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_my_wasp_biz",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PheromoneThrown",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pheromone_thrown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "FrigidColdTouch",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frigid_cold_touch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "ScorpionSting",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_sting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "TarantulaModel",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "Sprinter",
+      "type": "livingentity",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sprinter",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SprinterModel",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinter_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Slugger",
+      "type": "livingentity",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "slugger",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SluggerModel",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slugger_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "ScorpionModel",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "ScorpionLayer",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "NoBabies",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_babies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Zombievariants",
+      "type": "tag",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombievariants",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SprinterSprinting",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinter_sprinting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SeniorModel",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "senior_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Senior",
+      "type": "livingentity",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "senior",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "EnemyMeleeProjectile",
+      "type": "rangeditem",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_melee_projectile"
+    },
+    {
+      "name": "EnemyMeleeProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_melee_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MeleeProjectileAttack",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_projectile_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EquestrianModel",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Equestrian",
+      "type": "livingentity",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "equestrian",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "FrigidModel",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frigid_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Frigid",
+      "type": "livingentity",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "frigid",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "EquestrianEntityIsHurt",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "FrigidHurt",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frigid_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "WaspStingProjectile",
+      "type": "rangeditem",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_sting_projectile",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "WaspStingHit",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_sting_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "EquestrianLeap",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian_leap",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "FrigidTouchProjectile",
+      "type": "rangeditem",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frigid_touch_projectile",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "FrigidTouch",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frigid_touch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "MeatmanReplacement",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meatman_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Ladybug",
+      "type": "livingentity",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "LadybugModel",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "Zadybug",
+      "type": "livingentity",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "zadybug",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "ZadybugModel",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zadybug_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "LadybugZombification",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_zombification",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "HealingGooRegen",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo_regen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "HealingGoo",
+      "type": "rangeditem",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "HealingGooThrow",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo_throw",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "HealingGooItem",
+      "type": "item",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo_item",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "LadybugHealingGooBestowing",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_healing_goo_bestowing",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "Killstick",
+      "type": "item",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killstick",
+      "path": "~/TESTING PROCEDURES"
+    },
+    {
+      "name": "LadybugFalls",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_falls",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "ZadybugFalls",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zadybug_falls",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "MeatureModel",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "HealingGooStewUse",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo_stew_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HealingGooStew",
+      "type": "item",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo_soup",
+      "path": "~/Items"
+    },
+    {
+      "name": "HealingGooSoup",
+      "type": "recipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_goo_soup",
+      "path": "~/Items"
+    },
+    {
+      "name": "Spectre",
+      "type": "livingentity",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre",
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "SpectreModel",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "SpectreVanish",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_vanish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "SpectreJump",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_jump",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "Phantasm",
+      "type": "armor",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": true
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpectreReappear",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_reappear",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "MeatheadTick",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SlugvestTick",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slugvest_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SprintshortsTick",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprintshorts_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PhantasmCowlEvent",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cowl_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PhantasmCapeTick",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cape_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PhantasmSetJumpBoosty",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_set_jump_boosty",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PhantasmCowlRecipe",
+      "type": "recipe",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cowl_recipe",
+      "path": "~/Items"
+    },
+    {
+      "name": "PhantasmCapeRecipe",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cape_recipe",
+      "path": "~/Items"
+    },
+    {
+      "name": "Ghoul",
+      "type": "livingentity",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul",
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulModel",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulSlash",
+      "type": "rangeditem",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_slash",
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulAttackDelay",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_attack_delay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulHurt",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulBreakBlock",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_break_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulSpit",
+      "type": "rangeditem",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_spit",
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulSpitParticles",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_spit_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulSpitPutsOutFire",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_spit_puts_out_fire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GhoulSpitHitsEntity",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul_spit_hits_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "Cinder",
+      "type": "livingentity",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder",
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderModel",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderLayer",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderFireball",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_fireball",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderSlowFall",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_slow_fall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderSlice",
+      "type": "rangeditem",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_slice",
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderSliceHit",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_slice_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderFireCharge",
+      "type": "rangeditem",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_fire_charge",
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderFireExplode",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_fire_explode",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderReplace",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_replace",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "FireChargeHitEntity",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_charge_hit_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "Gallant",
+      "type": "livingentity",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant",
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "GallantModel",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "GallantAttack",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "GallantHurtAnimation",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant_hurt_animation",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "GallantWaterHurt",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant_water_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "InvulnerabilityActive",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invulnerability_active",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Invulnerability",
+      "type": "potioneffect",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invulnerability"
+    },
+    {
+      "name": "GallantSwings",
+      "type": "rangeditem",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant_swings",
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "GallantSwingDespawn",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gallant_swing_despawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "CinderHelm",
+      "type": "armor",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_helm",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CinderHelmTickEvent",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_helm_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CinderScrap",
+      "type": "item",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_scrap",
+      "path": "~/Items"
+    },
+    {
+      "name": "CinderCrownCrafting",
+      "type": "recipe",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_crown_crafting",
+      "path": "~/Items"
+    },
+    {
+      "name": "Goblin",
+      "type": "livingentity",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "goblin",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "GoblinModel",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "GoblinSteal",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_steal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "GoblinHurt",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "GoblinFear",
+      "type": "livingentity",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_fear",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "FearDespawn",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fear_despawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "GoblinLayer",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Bouncer",
+      "type": "livingentity",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bouncer",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "BouncerModel",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bouncer_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "BouncerKickProjectile",
+      "type": "rangeditem",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bouncer_kick_projectile",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "BouncerKickImpact",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bouncer_kick_impact",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Rancher",
+      "type": "livingentity",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "rancher",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "RancherModel",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rancher_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Baker",
+      "type": "livingentity",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "baker",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "BakerModel",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baker_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Cakerover",
+      "type": "livingentity",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cakerover",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CakeroverModel",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cakerover_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CakeroverParticles",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cakerover_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CakeroverFuse",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cakerover_fuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CakeroverSpawn",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cakerover_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Gabble",
+      "type": "livingentity",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gabble",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "GabbleSpawn",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gabble_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CinderFireChargeAntigravity",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinder_fire_charge_antigravity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "SlimeballThrow",
+      "type": "rangeditem",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimeball_throw",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Errant",
+      "type": "livingentity",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "errant",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "ErrantModel",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "errant_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "BakerHurt",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baker_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "RainRegen",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_regen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Caster",
+      "type": "livingentity",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "caster",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CasterModel",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caster_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CastSpell",
+      "type": "rangeditem",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cast_spell",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CastSpellAntiGrav",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cast_spell_anti_grav",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "CastSpellRandomEffect",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cast_spell_random_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "Goblins",
+      "type": "tag",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblins",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "SuspiciousSlice",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "suspicious_slice",
+      "path": "~/Items"
+    },
+    {
+      "name": "SuspiciousSliceEaten",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "suspicious_slice_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SusSliceIntoCake",
+      "type": "recipe",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sus_slice_into_cake",
+      "path": "~/Items"
+    },
+    {
+      "name": "PreposterousPortion",
+      "type": "item",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "preposterous_portion",
+      "path": "~/Items"
+    },
+    {
+      "name": "PreposterousPortionEaten",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "preposterous_portion_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GroundBoundActive",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ground_bound_active",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GroundBound",
+      "type": "potioneffect",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ground_bound"
+    },
+    {
+      "name": "Zobgoblin",
+      "type": "livingentity",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "zobgoblin",
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "ZobgoblinModel",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zobgoblin_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "VillagerGoblinTransformation",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "villager_goblin_transformation",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "TarantulaReplace",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula_replace",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "TarantulaReplacementRule",
+      "type": "gamerule",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantulaReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "CinderReplacementRule",
+      "type": "gamerule",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cinderReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Monsters/ShieldEnemies"
+    },
+    {
+      "name": "NoBabyZombies",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_baby_zombies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Petriman",
+      "type": "livingentity",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "PetrimanModel",
+      "type": "procedure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "PetrimanHurt",
+      "type": "procedure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "ScorpionReplacementRule",
+      "type": "gamerule",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpionReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "ScorpionReplace",
+      "type": "procedure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_replace",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "PetrimanReplacementRule",
+      "type": "gamerule",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petrimanReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Petriboulder",
+      "type": "livingentity",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriboulder",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "PetriboulderModel",
+      "type": "procedure",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriboulder_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "Petricrawler",
+      "type": "livingentity",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petricrawler",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "PetricrawlerModel",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petricrawler_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "RandomPetriman",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_petriman",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "PetrimanReplacement",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "PetrimanDontSpawnAboveGroundRule",
+      "type": "gamerule",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petrimanDontSpawnAboveGroundRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "PetrimanRandomRule",
+      "type": "gamerule",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petrimanRandomRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Intruder",
+      "type": "livingentity",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intruder",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "IntruderModel",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intruder_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "IntruderFuse",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intruder_fuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "IntruderReplacementRule",
+      "type": "gamerule",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intruderReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "IntruderReplacement",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intruder_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "Silverking",
+      "type": "livingentity",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "silverking",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SilverkingHurt",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverking_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SilverkingModel",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverking_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SilverkingReplacementRule",
+      "type": "gamerule",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverkingReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "SilverkingReplacement",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverking_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "SilverkingDontSpawnAboveDeepslateRule",
+      "type": "gamerule",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverkingDontSpawnAboveDeepslateRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Invisicreeper",
+      "type": "livingentity",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invisicreeper",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "Crawler",
+      "type": "livingentity",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "CrawlerModel",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "CrawlerFuse",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler_fuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "CrawlerExplosive",
+      "type": "rangeditem",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler_explosive",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "CrawlerExplosionDespawn",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler_explosion_despawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "CrawlerReplacementRule",
+      "type": "gamerule",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawlerReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "CrawlerReplacement",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "CrawlerDontSpawnAboveDeepslateRule",
+      "type": "gamerule",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawlerDontSpawnAboveDeepslateRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "SilverkingDies",
+      "type": "procedure",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverking_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SpeedCheck",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Troll",
+      "type": "livingentity",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "troll",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "TrollModel",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "TrollLayer",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "TrollHurt",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "Silverhat",
+      "type": "armor",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverhat",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SilverhatSpawn",
+      "type": "procedure",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverhat_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Silverpet",
+      "type": "livingentity",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverpet",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SilverpetModel",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverpet_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SilverhatDeath",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverhat_death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TrollDontSpawnAboveDeepslateRule",
+      "type": "gamerule",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trollDontSpawnAboveDeepslateRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "TrollInvulnerable",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_invulnerable",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SilverkingLayer",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverking_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "ResistenceParticle",
+      "type": "particle",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resistence_particle"
+    },
+    {
+      "name": "TrollInvincible",
+      "type": "rangeditem",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_invincible",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "TrollInvincibleParticles",
+      "type": "procedure",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_invincible_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "TrollParticles",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "Slimehead",
+      "type": "armor",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimehead",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SlimeheadRepell",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimehead_repell",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SlimeheadDeath",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimehead_death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Slimeheadzombie",
+      "type": "livingentity",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimeheadzombie",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "SlimeheadReplacement",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimehead_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Vampire",
+      "type": "livingentity",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "vampire",
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireModel",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireDontSpawnAboveDeepslateRule",
+      "type": "gamerule",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampireDontSpawnAboveDeepslateRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "VampRegen",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vamp_regen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampDrain",
+      "type": "procedure",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vamp_drain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampPanic",
+      "type": "procedure",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vamp_panic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireLayer",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "Biter",
+      "type": "livingentity",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biter",
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "BiterTimer",
+      "type": "procedure",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biter_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "BiterModel",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biter_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "BiterLayer",
+      "type": "procedure",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biter_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "BroThinkHeCarti",
+      "type": "achievement",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bro_think_he_carti",
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "CartiSlayer",
+      "type": "procedure",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carti_slayer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireSlayer",
+      "type": "achievement",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_slayer",
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireSlaying",
+      "type": "procedure",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_slaying",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireSpawn",
+      "type": "procedure",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "Headbiter",
+      "type": "armor",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "headbiter",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HeadbiterHarming",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "headbiter_harming",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HeatbiterSpawning",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heatbiter_spawning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "VampireReplacementRule",
+      "type": "gamerule",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampireReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "VampireReplacement",
+      "type": "procedure",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "VampBurnDespawn",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vamp_burn_despawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "VampireFlinted",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_flinted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Vampire"
+    },
+    {
+      "name": "TrollReplacementRule",
+      "type": "gamerule",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trollReplacementRule",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "TrollReplacement",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_replacement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "FuseHurt",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuse_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "SpectreAttack",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "Petrifiedtroll",
+      "type": "livingentity",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petrifiedtroll",
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "PetrifiedtrollSpawn",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petrifiedtroll_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "PetrifiedtrollModel",
+      "type": "procedure",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petrifiedtroll_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "MeatureLeveling",
+      "type": "procedure",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_leveling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "HuntsmanPushback",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsman_pushback",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpectreDies",
+      "type": "procedure",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "PetrimanSpawning",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "SilverkingSpawning",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverking_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "CrawlerSpawning",
+      "type": "procedure",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crawler_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "TrollSpawning",
+      "type": "procedure",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "VampireSpawning",
+      "type": "procedure",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "EquestrianSpawning",
+      "type": "procedure",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "WaspSpawning",
+      "type": "procedure",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Spiderlatch",
+      "type": "armor",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiderlatch",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpiderlatchAttack",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiderlatch_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpiderlatchDeath",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiderlatch_death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpiderlatchTick",
+      "type": "procedure",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiderlatch_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Trollface",
+      "type": "armor",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trollface",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Spectral",
+      "type": "armor",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectral",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": true
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpectralSpawn",
+      "type": "procedure",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectral_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpectreSpawn",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectre_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "SpectralAttack",
+      "type": "procedure",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spectral_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Propeller",
+      "type": "livingentity",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "propeller",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "PropellerModel",
+      "type": "procedure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propeller_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "PropellerHurt",
+      "type": "procedure",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propeller_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "PropellerDies",
+      "type": "procedure",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propeller_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Flutterfly",
+      "type": "livingentity",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly",
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "FlutterflyModel",
+      "type": "procedure",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "FlutterflyPlayerTouch",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_player_touch",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "FlutterflyPunishment",
+      "type": "procedure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_punishment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "Boar",
+      "type": "livingentity",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "boar",
+      "path": "~/Animals"
+    },
+    {
+      "name": "BoarModel",
+      "type": "procedure",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boar_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Animals"
+    },
+    {
+      "name": "CreateConfig",
+      "type": "procedure",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_config",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "ConfigReader",
+      "type": "procedure",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "config_reader",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "returnConfig",
+      "type": "string",
+      "scope": "world",
+      "value": "\"based\""
+    },
+    {
+      "name": "configMob",
+      "type": "string",
+      "scope": "world",
+      "value": "\"\""
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "silentstep",
+      "files": [
+        "silent"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "troll.roar",
+      "files": [
+        "troll.roar"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll roars"
+    },
+    {
+      "name": "troll.hurt.2",
+      "files": [
+        "troll.hurt.2"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll growls"
+    },
+    {
+      "name": "troll.death",
+      "files": [
+        "troll.death"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll dies"
+    },
+    {
+      "name": "troll.idle.1",
+      "files": [
+        "troll.idle.1"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll growls"
+    },
+    {
+      "name": "troll.hurt.1",
+      "files": [
+        "troll.hurt.1"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll grunts"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "entity.enemyexpansion.errant": "Errant",
+      "gamerule.petrimanReplacementRule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "item.enemyexpansion.petriboulder_spawn_egg": "Petriboulder Spawn Egg",
+      "entity.enemyexpansion.scorpion": "Scorpion",
+      "item.enemyexpansion.ghoul_spawn_egg": "Ghoul Spawn Egg",
+      "gamerule.vampire_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "gamerule.crawler_replacement_rule": "intruderReplacementRule",
+      "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
+      "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
+      "gamerule.silverkingDontSpawnAboveDeepslateRule.description": "Silverkings will not spawn above Y0.",
+      "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
+      "entity.enemyexpansion.spectre": "Spectre",
+      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
+      "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
+      "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
+      "item.enemyexpansion.silverhat_helmet": "Silverhat",
+      "item.enemyexpansion.spectral_boots": "",
+      "gamerule.intruderReplacementRule": "intruderReplacementRule",
+      "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrifiedtroll Spawn Egg",
+      "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
+      "entity.enemyexpansion.meatmanzombie": "Meatman",
+      "entity.enemyexpansion.zadybug": "Zadybug",
+      "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
+      "item.enemyexpansion.cast_spell": "Caster Spell",
+      "item.enemyexpansion.gallant_swings": "Gallant Swings",
+      "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
+      "gamerule.scorpionReplacementRule.description": "Enables Scorpions to replace 3/4rds of Spider spawns in Desert and Mesa biomes.",
+      "gamerule.vampireReplacementRule": "Vampires replace Skeletons below Deepslate",
+      "gamerule.trollReplacementRule": "Trolls replace Endermen below Deepslate",
+      "item.enemyexpansion.suspicious_slice": "Suspicious Slice",
+      "gamerule.silverking_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "gamerule.petriman_spawn_above_ground": "petrimanReplacementRule",
+      "item.enemyexpansion.frigid_spawn_egg": "Frigid Spawn Egg",
+      "effect.enemyexpansion.ground_bound": "Groundbound",
+      "entity.enemyexpansion.cakerover": "Cakerover",
+      "item.enemyexpansion.silverhat_chestplate": "",
+      "entity.enemyexpansion.cinder": "Cinder",
+      "item.enemyexpansion.slimeheadzombie_spawn_egg": "Slimehead Spawn Egg",
+      "subtitles.troll.idle.1": "Troll growls",
+      "item.enemyexpansion.healing_goo_item": "Healing Goo",
+      "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
+      "gamerule.crawlerDontSpawnAboveDeepslateRule": "Crawlers don\u0027t spawn above Deepslate",
+      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "entity.enemyexpansion.gallant": "Gallant",
+      "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
+      "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
+      "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
+      "entity.enemyexpansion.sprinter": "Sprinter",
+      "gamerule.blazes_do_cinder_jump": "cindersoccasionallyreplaceblazes",
+      "entity.enemyexpansion.crawler": "Crawler",
+      "gamerule.vampireDontSpawnAboveDeepslateRule": "Vampires don\u0027t spawn above Deepslate",
+      "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
+      "entity.enemyexpansion.casterfluu": "Goblin Caster",
+      "item.enemyexpansion.slugvest_leggings": "-",
+      "entity.enemyexpansion.baker": "Goblin Baker",
+      "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "gamerule.trollReplacementRule.description": "Trolls will replace Endermen that spawn below Y-20.",
+      "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
+      "entity.enemyexpansion.boar": "Boar",
+      "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
+      "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
+      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
+      "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
+      "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
+      "item.enemyexpansion.pheromone_summon_spawn_egg": "PheromoneSummon Spawn Egg",
+      "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
+      "item.enemyexpansion.slimehead_boots": "",
+      "entity.enemyexpansion.frigid": "Frigid",
+      "item.enemyexpansion.trollface_boots": "Phantasm Boots",
+      "gamerule.cinderReplacementRule.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "gamerule.trollDontSpawnAboveDeepslateRule.description": "Trolls will not spawn above Y-15.",
+      "death.attack.spectre": "%1$s was swallowed by the Spectre\u0027s grasp",
+      "item.enemyexpansion.frigid_touch_projectile": "Frigid Touch",
+      "item.enemyexpansion.invisicreeper_spawn_egg": "Invisicreeper Spawn Egg",
+      "item.enemyexpansion.ghoul_spit": "Spit",
+      "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
+      "gamerule.petrimanDontSpawnAboveGroundRule.description": "Petrimen will not spawn above Y25.",
+      "entity.enemyexpansion.tarantula": "Tarantula",
+      "gamerule.tarantulaReplacementRule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
+      "item.enemyexpansion.slugvest_chestplate": "Slugvest",
+      "item.enemyexpansion.trollface_chestplate": "",
+      "item.enemyexpansion.pheromone_projectile": "Wasp Pheromone",
+      "gamerule.crawlerDontSpawnAboveDeepslateRule.description": "Crawlers will not spawn above Y-15.",
+      "entity.enemyexpansion.projectile_slimeball_throw": "a stray Slimeball",
+      "entity.enemyexpansion.senior": "Senior",
+      "gamerule.petriman_dont_spawn_above_ground": "petrimanReplacementRule",
+      "gamerule.silverhead_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
+      "gamerule.tarantulaReplacementRule": "increaseddripstonetarantulas",
+      "item.enemyexpansion.healing_goo": "Healing Goo",
+      "entity.enemyexpansion.troll": "Troll",
+      "item.enemyexpansion.silverhat_leggings": "",
+      "entity.enemyexpansion.vampire": "Vampire",
+      "item.enemyexpansion.huntsman_punch": "Huntsman Punch",
+      "gamerule.intruder_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "entity.enemyexpansion.projectile_gallant_swings": "Gallant\u0027s blade",
+      "entity.enemyexpansion.flutterfly": "Flutterfly",
+      "entity.enemyexpansion.projectile_ghoul_spit": "ghoulish spit",
+      "entity.enemyexpansion.goblin": "Goblin Thief",
+      "gamerule.blazes_do_cinder_jump.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "gamerule.silverking_dont_spawn_above_ground_rule": "petrimanDontSpawnAboveGroundRule",
+      "entity.enemyexpansion.projectile_scorpion_sting_projectile": "Scorpion\u0027s sting",
+      "advancements.vampire_slayer.descr": "Slay a Vampire before it turns into a Biter",
+      "gamerule.cinder_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
+      "entity.enemyexpansion.ladybug": "Ladybug",
+      "entity.enemyexpansion.petriboulder": "Petriboulder",
+      "entity.enemyexpansion.projectile_ghoul_slash": "Ghoul slash",
+      "gamerule.cinder_replacement_rule": "increaseddripstonetarantulas",
+      "subtitles.silentstep": "",
+      "item.enemyexpansion.spectral_helmet": "Spectral Hood",
+      "entity.enemyexpansion.projectile_wasp_sting_projectile": "Wasp\u0027s sting",
+      "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
+      "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
+      "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
+      "gamerule.vampireReplacementRule.description": "Vampires will replace 3/4s of Skeletons that spawn in caves below Y-30.",
+      "gamerule.petriman_replacement_rule": "cindersoccasionallyreplaceblazes",
+      "entity.enemyexpansion.silverking": "Silverking",
+      "entity.enemyexpansion.projectile_enemy_melee_projectile": "enemy attack",
+      "item.enemyexpansion.cinder_helm_boots": "",
+      "entity.enemyexpansion.meature": "Meature",
+      "item.enemyexpansion.caster_spawn_egg": "Goblin Caster Spawn Egg",
+      "entity.enemyexpansion.petricrawler": "Petricrawler",
+      "entity.enemyexpansion.tarantulam": "Tarantula",
+      "gamerule.petriman_random_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "gamerule.trollDontSpawnAboveDeepslateRule": "Trolls don\u0027t spawn above Deepslate",
+      "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
+      "entity.enemyexpansion.wasp": "Wasp",
+      "item.enemyexpansion.cinder_helm_leggings": "",
+      "item.enemyexpansion.headbiter_helmet": "Headbiter",
+      "entity.enemyexpansion.petriman": "Petriman",
+      "item.enemyexpansion.slimehead_helmet": "Slimehead",
+      "advancements.meathead_obtained.title": "Nice to Meature",
+      "entity.enemyexpansion.huntsmanskeleton": "Huntsman Skeleton",
+      "item.enemyexpansion.phantasm_chestplate": "Phantasm Cape",
+      "item.enemyexpansion.cinder_helm_helmet": "Cinder Crown",
+      "item.enemyexpansion.cakerover_spawn_egg": "Cakerover Spawn Egg",
+      "advancements.on_my_wasp_biz.title": "\"I\u0027m on my Wasp Bizz\"",
+      "gamerule.no_baby_zombies": "cindersoccasionallyreplaceblazes",
+      "item.enemyexpansion.slugvest_helmet": "-",
+      "gamerule.silverking_replacement_rule": "petrimanReplacementRule",
+      "entity.enemyexpansion.ghoul": "Ghoul",
+      "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
+      "subtitles.troll.roar": "Troll roars",
+      "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
+      "item.enemyexpansion.slugvest_boots": "-",
+      "gamerule.petrimanReplacementRule": "Petrimen replace Zombies underground",
+      "item.enemyexpansion.headbiter_chestplate": "Phantasm Cape",
+      "item.enemyexpansion.petriman_spawn_egg": "Petriman Spawn Egg",
+      "item.enemyexpansion.meathead_armor_chestplate": "Meathead Chestplate",
+      "entity.enemyexpansion.biter": "Biter",
+      "gamerule.cinderReplacementRule": "cindersoccasionallyreplaceblazes",
+      "item.enemyexpansion.propeller_spawn_egg": "Propeller Spawn Egg",
+      "item.enemyexpansion.meatmanzombie_spawn_egg": "Meatman Spawn Egg",
+      "advancements.bro_think_he_carti.descr": "Wear a Headbiter",
+      "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
+      "gamerule.silverkingDontSpawnAboveDeepslateRule": "Silverkings don\u0027t spawn above Deepslate",
+      "entity.enemyexpansion.equestrian": "Equestrian",
+      "item.enemyexpansion.sprintshorts_chestplate": "-",
+      "item.enemyexpansion.intruder_spawn_egg": "Intruder Spawn Egg",
+      "gamerule.petrimanRandomRule.description": "Petrimen will also randomly spawn Petricrawlers and Petriboulders, too.",
+      "item.enemyexpansion.killstick": "Killstick",
+      "item.enemyexpansion.wasp_sting_projectile": "Wasp Sting",
+      "entity.enemyexpansion.projectile_huntsman_punch": "Huntsman\u0027s punch",
+      "item.enemyexpansion.headbiter_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.spiderlatch_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.flutterfly_spawn_egg": "Flutterfly Spawn Egg",
+      "item.enemyexpansion.meature_meatball": "Meature Meatball",
+      "entity.enemyexpansion.bouncer": "Bouncer",
+      "item.enemyexpansion.trollface_helmet": "Trollface",
+      "item.enemyexpansion.ghoul_slash": "Slash",
+      "entity.enemyexpansion.projectile_frigid_touch_projectile": "a frigid touch",
+      "item.enemyexpansion.spiderlatch_chestplate": "Phantasm Cape",
+      "item.enemyexpansion.healing_goo_soup": "Healing Goo Stew",
+      "item.enemyexpansion.zobgoblin_spawn_egg": "Zobgoblin Spawn Egg",
+      "item.enemyexpansion.spectral_leggings": "",
+      "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
+      "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
+      "item.enemyexpansion.senior_spawn_egg": "Senior Spawn Egg",
+      "item.enemyexpansion.preposterous_portion": "Preposterous Portion",
+      "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
+      "item.enemyexpansion.slimehead_leggings": "",
+      "gamerule.vampireDontSpawnAboveDeepslateRule.description": "Vampires will not spawn above Y-15.",
+      "gamerule.no_baby_zombies.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "gamerule.intruderReplacementRule.description": "Intruders will replace Creepers that spawn in caves between Y-15 and Y25.",
+      "item.enemyexpansion.zadybug_spawn_egg": "Zadybug Spawn Egg",
+      "gamerule.troll_replacement_rule": "silverkingReplacementRule",
+      "advancements.meathead_obtained.descr": "Obtain a Meat Hat",
+      "item.enemyexpansion.silverking_spawn_egg": "Silverking Spawn Egg",
+      "gamerule.petrimanDontSpawnAboveGroundRule": "Petrimen don\u0027t spawn above caves",
+      "gamerule.crawler_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
+      "entity.enemyexpansion.slugger": "Slugger",
+      "item.enemyexpansion.sprintshorts_leggings": "Sprintshorts",
+      "gamerule.petrimanRandomRule": "Random Petriman",
+      "item.enemyexpansion.petricrawler_spawn_egg": "Petricrawler Spawn Egg",
+      "item.enemyexpansion.troll_invincible": "Troll Invincibility",
+      "item.enemyexpansion.meathead_armor_helmet": "Meat Head",
+      "gamerule.scorpionReplacementRule": "scorpionsreplacedesertspiders",
+      "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.silverhat_boots": "",
+      "gamerule.silverhead_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
+      "advancements.on_my_wasp_biz.descr": "Summon a Wasp Drone",
+      "item.enemyexpansion.spectre_spawn_egg": "Spectre Spawn Egg",
+      "item.enemyexpansion.errant_spawn_egg": "Errant Spawn Egg",
+      "effect.enemyexpansion.invulnerability": "Invulnerability",
+      "entity.enemyexpansion.intruder": "Intruder",
+      "gamerule.petriman_replacement_rule.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "subtitles.troll.hurt.1": "Troll grunts",
+      "subtitles.troll.hurt.2": "Troll growls",
+      "item.enemyexpansion.bouncer_spawn_egg": "Bouncer Spawn Egg",
+      "entity.enemyexpansion.invisicreeper": "Invisicreeper",
+      "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
+      "gamerule.petriman_random_rule": "petrimanReplacementRule",
+      "item.enemyexpansion.cinder_spawn_egg": "Cinder Spawn Egg",
+      "gamerule.crawlerReplacementRule": "Crawlers replace Creepers below Deepslate",
+      "item.enemyexpansion.sprintshorts_boots": "-",
+      "item.enemyexpansion.cinder_scrap": "Cinder Scrap",
+      "entity.enemyexpansion.zobgoblin": "Zobgoblin",
+      "gamerule.silverking_dont_spawn_above_deepslate_rule.description": "Petrimen will not spawn above Y25.",
+      "gamerule.petriman_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
+      "advancements.bro_think_he_carti.title": "Bro Think He Carti",
+      "entity.enemyexpansion.silverpet": "Silverpet",
+      "entity.enemyexpansion.rancher": "Goblin Rancher",
+      "entity.enemyexpansion.gabble": "Gabble",
+      "item.enemyexpansion.silverpet_spawn_egg": "Silverpet Spawn Egg",
+      "gamerule.petriman_dont_spawn_above_ground_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "gamerule.silverkingReplacementRule": "Silverkings replace Spiders underground",
+      "item.enemyexpansion.rancher_spawn_egg": "Goblin Rancher Spawn Egg",
+      "gamerule.silverkingReplacementRule.description": "Silverkings will replace 1/2 of Spiders that spawn in Deepslate caves.",
+      "subtitles.troll.death": "Troll dies",
+      "item.enemyexpansion.phantasm_helmet": "Phantasm Cowl",
+      "advancements.vampire_slayer.title": "Vampire Slayer",
+      "entity.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "gamerule.intruder_replacement_rule": "petrimanReplacementRule",
+      "item.enemyexpansion.slimehead_chestplate": "",
+      "item.enemyexpansion.enemy_melee_projectile": "Melee Attack",
+      "gamerule.vampire_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
+      "gamerule.scorpion_replacement_rule": "increaseddripstonetarantulas",
+      "gamerule.crawler_replacement_rule.description": "Intruders will replace Creepers that spawn in caves.",
+      "entity.enemyexpansion.projectile_bouncer_kick_projectile": "Bouncer\u0027s kick",
+      "entity.enemyexpansion.goblin_fear": "Goblin Fear",
+      "entity.enemyexpansion.projectile_cast_spell": "Caster\u0027s spell",
+      "gamerule.petriman_dont_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
+      "item.enemyexpansion.cinder_fire_charge": "Cinder Fire Charge",
+      "gamerule.crawlerReplacementRule.description": "Crawlers will replace Creepers that spawn in caves below Y-15.",
+      "item.enemyexpansion.huntsmanskeleton_spawn_egg": "Huntsman Skeleton Spawn Egg",
+      "entity.enemyexpansion.slimeheadzombie": "Slimehead",
+      "entity.enemyexpansion.propeller": "Propeller",
+      "entity.enemyexpansion.petrifiedtroll": "Petrifiedtroll",
+      "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
+      "item.enemyexpansion.cinder_slice": "Cinder Slice",
+      "item.enemyexpansion.spectral_chestplate": "Spectral Cloak",
+      "item.enemyexpansion.sprintshorts_helmet": "-"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "TESTING PROCEDURES",
+        "children": []
+      },
+      {
+        "name": "Monsters",
+        "children": [
+          {
+            "name": "GhoulsAndGhosts",
+            "children": []
+          },
+          {
+            "name": "ShieldEnemies",
+            "children": []
+          },
+          {
+            "name": "Goblins",
+            "children": []
+          },
+          {
+            "name": "UndergroundGuys",
+            "children": []
+          },
+          {
+            "name": "Vampire",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Arthropods",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Spawning",
+        "children": []
+      },
+      {
+        "name": "Animals",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "enemyexpansion",
+    "modName": "Enemy Expansion",
+    "version": "1.10.0",
+    "description": "Adding variety to combat encounters!",
+    "author": "nekomaster",
+    "websiteURL": "https://mcreator.net",
+    "license": "Apache License version 2.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "meature_iso",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "allmods"
+    ],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "Nekomaster, FoshyJoshy, EB Mario",
+    "modElementsPackage": "net.mcreator.enemyexpproofofconcept",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200348217
+}

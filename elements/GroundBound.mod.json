@@ -1,0 +1,20 @@
+{
+  "_fv": 34,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Groundbound",
+    "icon": "invulnerability.png",
+    "color": {
+      "value": -10079488,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "GroundBoundActive"
+    }
+  }
+}
