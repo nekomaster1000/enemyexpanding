@@ -3,6 +3,7 @@ package net.mcreator.enemyexpproofofconcept.procedures;
 import net.minecraftforge.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.network.EnemyexpansionModVariables;
 
@@ -13,8 +14,8 @@ import java.io.BufferedReader;
 
 import com.google.gson.Gson;
 
-public class ConfigReaderProcedure {
-	public static boolean execute(LevelAccessor world, double y) {
+public class ConfigDepthProcedure {
+	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		boolean spawning = false;
 		File enemyexpansion = new File("");
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
@@ -31,7 +32,8 @@ public class ConfigReaderProcedure {
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if ((EnemyexpansionModVariables.WorldVariables.get(world).returnConfig).equals("SpawningDepth")) {
 					if (y < mainjsonobject.get((EnemyexpansionModVariables.WorldVariables.get(world).configMob + ""
-							+ EnemyexpansionModVariables.WorldVariables.get(world).returnConfig)).getAsDouble()) {
+							+ EnemyexpansionModVariables.WorldVariables.get(world).returnConfig)).getAsDouble()
+							&& world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) < 5) {
 						spawning = true;
 					} else {
 						spawning = false;

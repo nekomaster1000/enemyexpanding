@@ -47,7 +47,7 @@ public class NoBabyZombiesProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (mainjsonobject.get("noBabyZombies").getAsBoolean() == true) {
+				if (Math.random() > mainjsonobject.get("babyZombieSpawning").getAsDouble()) {
 					if ((entity instanceof Zombie || entity instanceof ZombieVillager)
 							&& (entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 						if (event != null && event.isCancelable()) {

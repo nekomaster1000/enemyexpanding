@@ -1194,7 +1194,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo",
-      "path": "~/Arthropods"
+      "path": "~/Items"
     },
     {
       "name": "HealingGooThrow",
@@ -3166,8 +3166,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Spawning"
+      }
     },
     {
       "name": "Petriman",
@@ -4052,7 +4051,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Spawning"
+      "path": "~/Monsters/UndergroundGuys"
     },
     {
       "name": "ResistenceParticle",
@@ -4986,7 +4985,15 @@
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
             "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -5008,7 +5015,15 @@
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
             "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -5527,17 +5542,54 @@
       }
     },
     {
-      "name": "ConfigReader",
+      "name": "ConfigDepth",
       "type": "procedure",
-      "sortid": 317,
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "config_reader",
+      "registry_name": "config_depth",
       "metadata": {
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
             "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ConfigReplacer",
+      "type": "procedure",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "config_replacer",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -5625,9 +5677,9 @@
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
       "gamerule.silverkingDontSpawnAboveDeepslateRule.description": "Silverkings will not spawn above Y0.",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "item.enemyexpansion.cinder_helm_chestplate": "",
-      "entity.enemyexpansion.spectre": "Spectre",
       "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "entity.enemyexpansion.spectre": "Spectre",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
       "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
@@ -5642,8 +5694,8 @@
       "item.enemyexpansion.cast_spell": "Caster Spell",
       "item.enemyexpansion.gallant_swings": "Gallant Swings",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
-      "gamerule.scorpionReplacementRule.description": "Enables Scorpions to replace 3/4rds of Spider spawns in Desert and Mesa biomes.",
       "gamerule.vampireReplacementRule": "Vampires replace Skeletons below Deepslate",
+      "gamerule.scorpionReplacementRule.description": "Enables Scorpions to replace 3/4rds of Spider spawns in Desert and Mesa biomes.",
       "gamerule.trollReplacementRule": "Trolls replace Endermen below Deepslate",
       "item.enemyexpansion.suspicious_slice": "Suspicious Slice",
       "gamerule.silverking_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
@@ -5658,9 +5710,9 @@
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
       "gamerule.crawlerDontSpawnAboveDeepslateRule": "Crawlers don\u0027t spawn above Deepslate",
-      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
-      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "entity.enemyexpansion.gallant": "Gallant",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
@@ -5678,8 +5730,8 @@
       "entity.enemyexpansion.boar": "Boar",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
       "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
-      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
       "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
       "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
       "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "PheromoneSummon Spawn Egg",

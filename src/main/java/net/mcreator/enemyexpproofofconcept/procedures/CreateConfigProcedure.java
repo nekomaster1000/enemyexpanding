@@ -38,17 +38,34 @@ public class CreateConfigProcedure {
 				exception.printStackTrace();
 			}
 		}
-		if (!(mainjsonobject.get("config_explanation") != null)) {
-			mainjsonobject.addProperty("config_explanation", "heey");
+		if (!(mainjsonobject.get("babyZombieSpawningExplained") != null)) {
+			mainjsonobject.addProperty("babyZombieSpawningExplained",
+					"babyZombieSpawning: 0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.3 being a 30% chance for a Baby Zombie to successfully spawn, for example.)");
 		}
-		if (!(mainjsonobject.get("noBabyZombies") != null)) {
-			mainjsonobject.addProperty("noBabyZombies", (true));
+		if (!(mainjsonobject.get("babyZombieSpawning") != null)) {
+			mainjsonobject.addProperty("babyZombieSpawning", 0);
+		}
+		if (!(mainjsonobject.get("mobSpawningDepthExplained") != null)) {
+			mainjsonobject.addProperty("mobSpawningDepthExplained",
+					"mobSpawningDepth: Mob will only naturally spawn below the specified y-level. This is so certain mobs are cave-exclusive by default.");
 		}
 		if (!(mainjsonobject.get("petrimanSpawningDepth") != null)) {
-			mainjsonobject.addProperty("petrimanSpawningDepth", (-25));
+			mainjsonobject.addProperty("petrimanSpawningDepth", (-10));
 		}
 		if (!(mainjsonobject.get("silverkingSpawningDepth") != null)) {
-			mainjsonobject.addProperty("silverkingSpawningDepth", (-25));
+			mainjsonobject.addProperty("silverkingSpawningDepth", (-10));
+		}
+		if (!(mainjsonobject.get("crawlerSpawningDepth") != null)) {
+			mainjsonobject.addProperty("crawlerSpawningDepth", (-10));
+		}
+		if (!(mainjsonobject.get("trollSpawningDepth") != null)) {
+			mainjsonobject.addProperty("trollSpawningDepth", (-10));
+		}
+		if (!(mainjsonobject.get("vampireSpawningDepth") != null)) {
+			mainjsonobject.addProperty("vampireSpawningDepth", (-10));
+		}
+		if (!(mainjsonobject.get("mobReplacementExplained") != null)) {
+			mainjsonobject.addProperty("mobReplacementExplained", "mobReplacement: ...?");
 		}
 		{
 			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();

@@ -180,7 +180,7 @@ public class PetrimanEntity extends Monster implements IAnimatable {
 					int x = pos.getX();
 					int y = pos.getY();
 					int z = pos.getZ();
-					return PetrimanSpawningProcedure.execute(world, y);
+					return PetrimanSpawningProcedure.execute(world, x, y, z);
 				});
 	}
 

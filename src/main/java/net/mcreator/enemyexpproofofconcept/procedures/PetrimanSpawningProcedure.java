@@ -5,11 +5,11 @@ import net.minecraft.world.level.LevelAccessor;
 import net.mcreator.enemyexpproofofconcept.network.EnemyexpansionModVariables;
 
 public class PetrimanSpawningProcedure {
-	public static boolean execute(LevelAccessor world, double y) {
+	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		EnemyexpansionModVariables.WorldVariables.get(world).configMob = "petriman";
 		EnemyexpansionModVariables.WorldVariables.get(world).syncData(world);
 		EnemyexpansionModVariables.WorldVariables.get(world).returnConfig = "SpawningDepth";
 		EnemyexpansionModVariables.WorldVariables.get(world).syncData(world);
-		return ConfigReaderProcedure.execute(world, y);
+		return ConfigDepthProcedure.execute(world, x, y, z);
 	}
 }
