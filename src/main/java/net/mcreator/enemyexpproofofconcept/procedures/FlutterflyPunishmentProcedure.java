@@ -33,7 +33,7 @@ public class FlutterflyPunishmentProcedure {
 			return;
 		if (entity instanceof Player && sourceentity instanceof FlutterflyEntity) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 2, (false), (true)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 4, (false), (true)));
 		}
 	}
 }

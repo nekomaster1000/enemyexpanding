@@ -58,7 +58,9 @@ public class EnemyexpansionModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "enemyexpansion_worldvars";
 		public String returnConfig = "\"based\"";
-		public String configMob = "\"\"";
+		public String configMob = "\"based on what?\"";
+		public String replaceConfig = "\"awful\"";
+		public String replaceDepthConfig = "\"utterlyawful\"";
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -69,12 +71,16 @@ public class EnemyexpansionModVariables {
 		public void read(CompoundTag nbt) {
 			returnConfig = nbt.getString("returnConfig");
 			configMob = nbt.getString("configMob");
+			replaceConfig = nbt.getString("replaceConfig");
+			replaceDepthConfig = nbt.getString("replaceDepthConfig");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putString("returnConfig", returnConfig);
 			nbt.putString("configMob", configMob);
+			nbt.putString("replaceConfig", replaceConfig);
+			nbt.putString("replaceDepthConfig", replaceDepthConfig);
 			return nbt;
 		}
 

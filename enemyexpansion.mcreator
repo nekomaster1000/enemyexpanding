@@ -2021,39 +2021,6 @@
       "path": "~/Monsters/ShieldEnemies"
     },
     {
-      "name": "CinderReplace",
-      "type": "procedure",
-      "sortid": 152,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cinder_replace",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Monsters/ShieldEnemies"
-    },
-    {
       "name": "FireChargeHitEntity",
       "type": "procedure",
       "sortid": 153,
@@ -3096,63 +3063,6 @@
       "path": "~/Monsters/Goblins"
     },
     {
-      "name": "TarantulaReplace",
-      "type": "procedure",
-      "sortid": 196,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tarantula_replace",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arthropods"
-    },
-    {
-      "name": "TarantulaReplacementRule",
-      "type": "gamerule",
-      "sortid": 197,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tarantulaReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Arthropods"
-    },
-    {
-      "name": "CinderReplacementRule",
-      "type": "gamerule",
-      "sortid": 198,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cinderReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Monsters/ShieldEnemies"
-    },
-    {
       "name": "NoBabyZombies",
       "type": "procedure",
       "sortid": 200,
@@ -3166,7 +3076,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Spawning"
     },
     {
       "name": "Petriman",
@@ -3223,63 +3134,6 @@
       "path": "~/Monsters/UndergroundGuys"
     },
     {
-      "name": "ScorpionReplacementRule",
-      "type": "gamerule",
-      "sortid": 203,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "scorpionReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Arthropods"
-    },
-    {
-      "name": "ScorpionReplace",
-      "type": "procedure",
-      "sortid": 204,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "scorpion_replace",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Arthropods"
-    },
-    {
-      "name": "PetrimanReplacementRule",
-      "type": "gamerule",
-      "sortid": 205,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "petrimanReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "Petriboulder",
       "type": "livingentity",
       "sortid": 30,
@@ -3322,96 +3176,6 @@
       "path": "~/Monsters/UndergroundGuys"
     },
     {
-      "name": "RandomPetriman",
-      "type": "procedure",
-      "sortid": 208,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "random_petriman",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "PetrimanReplacement",
-      "type": "procedure",
-      "sortid": 209,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "petriman_replacement",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "PetrimanDontSpawnAboveGroundRule",
-      "type": "gamerule",
-      "sortid": 210,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "petrimanDontSpawnAboveGroundRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "PetrimanRandomRule",
-      "type": "gamerule",
-      "sortid": 212,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "petrimanRandomRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "Intruder",
       "type": "livingentity",
       "sortid": 33,
@@ -3439,51 +3203,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "intruder_fuse",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Monsters/UndergroundGuys"
-    },
-    {
-      "name": "IntruderReplacementRule",
-      "type": "gamerule",
-      "sortid": 215,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "intruderReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Monsters/UndergroundGuys"
-    },
-    {
-      "name": "IntruderReplacement",
-      "type": "procedure",
-      "sortid": 216,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "intruder_replacement",
       "metadata": {
         "dependencies": [
           {
@@ -3569,18 +3288,6 @@
       "path": "~/Monsters/UndergroundGuys"
     },
     {
-      "name": "SilverkingReplacementRule",
-      "type": "gamerule",
-      "sortid": 221,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "silverkingReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "SilverkingReplacement",
       "type": "procedure",
       "sortid": 222,
@@ -3610,18 +3317,6 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "SilverkingDontSpawnAboveDeepslateRule",
-      "type": "gamerule",
-      "sortid": 223,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "silverkingDontSpawnAboveDeepslateRule",
-      "metadata": {
-        "type": "number"
       },
       "path": "~/Spawning"
     },
@@ -3729,63 +3424,6 @@
         ]
       },
       "path": "~/Monsters/UndergroundGuys"
-    },
-    {
-      "name": "CrawlerReplacementRule",
-      "type": "gamerule",
-      "sortid": 229,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crawlerReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "CrawlerReplacement",
-      "type": "procedure",
-      "sortid": 230,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crawler_replacement",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "CrawlerDontSpawnAboveDeepslateRule",
-      "type": "gamerule",
-      "sortid": 231,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crawlerDontSpawnAboveDeepslateRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "SilverkingDies",
@@ -4007,18 +3645,6 @@
         ]
       },
       "path": "~/Items"
-    },
-    {
-      "name": "TrollDontSpawnAboveDeepslateRule",
-      "type": "gamerule",
-      "sortid": 242,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "trollDontSpawnAboveDeepslateRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "TrollInvulnerable",
@@ -4267,18 +3893,6 @@
         "dependencies": []
       },
       "path": "~/Monsters/Vampire"
-    },
-    {
-      "name": "VampireDontSpawnAboveDeepslateRule",
-      "type": "gamerule",
-      "sortid": 254,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vampireDontSpawnAboveDeepslateRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "VampRegen",
@@ -4628,18 +4242,6 @@
       "path": "~/Items"
     },
     {
-      "name": "VampireReplacementRule",
-      "type": "gamerule",
-      "sortid": 273,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vampireReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "VampireReplacement",
       "type": "procedure",
       "sortid": 274,
@@ -4713,51 +4315,6 @@
         ]
       },
       "path": "~/Monsters/Vampire"
-    },
-    {
-      "name": "TrollReplacementRule",
-      "type": "gamerule",
-      "sortid": 277,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "trollReplacementRule",
-      "metadata": {
-        "type": "number"
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "TrollReplacement",
-      "type": "procedure",
-      "sortid": 278,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "troll_replacement",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "FuseHurt",
@@ -5539,7 +5096,8 @@
       "registry_name": "create_config",
       "metadata": {
         "dependencies": []
-      }
+      },
+      "path": "~/Spawning"
     },
     {
       "name": "ConfigDepth",
@@ -5568,7 +5126,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spawning"
     },
     {
       "name": "ConfigReplacer",
@@ -5578,8 +5137,11 @@
       "locked_code": false,
       "registry_name": "config_replacer",
       "metadata": {
-        "return_type": "logic",
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -5597,7 +5159,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spawning"
     }
   ],
   "variable_elements": [
@@ -5611,7 +5174,19 @@
       "name": "configMob",
       "type": "string",
       "scope": "world",
-      "value": "\"\""
+      "value": "\"based on what?\""
+    },
+    {
+      "name": "replaceConfig",
+      "type": "string",
+      "scope": "world",
+      "value": "\"awful\""
+    },
+    {
+      "name": "replaceDepthConfig",
+      "type": "string",
+      "scope": "world",
+      "value": "\"utterlyawful\""
     }
   ],
   "sound_elements": [
@@ -5667,7 +5242,6 @@
   "language_map": {
     "en_us": {
       "entity.enemyexpansion.errant": "Errant",
-      "gamerule.petrimanReplacementRule.description": "Petrimen will replace Zombies that spawn in caves.",
       "item.enemyexpansion.petriboulder_spawn_egg": "Petriboulder Spawn Egg",
       "entity.enemyexpansion.scorpion": "Scorpion",
       "item.enemyexpansion.ghoul_spawn_egg": "Ghoul Spawn Egg",
@@ -5675,28 +5249,23 @@
       "gamerule.crawler_replacement_rule": "intruderReplacementRule",
       "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
-      "gamerule.silverkingDontSpawnAboveDeepslateRule.description": "Silverkings will not spawn above Y0.",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
-      "entity.enemyexpansion.spectre": "Spectre",
       "item.enemyexpansion.cinder_helm_chestplate": "",
+      "entity.enemyexpansion.spectre": "Spectre",
+      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
       "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
       "item.enemyexpansion.silverhat_helmet": "Silverhat",
       "item.enemyexpansion.spectral_boots": "",
-      "gamerule.intruderReplacementRule": "intruderReplacementRule",
       "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrifiedtroll Spawn Egg",
       "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
       "entity.enemyexpansion.meatmanzombie": "Meatman",
       "entity.enemyexpansion.zadybug": "Zadybug",
       "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
-      "item.enemyexpansion.cast_spell": "Caster Spell",
       "item.enemyexpansion.gallant_swings": "Gallant Swings",
+      "item.enemyexpansion.cast_spell": "Caster Spell",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
-      "gamerule.vampireReplacementRule": "Vampires replace Skeletons below Deepslate",
-      "gamerule.scorpionReplacementRule.description": "Enables Scorpions to replace 3/4rds of Spider spawns in Desert and Mesa biomes.",
-      "gamerule.trollReplacementRule": "Trolls replace Endermen below Deepslate",
       "item.enemyexpansion.suspicious_slice": "Suspicious Slice",
       "gamerule.silverking_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "gamerule.petriman_spawn_above_ground": "petrimanReplacementRule",
@@ -5709,29 +5278,26 @@
       "subtitles.troll.idle.1": "Troll growls",
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
-      "gamerule.crawlerDontSpawnAboveDeepslateRule": "Crawlers don\u0027t spawn above Deepslate",
-      "entity.enemyexpansion.gallant": "Gallant",
-      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "entity.enemyexpansion.gallant": "Gallant",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
       "entity.enemyexpansion.sprinter": "Sprinter",
       "gamerule.blazes_do_cinder_jump": "cindersoccasionallyreplaceblazes",
       "entity.enemyexpansion.crawler": "Crawler",
-      "gamerule.vampireDontSpawnAboveDeepslateRule": "Vampires don\u0027t spawn above Deepslate",
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
       "entity.enemyexpansion.casterfluu": "Goblin Caster",
       "item.enemyexpansion.slugvest_leggings": "-",
       "entity.enemyexpansion.baker": "Goblin Baker",
       "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
-      "gamerule.trollReplacementRule.description": "Trolls will replace Endermen that spawn below Y-20.",
       "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
       "entity.enemyexpansion.boar": "Boar",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
       "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
-      "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
       "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
+      "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
       "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
       "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "PheromoneSummon Spawn Egg",
@@ -5739,25 +5305,19 @@
       "item.enemyexpansion.slimehead_boots": "",
       "entity.enemyexpansion.frigid": "Frigid",
       "item.enemyexpansion.trollface_boots": "Phantasm Boots",
-      "gamerule.cinderReplacementRule.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
-      "gamerule.trollDontSpawnAboveDeepslateRule.description": "Trolls will not spawn above Y-15.",
       "death.attack.spectre": "%1$s was swallowed by the Spectre\u0027s grasp",
       "item.enemyexpansion.frigid_touch_projectile": "Frigid Touch",
       "item.enemyexpansion.invisicreeper_spawn_egg": "Invisicreeper Spawn Egg",
       "item.enemyexpansion.ghoul_spit": "Spit",
       "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
-      "gamerule.petrimanDontSpawnAboveGroundRule.description": "Petrimen will not spawn above Y25.",
       "entity.enemyexpansion.tarantula": "Tarantula",
-      "gamerule.tarantulaReplacementRule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
-      "item.enemyexpansion.slugvest_chestplate": "Slugvest",
       "item.enemyexpansion.trollface_chestplate": "",
+      "item.enemyexpansion.slugvest_chestplate": "Slugvest",
       "item.enemyexpansion.pheromone_projectile": "Wasp Pheromone",
-      "gamerule.crawlerDontSpawnAboveDeepslateRule.description": "Crawlers will not spawn above Y-15.",
       "entity.enemyexpansion.projectile_slimeball_throw": "a stray Slimeball",
       "entity.enemyexpansion.senior": "Senior",
       "gamerule.petriman_dont_spawn_above_ground": "petrimanReplacementRule",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
-      "gamerule.tarantulaReplacementRule": "increaseddripstonetarantulas",
       "item.enemyexpansion.healing_goo": "Healing Goo",
       "entity.enemyexpansion.troll": "Troll",
       "item.enemyexpansion.silverhat_leggings": "",
@@ -5783,7 +5343,6 @@
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
       "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
-      "gamerule.vampireReplacementRule.description": "Vampires will replace 3/4s of Skeletons that spawn in caves below Y-30.",
       "gamerule.petriman_replacement_rule": "cindersoccasionallyreplaceblazes",
       "entity.enemyexpansion.silverking": "Silverking",
       "entity.enemyexpansion.projectile_enemy_melee_projectile": "enemy attack",
@@ -5793,7 +5352,6 @@
       "entity.enemyexpansion.petricrawler": "Petricrawler",
       "entity.enemyexpansion.tarantulam": "Tarantula",
       "gamerule.petriman_random_rule.description": "Petrimen will replace Zombies that spawn in caves.",
-      "gamerule.trollDontSpawnAboveDeepslateRule": "Trolls don\u0027t spawn above Deepslate",
       "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.cinder_helm_leggings": "",
@@ -5814,21 +5372,17 @@
       "subtitles.troll.roar": "Troll roars",
       "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
       "item.enemyexpansion.slugvest_boots": "-",
-      "gamerule.petrimanReplacementRule": "Petrimen replace Zombies underground",
       "item.enemyexpansion.headbiter_chestplate": "Phantasm Cape",
       "item.enemyexpansion.petriman_spawn_egg": "Petriman Spawn Egg",
       "item.enemyexpansion.meathead_armor_chestplate": "Meathead Chestplate",
       "entity.enemyexpansion.biter": "Biter",
-      "gamerule.cinderReplacementRule": "cindersoccasionallyreplaceblazes",
       "item.enemyexpansion.propeller_spawn_egg": "Propeller Spawn Egg",
       "item.enemyexpansion.meatmanzombie_spawn_egg": "Meatman Spawn Egg",
       "advancements.bro_think_he_carti.descr": "Wear a Headbiter",
       "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
-      "gamerule.silverkingDontSpawnAboveDeepslateRule": "Silverkings don\u0027t spawn above Deepslate",
       "entity.enemyexpansion.equestrian": "Equestrian",
       "item.enemyexpansion.sprintshorts_chestplate": "-",
       "item.enemyexpansion.intruder_spawn_egg": "Intruder Spawn Egg",
-      "gamerule.petrimanRandomRule.description": "Petrimen will also randomly spawn Petricrawlers and Petriboulders, too.",
       "item.enemyexpansion.killstick": "Killstick",
       "item.enemyexpansion.wasp_sting_projectile": "Wasp Sting",
       "entity.enemyexpansion.projectile_huntsman_punch": "Huntsman\u0027s punch",
@@ -5850,22 +5404,17 @@
       "item.enemyexpansion.preposterous_portion": "Preposterous Portion",
       "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
       "item.enemyexpansion.slimehead_leggings": "",
-      "gamerule.vampireDontSpawnAboveDeepslateRule.description": "Vampires will not spawn above Y-15.",
       "gamerule.no_baby_zombies.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
-      "gamerule.intruderReplacementRule.description": "Intruders will replace Creepers that spawn in caves between Y-15 and Y25.",
       "item.enemyexpansion.zadybug_spawn_egg": "Zadybug Spawn Egg",
       "gamerule.troll_replacement_rule": "silverkingReplacementRule",
       "advancements.meathead_obtained.descr": "Obtain a Meat Hat",
       "item.enemyexpansion.silverking_spawn_egg": "Silverking Spawn Egg",
-      "gamerule.petrimanDontSpawnAboveGroundRule": "Petrimen don\u0027t spawn above caves",
       "gamerule.crawler_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
       "entity.enemyexpansion.slugger": "Slugger",
       "item.enemyexpansion.sprintshorts_leggings": "Sprintshorts",
-      "gamerule.petrimanRandomRule": "Random Petriman",
       "item.enemyexpansion.petricrawler_spawn_egg": "Petricrawler Spawn Egg",
       "item.enemyexpansion.troll_invincible": "Troll Invincibility",
       "item.enemyexpansion.meathead_armor_helmet": "Meat Head",
-      "gamerule.scorpionReplacementRule": "scorpionsreplacedesertspiders",
       "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.silverhat_boots": "",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
@@ -5883,7 +5432,6 @@
       "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
       "gamerule.petriman_random_rule": "petrimanReplacementRule",
       "item.enemyexpansion.cinder_spawn_egg": "Cinder Spawn Egg",
-      "gamerule.crawlerReplacementRule": "Crawlers replace Creepers below Deepslate",
       "item.enemyexpansion.sprintshorts_boots": "-",
       "item.enemyexpansion.cinder_scrap": "Cinder Scrap",
       "entity.enemyexpansion.zobgoblin": "Zobgoblin",
@@ -5895,9 +5443,7 @@
       "entity.enemyexpansion.gabble": "Gabble",
       "item.enemyexpansion.silverpet_spawn_egg": "Silverpet Spawn Egg",
       "gamerule.petriman_dont_spawn_above_ground_rule.description": "Petrimen will replace Zombies that spawn in caves.",
-      "gamerule.silverkingReplacementRule": "Silverkings replace Spiders underground",
       "item.enemyexpansion.rancher_spawn_egg": "Goblin Rancher Spawn Egg",
-      "gamerule.silverkingReplacementRule.description": "Silverkings will replace 1/2 of Spiders that spawn in Deepslate caves.",
       "subtitles.troll.death": "Troll dies",
       "item.enemyexpansion.phantasm_helmet": "Phantasm Cowl",
       "advancements.vampire_slayer.title": "Vampire Slayer",
@@ -5913,7 +5459,6 @@
       "entity.enemyexpansion.projectile_cast_spell": "Caster\u0027s spell",
       "gamerule.petriman_dont_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
       "item.enemyexpansion.cinder_fire_charge": "Cinder Fire Charge",
-      "gamerule.crawlerReplacementRule.description": "Crawlers will replace Creepers that spawn in caves below Y-15.",
       "item.enemyexpansion.huntsmanskeleton_spawn_egg": "Huntsman Skeleton Spawn Egg",
       "entity.enemyexpansion.slimeheadzombie": "Slimehead",
       "entity.enemyexpansion.propeller": "Propeller",
