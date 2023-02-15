@@ -129,11 +129,6 @@ public class WaspEntity extends Monster implements IAnimatable {
 		return super.getPassengersRidingOffset() + 0.5;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(EnemyexpansionModItems.PHEROMONE_PROJECTILE.get()));
-	}
-
 	@Override
 	public SoundEvent getAmbientSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.loop"));

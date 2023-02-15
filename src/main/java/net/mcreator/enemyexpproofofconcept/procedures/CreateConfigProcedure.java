@@ -111,6 +111,43 @@ public class CreateConfigProcedure {
 		if (!(mainjsonobject.get("spiderTarantulaReplacement") != null)) {
 			mainjsonobject.addProperty("spiderTarantulaReplacement", 1);
 		}
+		if (!(mainjsonobject.get("hatWearerSpawningExplained") != null)) {
+			mainjsonobject.addProperty("hatWearerSpawningExplained",
+					"Some mobs will spawn wearing certain special gear. Toggle the rates of those here.");
+		}
+		if (!(mainjsonobject.get("meatHeadWearerSpawning") != null)) {
+			mainjsonobject.addProperty("meatHeadWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("headbittenWearerSpawning") != null)) {
+			mainjsonobject.addProperty("headbittenWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("slimeheadWearerSpawning") != null)) {
+			mainjsonobject.addProperty("slimeheadWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("spiderlatchWearerSpawning") != null)) {
+			mainjsonobject.addProperty("spiderlatchWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("silverheadWearerSpawning") != null)) {
+			mainjsonobject.addProperty("silverheadWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("bullSkullWearerSpawning") != null)) {
+			mainjsonobject.addProperty("bullSkullWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("phantasmWearerSpawning") != null)) {
+			mainjsonobject.addProperty("phantasmWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("spectralWearerSpawning") != null)) {
+			mainjsonobject.addProperty("spectralWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("ironWearerSpawning") != null)) {
+			mainjsonobject.addProperty("ironWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("chainmailWearerSpawning") != null)) {
+			mainjsonobject.addProperty("chainmailWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("leatherWearerSpawning") != null)) {
+			mainjsonobject.addProperty("leatherWearerSpawning", 0.01);
+		}
 		{
 			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 			try {

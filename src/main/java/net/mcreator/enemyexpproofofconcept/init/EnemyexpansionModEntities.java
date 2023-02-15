@@ -21,13 +21,13 @@ import net.mcreator.enemyexpproofofconcept.entity.ZadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspStingProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
 import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
+import net.mcreator.enemyexpproofofconcept.entity.TrollSpitEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollInvincibleEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TarantulaEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SluggerEntity;
-import net.mcreator.enemyexpproofofconcept.entity.SlimeheadzombieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SlimeballThrowEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SilverpetEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SilverkingEntity;
@@ -42,7 +42,6 @@ import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetricrawlerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetriboulderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
-import net.mcreator.enemyexpproofofconcept.entity.MeatmanzombieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.InvisicreeperEntity;
 import net.mcreator.enemyexpproofofconcept.entity.IntruderEntity;
@@ -71,6 +70,7 @@ import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CasterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CastSpellEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CakeroverEntity;
+import net.mcreator.enemyexpproofofconcept.entity.BullEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BouncerKickProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BouncerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BoarEntity;
@@ -236,9 +236,6 @@ public class EnemyexpansionModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(TrollEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<MeatmanzombieEntity>> MEATMANZOMBIE = register("meatmanzombie",
-			EntityType.Builder.<MeatmanzombieEntity>of(MeatmanzombieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MeatmanzombieEntity::new).fireImmune().sized(0.6f, 1.95f));
 	public static final RegistryObject<EntityType<GoblinFearEntity>> GOBLIN_FEAR = register("goblin_fear",
 			EntityType.Builder.<GoblinFearEntity>of(GoblinFearEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(GoblinFearEntity::new)
@@ -254,9 +251,6 @@ public class EnemyexpansionModEntities {
 					.setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(InvisicreeperEntity::new)
 
 					.sized(0f, 0f));
-	public static final RegistryObject<EntityType<SlimeheadzombieEntity>> SLIMEHEADZOMBIE = register("slimeheadzombie",
-			EntityType.Builder.<SlimeheadzombieEntity>of(SlimeheadzombieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SlimeheadzombieEntity::new).fireImmune().sized(0.6f, 1.95f));
 	public static final RegistryObject<EntityType<VampireEntity>> VAMPIRE = register("vampire",
 			EntityType.Builder.<VampireEntity>of(VampireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(VampireEntity::new)
@@ -267,6 +261,27 @@ public class EnemyexpansionModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(BiterEntity::new)
 
 					.sized(0.9f, 1.95f));
+	public static final RegistryObject<EntityType<PetrifiedtrollEntity>> PETRIFIEDTROLL = register("petrifiedtroll",
+			EntityType.Builder.<PetrifiedtrollEntity>of(PetrifiedtrollEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PetrifiedtrollEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PropellerEntity>> PROPELLER = register("propeller",
+			EntityType.Builder.<PropellerEntity>of(PropellerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PropellerEntity::new).fireImmune().sized(0.6f, 1.5f));
+	public static final RegistryObject<EntityType<FlutterflyEntity>> FLUTTERFLY = register("flutterfly",
+			EntityType.Builder.<FlutterflyEntity>of(FlutterflyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlutterflyEntity::new)
+
+					.sized(0.6f, 2.8f));
+	public static final RegistryObject<EntityType<BoarEntity>> BOAR = register("boar",
+			EntityType.Builder.<BoarEntity>of(BoarEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(BoarEntity::new)
+
+					.sized(0.95f, 0.65f));
+	public static final RegistryObject<EntityType<BullEntity>> BULL = register("bull",
+			EntityType.Builder.<BullEntity>of(BullEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(BullEntity::new)
+
+					.sized(1.3f, 1.55f));
 	public static final RegistryObject<EntityType<PheromoneProjectileEntity>> PHEROMONE_PROJECTILE = register("projectile_pheromone_projectile",
 			EntityType.Builder.<PheromoneProjectileEntity>of(PheromoneProjectileEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(PheromoneProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
@@ -325,22 +340,9 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<TrollInvincibleEntity>of(TrollInvincibleEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(TrollInvincibleEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<PetrifiedtrollEntity>> PETRIFIEDTROLL = register("petrifiedtroll",
-			EntityType.Builder.<PetrifiedtrollEntity>of(PetrifiedtrollEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PetrifiedtrollEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<PropellerEntity>> PROPELLER = register("propeller",
-			EntityType.Builder.<PropellerEntity>of(PropellerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PropellerEntity::new).fireImmune().sized(0.6f, 1.5f));
-	public static final RegistryObject<EntityType<FlutterflyEntity>> FLUTTERFLY = register("flutterfly",
-			EntityType.Builder.<FlutterflyEntity>of(FlutterflyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlutterflyEntity::new)
-
-					.sized(0.6f, 2.8f));
-	public static final RegistryObject<EntityType<BoarEntity>> BOAR = register("boar",
-			EntityType.Builder.<BoarEntity>of(BoarEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(BoarEntity::new)
-
-					.sized(0.95f, 0.65f));
+	public static final RegistryObject<EntityType<TrollSpitEntity>> TROLL_SPIT = register("projectile_troll_spit",
+			EntityType.Builder.<TrollSpitEntity>of(TrollSpitEntity::new, MobCategory.MISC).setCustomClientFactory(TrollSpitEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -382,17 +384,16 @@ public class EnemyexpansionModEntities {
 			CrawlerEntity.init();
 			IntruderEntity.init();
 			TrollEntity.init();
-			MeatmanzombieEntity.init();
 			GoblinFearEntity.init();
 			SilverpetEntity.init();
 			InvisicreeperEntity.init();
-			SlimeheadzombieEntity.init();
 			VampireEntity.init();
 			BiterEntity.init();
 			PetrifiedtrollEntity.init();
 			PropellerEntity.init();
 			FlutterflyEntity.init();
 			BoarEntity.init();
+			BullEntity.init();
 		});
 	}
 
@@ -431,16 +432,15 @@ public class EnemyexpansionModEntities {
 		event.put(CRAWLER.get(), CrawlerEntity.createAttributes().build());
 		event.put(INTRUDER.get(), IntruderEntity.createAttributes().build());
 		event.put(TROLL.get(), TrollEntity.createAttributes().build());
-		event.put(MEATMANZOMBIE.get(), MeatmanzombieEntity.createAttributes().build());
 		event.put(GOBLIN_FEAR.get(), GoblinFearEntity.createAttributes().build());
 		event.put(SILVERPET.get(), SilverpetEntity.createAttributes().build());
 		event.put(INVISICREEPER.get(), InvisicreeperEntity.createAttributes().build());
-		event.put(SLIMEHEADZOMBIE.get(), SlimeheadzombieEntity.createAttributes().build());
 		event.put(VAMPIRE.get(), VampireEntity.createAttributes().build());
 		event.put(BITER.get(), BiterEntity.createAttributes().build());
 		event.put(PETRIFIEDTROLL.get(), PetrifiedtrollEntity.createAttributes().build());
 		event.put(PROPELLER.get(), PropellerEntity.createAttributes().build());
 		event.put(FLUTTERFLY.get(), FlutterflyEntity.createAttributes().build());
 		event.put(BOAR.get(), BoarEntity.createAttributes().build());
+		event.put(BULL.get(), BullEntity.createAttributes().build());
 	}
 }

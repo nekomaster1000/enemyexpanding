@@ -11,7 +11,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -31,27 +31,30 @@ public class HeadbiterHarmingProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(),
+					event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
+		execute(null, world, x, y, z, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity sourceentity) {
+		if (sourceentity == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
+		if ((sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 				.getItem() == EnemyexpansionModItems.HEADBITER_HELMET.get()) {
-			if (!(entity instanceof Player)) {
+			if (sourceentity instanceof LivingEntity _entity)
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 210, 0, (false), (false)));
+			if (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMobType() == MobType.UNDEAD : false) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performCommand(
 							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 									_level.getServer(), null).withSuppressedOutput(),
 							"/summon area_effect_cloud ~ ~.75 ~ {CustomName:\"\\\"Headbiter\\\"\",Radius:0.7f,Duration:30,Effects:[{Id:7b,Amplifier:1b}]}");
 			}
-			if (entity instanceof Player) {
+			if (!(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMobType() == MobType.UNDEAD : false)) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performCommand(
 							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
@@ -78,11 +81,11 @@ public class HeadbiterHarmingProcedure {
 					}
 
 					private void run() {
-						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 65, 0, (false), (true)));
+						if (sourceentity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 0, (false), (true)));
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 10);
+				}.start(world, 2);
 			}
 		}
 	}

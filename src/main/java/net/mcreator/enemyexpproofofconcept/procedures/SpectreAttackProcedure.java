@@ -118,15 +118,15 @@ public class SpectreAttackProcedure {
 						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 5));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 600, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 1200, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 12000, 4));
+							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 4));
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.ENCHANTED_HIT, x, y, z, 4, 0.4, 0.4, 0.4, 0.3);
 						for (int index0 = 0; index0 < (int) (10); index0++) {

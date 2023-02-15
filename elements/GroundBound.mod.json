@@ -3,16 +3,16 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Groundbound",
-    "icon": "invulnerability.png",
+    "icon": "ground_bound.png",
     "color": {
-      "value": -10079488,
+      "value": -13434778,
       "falpha": 0.0
     },
     "isInstant": true,
     "isBad": true,
     "isBenefitical": false,
-    "renderStatusInInventory": false,
-    "renderStatusInHUD": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
     "onActiveTick": {
       "name": "GroundBoundActive"
     }

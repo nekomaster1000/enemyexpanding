@@ -32,6 +32,7 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -74,6 +75,7 @@ public class BoarEntity extends Pig implements IAnimatable {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -88,12 +90,12 @@ public class BoarEntity extends Pig implements IAnimatable {
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (1.8 + entity.getBbWidth() * entity.getBbWidth());
+				return (double) (1.7 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(4, new FloatGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
+		this.goalSelector.addGoal(5, new AvoidEntityGoal<>(this, Zombie.class, (float) 8, 1, 1.2));
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
 		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers());
 	}
@@ -101,6 +103,11 @@ public class BoarEntity extends Pig implements IAnimatable {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
@@ -131,7 +138,7 @@ public class BoarEntity extends Pig implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.28);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.26);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);

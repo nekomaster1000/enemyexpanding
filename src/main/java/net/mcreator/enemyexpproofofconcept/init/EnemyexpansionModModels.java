@@ -24,8 +24,10 @@ import net.mcreator.enemyexpproofofconcept.client.model.Modelmeatman;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelhuntsman;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelheadbiter;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelfrigid_zombie;
+import net.mcreator.enemyexpproofofconcept.client.model.Modelflutterfliers;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelequestrian_zombie;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelcinderhelmet;
+import net.mcreator.enemyexpproofofconcept.client.model.Modelbull_skull;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class EnemyexpansionModModels {
@@ -40,9 +42,11 @@ public class EnemyexpansionModModels {
 		event.registerLayerDefinition(Modelsilverhat.LAYER_LOCATION, Modelsilverhat::createBodyLayer);
 		event.registerLayerDefinition(meathat.LAYER_LOCATION, meathat::createBodyLayer);
 		event.registerLayerDefinition(Modelsenior_zombie.LAYER_LOCATION, Modelsenior_zombie::createBodyLayer);
+		event.registerLayerDefinition(Modelbull_skull.LAYER_LOCATION, Modelbull_skull::createBodyLayer);
 		event.registerLayerDefinition(Modelmeature.LAYER_LOCATION, Modelmeature::createBodyLayer);
 		event.registerLayerDefinition(Modelspectral_cloak.LAYER_LOCATION, Modelspectral_cloak::createBodyLayer);
 		event.registerLayerDefinition(Modelsprinter_zombie.LAYER_LOCATION, Modelsprinter_zombie::createBodyLayer);
+		event.registerLayerDefinition(Modelflutterfliers.LAYER_LOCATION, Modelflutterfliers::createBodyLayer);
 		event.registerLayerDefinition(Modeltrollface.LAYER_LOCATION, Modeltrollface::createBodyLayer);
 		event.registerLayerDefinition(Modelcinderhelmet.LAYER_LOCATION, Modelcinderhelmet::createBodyLayer);
 		event.registerLayerDefinition(Modelhuntsman.LAYER_LOCATION, Modelhuntsman::createBodyLayer);

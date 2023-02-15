@@ -43,6 +43,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
@@ -52,6 +53,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.PetrimanSpawningProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.PetrimanLightHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.PetrimanHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabyZombiesProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -111,10 +113,20 @@ public class PetrimanEntity extends Monster implements IAnimatable {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = PetrimanEntity.this.getX();
+				double y = PetrimanEntity.this.getY();
+				double z = PetrimanEntity.this.getZ();
+				Entity entity = PetrimanEntity.this;
+				Level world = PetrimanEntity.this.level;
+				return super.canUse() && PetrimanLightHostilityProcedure.execute(world, x, y, z);
+			}
+		});
 	}
 
 	@Override

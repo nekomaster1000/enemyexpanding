@@ -21,69 +21,59 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.procedures.MeatmanReplacementProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.BullSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-
-import javax.annotation.Nullable;
 
 import java.util.Set;
 
 @Mod.EventBusSubscriber
-public class SlimeheadzombieEntity extends Monster implements IAnimatable {
+public class BullEntity extends Cow implements IAnimatable {
 	private AnimationFactory factory = GeckoLibUtil.createFactory(this);
 	private boolean swinging;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("swamp"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("badlands"), new ResourceLocation("savanna_plateau"),
+			new ResourceLocation("wooded_badlands"), new ResourceLocation("savanna"), new ResourceLocation("windswept_savanna"),
+			new ResourceLocation("desert"), new ResourceLocation("eroded_badlands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.SLIMEHEADZOMBIE.get(), 60, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.BULL.get(), 15, 1, 5));
 	}
 
-	public SlimeheadzombieEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(EnemyexpansionModEntities.SLIMEHEADZOMBIE.get(), world);
+	public BullEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(EnemyexpansionModEntities.BULL.get(), world);
 	}
 
-	public SlimeheadzombieEntity(EntityType<SlimeheadzombieEntity> type, Level world) {
+	public BullEntity(EntityType<BullEntity> type, Level world) {
 		super(type, world);
-		xpReward = 8;
+		xpReward = 1;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -94,84 +84,68 @@ public class SlimeheadzombieEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.45));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, true) {
+		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.5, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.6));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new RandomSwimmingGoal(this, 2, 40));
+		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(4, new FloatGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
+		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
 	@Override
 	public MobType getMobType() {
-		return MobType.UNDEAD;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Items.ROTTEN_FLESH));
+		return MobType.UNDEFINED;
 	}
 
 	@Override
-	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.ambient"));
-	}
-
-	@Override
-	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.step")), 0.15f, 1);
-	}
-
-	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.hurt"));
-	}
-
-	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.death"));
-	}
-
-	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
-			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		MeatmanReplacementProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
-		return retval;
-	}
-
-	@Override
-	public boolean isPushable() {
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
 
 	@Override
-	protected void doPush(Entity entityIn) {
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.ambient"));
 	}
 
 	@Override
-	protected void pushEntities() {
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), 0.15f, 1);
+	}
+
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.hurt"));
+	}
+
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.death"));
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.SLIMEHEADZOMBIE.get(), SpawnPlacements.Type.ON_GROUND,
-				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
-						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.BULL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> {
+					int x = pos.getX();
+					int y = pos.getY();
+					int z = pos.getZ();
+					return BullSpawningProcedure.execute(world, x, y, z);
+				});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.27);
-		builder = builder.add(Attributes.MAX_HEALTH, 16);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
+		builder = builder.add(Attributes.MAX_HEALTH, 20);
+		builder = builder.add(Attributes.ARMOR, 6);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 7);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 20);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.3);
 		return builder;
 	}
 
@@ -231,6 +205,14 @@ public class SlimeheadzombieEntity extends Monster implements IAnimatable {
 			}
 		}
 		return PlayState.CONTINUE;
+	}
+
+	@Override
+	protected void tickDeath() {
+		++this.deathTime;
+		if (this.deathTime == 20) {
+			this.remove(BullEntity.RemovalReason.KILLED);
+		}
 	}
 
 	@Override

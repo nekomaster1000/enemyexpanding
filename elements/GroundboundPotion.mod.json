@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Groundbinding",
+    "splashName": "Splash Potion of Groundbinding",
+    "lingeringName": "Lingering Potion of Groundbinding",
+    "arrowName": "Arrow of Groundbinding",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:GroundBound"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

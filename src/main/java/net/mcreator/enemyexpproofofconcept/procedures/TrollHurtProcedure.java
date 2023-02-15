@@ -23,9 +23,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
+import net.mcreator.enemyexpproofofconcept.entity.TrollSpitEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
-import net.mcreator.enemyexpproofofconcept.entity.GhoulSpitEntity;
 
 import java.util.Random;
 
@@ -103,13 +103,13 @@ public class TrollHurtProcedure {
 									if (!projectileLevel.isClientSide()) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new GhoulSpitEntity(EnemyexpansionModEntities.GHOUL_SPIT.get(), level);
+												AbstractArrow entityToSpawn = new TrollSpitEntity(EnemyexpansionModEntities.TROLL_SPIT.get(), level);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
 												entityToSpawn.setSilent(true);
 												return entityToSpawn;
 											}
-										}.getArrow(projectileLevel, 1, 5);
+										}.getArrow(projectileLevel, 1, 1);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z,
 												(float) 1.5, 0);
@@ -123,14 +123,14 @@ public class TrollHurtProcedure {
 										if (!projectileLevel.isClientSide()) {
 											Projectile _entityToSpawn = new Object() {
 												public Projectile getArrow(Level level, float damage, int knockback) {
-													AbstractArrow entityToSpawn = new GhoulSpitEntity(EnemyexpansionModEntities.GHOUL_SPIT.get(),
+													AbstractArrow entityToSpawn = new TrollSpitEntity(EnemyexpansionModEntities.TROLL_SPIT.get(),
 															level);
 													entityToSpawn.setBaseDamage(damage);
 													entityToSpawn.setKnockback(knockback);
 													entityToSpawn.setSilent(true);
 													return entityToSpawn;
 												}
-											}.getArrow(projectileLevel, 1, 4);
+											}.getArrow(projectileLevel, 1, 1);
 											_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 											_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y,
 													_shootFrom.getLookAngle().z, 2, (float) Mth.nextDouble(new Random(), 1, 90));

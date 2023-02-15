@@ -28,6 +28,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModPotions;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModParticleTypes;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
@@ -54,6 +55,7 @@ public class EnemyexpansionMod {
 		EnemyexpansionModEntities.REGISTRY.register(bus);
 
 		EnemyexpansionModMobEffects.REGISTRY.register(bus);
+		EnemyexpansionModPotions.REGISTRY.register(bus);
 
 		EnemyexpansionModParticleTypes.REGISTRY.register(bus);
 		GeckoLib.initialize();

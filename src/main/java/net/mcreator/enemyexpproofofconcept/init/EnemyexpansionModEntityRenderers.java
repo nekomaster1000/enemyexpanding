@@ -21,7 +21,6 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.TarantulaRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SprinterRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SpectreRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SluggerRenderer;
-import net.mcreator.enemyexpproofofconcept.client.renderer.SlimeheadzombieRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SilverpetRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SilverkingRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SeniorRenderer;
@@ -34,7 +33,6 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.PetrifiedtrollRendere
 import net.mcreator.enemyexpproofofconcept.client.renderer.PetricrawlerRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PetriboulderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.MeatureRenderer;
-import net.mcreator.enemyexpproofofconcept.client.renderer.MeatmanzombieRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.LadybugRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.InvisicreeperRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.IntruderRenderer;
@@ -53,6 +51,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.CrawlerExplosiveRende
 import net.mcreator.enemyexpproofofconcept.client.renderer.CinderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.CasterRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.CakeroverRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.BullRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BouncerRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BoarRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BiterRenderer;
@@ -95,13 +94,16 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.CRAWLER.get(), CrawlerRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.INTRUDER.get(), IntruderRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL.get(), TrollRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.MEATMANZOMBIE.get(), MeatmanzombieRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.GOBLIN_FEAR.get(), GoblinFearRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERPET.get(), SilverpetRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.INVISICREEPER.get(), InvisicreeperRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.SLIMEHEADZOMBIE.get(), SlimeheadzombieRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.VAMPIRE.get(), VampireRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.BITER.get(), BiterRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.PETRIFIEDTROLL.get(), PetrifiedtrollRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.PROPELLER.get(), PropellerRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.FLUTTERFLY.get(), FlutterflyRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.BOAR.get(), BoarRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.BULL.get(), BullRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHEROMONE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HUNTSMAN_PUNCH.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), ThrownItemRenderer::new);
@@ -118,9 +120,6 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.CAST_SPELL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.CRAWLER_EXPLOSIVE.get(), CrawlerExplosiveRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_INVINCIBLE.get(), TrollInvincibleRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.PETRIFIEDTROLL.get(), PetrifiedtrollRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.PROPELLER.get(), PropellerRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.FLUTTERFLY.get(), FlutterflyRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.BOAR.get(), BoarRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_SPIT.get(), ThrownItemRenderer::new);
 	}
 }

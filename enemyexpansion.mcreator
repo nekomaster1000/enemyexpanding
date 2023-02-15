@@ -3,7 +3,7 @@
     {
       "name": "SluggerzombieEntityIsHurt",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sluggerzombie_entity_is_hurt",
@@ -46,7 +46,7 @@
     {
       "name": "TarantulaEntityIsHurt",
       "type": "procedure",
-      "sortid": 58,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tarantula_entity_is_hurt",
@@ -72,7 +72,7 @@
     {
       "name": "ScorpionEntityIsHurt",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_entity_is_hurt",
@@ -89,7 +89,7 @@
     {
       "name": "MeatheadArmor",
       "type": "armor",
-      "sortid": 44,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead_armor",
@@ -104,7 +104,7 @@
     {
       "name": "MeatheadSpawn",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead_spawn",
@@ -135,18 +135,9 @@
       "path": "~/Items"
     },
     {
-      "name": "Meatmanzombie",
-      "type": "livingentity",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meatmanzombie",
-      "path": "~/Monsters"
-    },
-    {
       "name": "SeniorzombieEntityIsHurt",
       "type": "procedure",
-      "sortid": 61,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "seniorzombie_entity_is_hurt",
@@ -163,7 +154,7 @@
     {
       "name": "SprinterzombieEntityIsHurt",
       "type": "procedure",
-      "sortid": 62,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprinterzombie_entity_is_hurt",
@@ -200,7 +191,7 @@
     {
       "name": "MeatheadArmorHelmetTickEvent",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead_armor_helmet_tick_event",
@@ -217,7 +208,7 @@
     {
       "name": "Slugvest",
       "type": "armor",
-      "sortid": 45,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slugvest",
@@ -232,7 +223,7 @@
     {
       "name": "SluggerLootTable",
       "type": "loottable",
-      "sortid": 64,
+      "sortid": 73,
       "compiles": true,
       "locked_code": true,
       "registry_name": "slugger_loot_table",
@@ -241,7 +232,7 @@
     {
       "name": "Sprintshorts",
       "type": "armor",
-      "sortid": 46,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprintshorts",
@@ -256,7 +247,7 @@
     {
       "name": "SprinterLootTable",
       "type": "loottable",
-      "sortid": 65,
+      "sortid": 74,
       "compiles": true,
       "locked_code": true,
       "registry_name": "sprinter_loot_table",
@@ -265,7 +256,7 @@
     {
       "name": "Sluggerverticalknockback",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sluggerverticalknockback",
@@ -286,7 +277,7 @@
     {
       "name": "EatMeatball",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "eat_meatball",
@@ -303,7 +294,7 @@
     {
       "name": "MeatureMeatball",
       "type": "item",
-      "sortid": 53,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_meatball",
@@ -312,7 +303,7 @@
     {
       "name": "HatIntoMeatball",
       "type": "recipe",
-      "sortid": 68,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hat_into_meatball",
@@ -330,7 +321,7 @@
     {
       "name": "HuntsmanPunch",
       "type": "rangeditem",
-      "sortid": 69,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "huntsman_punch",
@@ -339,7 +330,7 @@
     {
       "name": "HuntsmanGetAway",
       "type": "procedure",
-      "sortid": 70,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "huntsman_get_away",
@@ -356,7 +347,7 @@
     {
       "name": "HuntPunchSound",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hunt_punch_sound",
@@ -398,7 +389,7 @@
     {
       "name": "WaspModel",
       "type": "procedure",
-      "sortid": 72,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_model",
@@ -410,7 +401,7 @@
     {
       "name": "WaspDodgePattern",
       "type": "procedure",
-      "sortid": 73,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_dodge_pattern",
@@ -435,7 +426,7 @@
     {
       "name": "WaspSlowFalling",
       "type": "procedure",
-      "sortid": 74,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_slow_falling",
@@ -468,7 +459,7 @@
     {
       "name": "MeatheadObtained",
       "type": "achievement",
-      "sortid": 75,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead_obtained",
@@ -486,7 +477,7 @@
     {
       "name": "PheromoneSummonModel",
       "type": "procedure",
-      "sortid": 76,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pheromone_summon_model",
@@ -498,7 +489,7 @@
     {
       "name": "PheroTimer",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phero_timer",
@@ -519,7 +510,7 @@
     {
       "name": "PheromoneHits",
       "type": "procedure",
-      "sortid": 78,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pheromone_hits",
@@ -548,7 +539,7 @@
     {
       "name": "PheromoneProjectile",
       "type": "rangeditem",
-      "sortid": 42,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pheromone_projectile",
@@ -557,7 +548,7 @@
     {
       "name": "PheroSting",
       "type": "procedure",
-      "sortid": 79,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phero_sting",
@@ -594,7 +585,7 @@
     {
       "name": "OnMyWaspBiz",
       "type": "achievement",
-      "sortid": 80,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_my_wasp_biz",
@@ -603,7 +594,7 @@
     {
       "name": "PheromoneThrown",
       "type": "procedure",
-      "sortid": 81,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pheromone_thrown",
@@ -628,7 +619,7 @@
     {
       "name": "FrigidColdTouch",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frigid_cold_touch",
@@ -649,7 +640,7 @@
     {
       "name": "ScorpionSting",
       "type": "procedure",
-      "sortid": 83,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_sting",
@@ -674,7 +665,7 @@
     {
       "name": "TarantulaModel",
       "type": "procedure",
-      "sortid": 85,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tarantula_model",
@@ -686,7 +677,7 @@
     {
       "name": "Sprinter",
       "type": "livingentity",
-      "sortid": 8,
+      "sortid": 7,
       "compiles": true,
       "locked_code": true,
       "registry_name": "sprinter",
@@ -695,7 +686,7 @@
     {
       "name": "SprinterModel",
       "type": "procedure",
-      "sortid": 89,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprinter_model",
@@ -707,7 +698,7 @@
     {
       "name": "Slugger",
       "type": "livingentity",
-      "sortid": 9,
+      "sortid": 8,
       "compiles": true,
       "locked_code": true,
       "registry_name": "slugger",
@@ -716,7 +707,7 @@
     {
       "name": "SluggerModel",
       "type": "procedure",
-      "sortid": 90,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slugger_model",
@@ -728,7 +719,7 @@
     {
       "name": "ScorpionModel",
       "type": "procedure",
-      "sortid": 91,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_model",
@@ -740,7 +731,7 @@
     {
       "name": "ScorpionLayer",
       "type": "procedure",
-      "sortid": 92,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_layer",
@@ -752,7 +743,7 @@
     {
       "name": "NoBabies",
       "type": "procedure",
-      "sortid": 93,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "no_babies",
@@ -769,7 +760,7 @@
     {
       "name": "Zombievariants",
       "type": "tag",
-      "sortid": 94,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "zombievariants",
@@ -778,7 +769,7 @@
     {
       "name": "SprinterSprinting",
       "type": "procedure",
-      "sortid": 95,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprinter_sprinting",
@@ -795,7 +786,7 @@
     {
       "name": "SeniorModel",
       "type": "procedure",
-      "sortid": 96,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "senior_model",
@@ -807,7 +798,7 @@
     {
       "name": "Senior",
       "type": "livingentity",
-      "sortid": 10,
+      "sortid": 9,
       "compiles": true,
       "locked_code": true,
       "registry_name": "senior",
@@ -816,7 +807,7 @@
     {
       "name": "EnemyMeleeProjectile",
       "type": "rangeditem",
-      "sortid": 97,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "enemy_melee_projectile"
@@ -824,7 +815,7 @@
     {
       "name": "EnemyMeleeProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 98,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "enemy_melee_projectile_while_projectile_flying_tick",
@@ -844,7 +835,7 @@
     {
       "name": "MeleeProjectileAttack",
       "type": "procedure",
-      "sortid": 99,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "melee_projectile_attack",
@@ -880,7 +871,7 @@
     {
       "name": "EquestrianModel",
       "type": "procedure",
-      "sortid": 100,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "equestrian_model",
@@ -892,7 +883,7 @@
     {
       "name": "Equestrian",
       "type": "livingentity",
-      "sortid": 11,
+      "sortid": 10,
       "compiles": true,
       "locked_code": true,
       "registry_name": "equestrian",
@@ -901,7 +892,7 @@
     {
       "name": "FrigidModel",
       "type": "procedure",
-      "sortid": 101,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frigid_model",
@@ -913,7 +904,7 @@
     {
       "name": "Frigid",
       "type": "livingentity",
-      "sortid": 12,
+      "sortid": 11,
       "compiles": true,
       "locked_code": true,
       "registry_name": "frigid",
@@ -922,7 +913,7 @@
     {
       "name": "EquestrianEntityIsHurt",
       "type": "procedure",
-      "sortid": 102,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "equestrian_entity_is_hurt",
@@ -939,7 +930,7 @@
     {
       "name": "FrigidHurt",
       "type": "procedure",
-      "sortid": 103,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frigid_hurt",
@@ -972,7 +963,7 @@
     {
       "name": "WaspStingProjectile",
       "type": "rangeditem",
-      "sortid": 104,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_sting_projectile",
@@ -981,7 +972,7 @@
     {
       "name": "WaspStingHit",
       "type": "procedure",
-      "sortid": 105,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_sting_hit",
@@ -1018,7 +1009,7 @@
     {
       "name": "EquestrianLeap",
       "type": "procedure",
-      "sortid": 106,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "equestrian_leap",
@@ -1039,7 +1030,7 @@
     {
       "name": "FrigidTouchProjectile",
       "type": "rangeditem",
-      "sortid": 107,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frigid_touch_projectile",
@@ -1048,7 +1039,7 @@
     {
       "name": "FrigidTouch",
       "type": "procedure",
-      "sortid": 108,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frigid_touch",
@@ -1063,42 +1054,9 @@
       "path": "~/Monsters"
     },
     {
-      "name": "MeatmanReplacement",
-      "type": "procedure",
-      "sortid": 109,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meatman_replacement",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "Ladybug",
       "type": "livingentity",
-      "sortid": 13,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug",
@@ -1107,7 +1065,7 @@
     {
       "name": "LadybugModel",
       "type": "procedure",
-      "sortid": 110,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_model",
@@ -1119,7 +1077,7 @@
     {
       "name": "Zadybug",
       "type": "livingentity",
-      "sortid": 14,
+      "sortid": 13,
       "compiles": true,
       "locked_code": true,
       "registry_name": "zadybug",
@@ -1128,7 +1086,7 @@
     {
       "name": "ZadybugModel",
       "type": "procedure",
-      "sortid": 111,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "zadybug_model",
@@ -1140,7 +1098,7 @@
     {
       "name": "LadybugZombification",
       "type": "procedure",
-      "sortid": 112,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_zombification",
@@ -1173,7 +1131,7 @@
     {
       "name": "HealingGooRegen",
       "type": "procedure",
-      "sortid": 113,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo_regen",
@@ -1190,7 +1148,7 @@
     {
       "name": "HealingGoo",
       "type": "rangeditem",
-      "sortid": 114,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo",
@@ -1199,7 +1157,7 @@
     {
       "name": "HealingGooThrow",
       "type": "procedure",
-      "sortid": 115,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo_throw",
@@ -1236,7 +1194,7 @@
     {
       "name": "HealingGooItem",
       "type": "item",
-      "sortid": 43,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo_item",
@@ -1245,7 +1203,7 @@
     {
       "name": "LadybugHealingGooBestowing",
       "type": "procedure",
-      "sortid": 116,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_healing_goo_bestowing",
@@ -1286,7 +1244,7 @@
     {
       "name": "Killstick",
       "type": "item",
-      "sortid": 117,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "killstick",
@@ -1295,7 +1253,7 @@
     {
       "name": "LadybugFalls",
       "type": "procedure",
-      "sortid": 118,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_falls",
@@ -1312,7 +1270,7 @@
     {
       "name": "ZadybugFalls",
       "type": "procedure",
-      "sortid": 119,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "zadybug_falls",
@@ -1329,7 +1287,7 @@
     {
       "name": "MeatureModel",
       "type": "procedure",
-      "sortid": 120,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_model",
@@ -1341,7 +1299,7 @@
     {
       "name": "HealingGooStewUse",
       "type": "procedure",
-      "sortid": 121,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo_stew_use",
@@ -1358,7 +1316,7 @@
     {
       "name": "HealingGooStew",
       "type": "item",
-      "sortid": 54,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo_soup",
@@ -1367,7 +1325,7 @@
     {
       "name": "HealingGooSoup",
       "type": "recipe",
-      "sortid": 122,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_goo_soup",
@@ -1376,7 +1334,7 @@
     {
       "name": "Spectre",
       "type": "livingentity",
-      "sortid": 15,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre",
@@ -1385,7 +1343,7 @@
     {
       "name": "SpectreModel",
       "type": "procedure",
-      "sortid": 123,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_model",
@@ -1397,7 +1355,7 @@
     {
       "name": "SpectreVanish",
       "type": "procedure",
-      "sortid": 124,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_vanish",
@@ -1430,7 +1388,7 @@
     {
       "name": "SpectreJump",
       "type": "procedure",
-      "sortid": 125,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_jump",
@@ -1447,7 +1405,7 @@
     {
       "name": "Phantasm",
       "type": "armor",
-      "sortid": 47,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phantasm",
@@ -1462,7 +1420,7 @@
     {
       "name": "SpectreReappear",
       "type": "procedure",
-      "sortid": 126,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_reappear",
@@ -1495,7 +1453,7 @@
     {
       "name": "MeatheadTick",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead_tick",
@@ -1512,7 +1470,7 @@
     {
       "name": "SlugvestTick",
       "type": "procedure",
-      "sortid": 128,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slugvest_tick",
@@ -1529,7 +1487,7 @@
     {
       "name": "SprintshortsTick",
       "type": "procedure",
-      "sortid": 129,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprintshorts_tick",
@@ -1546,7 +1504,7 @@
     {
       "name": "PhantasmCowlEvent",
       "type": "procedure",
-      "sortid": 130,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phantasm_cowl_event",
@@ -1579,7 +1537,7 @@
     {
       "name": "PhantasmCapeTick",
       "type": "procedure",
-      "sortid": 131,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phantasm_cape_tick",
@@ -1612,7 +1570,7 @@
     {
       "name": "PhantasmSetJumpBoosty",
       "type": "procedure",
-      "sortid": 132,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phantasm_set_jump_boosty",
@@ -1629,7 +1587,7 @@
     {
       "name": "PhantasmCowlRecipe",
       "type": "recipe",
-      "sortid": 133,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phantasm_cowl_recipe",
@@ -1638,7 +1596,7 @@
     {
       "name": "PhantasmCapeRecipe",
       "type": "recipe",
-      "sortid": 134,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "registry_name": "phantasm_cape_recipe",
@@ -1647,7 +1605,7 @@
     {
       "name": "Ghoul",
       "type": "livingentity",
-      "sortid": 16,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul",
@@ -1656,7 +1614,7 @@
     {
       "name": "GhoulModel",
       "type": "procedure",
-      "sortid": 135,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_model",
@@ -1668,7 +1626,7 @@
     {
       "name": "GhoulSlash",
       "type": "rangeditem",
-      "sortid": 136,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_slash",
@@ -1677,7 +1635,7 @@
     {
       "name": "GhoulAttackDelay",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_attack_delay",
@@ -1698,7 +1656,7 @@
     {
       "name": "GhoulHurt",
       "type": "procedure",
-      "sortid": 138,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_hurt",
@@ -1735,7 +1693,7 @@
     {
       "name": "GhoulBreakBlock",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_break_block",
@@ -1768,7 +1726,7 @@
     {
       "name": "GhoulSpit",
       "type": "rangeditem",
-      "sortid": 140,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_spit",
@@ -1777,7 +1735,7 @@
     {
       "name": "GhoulSpitParticles",
       "type": "procedure",
-      "sortid": 141,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_spit_particles",
@@ -1806,7 +1764,7 @@
     {
       "name": "GhoulSpitPutsOutFire",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_spit_puts_out_fire",
@@ -1835,7 +1793,7 @@
     {
       "name": "GhoulSpitHitsEntity",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ghoul_spit_hits_entity",
@@ -1852,7 +1810,7 @@
     {
       "name": "Cinder",
       "type": "livingentity",
-      "sortid": 17,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder",
@@ -1861,7 +1819,7 @@
     {
       "name": "CinderModel",
       "type": "procedure",
-      "sortid": 144,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_model",
@@ -1873,7 +1831,7 @@
     {
       "name": "CinderLayer",
       "type": "procedure",
-      "sortid": 145,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_layer",
@@ -1885,7 +1843,7 @@
     {
       "name": "CinderFireball",
       "type": "procedure",
-      "sortid": 146,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_fireball",
@@ -1922,7 +1880,7 @@
     {
       "name": "CinderSlowFall",
       "type": "procedure",
-      "sortid": 147,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_slow_fall",
@@ -1955,7 +1913,7 @@
     {
       "name": "CinderSlice",
       "type": "rangeditem",
-      "sortid": 148,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_slice",
@@ -1964,7 +1922,7 @@
     {
       "name": "CinderSliceHit",
       "type": "procedure",
-      "sortid": 149,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_slice_hit",
@@ -1985,7 +1943,7 @@
     {
       "name": "CinderFireCharge",
       "type": "rangeditem",
-      "sortid": 150,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_fire_charge",
@@ -1994,7 +1952,7 @@
     {
       "name": "CinderFireExplode",
       "type": "procedure",
-      "sortid": 151,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_fire_explode",
@@ -2023,7 +1981,7 @@
     {
       "name": "FireChargeHitEntity",
       "type": "procedure",
-      "sortid": 153,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_charge_hit_entity",
@@ -2056,7 +2014,7 @@
     {
       "name": "Gallant",
       "type": "livingentity",
-      "sortid": 18,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant",
@@ -2065,7 +2023,7 @@
     {
       "name": "GallantModel",
       "type": "procedure",
-      "sortid": 154,
+      "sortid": 158,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant_model",
@@ -2077,7 +2035,7 @@
     {
       "name": "GallantAttack",
       "type": "procedure",
-      "sortid": 155,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant_attack",
@@ -2110,7 +2068,7 @@
     {
       "name": "GallantHurtAnimation",
       "type": "procedure",
-      "sortid": 156,
+      "sortid": 160,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant_hurt_animation",
@@ -2147,7 +2105,7 @@
     {
       "name": "GallantWaterHurt",
       "type": "procedure",
-      "sortid": 157,
+      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant_water_hurt",
@@ -2164,7 +2122,7 @@
     {
       "name": "InvulnerabilityActive",
       "type": "procedure",
-      "sortid": 158,
+      "sortid": 162,
       "compiles": true,
       "locked_code": false,
       "registry_name": "invulnerability_active",
@@ -2180,7 +2138,7 @@
     {
       "name": "Invulnerability",
       "type": "potioneffect",
-      "sortid": 159,
+      "sortid": 163,
       "compiles": true,
       "locked_code": false,
       "registry_name": "invulnerability"
@@ -2188,7 +2146,7 @@
     {
       "name": "GallantSwings",
       "type": "rangeditem",
-      "sortid": 160,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant_swings",
@@ -2197,7 +2155,7 @@
     {
       "name": "GallantSwingDespawn",
       "type": "procedure",
-      "sortid": 161,
+      "sortid": 165,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gallant_swing_despawn",
@@ -2218,7 +2176,7 @@
     {
       "name": "CinderHelm",
       "type": "armor",
-      "sortid": 49,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_helm",
@@ -2233,7 +2191,7 @@
     {
       "name": "CinderHelmTickEvent",
       "type": "procedure",
-      "sortid": 162,
+      "sortid": 166,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_helm_tick_event",
@@ -2270,7 +2228,7 @@
     {
       "name": "CinderScrap",
       "type": "item",
-      "sortid": 52,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_scrap",
@@ -2279,7 +2237,7 @@
     {
       "name": "CinderCrownCrafting",
       "type": "recipe",
-      "sortid": 163,
+      "sortid": 167,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_crown_crafting",
@@ -2288,7 +2246,7 @@
     {
       "name": "Goblin",
       "type": "livingentity",
-      "sortid": 19,
+      "sortid": 18,
       "compiles": true,
       "locked_code": true,
       "registry_name": "goblin",
@@ -2297,7 +2255,7 @@
     {
       "name": "GoblinModel",
       "type": "procedure",
-      "sortid": 164,
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_model",
@@ -2309,7 +2267,7 @@
     {
       "name": "GoblinSteal",
       "type": "procedure",
-      "sortid": 165,
+      "sortid": 169,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_steal",
@@ -2346,7 +2304,7 @@
     {
       "name": "GoblinHurt",
       "type": "procedure",
-      "sortid": 166,
+      "sortid": 170,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hurt",
@@ -2379,7 +2337,7 @@
     {
       "name": "GoblinFear",
       "type": "livingentity",
-      "sortid": 36,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_fear",
@@ -2388,7 +2346,7 @@
     {
       "name": "FearDespawn",
       "type": "procedure",
-      "sortid": 167,
+      "sortid": 171,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fear_despawn",
@@ -2409,7 +2367,7 @@
     {
       "name": "GoblinLayer",
       "type": "procedure",
-      "sortid": 168,
+      "sortid": 172,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_layer",
@@ -2421,7 +2379,7 @@
     {
       "name": "Bouncer",
       "type": "livingentity",
-      "sortid": 20,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bouncer",
@@ -2430,7 +2388,7 @@
     {
       "name": "BouncerModel",
       "type": "procedure",
-      "sortid": 169,
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bouncer_model",
@@ -2442,7 +2400,7 @@
     {
       "name": "BouncerKickProjectile",
       "type": "rangeditem",
-      "sortid": 170,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bouncer_kick_projectile",
@@ -2451,7 +2409,7 @@
     {
       "name": "BouncerKickImpact",
       "type": "procedure",
-      "sortid": 171,
+      "sortid": 175,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bouncer_kick_impact",
@@ -2484,7 +2442,7 @@
     {
       "name": "Rancher",
       "type": "livingentity",
-      "sortid": 21,
+      "sortid": 20,
       "compiles": true,
       "locked_code": true,
       "registry_name": "rancher",
@@ -2493,7 +2451,7 @@
     {
       "name": "RancherModel",
       "type": "procedure",
-      "sortid": 172,
+      "sortid": 176,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rancher_model",
@@ -2505,7 +2463,7 @@
     {
       "name": "Baker",
       "type": "livingentity",
-      "sortid": 22,
+      "sortid": 21,
       "compiles": true,
       "locked_code": true,
       "registry_name": "baker",
@@ -2514,7 +2472,7 @@
     {
       "name": "BakerModel",
       "type": "procedure",
-      "sortid": 173,
+      "sortid": 177,
       "compiles": true,
       "locked_code": false,
       "registry_name": "baker_model",
@@ -2526,7 +2484,7 @@
     {
       "name": "Cakerover",
       "type": "livingentity",
-      "sortid": 27,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cakerover",
@@ -2535,7 +2493,7 @@
     {
       "name": "CakeroverModel",
       "type": "procedure",
-      "sortid": 174,
+      "sortid": 178,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cakerover_model",
@@ -2547,7 +2505,7 @@
     {
       "name": "CakeroverParticles",
       "type": "procedure",
-      "sortid": 175,
+      "sortid": 179,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cakerover_particles",
@@ -2576,7 +2534,7 @@
     {
       "name": "CakeroverFuse",
       "type": "procedure",
-      "sortid": 176,
+      "sortid": 180,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cakerover_fuse",
@@ -2609,7 +2567,7 @@
     {
       "name": "CakeroverSpawn",
       "type": "procedure",
-      "sortid": 177,
+      "sortid": 181,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cakerover_spawn",
@@ -2642,7 +2600,7 @@
     {
       "name": "Gabble",
       "type": "livingentity",
-      "sortid": 25,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gabble",
@@ -2651,7 +2609,7 @@
     {
       "name": "GabbleSpawn",
       "type": "procedure",
-      "sortid": 178,
+      "sortid": 182,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gabble_spawn",
@@ -2684,7 +2642,7 @@
     {
       "name": "CinderFireChargeAntigravity",
       "type": "procedure",
-      "sortid": 179,
+      "sortid": 183,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cinder_fire_charge_antigravity",
@@ -2705,7 +2663,7 @@
     {
       "name": "SlimeballThrow",
       "type": "rangeditem",
-      "sortid": 180,
+      "sortid": 184,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slimeball_throw",
@@ -2714,7 +2672,7 @@
     {
       "name": "Errant",
       "type": "livingentity",
-      "sortid": 23,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "errant",
@@ -2723,7 +2681,7 @@
     {
       "name": "ErrantModel",
       "type": "procedure",
-      "sortid": 181,
+      "sortid": 185,
       "compiles": true,
       "locked_code": false,
       "registry_name": "errant_model",
@@ -2735,7 +2693,7 @@
     {
       "name": "BakerHurt",
       "type": "procedure",
-      "sortid": 182,
+      "sortid": 186,
       "compiles": true,
       "locked_code": false,
       "registry_name": "baker_hurt",
@@ -2768,7 +2726,7 @@
     {
       "name": "RainRegen",
       "type": "procedure",
-      "sortid": 183,
+      "sortid": 187,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_regen",
@@ -2785,7 +2743,7 @@
     {
       "name": "Caster",
       "type": "livingentity",
-      "sortid": 24,
+      "sortid": 23,
       "compiles": true,
       "locked_code": true,
       "registry_name": "caster",
@@ -2794,7 +2752,7 @@
     {
       "name": "CasterModel",
       "type": "procedure",
-      "sortid": 184,
+      "sortid": 188,
       "compiles": true,
       "locked_code": false,
       "registry_name": "caster_model",
@@ -2806,7 +2764,7 @@
     {
       "name": "CastSpell",
       "type": "rangeditem",
-      "sortid": 185,
+      "sortid": 189,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cast_spell",
@@ -2815,7 +2773,7 @@
     {
       "name": "CastSpellAntiGrav",
       "type": "procedure",
-      "sortid": 186,
+      "sortid": 190,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cast_spell_anti_grav",
@@ -2848,7 +2806,7 @@
     {
       "name": "CastSpellRandomEffect",
       "type": "procedure",
-      "sortid": 187,
+      "sortid": 191,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cast_spell_random_effect",
@@ -2885,7 +2843,7 @@
     {
       "name": "Goblins",
       "type": "tag",
-      "sortid": 188,
+      "sortid": 192,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblins",
@@ -2894,7 +2852,7 @@
     {
       "name": "SuspiciousSlice",
       "type": "item",
-      "sortid": 55,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suspicious_slice",
@@ -2903,7 +2861,7 @@
     {
       "name": "SuspiciousSliceEaten",
       "type": "procedure",
-      "sortid": 189,
+      "sortid": 193,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suspicious_slice_eaten",
@@ -2936,7 +2894,7 @@
     {
       "name": "SusSliceIntoCake",
       "type": "recipe",
-      "sortid": 190,
+      "sortid": 194,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sus_slice_into_cake",
@@ -2945,7 +2903,7 @@
     {
       "name": "PreposterousPortion",
       "type": "item",
-      "sortid": 56,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "preposterous_portion",
@@ -2954,7 +2912,7 @@
     {
       "name": "PreposterousPortionEaten",
       "type": "procedure",
-      "sortid": 191,
+      "sortid": 195,
       "compiles": true,
       "locked_code": false,
       "registry_name": "preposterous_portion_eaten",
@@ -2987,7 +2945,7 @@
     {
       "name": "GroundBoundActive",
       "type": "procedure",
-      "sortid": 192,
+      "sortid": 196,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ground_bound_active",
@@ -3003,7 +2961,7 @@
     {
       "name": "GroundBound",
       "type": "potioneffect",
-      "sortid": 193,
+      "sortid": 197,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ground_bound"
@@ -3011,7 +2969,7 @@
     {
       "name": "Zobgoblin",
       "type": "livingentity",
-      "sortid": 26,
+      "sortid": 25,
       "compiles": true,
       "locked_code": true,
       "registry_name": "zobgoblin",
@@ -3020,7 +2978,7 @@
     {
       "name": "ZobgoblinModel",
       "type": "procedure",
-      "sortid": 194,
+      "sortid": 198,
       "compiles": true,
       "locked_code": false,
       "registry_name": "zobgoblin_model",
@@ -3032,7 +2990,7 @@
     {
       "name": "VillagerGoblinTransformation",
       "type": "procedure",
-      "sortid": 195,
+      "sortid": 199,
       "compiles": true,
       "locked_code": false,
       "registry_name": "villager_goblin_transformation",
@@ -3082,7 +3040,7 @@
     {
       "name": "Petriman",
       "type": "livingentity",
-      "sortid": 28,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petriman",
@@ -3136,7 +3094,7 @@
     {
       "name": "Petriboulder",
       "type": "livingentity",
-      "sortid": 30,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petriboulder",
@@ -3145,7 +3103,7 @@
     {
       "name": "PetriboulderModel",
       "type": "procedure",
-      "sortid": 206,
+      "sortid": 203,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petriboulder_model",
@@ -3157,7 +3115,7 @@
     {
       "name": "Petricrawler",
       "type": "livingentity",
-      "sortid": 29,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petricrawler",
@@ -3166,7 +3124,7 @@
     {
       "name": "PetricrawlerModel",
       "type": "procedure",
-      "sortid": 207,
+      "sortid": 204,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petricrawler_model",
@@ -3178,7 +3136,7 @@
     {
       "name": "Intruder",
       "type": "livingentity",
-      "sortid": 33,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "intruder",
@@ -3187,7 +3145,7 @@
     {
       "name": "IntruderModel",
       "type": "procedure",
-      "sortid": 213,
+      "sortid": 205,
       "compiles": true,
       "locked_code": false,
       "registry_name": "intruder_model",
@@ -3199,7 +3157,7 @@
     {
       "name": "IntruderFuse",
       "type": "procedure",
-      "sortid": 214,
+      "sortid": 206,
       "compiles": true,
       "locked_code": false,
       "registry_name": "intruder_fuse",
@@ -3232,7 +3190,7 @@
     {
       "name": "Silverking",
       "type": "livingentity",
-      "sortid": 31,
+      "sortid": 30,
       "compiles": true,
       "locked_code": true,
       "registry_name": "silverking",
@@ -3241,7 +3199,7 @@
     {
       "name": "SilverkingHurt",
       "type": "procedure",
-      "sortid": 219,
+      "sortid": 207,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverking_hurt",
@@ -3278,7 +3236,7 @@
     {
       "name": "SilverkingModel",
       "type": "procedure",
-      "sortid": 220,
+      "sortid": 208,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverking_model",
@@ -3288,42 +3246,9 @@
       "path": "~/Monsters/UndergroundGuys"
     },
     {
-      "name": "SilverkingReplacement",
-      "type": "procedure",
-      "sortid": 222,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "silverking_replacement",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "Invisicreeper",
       "type": "livingentity",
-      "sortid": 38,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "invisicreeper",
@@ -3332,7 +3257,7 @@
     {
       "name": "Crawler",
       "type": "livingentity",
-      "sortid": 32,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crawler",
@@ -3341,7 +3266,7 @@
     {
       "name": "CrawlerModel",
       "type": "procedure",
-      "sortid": 225,
+      "sortid": 210,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crawler_model",
@@ -3353,7 +3278,7 @@
     {
       "name": "CrawlerFuse",
       "type": "procedure",
-      "sortid": 226,
+      "sortid": 211,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crawler_fuse",
@@ -3386,7 +3311,7 @@
     {
       "name": "CrawlerExplosive",
       "type": "rangeditem",
-      "sortid": 227,
+      "sortid": 212,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crawler_explosive",
@@ -3395,7 +3320,7 @@
     {
       "name": "CrawlerExplosionDespawn",
       "type": "procedure",
-      "sortid": 228,
+      "sortid": 213,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crawler_explosion_despawn",
@@ -3428,7 +3353,7 @@
     {
       "name": "SilverkingDies",
       "type": "procedure",
-      "sortid": 233,
+      "sortid": 214,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverking_dies",
@@ -3457,7 +3382,7 @@
     {
       "name": "SpeedCheck",
       "type": "procedure",
-      "sortid": 234,
+      "sortid": 215,
       "compiles": true,
       "locked_code": false,
       "registry_name": "speed_check",
@@ -3473,7 +3398,7 @@
     {
       "name": "Troll",
       "type": "livingentity",
-      "sortid": 34,
+      "sortid": 33,
       "compiles": true,
       "locked_code": true,
       "registry_name": "troll",
@@ -3482,7 +3407,7 @@
     {
       "name": "TrollModel",
       "type": "procedure",
-      "sortid": 235,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_model",
@@ -3494,7 +3419,7 @@
     {
       "name": "TrollLayer",
       "type": "procedure",
-      "sortid": 236,
+      "sortid": 217,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_layer",
@@ -3506,7 +3431,7 @@
     {
       "name": "TrollHurt",
       "type": "procedure",
-      "sortid": 237,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_hurt",
@@ -3543,7 +3468,7 @@
     {
       "name": "Silverhat",
       "type": "armor",
-      "sortid": 51,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverhat",
@@ -3558,7 +3483,7 @@
     {
       "name": "SilverhatSpawn",
       "type": "procedure",
-      "sortid": 238,
+      "sortid": 219,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverhat_spawn",
@@ -3595,7 +3520,7 @@
     {
       "name": "Silverpet",
       "type": "livingentity",
-      "sortid": 37,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverpet",
@@ -3604,7 +3529,7 @@
     {
       "name": "SilverpetModel",
       "type": "procedure",
-      "sortid": 239,
+      "sortid": 220,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverpet_model",
@@ -3616,7 +3541,7 @@
     {
       "name": "SilverhatDeath",
       "type": "procedure",
-      "sortid": 240,
+      "sortid": 221,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverhat_death",
@@ -3649,7 +3574,7 @@
     {
       "name": "TrollInvulnerable",
       "type": "procedure",
-      "sortid": 244,
+      "sortid": 222,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_invulnerable",
@@ -3670,7 +3595,7 @@
     {
       "name": "SilverkingLayer",
       "type": "procedure",
-      "sortid": 245,
+      "sortid": 223,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverking_layer",
@@ -3682,7 +3607,7 @@
     {
       "name": "ResistenceParticle",
       "type": "particle",
-      "sortid": 246,
+      "sortid": 224,
       "compiles": true,
       "locked_code": false,
       "registry_name": "resistence_particle"
@@ -3690,7 +3615,7 @@
     {
       "name": "TrollInvincible",
       "type": "rangeditem",
-      "sortid": 247,
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_invincible",
@@ -3699,7 +3624,7 @@
     {
       "name": "TrollInvincibleParticles",
       "type": "procedure",
-      "sortid": 248,
+      "sortid": 226,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_invincible_particles",
@@ -3732,7 +3657,7 @@
     {
       "name": "TrollParticles",
       "type": "procedure",
-      "sortid": 249,
+      "sortid": 227,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_particles",
@@ -3765,7 +3690,7 @@
     {
       "name": "Slimehead",
       "type": "armor",
-      "sortid": 48,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slimehead",
@@ -3780,7 +3705,7 @@
     {
       "name": "SlimeheadRepell",
       "type": "procedure",
-      "sortid": 250,
+      "sortid": 228,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slimehead_repell",
@@ -3801,7 +3726,7 @@
     {
       "name": "SlimeheadDeath",
       "type": "procedure",
-      "sortid": 251,
+      "sortid": 229,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slimehead_death",
@@ -3832,51 +3757,9 @@
       "path": "~/Items"
     },
     {
-      "name": "Slimeheadzombie",
-      "type": "livingentity",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slimeheadzombie",
-      "path": "~/Monsters"
-    },
-    {
-      "name": "SlimeheadReplacement",
-      "type": "procedure",
-      "sortid": 252,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slimehead_replacement",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "Vampire",
       "type": "livingentity",
-      "sortid": 40,
+      "sortid": 39,
       "compiles": true,
       "locked_code": true,
       "registry_name": "vampire",
@@ -3885,7 +3768,7 @@
     {
       "name": "VampireModel",
       "type": "procedure",
-      "sortid": 253,
+      "sortid": 231,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_model",
@@ -3897,7 +3780,7 @@
     {
       "name": "VampRegen",
       "type": "procedure",
-      "sortid": 256,
+      "sortid": 232,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vamp_regen",
@@ -3930,7 +3813,7 @@
     {
       "name": "VampDrain",
       "type": "procedure",
-      "sortid": 257,
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vamp_drain",
@@ -3967,7 +3850,7 @@
     {
       "name": "VampPanic",
       "type": "procedure",
-      "sortid": 258,
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vamp_panic",
@@ -4000,7 +3883,7 @@
     {
       "name": "VampireLayer",
       "type": "procedure",
-      "sortid": 259,
+      "sortid": 235,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_layer",
@@ -4012,7 +3895,7 @@
     {
       "name": "Biter",
       "type": "livingentity",
-      "sortid": 41,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "biter",
@@ -4021,7 +3904,7 @@
     {
       "name": "BiterTimer",
       "type": "procedure",
-      "sortid": 260,
+      "sortid": 236,
       "compiles": true,
       "locked_code": false,
       "registry_name": "biter_timer",
@@ -4054,7 +3937,7 @@
     {
       "name": "BiterModel",
       "type": "procedure",
-      "sortid": 261,
+      "sortid": 237,
       "compiles": true,
       "locked_code": false,
       "registry_name": "biter_model",
@@ -4066,7 +3949,7 @@
     {
       "name": "BiterLayer",
       "type": "procedure",
-      "sortid": 262,
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "registry_name": "biter_layer",
@@ -4078,7 +3961,7 @@
     {
       "name": "BroThinkHeCarti",
       "type": "achievement",
-      "sortid": 265,
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bro_think_he_carti",
@@ -4087,7 +3970,7 @@
     {
       "name": "CartiSlayer",
       "type": "procedure",
-      "sortid": 266,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "registry_name": "carti_slayer",
@@ -4104,7 +3987,7 @@
     {
       "name": "VampireSlayer",
       "type": "achievement",
-      "sortid": 267,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_slayer",
@@ -4113,7 +3996,7 @@
     {
       "name": "VampireSlaying",
       "type": "procedure",
-      "sortid": 268,
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_slaying",
@@ -4130,7 +4013,7 @@
     {
       "name": "VampireSpawn",
       "type": "procedure",
-      "sortid": 269,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_spawn",
@@ -4163,7 +4046,7 @@
     {
       "name": "Headbiter",
       "type": "armor",
-      "sortid": 50,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "headbiter",
@@ -4178,14 +4061,14 @@
     {
       "name": "HeadbiterHarming",
       "type": "procedure",
-      "sortid": 271,
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "registry_name": "headbiter_harming",
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -4211,7 +4094,7 @@
     {
       "name": "HeatbiterSpawning",
       "type": "procedure",
-      "sortid": 272,
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "registry_name": "heatbiter_spawning",
@@ -4244,7 +4127,7 @@
     {
       "name": "VampireReplacement",
       "type": "procedure",
-      "sortid": 274,
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_replacement",
@@ -4277,7 +4160,7 @@
     {
       "name": "VampBurnDespawn",
       "type": "procedure",
-      "sortid": 275,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vamp_burn_despawn",
@@ -4298,7 +4181,7 @@
     {
       "name": "VampireFlinted",
       "type": "procedure",
-      "sortid": 276,
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_flinted",
@@ -4319,7 +4202,7 @@
     {
       "name": "FuseHurt",
       "type": "procedure",
-      "sortid": 281,
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fuse_hurt",
@@ -4356,7 +4239,7 @@
     {
       "name": "SpectreAttack",
       "type": "procedure",
-      "sortid": 282,
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_attack",
@@ -4393,7 +4276,7 @@
     {
       "name": "Petrifiedtroll",
       "type": "livingentity",
-      "sortid": 283,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petrifiedtroll",
@@ -4402,7 +4285,7 @@
     {
       "name": "PetrifiedtrollSpawn",
       "type": "procedure",
-      "sortid": 284,
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petrifiedtroll_spawn",
@@ -4431,7 +4314,7 @@
     {
       "name": "PetrifiedtrollModel",
       "type": "procedure",
-      "sortid": 285,
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petrifiedtroll_model",
@@ -4443,7 +4326,7 @@
     {
       "name": "MeatureLeveling",
       "type": "procedure",
-      "sortid": 286,
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_leveling",
@@ -4464,7 +4347,7 @@
     {
       "name": "HuntsmanPushback",
       "type": "procedure",
-      "sortid": 287,
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "registry_name": "huntsman_pushback",
@@ -4501,7 +4384,7 @@
     {
       "name": "SpectreDies",
       "type": "procedure",
-      "sortid": 288,
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_dies",
@@ -4534,7 +4417,7 @@
     {
       "name": "PetrimanSpawning",
       "type": "procedure",
-      "sortid": 289,
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "registry_name": "petriman_spawning",
@@ -4564,7 +4447,7 @@
     {
       "name": "SilverkingSpawning",
       "type": "procedure",
-      "sortid": 290,
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverking_spawning",
@@ -4594,7 +4477,7 @@
     {
       "name": "CrawlerSpawning",
       "type": "procedure",
-      "sortid": 291,
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crawler_spawning",
@@ -4624,7 +4507,7 @@
     {
       "name": "TrollSpawning",
       "type": "procedure",
-      "sortid": 292,
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_spawning",
@@ -4654,7 +4537,7 @@
     {
       "name": "VampireSpawning",
       "type": "procedure",
-      "sortid": 293,
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_spawning",
@@ -4684,7 +4567,7 @@
     {
       "name": "EquestrianSpawning",
       "type": "procedure",
-      "sortid": 294,
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "registry_name": "equestrian_spawning",
@@ -4714,7 +4597,7 @@
     {
       "name": "WaspSpawning",
       "type": "procedure",
-      "sortid": 295,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_spawning",
@@ -4744,7 +4627,7 @@
     {
       "name": "Spiderlatch",
       "type": "armor",
-      "sortid": 296,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spiderlatch",
@@ -4759,7 +4642,7 @@
     {
       "name": "SpiderlatchAttack",
       "type": "procedure",
-      "sortid": 297,
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spiderlatch_attack",
@@ -4780,7 +4663,7 @@
     {
       "name": "SpiderlatchDeath",
       "type": "procedure",
-      "sortid": 298,
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spiderlatch_death",
@@ -4813,7 +4696,7 @@
     {
       "name": "SpiderlatchTick",
       "type": "procedure",
-      "sortid": 299,
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spiderlatch_tick",
@@ -4830,7 +4713,7 @@
     {
       "name": "Trollface",
       "type": "armor",
-      "sortid": 300,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "trollface",
@@ -4845,7 +4728,7 @@
     {
       "name": "Spectral",
       "type": "armor",
-      "sortid": 301,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectral",
@@ -4860,7 +4743,7 @@
     {
       "name": "SpectralSpawn",
       "type": "procedure",
-      "sortid": 302,
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectral_spawn",
@@ -4893,7 +4776,7 @@
     {
       "name": "SpectreSpawn",
       "type": "procedure",
-      "sortid": 303,
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectre_spawn",
@@ -4910,7 +4793,7 @@
     {
       "name": "SpectralAttack",
       "type": "procedure",
-      "sortid": 304,
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spectral_attack",
@@ -4931,7 +4814,7 @@
     {
       "name": "Propeller",
       "type": "livingentity",
-      "sortid": 305,
+      "sortid": 42,
       "compiles": true,
       "locked_code": true,
       "registry_name": "propeller",
@@ -4940,7 +4823,7 @@
     {
       "name": "PropellerModel",
       "type": "procedure",
-      "sortid": 306,
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "registry_name": "propeller_model",
@@ -4952,7 +4835,7 @@
     {
       "name": "PropellerHurt",
       "type": "procedure",
-      "sortid": 307,
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "registry_name": "propeller_hurt",
@@ -4973,7 +4856,7 @@
     {
       "name": "PropellerDies",
       "type": "procedure",
-      "sortid": 308,
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "registry_name": "propeller_dies",
@@ -5006,7 +4889,7 @@
     {
       "name": "Flutterfly",
       "type": "livingentity",
-      "sortid": 309,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flutterfly",
@@ -5015,7 +4898,7 @@
     {
       "name": "FlutterflyModel",
       "type": "procedure",
-      "sortid": 310,
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flutterfly_model",
@@ -5027,7 +4910,7 @@
     {
       "name": "FlutterflyPlayerTouch",
       "type": "procedure",
-      "sortid": 311,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flutterfly_player_touch",
@@ -5048,7 +4931,7 @@
     {
       "name": "FlutterflyPunishment",
       "type": "procedure",
-      "sortid": 312,
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flutterfly_punishment",
@@ -5069,7 +4952,7 @@
     {
       "name": "Boar",
       "type": "livingentity",
-      "sortid": 314,
+      "sortid": 44,
       "compiles": true,
       "locked_code": true,
       "registry_name": "boar",
@@ -5078,7 +4961,7 @@
     {
       "name": "BoarModel",
       "type": "procedure",
-      "sortid": 315,
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boar_model",
@@ -5090,7 +4973,7 @@
     {
       "name": "CreateConfig",
       "type": "procedure",
-      "sortid": 316,
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "registry_name": "create_config",
@@ -5102,7 +4985,7 @@
     {
       "name": "ConfigDepth",
       "type": "procedure",
-      "sortid": 318,
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "registry_name": "config_depth",
@@ -5132,10 +5015,262 @@
     {
       "name": "ConfigReplacer",
       "type": "procedure",
-      "sortid": 319,
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "registry_name": "config_replacer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Bull",
+      "type": "livingentity",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bull",
+      "path": "~/Animals"
+    },
+    {
+      "name": "BullModel",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bull_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Animals"
+    },
+    {
+      "name": "BullSkull",
+      "type": "armor",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bull_skull",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Flutterfliers",
+      "type": "armor",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfliers",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": false,
+        "ec": true
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "FlutterfliersEffects",
+      "type": "procedure",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfliers_effects",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "FlutterfliersSpawning",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfliers_spawning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PetrimanLightHostility",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman_light_hostility",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "TrollSpit",
+      "type": "rangeditem",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_spit",
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "TrollSpitHitsEntity",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_spit_hits_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/GhoulsAndGhosts"
+    },
+    {
+      "name": "GroundboundPotion",
+      "type": "potion",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "groundbound_potion"
+    },
+    {
+      "name": "GroundbindingPotionBrewing",
+      "type": "recipe",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "groundbinding_potion_brewing"
+    },
+    {
+      "name": "BullSpawning",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bull_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "HatSpawns",
+      "type": "procedure",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hat_spawns",
       "metadata": {
         "dependencies": [
           {
@@ -5250,9 +5385,9 @@
       "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "item.enemyexpansion.cinder_helm_chestplate": "",
-      "entity.enemyexpansion.spectre": "Spectre",
       "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "entity.enemyexpansion.spectre": "Spectre",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
       "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
@@ -5260,12 +5395,13 @@
       "item.enemyexpansion.spectral_boots": "",
       "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrifiedtroll Spawn Egg",
       "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
-      "entity.enemyexpansion.meatmanzombie": "Meatman",
       "entity.enemyexpansion.zadybug": "Zadybug",
       "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
-      "item.enemyexpansion.gallant_swings": "Gallant Swings",
       "item.enemyexpansion.cast_spell": "Caster Spell",
+      "item.enemyexpansion.gallant_swings": "Gallant Swings",
+      "item.enemyexpansion.flutterfliers_boots": "",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
+      "item.minecraft.potion.effect.groundbound_potion": "Potion of Groundbinding",
       "item.enemyexpansion.suspicious_slice": "Suspicious Slice",
       "gamerule.silverking_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "gamerule.petriman_spawn_above_ground": "petrimanReplacementRule",
@@ -5274,13 +5410,12 @@
       "entity.enemyexpansion.cakerover": "Cakerover",
       "item.enemyexpansion.silverhat_chestplate": "",
       "entity.enemyexpansion.cinder": "Cinder",
-      "item.enemyexpansion.slimeheadzombie_spawn_egg": "Slimehead Spawn Egg",
       "subtitles.troll.idle.1": "Troll growls",
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
-      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
-      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "entity.enemyexpansion.gallant": "Gallant",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
@@ -5290,14 +5425,14 @@
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
       "entity.enemyexpansion.casterfluu": "Goblin Caster",
       "item.enemyexpansion.slugvest_leggings": "-",
-      "entity.enemyexpansion.baker": "Goblin Baker",
       "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "entity.enemyexpansion.baker": "Goblin Baker",
       "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
       "entity.enemyexpansion.boar": "Boar",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
       "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
-      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
       "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
       "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
       "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "PheromoneSummon Spawn Egg",
@@ -5311,8 +5446,8 @@
       "item.enemyexpansion.ghoul_spit": "Spit",
       "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
       "entity.enemyexpansion.tarantula": "Tarantula",
-      "item.enemyexpansion.trollface_chestplate": "",
       "item.enemyexpansion.slugvest_chestplate": "Slugvest",
+      "item.enemyexpansion.trollface_chestplate": "",
       "item.enemyexpansion.pheromone_projectile": "Wasp Pheromone",
       "entity.enemyexpansion.projectile_slimeball_throw": "a stray Slimeball",
       "entity.enemyexpansion.senior": "Senior",
@@ -5325,15 +5460,18 @@
       "item.enemyexpansion.huntsman_punch": "Huntsman Punch",
       "gamerule.intruder_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "entity.enemyexpansion.projectile_gallant_swings": "Gallant\u0027s blade",
-      "entity.enemyexpansion.flutterfly": "Flutterfly",
+      "entity.enemyexpansion.flutterfly": "Flutterfly Colony",
       "entity.enemyexpansion.projectile_ghoul_spit": "ghoulish spit",
       "entity.enemyexpansion.goblin": "Goblin Thief",
       "gamerule.blazes_do_cinder_jump.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
       "gamerule.silverking_dont_spawn_above_ground_rule": "petrimanDontSpawnAboveGroundRule",
+      "item.enemyexpansion.bull_skull_boots": "",
       "entity.enemyexpansion.projectile_scorpion_sting_projectile": "Scorpion\u0027s sting",
       "advancements.vampire_slayer.descr": "Slay a Vampire before it turns into a Biter",
       "gamerule.cinder_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
+      "item.enemyexpansion.flutterfliers_helmet": "",
       "entity.enemyexpansion.ladybug": "Ladybug",
+      "item.enemyexpansion.troll_spit": "Spit",
       "entity.enemyexpansion.petriboulder": "Petriboulder",
       "entity.enemyexpansion.projectile_ghoul_slash": "Ghoul slash",
       "gamerule.cinder_replacement_rule": "increaseddripstonetarantulas",
@@ -5341,8 +5479,10 @@
       "item.enemyexpansion.spectral_helmet": "Spectral Hood",
       "entity.enemyexpansion.projectile_wasp_sting_projectile": "Wasp\u0027s sting",
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
+      "item.enemyexpansion.bull_skull_chestplate": "",
       "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
+      "item.enemyexpansion.bull_spawn_egg": "Bull Spawn Egg",
       "gamerule.petriman_replacement_rule": "cindersoccasionallyreplaceblazes",
       "entity.enemyexpansion.silverking": "Silverking",
       "entity.enemyexpansion.projectile_enemy_melee_projectile": "enemy attack",
@@ -5352,6 +5492,7 @@
       "entity.enemyexpansion.petricrawler": "Petricrawler",
       "entity.enemyexpansion.tarantulam": "Tarantula",
       "gamerule.petriman_random_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "item.enemyexpansion.bull_skull_leggings": "",
       "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.cinder_helm_leggings": "",
@@ -5367,8 +5508,10 @@
       "gamerule.no_baby_zombies": "cindersoccasionallyreplaceblazes",
       "item.enemyexpansion.slugvest_helmet": "-",
       "gamerule.silverking_replacement_rule": "petrimanReplacementRule",
+      "item.minecraft.splash_potion.effect.groundbound_potion": "Splash Potion of Groundbinding",
       "entity.enemyexpansion.ghoul": "Ghoul",
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
+      "item.enemyexpansion.flutterfliers_chestplate": "Flutterfliers",
       "subtitles.troll.roar": "Troll roars",
       "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
       "item.enemyexpansion.slugvest_boots": "-",
@@ -5376,8 +5519,8 @@
       "item.enemyexpansion.petriman_spawn_egg": "Petriman Spawn Egg",
       "item.enemyexpansion.meathead_armor_chestplate": "Meathead Chestplate",
       "entity.enemyexpansion.biter": "Biter",
+      "item.enemyexpansion.bull_skull_helmet": "Bull Skull",
       "item.enemyexpansion.propeller_spawn_egg": "Propeller Spawn Egg",
-      "item.enemyexpansion.meatmanzombie_spawn_egg": "Meatman Spawn Egg",
       "advancements.bro_think_he_carti.descr": "Wear a Headbiter",
       "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
       "entity.enemyexpansion.equestrian": "Equestrian",
@@ -5390,6 +5533,7 @@
       "item.enemyexpansion.spiderlatch_leggings": "Phantasm Leggings",
       "item.enemyexpansion.flutterfly_spawn_egg": "Flutterfly Spawn Egg",
       "item.enemyexpansion.meature_meatball": "Meature Meatball",
+      "item.minecraft.tipped_arrow.effect.groundbound_potion": "Arrow of Groundbinding",
       "entity.enemyexpansion.bouncer": "Bouncer",
       "item.enemyexpansion.trollface_helmet": "Trollface",
       "item.enemyexpansion.ghoul_slash": "Slash",
@@ -5405,6 +5549,7 @@
       "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
       "item.enemyexpansion.slimehead_leggings": "",
       "gamerule.no_baby_zombies.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "entity.enemyexpansion.projectile_troll_spit": "heavy troll saliva",
       "item.enemyexpansion.zadybug_spawn_egg": "Zadybug Spawn Egg",
       "gamerule.troll_replacement_rule": "silverkingReplacementRule",
       "advancements.meathead_obtained.descr": "Obtain a Meat Hat",
@@ -5414,6 +5559,7 @@
       "item.enemyexpansion.sprintshorts_leggings": "Sprintshorts",
       "item.enemyexpansion.petricrawler_spawn_egg": "Petricrawler Spawn Egg",
       "item.enemyexpansion.troll_invincible": "Troll Invincibility",
+      "item.enemyexpansion.flutterfliers_leggings": "",
       "item.enemyexpansion.meathead_armor_helmet": "Meat Head",
       "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.silverhat_boots": "",
@@ -5432,6 +5578,7 @@
       "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
       "gamerule.petriman_random_rule": "petrimanReplacementRule",
       "item.enemyexpansion.cinder_spawn_egg": "Cinder Spawn Egg",
+      "entity.enemyexpansion.bull": "Bull",
       "item.enemyexpansion.sprintshorts_boots": "-",
       "item.enemyexpansion.cinder_scrap": "Cinder Scrap",
       "entity.enemyexpansion.zobgoblin": "Zobgoblin",
@@ -5460,12 +5607,12 @@
       "gamerule.petriman_dont_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
       "item.enemyexpansion.cinder_fire_charge": "Cinder Fire Charge",
       "item.enemyexpansion.huntsmanskeleton_spawn_egg": "Huntsman Skeleton Spawn Egg",
-      "entity.enemyexpansion.slimeheadzombie": "Slimehead",
       "entity.enemyexpansion.propeller": "Propeller",
       "entity.enemyexpansion.petrifiedtroll": "Petrifiedtroll",
       "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
       "item.enemyexpansion.cinder_slice": "Cinder Slice",
       "item.enemyexpansion.spectral_chestplate": "Spectral Cloak",
+      "item.minecraft.lingering_potion.effect.groundbound_potion": "Lingering Potion of Groundbinding",
       "item.enemyexpansion.sprintshorts_helmet": "-"
     }
   },

@@ -14,6 +14,7 @@ import net.minecraft.world.item.CreativeModeTab;
 
 import net.mcreator.enemyexpproofofconcept.item.WaspStingProjectileItem;
 import net.mcreator.enemyexpproofofconcept.item.TrollfaceItem;
+import net.mcreator.enemyexpproofofconcept.item.TrollSpitItem;
 import net.mcreator.enemyexpproofofconcept.item.TrollInvincibleItem;
 import net.mcreator.enemyexpproofofconcept.item.SuspiciousSliceItem;
 import net.mcreator.enemyexpproofofconcept.item.SprintshortsItem;
@@ -38,6 +39,7 @@ import net.mcreator.enemyexpproofofconcept.item.GhoulSpitItem;
 import net.mcreator.enemyexpproofofconcept.item.GhoulSlashItem;
 import net.mcreator.enemyexpproofofconcept.item.GallantSwingsItem;
 import net.mcreator.enemyexpproofofconcept.item.FrigidTouchProjectileItem;
+import net.mcreator.enemyexpproofofconcept.item.FlutterfliersItem;
 import net.mcreator.enemyexpproofofconcept.item.EnemyMeleeProjectileItem;
 import net.mcreator.enemyexpproofofconcept.item.CrawlerExplosiveItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderSliceItem;
@@ -45,6 +47,7 @@ import net.mcreator.enemyexpproofofconcept.item.CinderScrapItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderHelmItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderFireChargeItem;
 import net.mcreator.enemyexpproofofconcept.item.CastSpellItem;
+import net.mcreator.enemyexpproofofconcept.item.BullSkullItem;
 import net.mcreator.enemyexpproofofconcept.item.BouncerKickProjectileItem;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
@@ -132,6 +135,16 @@ public class EnemyexpansionModItems {
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.VAMPIRE, -12699048, -9014373, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BITER = REGISTRY.register("biter_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BITER, -7238220, -4277028, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> PROPELLER = REGISTRY.register("propeller_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PROPELLER, -7048125, -6052694,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FLUTTERFLY = REGISTRY.register("flutterfly_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.FLUTTERFLY, -10744820, -1506043,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BOAR = REGISTRY.register("boar_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BOAR, -10793658, -6122617, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BULL = REGISTRY.register("bull_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BULL, -14278628, -10461088, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> PHEROMONE_PROJECTILE = REGISTRY.register("pheromone_projectile", () -> new PheromoneProjectileItem());
 	public static final RegistryObject<Item> HEALING_GOO_ITEM = REGISTRY.register("healing_goo_item", () -> new HealingGooItemItem());
 	public static final RegistryObject<Item> MEATHEAD_ARMOR_HELMET = REGISTRY.register("meathead_armor_helmet", () -> new MeatheadArmorItem.Helmet());
@@ -144,6 +157,13 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> CINDER_HELM_HELMET = REGISTRY.register("cinder_helm_helmet", () -> new CinderHelmItem.Helmet());
 	public static final RegistryObject<Item> HEADBITER_HELMET = REGISTRY.register("headbiter_helmet", () -> new HeadbiterItem.Helmet());
 	public static final RegistryObject<Item> SILVERHAT_HELMET = REGISTRY.register("silverhat_helmet", () -> new SilverhatItem.Helmet());
+	public static final RegistryObject<Item> SPIDERLATCH_HELMET = REGISTRY.register("spiderlatch_helmet", () -> new SpiderlatchItem.Helmet());
+	public static final RegistryObject<Item> TROLLFACE_HELMET = REGISTRY.register("trollface_helmet", () -> new TrollfaceItem.Helmet());
+	public static final RegistryObject<Item> SPECTRAL_HELMET = REGISTRY.register("spectral_helmet", () -> new SpectralItem.Helmet());
+	public static final RegistryObject<Item> SPECTRAL_CHESTPLATE = REGISTRY.register("spectral_chestplate", () -> new SpectralItem.Chestplate());
+	public static final RegistryObject<Item> BULL_SKULL_HELMET = REGISTRY.register("bull_skull_helmet", () -> new BullSkullItem.Helmet());
+	public static final RegistryObject<Item> FLUTTERFLIERS_CHESTPLATE = REGISTRY.register("flutterfliers_chestplate",
+			() -> new FlutterfliersItem.Chestplate());
 	public static final RegistryObject<Item> CINDER_SCRAP = REGISTRY.register("cinder_scrap", () -> new CinderScrapItem());
 	public static final RegistryObject<Item> MEATURE_MEATBALL = REGISTRY.register("meature_meatball", () -> new MeatureMeatballItem());
 	public static final RegistryObject<Item> HEALING_GOO_SOUP = REGISTRY.register("healing_goo_soup", () -> new HealingGooStewItem());
@@ -168,16 +188,5 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> CAST_SPELL = REGISTRY.register("cast_spell", () -> new CastSpellItem());
 	public static final RegistryObject<Item> CRAWLER_EXPLOSIVE = REGISTRY.register("crawler_explosive", () -> new CrawlerExplosiveItem());
 	public static final RegistryObject<Item> TROLL_INVINCIBLE = REGISTRY.register("troll_invincible", () -> new TrollInvincibleItem());
-	public static final RegistryObject<Item> SPIDERLATCH_HELMET = REGISTRY.register("spiderlatch_helmet", () -> new SpiderlatchItem.Helmet());
-	public static final RegistryObject<Item> TROLLFACE_HELMET = REGISTRY.register("trollface_helmet", () -> new TrollfaceItem.Helmet());
-	public static final RegistryObject<Item> SPECTRAL_HELMET = REGISTRY.register("spectral_helmet", () -> new SpectralItem.Helmet());
-	public static final RegistryObject<Item> SPECTRAL_CHESTPLATE = REGISTRY.register("spectral_chestplate", () -> new SpectralItem.Chestplate());
-	public static final RegistryObject<Item> PROPELLER = REGISTRY.register("propeller_spawn_egg",
-			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PROPELLER, -7048125, -6052694,
-					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> FLUTTERFLY = REGISTRY.register("flutterfly_spawn_egg",
-			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.FLUTTERFLY, -10744820, -1506043,
-					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> BOAR = REGISTRY.register("boar_spawn_egg",
-			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BOAR, -10793658, -6122617, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> TROLL_SPIT = REGISTRY.register("troll_spit", () -> new TrollSpitItem());
 }
