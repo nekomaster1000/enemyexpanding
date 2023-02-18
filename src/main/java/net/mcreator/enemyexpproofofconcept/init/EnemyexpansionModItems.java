@@ -145,6 +145,10 @@ public class EnemyexpansionModItems {
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BOAR, -10793658, -6122617, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BULL = REGISTRY.register("bull_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BULL, -14278628, -10461088, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> RAM = REGISTRY.register("ram_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.RAM, -526345, -11123407, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ROOSTER = REGISTRY.register("rooster_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ROOSTER, -156144, -16746667, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> PHEROMONE_PROJECTILE = REGISTRY.register("pheromone_projectile", () -> new PheromoneProjectileItem());
 	public static final RegistryObject<Item> HEALING_GOO_ITEM = REGISTRY.register("healing_goo_item", () -> new HealingGooItemItem());
 	public static final RegistryObject<Item> MEATHEAD_ARMOR_HELMET = REGISTRY.register("meathead_armor_helmet", () -> new MeatheadArmorItem.Helmet());

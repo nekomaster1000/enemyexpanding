@@ -4,7 +4,7 @@ license="Apache License version 2.0"
 
 [[mods]]
 modId="enemyexpansion"
-version="1.10.0"
+version="1.11.0"
 displayName="Enemy Expansion"
 credits="Nekomaster, FoshyJoshy, EB Mario"
 displayURL="https://mcreator.net"

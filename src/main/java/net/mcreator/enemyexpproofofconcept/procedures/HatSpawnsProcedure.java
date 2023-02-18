@@ -58,7 +58,7 @@ public class HatSpawnsProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (Math.random() < mainjsonobject.get("meatHeadWearerSpawning").getAsDouble()) {
+				if (Math.random() < mainjsonobject.get("meatheadWearerSpawning").getAsDouble()) {
 					if (entity instanceof Zombie || entity instanceof Skeleton) {
 						if (world.getBiome(new BlockPos(x, y, z))
 								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
@@ -138,6 +138,22 @@ public class HatSpawnsProcedure {
 						}
 					}
 				}
+				if (Math.random() < mainjsonobject.get("flutterfliersWearerSpawning").getAsDouble()) {
+					if (entity instanceof Zombie || entity instanceof Skeleton) {
+						if (world.getBiome(new BlockPos(x, y, z))
+								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.FLUTTERFLIERS_CHESTPLATE.get()));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.FLUTTERFLIERS_CHESTPLATE.get()));
+								}
+							}
+						}
+					}
+				}
 				if (Math.random() < mainjsonobject.get("phantasmWearerSpawning").getAsDouble()) {
 					if (entity instanceof Zombie || entity instanceof Skeleton) {
 						if (world.getBiome(new BlockPos(x, y, z))
@@ -208,6 +224,135 @@ public class HatSpawnsProcedure {
 									_player.getInventory().setChanged();
 								} else if (_entity instanceof LivingEntity _living) {
 									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
+								}
+							}
+						}
+					}
+				}
+				if (Math.random() < mainjsonobject.get("netheriteWearerSpawning").getAsDouble()) {
+					if (entity instanceof Zombie || entity instanceof Skeleton) {
+						if (world.getBiome(new BlockPos(x, y, z))
+								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(3, new ItemStack(Items.NETHERITE_HELMET));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.NETHERITE_HELMET));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(2, new ItemStack(Items.NETHERITE_CHESTPLATE));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.NETHERITE_CHESTPLATE));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(1, new ItemStack(Items.NETHERITE_LEGGINGS));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.NETHERITE_LEGGINGS));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(0, new ItemStack(Items.NETHERITE_BOOTS));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.NETHERITE_BOOTS));
+								}
+							}
+						}
+					}
+				}
+				if (Math.random() < mainjsonobject.get("diamondWearerSpawning").getAsDouble()) {
+					if (entity instanceof Zombie || entity instanceof Skeleton) {
+						if (world.getBiome(new BlockPos(x, y, z))
+								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(3, new ItemStack(Items.DIAMOND_HELMET));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.DIAMOND_HELMET));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(2, new ItemStack(Items.DIAMOND_CHESTPLATE));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.DIAMOND_CHESTPLATE));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(1, new ItemStack(Items.DIAMOND_LEGGINGS));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.DIAMOND_LEGGINGS));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(0, new ItemStack(Items.DIAMOND_BOOTS));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.DIAMOND_BOOTS));
+								}
+							}
+						}
+					}
+				}
+				if (Math.random() < mainjsonobject.get("goldWearerSpawning").getAsDouble()) {
+					if (entity instanceof Zombie || entity instanceof Skeleton) {
+						if (world.getBiome(new BlockPos(x, y, z))
+								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(3, new ItemStack(Items.GOLDEN_HELMET));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.GOLDEN_HELMET));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(2, new ItemStack(Items.GOLDEN_CHESTPLATE));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.GOLDEN_CHESTPLATE));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(1, new ItemStack(Items.GOLDEN_LEGGINGS));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.GOLDEN_LEGGINGS));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(0, new ItemStack(Items.GOLDEN_BOOTS));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.GOLDEN_BOOTS));
 								}
 							}
 						}

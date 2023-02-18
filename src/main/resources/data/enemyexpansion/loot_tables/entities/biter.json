@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "enemyexpansion:headbiter"
+          "name": "enemyexpansion:headbiter_helmet"
         }
       ],
       "conditions": [

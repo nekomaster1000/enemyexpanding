@@ -66,7 +66,7 @@ public class CreateConfigProcedure {
 		}
 		if (!(mainjsonobject.get("mobReplacementExplained") != null)) {
 			mainjsonobject.addProperty("mobReplacementExplained",
-					"mobMobReplacement: mob will replace Mob based on the percentage chance and depth level specified, much like babyZombieSpawning and mobSpawningDepth.");
+					"Mob1 will replace Mob2 based on the percentage chance and depth level specified, much like babyZombieSpawning and mobSpawningDepth.");
 		}
 		if (!(mainjsonobject.get("petrimanZombieReplacement") != null)) {
 			mainjsonobject.addProperty("petrimanZombieReplacement", 1);
@@ -101,22 +101,30 @@ public class CreateConfigProcedure {
 		if (!(mainjsonobject.get("cinderBlazeReplacement") != null)) {
 			mainjsonobject.addProperty("cinderBlazeReplacement", 0.2);
 		}
-		if (!(mainjsonobject.get("spiderMobReplacementExplained") != null)) {
-			mainjsonobject.addProperty("spiderMobReplacementExplained",
-					"Spiders will be replaced by Scorpions in Deserts/Mesas and Tarantulas in Dripstone Caves.");
+		if (!(mainjsonobject.get("pigBoarReplacement") != null)) {
+			mainjsonobject.addProperty("pigBoarReplacement", 0.65);
 		}
-		if (!(mainjsonobject.get("spiderScorpionReplacement") != null)) {
-			mainjsonobject.addProperty("spiderScorpionReplacement", 0.8);
+		if (!(mainjsonobject.get("cowBullReplacement") != null)) {
+			mainjsonobject.addProperty("cowBullReplacement", 0.75);
+		}
+		if (!(mainjsonobject.get("sheepRamReplacement") != null)) {
+			mainjsonobject.addProperty("sheepRamReplacement", 0.85);
+		}
+		if (!(mainjsonobject.get("chickenRoosterReplacement") != null)) {
+			mainjsonobject.addProperty("chickenRoosterReplacement", 0.55);
 		}
 		if (!(mainjsonobject.get("spiderTarantulaReplacement") != null)) {
 			mainjsonobject.addProperty("spiderTarantulaReplacement", 1);
 		}
+		if (!(mainjsonobject.get("spiderScorpionReplacement") != null)) {
+			mainjsonobject.addProperty("spiderScorpionReplacement", 1);
+		}
 		if (!(mainjsonobject.get("hatWearerSpawningExplained") != null)) {
 			mainjsonobject.addProperty("hatWearerSpawningExplained",
-					"Some mobs will spawn wearing certain special gear. Toggle the rates of those here.");
+					"Some mobs will spawn wearing certain special gear. Edit the minecraft:is_meatury tag to choose what biomes these mobs spawn in.");
 		}
-		if (!(mainjsonobject.get("meatHeadWearerSpawning") != null)) {
-			mainjsonobject.addProperty("meatHeadWearerSpawning", 0.01);
+		if (!(mainjsonobject.get("meatheadWearerSpawning") != null)) {
+			mainjsonobject.addProperty("meatheadWearerSpawning", 0.01);
 		}
 		if (!(mainjsonobject.get("headbittenWearerSpawning") != null)) {
 			mainjsonobject.addProperty("headbittenWearerSpawning", 0.01);
@@ -130,8 +138,8 @@ public class CreateConfigProcedure {
 		if (!(mainjsonobject.get("silverheadWearerSpawning") != null)) {
 			mainjsonobject.addProperty("silverheadWearerSpawning", 0.01);
 		}
-		if (!(mainjsonobject.get("bullSkullWearerSpawning") != null)) {
-			mainjsonobject.addProperty("bullSkullWearerSpawning", 0.01);
+		if (!(mainjsonobject.get("flutterfliersWearerSpawning") != null)) {
+			mainjsonobject.addProperty("flutterfliersWearerSpawning", 0.01);
 		}
 		if (!(mainjsonobject.get("phantasmWearerSpawning") != null)) {
 			mainjsonobject.addProperty("phantasmWearerSpawning", 0.01);
@@ -139,14 +147,29 @@ public class CreateConfigProcedure {
 		if (!(mainjsonobject.get("spectralWearerSpawning") != null)) {
 			mainjsonobject.addProperty("spectralWearerSpawning", 0.01);
 		}
+		if (!(mainjsonobject.get("bullSkullWearerSpawning") != null)) {
+			mainjsonobject.addProperty("bullSkullWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("netheriteWearerSpawning") != null)) {
+			mainjsonobject.addProperty("netheriteWearerSpawning", 0.001);
+		}
+		if (!(mainjsonobject.get("diamondWearerSpawning") != null)) {
+			mainjsonobject.addProperty("diamondWearerSpawning", 0.0025);
+		}
+		if (!(mainjsonobject.get("goldWearerSpawning") != null)) {
+			mainjsonobject.addProperty("goldWearerSpawning", 0.005);
+		}
 		if (!(mainjsonobject.get("ironWearerSpawning") != null)) {
 			mainjsonobject.addProperty("ironWearerSpawning", 0.01);
 		}
 		if (!(mainjsonobject.get("chainmailWearerSpawning") != null)) {
-			mainjsonobject.addProperty("chainmailWearerSpawning", 0.01);
+			mainjsonobject.addProperty("chainmailWearerSpawning", 0.015);
 		}
 		if (!(mainjsonobject.get("leatherWearerSpawning") != null)) {
-			mainjsonobject.addProperty("leatherWearerSpawning", 0.01);
+			mainjsonobject.addProperty("leatherWearerSpawning", 0.02);
+		}
+		if (!(mainjsonobject.get("ramPunchingDropsWool") != null)) {
+			mainjsonobject.addProperty("ramPunchingDropsWool", 0);
 		}
 		{
 			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();

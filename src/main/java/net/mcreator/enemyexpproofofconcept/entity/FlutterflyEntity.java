@@ -74,7 +74,7 @@ public class FlutterflyEntity extends PathfinderMob implements IAnimatable {
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.FLUTTERFLY.get(), 10, 4, 4));
+					.add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.FLUTTERFLY.get(), 5, 1, 4));
 	}
 
 	public FlutterflyEntity(PlayMessages.SpawnEntity packet, Level world) {

@@ -22,7 +22,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -93,7 +93,7 @@ public class BullEntity extends Cow implements IAnimatable {
 		});
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(4, new FloatGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Husk.class, false, false));
 		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
