@@ -107,9 +107,9 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.FLUTTERFLY.get(), FlutterflyRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.BOAR.get(), BoarRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.BULL.get(), BullRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.RAMSHEARED.get(), RamshearedRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.RAM.get(), RamRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ROOSTER.get(), RoosterRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.RAMSHEARED.get(), RamshearedRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHEROMONE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HUNTSMAN_PUNCH.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), ThrownItemRenderer::new);

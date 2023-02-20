@@ -51,6 +51,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.RamShearingProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.RamHurtWoolDropProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.BullSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -133,6 +134,12 @@ public class RamEntity extends Monster implements IAnimatable {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.death"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		RamHurtWoolDropProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		return super.hurt(source, amount);
 	}
 
 	@Override

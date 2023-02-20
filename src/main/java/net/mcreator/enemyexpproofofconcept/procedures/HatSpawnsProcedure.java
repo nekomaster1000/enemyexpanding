@@ -1,10 +1,6 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
@@ -22,8 +18,6 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 
-import javax.annotation.Nullable;
-
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.File;
@@ -31,18 +25,8 @@ import java.io.BufferedReader;
 
 import com.google.gson.Gson;
 
-@Mod.EventBusSubscriber
 public class HatSpawnsProcedure {
-	@SubscribeEvent
-	public static void onEntitySpawned(EntityJoinWorldEvent event) {
-		execute(event, event.getWorld(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
-	}
-
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		File enemyexpansion = new File("");

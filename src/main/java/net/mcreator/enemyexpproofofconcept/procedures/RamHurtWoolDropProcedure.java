@@ -1,10 +1,6 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -22,8 +18,6 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
 
-import javax.annotation.Nullable;
-
 import java.util.Random;
 
 import java.io.IOException;
@@ -33,20 +27,8 @@ import java.io.BufferedReader;
 
 import com.google.gson.Gson;
 
-@Mod.EventBusSubscriber
 public class RamHurtWoolDropProcedure {
-	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
-		}
-	}
-
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		File enemyexpansion = new File("");
@@ -66,8 +48,7 @@ public class RamHurtWoolDropProcedure {
 					if (entity instanceof RamEntity) {
 						for (int index0 = 0; index0 < (int) (Mth.nextDouble(new Random(), 1, 3)); index0++) {
 							if (world instanceof Level _level && !_level.isClientSide()) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, (entity.getX()), (entity.getY()), (entity.getZ()),
-										new ItemStack(Blocks.WHITE_WOOL));
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 								entityToSpawn.setPickUpDelay(10);
 								_level.addFreshEntity(entityToSpawn);
 							}

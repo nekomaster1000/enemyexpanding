@@ -139,7 +139,7 @@ public class PetriboulderEntity extends Monster implements IAnimatable {
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
 			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		NoBabyZombiesProcedure.execute(this);
+		NoBabyZombiesProcedure.execute(world, this);
 		return retval;
 	}
 

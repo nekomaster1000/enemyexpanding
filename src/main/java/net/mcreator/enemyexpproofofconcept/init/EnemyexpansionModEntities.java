@@ -285,11 +285,6 @@ public class EnemyexpansionModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(BullEntity::new)
 
 					.sized(1.3f, 1.55f));
-	public static final RegistryObject<EntityType<RamshearedEntity>> RAMSHEARED = register("ramsheared",
-			EntityType.Builder.<RamshearedEntity>of(RamshearedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RamshearedEntity::new)
-
-					.sized(1.3f, 1.55f));
 	public static final RegistryObject<EntityType<RamEntity>> RAM = register("ram",
 			EntityType.Builder.<RamEntity>of(RamEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(RamEntity::new)
@@ -300,6 +295,11 @@ public class EnemyexpansionModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(RoosterEntity::new)
 
 					.sized(0.95f, 0.95f));
+	public static final RegistryObject<EntityType<RamshearedEntity>> RAMSHEARED = register("ramsheared",
+			EntityType.Builder.<RamshearedEntity>of(RamshearedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RamshearedEntity::new)
+
+					.sized(1.3f, 1.55f));
 	public static final RegistryObject<EntityType<PheromoneProjectileEntity>> PHEROMONE_PROJECTILE = register("projectile_pheromone_projectile",
 			EntityType.Builder.<PheromoneProjectileEntity>of(PheromoneProjectileEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(PheromoneProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
@@ -412,9 +412,9 @@ public class EnemyexpansionModEntities {
 			FlutterflyEntity.init();
 			BoarEntity.init();
 			BullEntity.init();
-			RamshearedEntity.init();
 			RamEntity.init();
 			RoosterEntity.init();
+			RamshearedEntity.init();
 		});
 	}
 
@@ -463,8 +463,8 @@ public class EnemyexpansionModEntities {
 		event.put(FLUTTERFLY.get(), FlutterflyEntity.createAttributes().build());
 		event.put(BOAR.get(), BoarEntity.createAttributes().build());
 		event.put(BULL.get(), BullEntity.createAttributes().build());
-		event.put(RAMSHEARED.get(), RamshearedEntity.createAttributes().build());
 		event.put(RAM.get(), RamEntity.createAttributes().build());
 		event.put(ROOSTER.get(), RoosterEntity.createAttributes().build());
+		event.put(RAMSHEARED.get(), RamshearedEntity.createAttributes().build());
 	}
 }
