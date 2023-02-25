@@ -79,7 +79,7 @@ public class FlutterfliersEffectsProcedure {
 
 					private void run() {
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 70, 0, (false), (true)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 210, 0, (false), (true)));
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, 10);

@@ -44,7 +44,7 @@ public class RamHurtWoolDropProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (Math.random() < mainjsonobject.get("ramPunchingDropsWool").getAsDouble()) {
+				if (Math.random() < mainjsonobject.get("ramPunchingDropsWoolChance").getAsDouble()) {
 					if (entity instanceof RamEntity) {
 						for (int index0 = 0; index0 < (int) (Mth.nextDouble(new Random(), 1, 3)); index0++) {
 							if (world instanceof Level _level && !_level.isClientSide()) {

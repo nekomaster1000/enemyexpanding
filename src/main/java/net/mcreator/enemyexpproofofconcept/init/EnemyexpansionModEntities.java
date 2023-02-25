@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.enemyexpproofofconcept.entity.ZobgoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ZadybugEntity;
+import net.mcreator.enemyexpproofofconcept.entity.WolfsbaneEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspStingProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
 import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
@@ -78,6 +79,7 @@ import net.mcreator.enemyexpproofofconcept.entity.BouncerKickProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BouncerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BoarEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BiterEntity;
+import net.mcreator.enemyexpproofofconcept.entity.BanedasherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BakerEntity;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
@@ -361,6 +363,16 @@ public class EnemyexpansionModEntities {
 	public static final RegistryObject<EntityType<TrollSpitEntity>> TROLL_SPIT = register("projectile_troll_spit",
 			EntityType.Builder.<TrollSpitEntity>of(TrollSpitEntity::new, MobCategory.MISC).setCustomClientFactory(TrollSpitEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WolfsbaneEntity>> WOLFSBANE = register("wolfsbane",
+			EntityType.Builder.<WolfsbaneEntity>of(WolfsbaneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WolfsbaneEntity::new)
+
+					.sized(0.9f, 2.45f));
+	public static final RegistryObject<EntityType<BanedasherEntity>> BANEDASHER = register("banedasher",
+			EntityType.Builder.<BanedasherEntity>of(BanedasherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BanedasherEntity::new)
+
+					.sized(1.7000000000000002f, 1.45f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -415,6 +427,8 @@ public class EnemyexpansionModEntities {
 			RamEntity.init();
 			RoosterEntity.init();
 			RamshearedEntity.init();
+			WolfsbaneEntity.init();
+			BanedasherEntity.init();
 		});
 	}
 
@@ -466,5 +480,7 @@ public class EnemyexpansionModEntities {
 		event.put(RAM.get(), RamEntity.createAttributes().build());
 		event.put(ROOSTER.get(), RoosterEntity.createAttributes().build());
 		event.put(RAMSHEARED.get(), RamshearedEntity.createAttributes().build());
+		event.put(WOLFSBANE.get(), WolfsbaneEntity.createAttributes().build());
+		event.put(BANEDASHER.get(), BanedasherEntity.createAttributes().build());
 	}
 }

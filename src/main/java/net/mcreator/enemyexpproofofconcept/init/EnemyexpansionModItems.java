@@ -27,10 +27,12 @@ import net.mcreator.enemyexpproofofconcept.item.SilverhatItem;
 import net.mcreator.enemyexpproofofconcept.item.PreposterousPortionItem;
 import net.mcreator.enemyexpproofofconcept.item.PheromoneProjectileItem;
 import net.mcreator.enemyexpproofofconcept.item.PhantasmItem;
+import net.mcreator.enemyexpproofofconcept.item.MiniWitherItem;
 import net.mcreator.enemyexpproofofconcept.item.MeatureMeatballItem;
 import net.mcreator.enemyexpproofofconcept.item.MeatheadArmorItem;
 import net.mcreator.enemyexpproofofconcept.item.KillstickItem;
 import net.mcreator.enemyexpproofofconcept.item.HuntsmanPunchItem;
+import net.mcreator.enemyexpproofofconcept.item.HorseheadItem;
 import net.mcreator.enemyexpproofofconcept.item.HealingGooStewItem;
 import net.mcreator.enemyexpproofofconcept.item.HealingGooItemItem;
 import net.mcreator.enemyexpproofofconcept.item.HealingGooItem;
@@ -48,6 +50,7 @@ import net.mcreator.enemyexpproofofconcept.item.CinderHelmItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderFireChargeItem;
 import net.mcreator.enemyexpproofofconcept.item.CastSpellItem;
 import net.mcreator.enemyexpproofofconcept.item.BullSkullItem;
+import net.mcreator.enemyexpproofofconcept.item.BrutishItem;
 import net.mcreator.enemyexpproofofconcept.item.BouncerKickProjectileItem;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
@@ -193,4 +196,10 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> CRAWLER_EXPLOSIVE = REGISTRY.register("crawler_explosive", () -> new CrawlerExplosiveItem());
 	public static final RegistryObject<Item> TROLL_INVINCIBLE = REGISTRY.register("troll_invincible", () -> new TrollInvincibleItem());
 	public static final RegistryObject<Item> TROLL_SPIT = REGISTRY.register("troll_spit", () -> new TrollSpitItem());
+	public static final RegistryObject<Item> HORSEHEAD_HELMET = REGISTRY.register("horsehead_helmet", () -> new HorseheadItem.Helmet());
+	public static final RegistryObject<Item> MINI_WITHER_HELMET = REGISTRY.register("mini_wither_helmet", () -> new MiniWitherItem.Helmet());
+	public static final RegistryObject<Item> BRUTISH_CHESTPLATE = REGISTRY.register("brutish_chestplate", () -> new BrutishItem.Chestplate());
+	public static final RegistryObject<Item> WOLFSBANE = REGISTRY.register("wolfsbane_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.WOLFSBANE, -10730918, -462600,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

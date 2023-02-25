@@ -3,7 +3,7 @@ package net.mcreator.enemyexpproofofconcept.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class FlutterflyPunishmentProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingHurtEvent event) {
+	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
 			execute(event, event.getEntity(), event.getSource().getEntity());
 		}

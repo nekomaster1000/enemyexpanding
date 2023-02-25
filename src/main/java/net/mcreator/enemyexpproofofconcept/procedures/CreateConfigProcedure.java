@@ -40,10 +40,20 @@ public class CreateConfigProcedure {
 		}
 		if (!(mainjsonobject.get("babyZombieSpawningExplained") != null)) {
 			mainjsonobject.addProperty("babyZombieSpawningExplained",
-					"0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.3 being 30%, for example.)");
+					"0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)");
 		}
 		if (!(mainjsonobject.get("babyZombieSpawning") != null)) {
-			mainjsonobject.addProperty("babyZombieSpawning", 0);
+			mainjsonobject.addProperty("babyZombieSpawning", 0.13);
+		}
+		if (!(mainjsonobject.get("babyZombieHealthExplained") != null)) {
+			mainjsonobject.addProperty("babyZombieHealthExplained",
+					"Allows you to set the amount of health Baby Zombies spawn with (if they're allowed to spawn at all.) I made it really low by default so as to make them less annoying to deal with if you do have to encounter them.");
+		}
+		if (!(mainjsonobject.get("babyZombieHealth") != null)) {
+			mainjsonobject.addProperty("babyZombieHealth", 4);
+		}
+		if (!(mainjsonobject.get("phantomHealth") != null)) {
+			mainjsonobject.addProperty("phantomHealth", 4);
 		}
 		if (!(mainjsonobject.get("mobSpawningDepthExplained") != null)) {
 			mainjsonobject.addProperty("mobSpawningDepthExplained",
@@ -138,6 +148,12 @@ public class CreateConfigProcedure {
 		if (!(mainjsonobject.get("silverheadWearerSpawning") != null)) {
 			mainjsonobject.addProperty("silverheadWearerSpawning", 0.01);
 		}
+		if (!(mainjsonobject.get("horseheadWearerSpawning") != null)) {
+			mainjsonobject.addProperty("horseheadWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("miniWitherWearerSpawning") != null)) {
+			mainjsonobject.addProperty("miniWitherWearerSpawning", 0.01);
+		}
 		if (!(mainjsonobject.get("flutterfliersWearerSpawning") != null)) {
 			mainjsonobject.addProperty("flutterfliersWearerSpawning", 0.01);
 		}
@@ -146,6 +162,9 @@ public class CreateConfigProcedure {
 		}
 		if (!(mainjsonobject.get("spectralWearerSpawning") != null)) {
 			mainjsonobject.addProperty("spectralWearerSpawning", 0.01);
+		}
+		if (!(mainjsonobject.get("bruteGarmentWearerSpawning") != null)) {
+			mainjsonobject.addProperty("bruteGarmentWearerSpawning", 0.01);
 		}
 		if (!(mainjsonobject.get("bullSkullWearerSpawning") != null)) {
 			mainjsonobject.addProperty("bullSkullWearerSpawning", 0.01);
@@ -168,8 +187,14 @@ public class CreateConfigProcedure {
 		if (!(mainjsonobject.get("leatherWearerSpawning") != null)) {
 			mainjsonobject.addProperty("leatherWearerSpawning", 0.02);
 		}
-		if (!(mainjsonobject.get("ramPunchingDropsWool") != null)) {
-			mainjsonobject.addProperty("ramPunchingDropsWool", 0);
+		if (!(mainjsonobject.get("miscOptionsExplained") != null)) {
+			mainjsonobject.addProperty("miscOptionsExplained", "Various other options you can change if you so wish.");
+		}
+		if (!(mainjsonobject.get("ramPunchingDropsWoolChance") != null)) {
+			mainjsonobject.addProperty("ramPunchingDropsWoolChance", 0);
+		}
+		if (!(mainjsonobject.get("wanderingTraderBecomesIllusionerOnHitChance") != null)) {
+			mainjsonobject.addProperty("wanderingTraderBecomesIllusionerOnHitChance", 0.99);
 		}
 		{
 			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();

@@ -12,8 +12,10 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,6 +26,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
 
 import javax.annotation.Nullable;
@@ -118,15 +121,33 @@ public class SpectreAttackProcedure {
 						if (entity instanceof LivingEntity _entity)
 							_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 5));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3600, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3600, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 1200, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 3600, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
+							_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3600, 0));
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 4));
+							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 3600, 4));
+						{
+							Entity _entity = entity;
+							if (_entity instanceof Player _player) {
+								_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.SPECTRAL_HELMET.get()));
+								_player.getInventory().setChanged();
+							} else if (_entity instanceof LivingEntity _living) {
+								_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.SPECTRAL_HELMET.get()));
+							}
+						}
+						{
+							Entity _entity = entity;
+							if (_entity instanceof Player _player) {
+								_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
+								_player.getInventory().setChanged();
+							} else if (_entity instanceof LivingEntity _living) {
+								_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
+							}
+						}
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.ENCHANTED_HIT, x, y, z, 4, 0.4, 0.4, 0.4, 0.3);
 						for (int index0 = 0; index0 < (int) (10); index0++) {

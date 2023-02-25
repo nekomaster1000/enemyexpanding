@@ -1,0 +1,62 @@
+{
+  "_fv": 34,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "horsehead",
+    "enableBody": false,
+    "textureBody": "",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": false,
+    "textureBoots": "",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "slimehead_",
+    "helmetName": "Horsehead",
+    "bodyName": "",
+    "leggingsName": "",
+    "bootsName": "",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Modelhorsehead",
+    "helmetModelPart": "all",
+    "helmetModelTexture": "horsehead.png",
+    "bodyModelName": "Modelphantasm",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "phantom_cape.png",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 5,
+    "damageValueHelmet": 1,
+    "damageValueBody": 0,
+    "damageValueLeggings": 0,
+    "damageValueBoots": 0,
+    "enchantability": 0,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "entity.horse.breathe"
+    },
+    "repairItems": [
+      {
+        "value": "Items.ROTTEN_FLESH"
+      }
+    ]
+  }
+}

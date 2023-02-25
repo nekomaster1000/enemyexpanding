@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.WitherSkeleton;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -42,10 +43,10 @@ public class HatSpawnsProcedure {
 				}
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (Math.random() < mainjsonobject.get("meatheadWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+				if (entity instanceof Zombie || entity instanceof Skeleton) {
+					if (world.getBiome(new BlockPos(x, y, z))
+							.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("meatheadWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -56,12 +57,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("headbittenWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("headbittenWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -72,12 +68,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("slimeheadWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("slimeheadWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -88,12 +79,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("spiderlatchWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("spiderlatchWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -104,12 +90,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("silverheadWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("silverheadWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -120,12 +101,29 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("flutterfliersWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("horseheadWearerSpawning").getAsDouble()) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.HORSEHEAD_HELMET.get()));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.HORSEHEAD_HELMET.get()));
+								}
+							}
+						}
+						if (Math.random() < mainjsonobject.get("miniWitherWearerSpawning").getAsDouble()) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
+								}
+							}
+						}
+						if (Math.random() < mainjsonobject.get("flutterfliersWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -136,12 +134,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("phantasmWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("phantasmWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -161,12 +154,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("spectralWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("spectralWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -186,37 +174,18 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("bullSkullWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
+						if (Math.random() < mainjsonobject.get("bruteGarmentWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
-									_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.BULL_SKULL_HELMET.get()));
+									_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.BRUTISH_CHESTPLATE.get()));
 									_player.getInventory().setChanged();
 								} else if (_entity instanceof LivingEntity _living) {
-									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.BULL_SKULL_HELMET.get()));
-								}
-							}
-							{
-								Entity _entity = entity;
-								if (_entity instanceof Player _player) {
-									_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
-									_player.getInventory().setChanged();
-								} else if (_entity instanceof LivingEntity _living) {
-									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
+									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.BRUTISH_CHESTPLATE.get()));
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("netheriteWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("netheriteWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -254,12 +223,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("diamondWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("diamondWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -297,12 +261,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("goldWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("goldWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -340,12 +299,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("ironWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("ironWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -383,12 +337,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("chainmailWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("chainmailWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -426,12 +375,7 @@ public class HatSpawnsProcedure {
 								}
 							}
 						}
-					}
-				}
-				if (Math.random() < mainjsonobject.get("leatherWearerSpawning").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof Skeleton) {
-						if (world.getBiome(new BlockPos(x, y, z))
-								.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+						if (Math.random() < mainjsonobject.get("leatherWearerSpawning").getAsDouble()) {
 							{
 								Entity _entity = entity;
 								if (_entity instanceof Player _player) {
@@ -467,6 +411,41 @@ public class HatSpawnsProcedure {
 								} else if (_entity instanceof LivingEntity _living) {
 									_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
 								}
+							}
+						}
+					}
+					if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
+						if (Math.random() < mainjsonobject.get("bullSkullWearerSpawning").getAsDouble()) {
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.BULL_SKULL_HELMET.get()));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.BULL_SKULL_HELMET.get()));
+								}
+							}
+							{
+								Entity _entity = entity;
+								if (_entity instanceof Player _player) {
+									_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
+									_player.getInventory().setChanged();
+								} else if (_entity instanceof LivingEntity _living) {
+									_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
+								}
+							}
+						}
+					}
+				}
+				if (entity instanceof WitherSkeleton) {
+					if (Math.random() < mainjsonobject.get("miniWitherWearerSpawning").getAsDouble()) {
+						{
+							Entity _entity = entity;
+							if (_entity instanceof Player _player) {
+								_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
+								_player.getInventory().setChanged();
+							} else if (_entity instanceof LivingEntity _living) {
+								_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
 							}
 						}
 					}

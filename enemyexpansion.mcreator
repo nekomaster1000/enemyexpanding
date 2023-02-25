@@ -5927,6 +5927,472 @@
         ]
       },
       "path": "~/Spawning"
+    },
+    {
+      "name": "Horsehead",
+      "type": "armor",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horsehead",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MiniWither",
+      "type": "armor",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mini_wither",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MiniWitherAttack",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mini_wither_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "HorseheadSpeedBoost",
+      "type": "procedure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horsehead_speed_boost",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "WolfsbaneHealthLogger",
+      "type": "procedure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolfsbane_health_logger",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IllusionerTrader",
+      "type": "procedure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "illusioner_trader",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "SwiftFlightActive",
+      "type": "procedure",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swift_flight_active",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SwiftFlight",
+      "type": "potioneffect",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swift_flight"
+    },
+    {
+      "name": "FlutterflySpeedUp",
+      "type": "procedure",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_speed_up",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arthropods"
+    },
+    {
+      "name": "Brutish",
+      "type": "armor",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brutish",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": false,
+        "ec": true
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BrutishResistance",
+      "type": "procedure",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brutish_resistance",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BruteDropsGarment",
+      "type": "procedure",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brute_drops_garment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BabyZombieHealth",
+      "type": "procedure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_zombie_health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "PhantomHealthCall",
+      "type": "procedure",
+      "sortid": 321,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_health_call",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "PhantomHealth",
+      "type": "procedure",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Wolfsbane",
+      "type": "livingentity",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolfsbane",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "WolfsbaneModel",
+      "type": "procedure",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolfsbane_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "WolfsbaneLayer",
+      "type": "procedure",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolfsbane_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "WolfsbaneHurt",
+      "type": "procedure",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolfsbane_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Banedasher",
+      "type": "livingentity",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banedasher",
+      "path": "~/Monsters"
+    },
+    {
+      "name": "BanedasherModel",
+      "type": "procedure",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banedasher_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "BanedasherLayer",
+      "type": "procedure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banedasher_layer",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "BanedasherHurt",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banedasher_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
     }
   ],
   "variable_elements": [
@@ -6017,14 +6483,15 @@
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
       "item.enemyexpansion.ram_spawn_egg": "Ram Spawn Egg",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
-      "entity.enemyexpansion.spectre": "Spectre",
       "item.enemyexpansion.cinder_helm_chestplate": "",
+      "entity.enemyexpansion.spectre": "Spectre",
+      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
       "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
       "item.enemyexpansion.silverhat_helmet": "Silverhat",
       "item.enemyexpansion.spectral_boots": "",
+      "entity.enemyexpansion.caster": "Goblin Caster",
       "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrifiedtroll Spawn Egg",
       "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
       "entity.enemyexpansion.zadybug": "Zadybug",
@@ -6040,14 +6507,15 @@
       "item.enemyexpansion.frigid_spawn_egg": "Frigid Spawn Egg",
       "effect.enemyexpansion.ground_bound": "Groundbound",
       "entity.enemyexpansion.cakerover": "Cakerover",
+      "item.enemyexpansion.brutish_leggings": "",
       "item.enemyexpansion.silverhat_chestplate": "",
       "entity.enemyexpansion.cinder": "Cinder",
       "subtitles.troll.idle.1": "Troll growls",
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
-      "entity.enemyexpansion.gallant": "Gallant",
-      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "entity.enemyexpansion.gallant": "Gallant",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
@@ -6055,16 +6523,15 @@
       "gamerule.blazes_do_cinder_jump": "cindersoccasionallyreplaceblazes",
       "entity.enemyexpansion.crawler": "Crawler",
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
-      "entity.enemyexpansion.casterfluu": "Goblin Caster",
       "item.enemyexpansion.slugvest_leggings": "-",
-      "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
       "entity.enemyexpansion.baker": "Goblin Baker",
+      "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
       "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
       "entity.enemyexpansion.boar": "Boar",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
       "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
-      "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
       "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
+      "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
       "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
       "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "PheromoneSummon Spawn Egg",
@@ -6077,12 +6544,14 @@
       "item.enemyexpansion.frigid_touch_projectile": "Frigid Touch",
       "item.enemyexpansion.invisicreeper_spawn_egg": "Invisicreeper Spawn Egg",
       "item.enemyexpansion.ghoul_spit": "Spit",
+      "entity.enemyexpansion.banedasher": "Wolfsbane",
       "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
       "entity.enemyexpansion.tarantula": "Tarantula",
       "item.enemyexpansion.slugvest_chestplate": "Slugvest",
       "item.enemyexpansion.trollface_chestplate": "",
       "item.enemyexpansion.pheromone_projectile": "Wasp Pheromone",
       "entity.enemyexpansion.projectile_slimeball_throw": "a stray Slimeball",
+      "item.enemyexpansion.mini_wither_helmet": "Mini-Wither",
       "entity.enemyexpansion.senior": "Senior",
       "gamerule.petriman_dont_spawn_above_ground": "petrimanReplacementRule",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
@@ -6091,10 +6560,12 @@
       "item.enemyexpansion.silverhat_leggings": "",
       "entity.enemyexpansion.vampire": "Vampire",
       "item.enemyexpansion.huntsman_punch": "Huntsman Punch",
+      "item.enemyexpansion.horsehead_helmet": "Horsehead",
       "gamerule.intruder_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "entity.enemyexpansion.projectile_gallant_swings": "Gallant\u0027s blade",
       "entity.enemyexpansion.flutterfly": "Flutterfly",
       "entity.enemyexpansion.projectile_ghoul_spit": "ghoulish spit",
+      "item.enemyexpansion.mini_wither_boots": "",
       "entity.enemyexpansion.goblin": "Goblin Thief",
       "gamerule.blazes_do_cinder_jump.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
       "gamerule.silverking_dont_spawn_above_ground_rule": "petrimanDontSpawnAboveGroundRule",
@@ -6114,6 +6585,7 @@
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
       "item.enemyexpansion.bull_skull_chestplate": "",
       "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
+      "item.enemyexpansion.mini_wither_chestplate": "",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
       "item.enemyexpansion.bull_spawn_egg": "Bull Spawn Egg",
       "gamerule.petriman_replacement_rule": "cindersoccasionallyreplaceblazes",
@@ -6125,12 +6597,14 @@
       "entity.enemyexpansion.petricrawler": "Petricrawler",
       "entity.enemyexpansion.tarantulam": "Tarantula",
       "gamerule.petriman_random_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "item.enemyexpansion.banedasher_spawn_egg": "Banedasher Spawn Egg",
       "entity.enemyexpansion.ramsheared": "Ramsheared",
       "item.enemyexpansion.bull_skull_leggings": "",
       "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.cinder_helm_leggings": "",
       "item.enemyexpansion.headbiter_helmet": "Headbiter",
+      "item.enemyexpansion.brutish_boots": "",
       "entity.enemyexpansion.petriman": "Petriman",
       "item.enemyexpansion.slimehead_helmet": "Slimehead",
       "advancements.meathead_obtained.title": "Nice to Meature",
@@ -6147,15 +6621,18 @@
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
       "item.enemyexpansion.flutterfliers_chestplate": "Flutterfliers",
       "subtitles.troll.roar": "Troll roars",
+      "entity.enemyexpansion.wolfsbane": "Wolfsbane",
       "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
       "item.enemyexpansion.slugvest_boots": "-",
       "item.enemyexpansion.headbiter_chestplate": "Phantasm Cape",
+      "item.enemyexpansion.mini_wither_leggings": "",
       "item.enemyexpansion.petriman_spawn_egg": "Petriman Spawn Egg",
       "item.enemyexpansion.meathead_armor_chestplate": "Meathead Chestplate",
       "entity.enemyexpansion.biter": "Biter",
       "item.enemyexpansion.ramsheared_spawn_egg": "Ramsheared Spawn Egg",
       "item.enemyexpansion.bull_skull_helmet": "Bull Skull",
       "item.enemyexpansion.propeller_spawn_egg": "Propeller Spawn Egg",
+      "item.enemyexpansion.horsehead_leggings": "",
       "advancements.bro_think_he_carti.descr": "Wear a Headbiter",
       "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
       "entity.enemyexpansion.equestrian": "Equestrian",
@@ -6170,8 +6647,10 @@
       "item.enemyexpansion.meature_meatball": "Meature Meatball",
       "item.minecraft.tipped_arrow.effect.groundbound_potion": "Arrow of Groundbinding",
       "entity.enemyexpansion.bouncer": "Bouncer",
+      "item.enemyexpansion.horsehead_chestplate": "",
       "item.enemyexpansion.trollface_helmet": "Trollface",
       "item.enemyexpansion.ghoul_slash": "Slash",
+      "item.enemyexpansion.wolfsbane_spawn_egg": "Wolfsbane Spawn Egg",
       "entity.enemyexpansion.projectile_frigid_touch_projectile": "a frigid touch",
       "item.enemyexpansion.spiderlatch_chestplate": "Phantasm Cape",
       "item.enemyexpansion.healing_goo_soup": "Healing Goo Stew",
@@ -6198,6 +6677,7 @@
       "item.enemyexpansion.flutterfliers_leggings": "",
       "item.enemyexpansion.meathead_armor_helmet": "Meat Head",
       "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.horsehead_boots": "",
       "item.enemyexpansion.silverhat_boots": "",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
@@ -6228,6 +6708,7 @@
       "gamerule.petriman_dont_spawn_above_ground_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "item.enemyexpansion.rancher_spawn_egg": "Goblin Rancher Spawn Egg",
       "subtitles.troll.death": "Troll dies",
+      "item.enemyexpansion.brutish_helmet": "",
       "item.enemyexpansion.phantasm_helmet": "Phantasm Cowl",
       "advancements.vampire_slayer.title": "Vampire Slayer",
       "entity.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
@@ -6246,8 +6727,10 @@
       "item.enemyexpansion.huntsmanskeleton_spawn_egg": "Huntsman Skeleton Spawn Egg",
       "entity.enemyexpansion.propeller": "Propeller",
       "entity.enemyexpansion.petrifiedtroll": "Petrifiedtroll",
+      "item.enemyexpansion.brutish_chestplate": "Brutish Garment",
       "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
       "item.enemyexpansion.cinder_slice": "Cinder Slice",
+      "effect.enemyexpansion.swift_flight": "Swift Flight",
       "item.enemyexpansion.spectral_chestplate": "Spectral Cloak",
       "item.minecraft.lingering_potion.effect.groundbound_potion": "Lingering Potion of Groundbinding",
       "item.enemyexpansion.sprintshorts_helmet": "-"

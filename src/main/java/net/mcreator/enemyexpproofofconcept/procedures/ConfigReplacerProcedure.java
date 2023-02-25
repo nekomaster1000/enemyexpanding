@@ -7,11 +7,11 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.monster.ZombieVillager;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.EnderMan;
+import net.minecraft.world.entity.monster.Drowned;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.CaveSpider;
 import net.minecraft.world.entity.monster.Blaze;
@@ -73,7 +73,7 @@ public class ConfigReplacerProcedure {
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (Math.random() < mainjsonobject.get("petrimanZombieReplacement").getAsDouble()
 						&& y < mainjsonobject.get("petrimanZombieReplacementDepth").getAsDouble()) {
-					if (entity instanceof Zombie || entity instanceof ZombieVillager) {
+					if (entity instanceof Zombie && !(entity instanceof Drowned)) {
 						ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
 					}
 				}

@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.enemyexpproofofconcept.client.renderer.ZobgoblinRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.ZadybugRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.WolfsbaneRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.WaspRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.VampireRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.TrollRenderer;
@@ -58,6 +59,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.BullRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BouncerRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BoarRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BiterRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.BanedasherRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BakerRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -127,5 +129,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.CRAWLER_EXPLOSIVE.get(), CrawlerExplosiveRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_INVINCIBLE.get(), TrollInvincibleRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_SPIT.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.WOLFSBANE.get(), WolfsbaneRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.BANEDASHER.get(), BanedasherRenderer::new);
 	}
 }

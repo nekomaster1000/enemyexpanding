@@ -50,6 +50,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.FlutterflySpeedUpProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.FlutterflyPlayerTouchProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -181,6 +182,12 @@ public class FlutterflyEntity extends PathfinderMob implements IAnimatable {
 	@Override
 	public boolean causeFallDamage(float l, float d, DamageSource source) {
 		return false;
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		FlutterflySpeedUpProcedure.execute(this);
+		return super.hurt(source, amount);
 	}
 
 	@Override

@@ -1,0 +1,62 @@
+{
+  "_fv": 34,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": false,
+    "textureHelmet": "",
+    "enableBody": true,
+    "textureBody": "brutish_garment",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": false,
+    "textureBoots": "",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "cinder_",
+    "helmetName": "",
+    "bodyName": "Brutish Garment",
+    "leggingsName": "",
+    "bootsName": "",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "bull_skull.png",
+    "bodyModelName": "Modelbrutish_garment",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "brutish_garment.png",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 4,
+    "damageValueHelmet": 0,
+    "damageValueBody": 1,
+    "damageValueLeggings": 0,
+    "damageValueBoots": 0,
+    "enchantability": 15,
+    "toughness": 0.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": "entity.parrot.imitate.piglin_brute"
+    },
+    "repairItems": [
+      {
+        "value": "Items.GOLD_INGOT"
+      }
+    ]
+  }
+}
