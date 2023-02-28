@@ -66,8 +66,8 @@ public class BanedasherEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new PanicGoal(this, 1.5));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, false) {
+		this.goalSelector.addGoal(1, new PanicGoal(this, 1.6));
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
@@ -127,7 +127,7 @@ public class BanedasherEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 40);
 		builder = builder.add(Attributes.ARMOR, 4);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 24);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 28);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
 		return builder;

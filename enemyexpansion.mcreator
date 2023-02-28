@@ -6200,22 +6200,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -6233,22 +6217,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -6393,6 +6361,15 @@
         ]
       },
       "path": "~/Monsters"
+    },
+    {
+      "name": "BetterConfig",
+      "type": "config",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "better_config",
+      "path": "~/Spawning"
     }
   ],
   "variable_elements": [
@@ -6483,9 +6460,9 @@
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
       "item.enemyexpansion.ram_spawn_egg": "Ram Spawn Egg",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "item.enemyexpansion.cinder_helm_chestplate": "",
-      "entity.enemyexpansion.spectre": "Spectre",
       "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "entity.enemyexpansion.spectre": "Spectre",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
       "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
@@ -6513,9 +6490,9 @@
       "subtitles.troll.idle.1": "Troll growls",
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
-      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
-      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "entity.enemyexpansion.gallant": "Gallant",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
@@ -6524,8 +6501,8 @@
       "entity.enemyexpansion.crawler": "Crawler",
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
       "item.enemyexpansion.slugvest_leggings": "-",
-      "entity.enemyexpansion.baker": "Goblin Baker",
       "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "entity.enemyexpansion.baker": "Goblin Baker",
       "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
       "entity.enemyexpansion.boar": "Boar",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
@@ -6544,7 +6521,7 @@
       "item.enemyexpansion.frigid_touch_projectile": "Frigid Touch",
       "item.enemyexpansion.invisicreeper_spawn_egg": "Invisicreeper Spawn Egg",
       "item.enemyexpansion.ghoul_spit": "Spit",
-      "entity.enemyexpansion.banedasher": "Wolfsbane",
+      "entity.enemyexpansion.banedasher": "Banedasher",
       "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
       "entity.enemyexpansion.tarantula": "Tarantula",
       "item.enemyexpansion.slugvest_chestplate": "Slugvest",
@@ -6698,6 +6675,7 @@
       "item.enemyexpansion.sprintshorts_boots": "-",
       "item.enemyexpansion.cinder_scrap": "Cinder Scrap",
       "entity.enemyexpansion.zobgoblin": "Zobgoblin",
+      "config.enemyexpansion.better_config": "enemyexpansion",
       "gamerule.silverking_dont_spawn_above_deepslate_rule.description": "Petrimen will not spawn above Y25.",
       "gamerule.petriman_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
       "advancements.bro_think_he_carti.title": "Bro Think He Carti",

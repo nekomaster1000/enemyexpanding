@@ -1,15 +1,18 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.network.EnemyexpansionModVariables;
+import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
 public class SilverkingSpawningProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		EnemyexpansionModVariables.WorldVariables.get(world).configMob = "silverking";
-		EnemyexpansionModVariables.WorldVariables.get(world).syncData(world);
-		EnemyexpansionModVariables.WorldVariables.get(world).returnConfig = "SpawningDepth";
-		EnemyexpansionModVariables.WorldVariables.get(world).syncData(world);
-		return ConfigDepthProcedure.execute(world, x, y, z);
+		boolean spawning = false;
+		if (y < (double) BetterConfigConfiguration.SILVERKINGSPAWNINGDEPTH.get() && world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) < 5) {
+			spawning = true;
+		} else {
+			spawning = false;
+		}
+		return spawning;
 	}
 }

@@ -1,0 +1,485 @@
+{
+  "_fv": 34,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "mobSpawning",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.13,
+            "textDefault": "",
+            "comment": "0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)",
+            "vardisplay": "Baby Zombie Spawning",
+            "varname": "babyzombiespawning",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "mobHealth",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 2.0,
+            "textDefault": "",
+            "comment": "Allows you to set the amount of health mobs spawn with (if they're allowed to spawn at all.) I made it really low by default so as to make them less annoying to deal with if you do have to encounter them.",
+            "vardisplay": "Baby Zombie Health",
+            "varname": "babyzombiehealth",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 6.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Phantom Health",
+            "varname": "phantomhealth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "spawningDepth",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 55.0,
+            "textDefault": "",
+            "comment": "The specified mob will only naturally spawn below the specified y-level. This is so certain mobs are cave-exclusive by default.",
+            "vardisplay": "Petriman Spawning Depth",
+            "varname": "petrimanspawningdepth",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Silverking Spawning Depth",
+            "varname": "silverkingspawningdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Crawler Spawning Depth",
+            "varname": "crawlerspawningdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Troll Spawning Depth",
+            "varname": "trollspawningdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Vampire Spawning Depth",
+            "varname": "vampirespawningdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "mobReplacement",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Petriman Zombie Replacement",
+            "varname": "petrimanzombiereplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.4,
+            "textDefault": "",
+            "comment": "cinderblazereplacement",
+            "vardisplay": "Silverking Spider Replacement",
+            "varname": "silverkingspiderreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.3,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Crawler/Intruder Creeper Replacement",
+            "varname": "creepsreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.75,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Vampire Skeleton Replacement",
+            "varname": "vampireskeletonreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Troll Enderman Replacement",
+            "varname": "trollendermanreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.2,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Cinder Blaze Replacement",
+            "varname": "cinderblazereplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.65,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Pig Boar Replacement",
+            "varname": "pigboarreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.75,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Cow Bull Replacement",
+            "varname": "cowbullreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.85,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Sheep Ram Replacement",
+            "varname": "sheepramreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.55,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chicken Rooster Replacement",
+            "varname": "chickenroosterreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Tarantula Spider Replacement",
+            "varname": "spidertarantulareplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Scorpion Spider Replacement",
+            "varname": "spiderscorpionreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "mobReplacementDepth",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 55.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Petriman Zombie Replacement Depth",
+            "varname": "petrimanzombiereplacementdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Silverking Spider Replacement Depth",
+            "varname": "silverkingspiderreplacementdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Crawler/Intruder Creeper Replacement Depth",
+            "varname": "creepsreplacementdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Vampire Skeleton Replacement Depth",
+            "varname": "vampireskeletonreplacementdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": -10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Troll Enderman Replacement Depth",
+            "varname": "trollendermanreplacementdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      }
+    ],
+    "file": "enemyexpansion",
+    "configType": 0
+  }
+}
