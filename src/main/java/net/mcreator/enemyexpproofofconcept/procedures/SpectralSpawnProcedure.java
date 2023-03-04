@@ -39,7 +39,7 @@ public class SpectralSpawnProcedure {
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 				.getItem() == EnemyexpansionModItems.SPECTRAL_HELMET.get()
-				|| (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
+				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
 						.getItem() == EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()) {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SQUID_INK, x, (y + 1), z, 10, 3, 3, 3, 1);

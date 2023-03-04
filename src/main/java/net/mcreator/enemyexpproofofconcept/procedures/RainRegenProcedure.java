@@ -11,7 +11,7 @@ public class RainRegenProcedure {
 			return;
 		if (entity.isInWaterRainOrBubble()) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, (false), (true)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 0, (false), (true)));
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 100, 0, (false), (false)));
 			if (entity instanceof LivingEntity _entity)

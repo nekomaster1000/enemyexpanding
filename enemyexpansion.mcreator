@@ -4789,6 +4789,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4973,18 +4989,6 @@
         "dependencies": []
       },
       "path": "~/Animals"
-    },
-    {
-      "name": "CreateConfig",
-      "type": "procedure",
-      "sortid": 274,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "create_config",
-      "metadata": {
-        "dependencies": []
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "ConfigDepth",
@@ -6256,43 +6260,6 @@
       "path": "~/Monsters"
     },
     {
-      "name": "WolfsbaneHurt",
-      "type": "procedure",
-      "sortid": 327,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wolfsbane_hurt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Monsters"
-    },
-    {
       "name": "Banedasher",
       "type": "livingentity",
       "sortid": 328,
@@ -6326,12 +6293,21 @@
       "path": "~/Monsters"
     },
     {
-      "name": "BanedasherHurt",
-      "type": "procedure",
-      "sortid": 331,
+      "name": "BetterConfig",
+      "type": "config",
+      "sortid": 332,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "banedasher_hurt",
+      "registry_name": "better_config",
+      "path": "~/Spawning"
+    },
+    {
+      "name": "BaneHurt",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bane_hurt",
       "metadata": {
         "dependencies": [
           {
@@ -6340,6 +6316,27 @@
           },
           {
             "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "BaneDaylight",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bane_daylight",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
             "type": "entity"
           },
           {
@@ -6363,13 +6360,128 @@
       "path": "~/Monsters"
     },
     {
-      "name": "BetterConfig",
-      "type": "config",
-      "sortid": 332,
+      "name": "BanedasherCalmDown",
+      "type": "procedure",
+      "sortid": 336,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "better_config",
+      "registry_name": "banedasher_calm_down",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "PropellerOneshot",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propeller_oneshot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "PrecisionStrike",
+      "type": "achievement",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_strike"
+    },
+    {
+      "name": "EffectSpawns",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "effect_spawns",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
       "path": "~/Spawning"
+    },
+    {
+      "name": "BurningSpeedUp",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning_speed_up",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Banemask",
+      "type": "armor",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banemask",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Banejump",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banejump",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -6493,6 +6605,7 @@
       "entity.enemyexpansion.gallant": "Gallant",
       "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.banemask_boots": "",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
@@ -6513,6 +6626,7 @@
       "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "PheromoneSummon Spawn Egg",
       "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
+      "advancements.precision_strike.descr": "Shoot a Propeller out of the air with an arrow",
       "item.enemyexpansion.slimehead_boots": "",
       "entity.enemyexpansion.rooster": "Rooster",
       "entity.enemyexpansion.frigid": "Frigid",
@@ -6532,6 +6646,7 @@
       "entity.enemyexpansion.senior": "Senior",
       "gamerule.petriman_dont_spawn_above_ground": "petrimanReplacementRule",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
+      "item.enemyexpansion.banemask_helmet": "Banemask",
       "item.enemyexpansion.healing_goo": "Healing Goo",
       "entity.enemyexpansion.troll": "Troll",
       "item.enemyexpansion.silverhat_leggings": "",
@@ -6632,6 +6747,7 @@
       "item.enemyexpansion.spiderlatch_chestplate": "Phantasm Cape",
       "item.enemyexpansion.healing_goo_soup": "Healing Goo Stew",
       "item.enemyexpansion.zobgoblin_spawn_egg": "Zobgoblin Spawn Egg",
+      "item.enemyexpansion.banemask_leggings": "",
       "item.enemyexpansion.spectral_leggings": "",
       "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
       "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
@@ -6641,6 +6757,7 @@
       "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
       "item.enemyexpansion.slimehead_leggings": "",
       "gamerule.no_baby_zombies.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "item.enemyexpansion.banemask_chestplate": "",
       "entity.enemyexpansion.projectile_troll_spit": "heavy troll saliva",
       "item.enemyexpansion.zadybug_spawn_egg": "Zadybug Spawn Egg",
       "gamerule.troll_replacement_rule": "silverkingReplacementRule",
@@ -6710,6 +6827,7 @@
       "item.enemyexpansion.cinder_slice": "Cinder Slice",
       "effect.enemyexpansion.swift_flight": "Swift Flight",
       "item.enemyexpansion.spectral_chestplate": "Spectral Cloak",
+      "advancements.precision_strike.title": "Precision Strike",
       "item.minecraft.lingering_potion.effect.groundbound_potion": "Lingering Potion of Groundbinding",
       "item.enemyexpansion.sprintshorts_helmet": "-"
     }
@@ -6775,7 +6893,9 @@
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "meature_iso",
-    "requiredMods": [],
+    "requiredMods": [
+      "geckolib"
+    ],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [

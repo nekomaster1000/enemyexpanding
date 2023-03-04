@@ -31,6 +31,7 @@ import net.mcreator.enemyexpproofofconcept.client.model.Modelequestrian_zombie;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelcinderhelmet;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelbull_skull;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelbrutish_garment;
+import net.mcreator.enemyexpproofofconcept.client.model.Modelbanemask;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class EnemyexpansionModModels {
@@ -40,6 +41,7 @@ public class EnemyexpansionModModels {
 		event.registerLayerDefinition(Modelhorsehead.LAYER_LOCATION, Modelhorsehead::createBodyLayer);
 		event.registerLayerDefinition(Modelphantasm.LAYER_LOCATION, Modelphantasm::createBodyLayer);
 		event.registerLayerDefinition(Modelsteve.LAYER_LOCATION, Modelsteve::createBodyLayer);
+		event.registerLayerDefinition(Modelbanemask.LAYER_LOCATION, Modelbanemask::createBodyLayer);
 		event.registerLayerDefinition(Modelequestrian_zombie.LAYER_LOCATION, Modelequestrian_zombie::createBodyLayer);
 		event.registerLayerDefinition(Modelfrigid_zombie.LAYER_LOCATION, Modelfrigid_zombie::createBodyLayer);
 		event.registerLayerDefinition(Modelspiderlatch.LAYER_LOCATION, Modelspiderlatch::createBodyLayer);

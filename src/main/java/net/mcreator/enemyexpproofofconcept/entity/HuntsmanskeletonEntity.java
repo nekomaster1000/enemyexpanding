@@ -34,6 +34,7 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
@@ -83,6 +84,7 @@ public class HuntsmanskeletonEntity extends Skeleton implements IAnimatable {
 		super(type, world);
 		xpReward = 8;
 		setNoAi(false);
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
 	}
 
 	@Override
@@ -104,11 +106,6 @@ public class HuntsmanskeletonEntity extends Skeleton implements IAnimatable {
 	@Override
 	public double getPassengersRidingOffset() {
 		return super.getPassengersRidingOffset() + 0.5;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Items.BONE));
 	}
 
 	@Override

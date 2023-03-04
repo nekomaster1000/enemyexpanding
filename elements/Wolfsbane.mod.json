@@ -48,7 +48,7 @@
     "mobCreatureType": "UNDEAD",
     "attackStrength": 10,
     "attackKnockback": 1.5,
-    "knockbackResistance": 0.5,
+    "knockbackResistance": 1.0,
     "movementSpeed": 0.22,
     "armorBaseValue": 10.0,
     "trackingRange": 64,
@@ -100,7 +100,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "whenMobIsHurt": {
-      "name": "WolfsbaneHurt"
+      "name": "BaneHurt"
     },
     "hasAI": true,
     "aiBase": "(none)",

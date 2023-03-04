@@ -27,7 +27,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": ""
+      "value": "Items.BOW"
     },
     "equipmentOffHand": {
       "value": ""
@@ -78,7 +78,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Items.BONE"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.skeleton.ambient"

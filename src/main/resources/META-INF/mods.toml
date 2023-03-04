@@ -22,6 +22,12 @@ Adding variety to combat encounters!
     side="BOTH"
 
 
+[[dependencies.enemyexpansion]]
+    modId="geckolib"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.enemyexpansion]]
     modId="geckolib"

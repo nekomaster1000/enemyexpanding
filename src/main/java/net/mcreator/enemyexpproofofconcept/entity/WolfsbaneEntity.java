@@ -44,7 +44,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.procedures.WolfsbaneHurtProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.BaneHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -134,7 +134,7 @@ public class WolfsbaneEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		WolfsbaneHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		BaneHurtProcedure.execute(this.level, this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		return super.hurt(source, amount);
@@ -153,7 +153,7 @@ public class WolfsbaneEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
 		return builder;
 	}

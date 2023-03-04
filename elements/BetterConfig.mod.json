@@ -477,6 +477,494 @@
             "entityType": "CUSTOM:Baker"
           }
         ]
+      },
+      {
+        "category": "hatWearerSpawning",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "Some Zombies and Skeletons will spawn wearing certain special gear. edit the minecraft:is_meatury tag to choose what biomes these mobs spawn in.",
+            "vardisplay": "Meat Head Wearer Spawning",
+            "varname": "meatheadwearerspawning",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Headbitten Wearer Spawning",
+            "varname": "headbittenwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Slimehead Wearer Spawning",
+            "varname": "slimeheadwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Spiderlatch Wearer Spawning",
+            "varname": "spiderlatchwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Silverhead Wearer Spawning",
+            "varname": "silverheadwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Horsehead Wearer Spawning",
+            "varname": "horseheadwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Miniwither Wearer Spawning",
+            "varname": "miniwitherwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Flutterfliers Wearer Spawning",
+            "varname": "flutterflierswearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Phantasm Wearer Spawning",
+            "varname": "phantasmwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Spectral Wearer Spawning",
+            "varname": "spectralwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Brutish Garment Wearer Spawning",
+            "varname": "brutishgarmentwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Bull Skull Wearer Spawning",
+            "varname": "bullskullwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "armorWearerSpawning",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Leather Wearer Spawning",
+            "varname": "leatherwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chainmail Wearer Spawning",
+            "varname": "chainmailwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Iron Wearer Spawning",
+            "varname": "ironwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.007,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Gold Wearer Spawning",
+            "varname": "goldwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.004,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Diamond Wearer Spawning",
+            "varname": "diamondwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.001,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Netherite Wearer Spawning",
+            "varname": "netheritewearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "miscOptions",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Punching Ram Drops Wool Chance",
+            "varname": "punchingramdropswoolchance",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.95,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Wandering Trader becomes Illusioner on-death Chance",
+            "varname": "wanderingtraderbecomesillusioneronhitchance",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.2,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Burning Undead mobs gain Speed III Chance",
+            "varname": "burningundeadspeedup",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
+      },
+      {
+        "category": "effectSpawning",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "Zombies and Skeletons will spawn with a potion effect.",
+            "vardisplay": "Chance of Strength effect applied on mob-spawn",
+            "varname": "strength",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chance of Speed effect applied on mob-spawn",
+            "varname": "speed",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chance of Resistance effect applied on mob-spawn",
+            "varname": "resistance",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chance of Haste effect applied on mob-spawn",
+            "varname": "haste",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chance of Fire Resistance effect applied on mob-spawn",
+            "varname": "fireres",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          }
+        ]
       }
     ],
     "file": "enemyexpansion",

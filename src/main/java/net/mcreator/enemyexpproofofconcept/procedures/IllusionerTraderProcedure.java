@@ -1,7 +1,6 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -21,14 +20,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
+
 import javax.annotation.Nullable;
 
-import java.io.IOException;
-import java.io.FileReader;
 import java.io.File;
-import java.io.BufferedReader;
-
-import com.google.gson.Gson;
 
 @Mod.EventBusSubscriber
 public class IllusionerTraderProcedure {
@@ -49,49 +45,33 @@ public class IllusionerTraderProcedure {
 		boolean spawning = false;
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		File enemyexpansion = new File("");
-		enemyexpansion = new File((FMLPaths.GAMEDIR.get().toString() + "/config/"), File.separator + "enemyexpansion.json");
-		{
-			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(enemyexpansion));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
-				}
-				bufferedReader.close();
-				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (Math.random() < mainjsonobject.get("wanderingTraderBecomesIllusionerOnHitChance").getAsDouble()) {
-					if (entity instanceof WanderingTrader) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 25, 0.5, 0.5, 0.5, 1);
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.mirror_move")),
-										SoundSource.NEUTRAL, 1, 1);
-							} else {
-								_level.playLocalSound(x, y, z,
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.mirror_move")),
-										SoundSource.NEUTRAL, 1, 1, false);
-							}
-						}
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = new Illusioner(EntityType.ILLUSIONER, _level);
-							entityToSpawn.moveTo(x, y, z, entity.getYRot(), 0);
-							entityToSpawn.setYBodyRot(entity.getYRot());
-							entityToSpawn.setYHeadRot(entity.getYRot());
-							entityToSpawn.setDeltaMovement(0, 0, 0);
-							if (entityToSpawn instanceof Mob _mobToSpawn)
-								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-										MobSpawnType.MOB_SUMMONED, null, null);
-							world.addFreshEntity(entityToSpawn);
-						}
-						if (!entity.level.isClientSide())
-							entity.discard();
+		if (Math.random() < (double) BetterConfigConfiguration.WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE.get()) {
+			if (entity instanceof WanderingTrader) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 25, 0.5, 0.5, 0.5, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos(x, y, z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.mirror_move")), SoundSource.NEUTRAL, 1,
+								1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.mirror_move")),
+								SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = new Illusioner(EntityType.ILLUSIONER, _level);
+					entityToSpawn.moveTo(x, y, z, entity.getYRot(), 0);
+					entityToSpawn.setYBodyRot(entity.getYRot());
+					entityToSpawn.setYHeadRot(entity.getYRot());
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+					if (entityToSpawn instanceof Mob _mobToSpawn)
+						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
+								null, null);
+					world.addFreshEntity(entityToSpawn);
+				}
+				if (!entity.level.isClientSide())
+					entity.discard();
 			}
 		}
 	}

@@ -52,6 +52,7 @@ import net.mcreator.enemyexpproofofconcept.item.CastSpellItem;
 import net.mcreator.enemyexpproofofconcept.item.BullSkullItem;
 import net.mcreator.enemyexpproofofconcept.item.BrutishItem;
 import net.mcreator.enemyexpproofofconcept.item.BouncerKickProjectileItem;
+import net.mcreator.enemyexpproofofconcept.item.BanemaskItem;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 public class EnemyexpansionModItems {
@@ -202,4 +203,5 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> WOLFSBANE = REGISTRY.register("wolfsbane_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.WOLFSBANE, -10730918, -462600,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BANEMASK_HELMET = REGISTRY.register("banemask_helmet", () -> new BanemaskItem.Helmet());
 }

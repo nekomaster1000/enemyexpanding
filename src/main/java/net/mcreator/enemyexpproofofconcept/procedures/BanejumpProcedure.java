@@ -1,5 +1,6 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -9,20 +10,21 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.entity.PropellerEntity;
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 
 import javax.annotation.Nullable;
 
-import java.util.Random;
-
 @Mod.EventBusSubscriber
-public class PropellerHurtProcedure {
+public class BanejumpProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
@@ -37,8 +39,8 @@ public class PropellerHurtProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof PropellerEntity) {
-			entity.setDeltaMovement(new Vec3(0, 0.2, 0));
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
+				.getItem() == EnemyexpansionModItems.BANEMASK_HELMET.get()) {
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -60,9 +62,7 @@ public class PropellerHurtProcedure {
 				}
 
 				private void run() {
-					entity.setDeltaMovement(new Vec3(0, 1.2, 0));
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, (false), (false)));
+					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.2), 0.2, (entity.getLookAngle().z * 0.2)));
 					new Object() {
 						private int ticks = 0;
 						private float waitTicks;
@@ -84,14 +84,24 @@ public class PropellerHurtProcedure {
 						}
 
 						private void run() {
-							entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1, 1.5)), (Mth.nextDouble(new Random(), 0.3, 2)),
-									(Mth.nextDouble(new Random(), -1, 1.5))));
+							entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 1.2), 0.5, (entity.getLookAngle().z * 1.2)));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
+											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.howl")), SoundSource.NEUTRAL, 1,
+											1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
+											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.howl")), SoundSource.NEUTRAL, 1,
+											1, false);
+								}
+							}
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 4);
+					}.start(world, 2);
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 2);
+			}.start(world, 20);
 		}
 	}
 }

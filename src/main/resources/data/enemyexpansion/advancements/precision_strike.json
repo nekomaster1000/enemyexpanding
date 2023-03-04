@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:spectral_arrow"
+    },
+    "title": {
+      "translate": "advancements.precision_strike.title"
+    },
+    "description": {
+      "translate": "advancements.precision_strike.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "precision_strike": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 20
+  },
+  "parent": "minecraft:story/root"
+}
