@@ -99,6 +99,9 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
+    "whenMobIsHurt": {
+      "name": "FuseHurt"
+    },
     "onPlayerCollidesWith": {
       "name": "IntruderFuse"
     },
@@ -118,6 +121,9 @@
     "rangedItemType": "Default item",
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "IntruderSpawning"
+    },
     "spawningProbability": 30,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

@@ -13,6 +13,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> CRAWLERSPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> TROLLSPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> VAMPIRESPAWNINGDEPTH;
+	public static final ForgeConfigSpec.ConfigValue<Double> INTRUDERSPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENT;
@@ -42,6 +43,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> SPECTRALWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> BRUTISHGARMENTWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> BULLSKULLWEARERSPAWNING;
+	public static final ForgeConfigSpec.ConfigValue<Double> BANEMASKWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> LEATHERWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> CHAINMAILWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONWEARERSPAWNING;
@@ -76,6 +78,7 @@ public class BetterConfigConfiguration {
 		CRAWLERSPAWNINGDEPTH = BUILDER.define("Crawler Spawning Depth", (double) -10);
 		TROLLSPAWNINGDEPTH = BUILDER.define("Troll Spawning Depth", (double) -10);
 		VAMPIRESPAWNINGDEPTH = BUILDER.define("Vampire Spawning Depth", (double) -10);
+		INTRUDERSPAWNINGDEPTH = BUILDER.define("Intruder Spawning Depth", (double) 35);
 		BUILDER.pop();
 		BUILDER.push("mobReplacement");
 		PETRIMANZOMBIEREPLACEMENT = BUILDER.define("Petriman Zombie Replacement", (double) 1);
@@ -113,6 +116,7 @@ public class BetterConfigConfiguration {
 		SPECTRALWEARERSPAWNING = BUILDER.define("Spectral Wearer Spawning", (double) 0.01);
 		BRUTISHGARMENTWEARERSPAWNING = BUILDER.define("Brutish Garment Wearer Spawning", (double) 0.01);
 		BULLSKULLWEARERSPAWNING = BUILDER.define("Bull Skull Wearer Spawning", (double) 0.01);
+		BANEMASKWEARERSPAWNING = BUILDER.define("Bane Mask Wearer Spawning", (double) 0.01);
 		BUILDER.pop();
 		BUILDER.push("armorWearerSpawning");
 		LEATHERWEARERSPAWNING = BUILDER.define("Leather Wearer Spawning", (double) 0.01);

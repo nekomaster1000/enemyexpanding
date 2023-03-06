@@ -8,11 +8,14 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+
+import java.util.Random;
 
 public class VampireSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -61,6 +64,13 @@ public class VampireSpawnProcedure {
 		}
 		if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) > 13 && world.canSeeSkyFromBelowWater(new BlockPos(x, y, z))) {
 			entity.setSecondsOnFire(10);
+		}
+		{
+			Entity _ent = entity;
+			if (!_ent.level.isClientSide() && _ent.getServer() != null)
+				_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						("/attribute @s minecraft:generic.movement_speed base set variedspeed".replace("variedspeed",
+								"" + Mth.nextDouble(new Random(), 0.2, 0.45))));
 		}
 	}
 }

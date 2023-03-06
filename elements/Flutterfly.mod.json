@@ -102,7 +102,7 @@
     "whenMobIsHurt": {
       "name": "FlutterflySpeedUp"
     },
-    "onPlayerCollidesWith": {
+    "onRightClickedOn": {
       "name": "FlutterflyPlayerTouch"
     },
     "hasAI": true,

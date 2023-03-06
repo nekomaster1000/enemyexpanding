@@ -116,6 +116,17 @@ public class HatSpawnsProcedure {
 						}
 					}
 				}
+				if (Math.random() < (double) BetterConfigConfiguration.BANEMASKWEARERSPAWNING.get()) {
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.BANEMASK_HELMET.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.BANEMASK_HELMET.get()));
+						}
+					}
+				}
 				if (Math.random() < (double) BetterConfigConfiguration.PHANTASMWEARERSPAWNING.get()) {
 					{
 						Entity _entity = entity;

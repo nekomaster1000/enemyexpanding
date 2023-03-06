@@ -23,7 +23,7 @@ Adding variety to combat encounters!
 
 
 [[dependencies.enemyexpansion]]
-    modId="geckolib"
+    modId="geckolib3"
     mandatory=true
     versionRange="[0,)"
     ordering="NONE"

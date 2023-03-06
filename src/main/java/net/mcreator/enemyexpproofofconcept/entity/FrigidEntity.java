@@ -96,7 +96,7 @@ public class FrigidEntity extends Zombie implements IAnimatable {
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (3.0 + entity.getBbWidth() * entity.getBbWidth());
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());

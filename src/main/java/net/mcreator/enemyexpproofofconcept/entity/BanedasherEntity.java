@@ -98,7 +98,7 @@ public class BanedasherEntity extends Monster implements IAnimatable {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:bane.hurt"));
 	}
 
 	@Override
@@ -108,7 +108,7 @@ public class BanedasherEntity extends Monster implements IAnimatable {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.whine"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.hurt"));
 	}
 
 	@Override

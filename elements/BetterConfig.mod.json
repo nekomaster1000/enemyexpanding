@@ -159,6 +159,24 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 35.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Intruder Spawning Depth",
+            "varname": "intruderspawningdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
           }
         ]
       },
@@ -693,6 +711,24 @@
             "comment": "",
             "vardisplay": "Bull Skull Wearer Spawning",
             "varname": "bullskullwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Bane Mask Wearer Spawning",
+            "varname": "banemaskwearerspawning",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"

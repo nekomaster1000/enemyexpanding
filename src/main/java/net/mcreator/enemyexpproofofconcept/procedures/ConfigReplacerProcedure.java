@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
@@ -57,7 +58,7 @@ public class ConfigReplacerProcedure {
 		File enemyexpansion = new File("");
 		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get()
 				&& y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
-			if (entity instanceof Zombie && !(entity instanceof Drowned)) {
+			if (entity instanceof Zombie && (!(entity instanceof Drowned) || !(entity instanceof ZombifiedPiglin))) {
 				ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
 			}
 		}

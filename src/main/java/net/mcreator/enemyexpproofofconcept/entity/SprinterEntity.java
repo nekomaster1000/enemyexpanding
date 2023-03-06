@@ -163,7 +163,7 @@ public class SprinterEntity extends Zombie implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		SprinterzombieEntityIsHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		SprinterzombieEntityIsHurtProcedure.execute(this.level, this, source.getEntity());
 		return super.hurt(source, amount);
 	}
 

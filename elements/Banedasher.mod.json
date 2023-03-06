@@ -81,10 +81,10 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.wolf.growl"
+      "value": "CUSTOM:bane.hurt"
     },
     "hurtSound": {
-      "value": "entity.wolf.whine"
+      "value": "entity.wolf.hurt"
     },
     "deathSound": {
       "value": "entity.wolf.death"

@@ -169,18 +169,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -906,7 +894,7 @@
       "type": "livingentity",
       "sortid": 11,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "frigid",
       "path": "~/Monsters"
     },
@@ -922,6 +910,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3169,6 +3161,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -6482,6 +6478,134 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "WolfsbaneAttackNoise",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wolfsbane_attack_noise",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "WitherDropsMiniWither",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_drops_mini_wither",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Superhealing",
+      "type": "potioneffect",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "superhealing"
+    },
+    {
+      "name": "SuperhealingActive",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "superhealing_active",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IntruderSpawning",
+      "type": "procedure",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intruder_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
     }
   ],
   "variable_elements": [
@@ -6558,6 +6682,27 @@
       ],
       "category": "hostile",
       "subtitle": "Troll grunts"
+    },
+    {
+      "name": "bane.idle",
+      "files": [
+        "bane_idle_1",
+        "bane_idle_2",
+        "bane_idle_3"
+      ],
+      "category": "hostile",
+      "subtitle": "Wolfsbane snorts"
+    },
+    {
+      "name": "bane.hurt",
+      "files": [
+        "bane_hurt_1",
+        "bane_hurt_2",
+        "bane_hurt_3",
+        "bane_hurt_4"
+      ],
+      "category": "hostile",
+      "subtitle": "Wolfsbane growls"
     }
   ],
   "language_map": {
@@ -6569,6 +6714,7 @@
       "gamerule.vampire_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
       "gamerule.crawler_replacement_rule": "intruderReplacementRule",
       "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
+      "subtitles.bane.idle": "Wolfsbane snorts",
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
       "item.enemyexpansion.ram_spawn_egg": "Ram Spawn Egg",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
@@ -6582,6 +6728,7 @@
       "item.enemyexpansion.spectral_boots": "",
       "entity.enemyexpansion.caster": "Goblin Caster",
       "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrifiedtroll Spawn Egg",
+      "subtitles.wolfsbane.attack": "Wolfsbane roars",
       "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
       "entity.enemyexpansion.zadybug": "Zadybug",
       "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
@@ -6592,6 +6739,7 @@
       "item.minecraft.potion.effect.groundbound_potion": "Potion of Groundbinding",
       "item.enemyexpansion.suspicious_slice": "Suspicious Slice",
       "gamerule.silverking_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "subtitles.bane.hurt": "Wolfsbane growls",
       "gamerule.petriman_spawn_above_ground": "petrimanReplacementRule",
       "item.enemyexpansion.frigid_spawn_egg": "Frigid Spawn Egg",
       "effect.enemyexpansion.ground_bound": "Groundbound",
@@ -6602,9 +6750,9 @@
       "subtitles.troll.idle.1": "Troll growls",
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
-      "entity.enemyexpansion.gallant": "Gallant",
-      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
+      "entity.enemyexpansion.gallant": "Gallant",
       "item.enemyexpansion.banemask_boots": "",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
@@ -6685,6 +6833,7 @@
       "entity.enemyexpansion.projectile_enemy_melee_projectile": "enemy attack",
       "item.enemyexpansion.cinder_helm_boots": "",
       "entity.enemyexpansion.meature": "Meature",
+      "effect.enemyexpansion.superhealing": "Superhealing",
       "item.enemyexpansion.caster_spawn_egg": "Goblin Caster Spawn Egg",
       "entity.enemyexpansion.petricrawler": "Petricrawler",
       "entity.enemyexpansion.tarantulam": "Tarantula",
@@ -6693,6 +6842,7 @@
       "entity.enemyexpansion.ramsheared": "Ramsheared",
       "item.enemyexpansion.bull_skull_leggings": "",
       "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
+      "subtitles.wolfsbane.hurt": "Wolfbane barks",
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.cinder_helm_leggings": "",
       "item.enemyexpansion.headbiter_helmet": "Headbiter",
@@ -6731,6 +6881,7 @@
       "item.enemyexpansion.sprintshorts_chestplate": "-",
       "item.enemyexpansion.intruder_spawn_egg": "Intruder Spawn Egg",
       "item.enemyexpansion.killstick": "Killstick",
+      "subtitles.wolfsbane.idle": "Wolfsbane growls",
       "item.enemyexpansion.wasp_sting_projectile": "Wasp Sting",
       "entity.enemyexpansion.projectile_huntsman_punch": "Huntsman\u0027s punch",
       "item.enemyexpansion.headbiter_leggings": "Phantasm Leggings",
@@ -6894,7 +7045,7 @@
     "serverSideOnly": false,
     "modPicture": "meature_iso",
     "requiredMods": [
-      "geckolib"
+      "geckolib3"
     ],
     "dependencies": [],
     "dependants": [],

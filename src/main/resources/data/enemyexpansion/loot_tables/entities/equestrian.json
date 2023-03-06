@@ -48,6 +48,10 @@
         },
         {
           "type": "minecraft:item",
+          "name": "enemyexpansion:horsehead_helmet"
+        },
+        {
+          "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:furnace_smelt",
@@ -73,7 +77,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.10,
+          "chance": 0.20,
           "looting_multiplier": 0.01
         }
       ]

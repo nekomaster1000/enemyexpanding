@@ -55,6 +55,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.FuseHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.CrawlerSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.CrawlerFuseProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -147,6 +148,7 @@ public class CrawlerEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
+		FuseHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.CACTUS)

@@ -105,7 +105,7 @@ public class EquestrianEntity extends Zombie implements IAnimatable {
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (1.6 + entity.getBbWidth() * entity.getBbWidth());
+				return (double) (1.5 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
@@ -143,7 +143,7 @@ public class EquestrianEntity extends Zombie implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		EquestrianEntityIsHurtProcedure.execute(this);
+		EquestrianEntityIsHurtProcedure.execute(this.level, this);
 		return super.hurt(source, amount);
 	}
 

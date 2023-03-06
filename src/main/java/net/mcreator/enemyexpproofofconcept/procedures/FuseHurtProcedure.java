@@ -62,7 +62,7 @@ public class FuseHurtProcedure {
 				return false;
 			}
 		}.checkGamemode(sourceentity)) && (entity instanceof IntruderEntity || entity instanceof CrawlerEntity)) {
-			if (Math.random() < 0.5) {
+			if (Math.random() < 0.25) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0, (false), (false)));
 				entity.setSecondsOnFire(2);

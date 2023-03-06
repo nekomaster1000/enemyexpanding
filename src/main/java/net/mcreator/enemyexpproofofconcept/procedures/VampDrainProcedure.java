@@ -52,9 +52,7 @@ public class VampDrainProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 0, (false), (true)));
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 60, 0, (false), (false)));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0, (false), (true)));
+					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0, (false), (true)));
 				if (sourceentity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0, (false), (false)));
 			}

@@ -16,7 +16,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 
 public class SprinterzombieEntityIsHurtProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof LivingEntity && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -46,13 +46,11 @@ public class SprinterzombieEntityIsHurtProcedure {
 				}
 
 				private void run() {
-					if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false)) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, x, y, z, 5, 1, 1, 1, 0.6);
-					}
+					if (world instanceof ServerLevel _level)
+						_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 42);
+			}.start(world, 36);
 		}
 	}
 }
