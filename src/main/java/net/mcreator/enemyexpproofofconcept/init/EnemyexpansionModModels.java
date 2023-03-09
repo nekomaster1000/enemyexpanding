@@ -25,6 +25,7 @@ import net.mcreator.enemyexpproofofconcept.client.model.Modelmeatman;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelhuntsman;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelhorsehead;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelheadbiter;
+import net.mcreator.enemyexpproofofconcept.client.model.Modelgladling;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelfrigid_zombie;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelflutterfliers;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelequestrian_zombie;
@@ -37,6 +38,7 @@ import net.mcreator.enemyexpproofofconcept.client.model.Modelbanemask;
 public class EnemyexpansionModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelgladling.LAYER_LOCATION, Modelgladling::createBodyLayer);
 		event.registerLayerDefinition(Modelheadbiter.LAYER_LOCATION, Modelheadbiter::createBodyLayer);
 		event.registerLayerDefinition(Modelhorsehead.LAYER_LOCATION, Modelhorsehead::createBodyLayer);
 		event.registerLayerDefinition(Modelphantasm.LAYER_LOCATION, Modelphantasm::createBodyLayer);

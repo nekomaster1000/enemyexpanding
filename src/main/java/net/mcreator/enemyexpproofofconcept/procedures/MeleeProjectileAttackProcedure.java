@@ -8,8 +8,6 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -472,7 +470,6 @@ public class MeleeProjectileAttackProcedure {
 								projectileLevel.addFreshEntity(_entityToSpawn);
 							}
 						}
-						world.levelEvent(2001, new BlockPos(x, y, z), Block.getId(Blocks.TUFF.defaultBlockState()));
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
@@ -523,7 +520,6 @@ public class MeleeProjectileAttackProcedure {
 								projectileLevel.addFreshEntity(_entityToSpawn);
 							}
 						}
-						world.levelEvent(2001, new BlockPos(x, y, z), Block.getId(Blocks.TUFF.defaultBlockState()));
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}

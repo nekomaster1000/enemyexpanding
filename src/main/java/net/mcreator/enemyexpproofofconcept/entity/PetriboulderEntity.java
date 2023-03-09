@@ -113,7 +113,7 @@ public class PetriboulderEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		PetrimanHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		PetrimanHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source.getDirectEntity() instanceof AbstractArrow)
 			return false;
 		if (source == DamageSource.FALL)

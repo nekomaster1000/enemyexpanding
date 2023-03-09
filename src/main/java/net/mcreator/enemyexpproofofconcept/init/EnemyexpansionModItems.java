@@ -37,6 +37,8 @@ import net.mcreator.enemyexpproofofconcept.item.HealingGooStewItem;
 import net.mcreator.enemyexpproofofconcept.item.HealingGooItemItem;
 import net.mcreator.enemyexpproofofconcept.item.HealingGooItem;
 import net.mcreator.enemyexpproofofconcept.item.HeadbiterItem;
+import net.mcreator.enemyexpproofofconcept.item.GladlingItem;
+import net.mcreator.enemyexpproofofconcept.item.GladiusInkItem;
 import net.mcreator.enemyexpproofofconcept.item.GhoulSpitItem;
 import net.mcreator.enemyexpproofofconcept.item.GhoulSlashItem;
 import net.mcreator.enemyexpproofofconcept.item.GallantSwingsItem;
@@ -204,4 +206,12 @@ public class EnemyexpansionModItems {
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.WOLFSBANE, -10730918, -462600,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BANEMASK_HELMET = REGISTRY.register("banemask_helmet", () -> new BanemaskItem.Helmet());
+	public static final RegistryObject<Item> GLADIUS = REGISTRY.register("gladius_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.GLADIUS, -15719630, -10850950,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> GLADIUS_INK = REGISTRY.register("gladius_ink", () -> new GladiusInkItem());
+	public static final RegistryObject<Item> GLADILAD = REGISTRY.register("gladilad_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.GLADILAD, -14731706, -10850950,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> GLADLING_HELMET = REGISTRY.register("gladling_helmet", () -> new GladlingItem.Helmet());
 }

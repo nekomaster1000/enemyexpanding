@@ -10,6 +10,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
@@ -98,7 +99,11 @@ public class FuseHurtProcedure {
 					}
 
 					private void run() {
-						if (entity.isAlive()) {
+						if (entity.isAlive()
+								&& !world
+										.getEntitiesOfClass(Player.class,
+												AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 4, 4, 4), e -> true)
+										.isEmpty()) {
 							if (entity instanceof IntruderEntity) {
 								if (Math.random() < 0.25) {
 									entity.setDeltaMovement(new Vec3(0, 0.2, 0.2));

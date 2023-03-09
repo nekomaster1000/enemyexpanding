@@ -56,7 +56,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.IntruderSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.IntruderFuseProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.FuseHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -146,7 +145,6 @@ public class IntruderEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		FuseHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.CACTUS)

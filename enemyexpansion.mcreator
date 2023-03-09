@@ -3068,6 +3068,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -3763,7 +3767,7 @@
       "compiles": true,
       "locked_code": true,
       "registry_name": "vampire",
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampireModel",
@@ -3775,7 +3779,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampRegen",
@@ -3808,7 +3812,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampDrain",
@@ -3845,7 +3849,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampPanic",
@@ -3878,7 +3882,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampireLayer",
@@ -3890,7 +3894,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "Biter",
@@ -3899,7 +3903,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "biter",
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BiterTimer",
@@ -3932,7 +3936,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BiterModel",
@@ -3944,7 +3948,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BiterLayer",
@@ -3956,7 +3960,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BroThinkHeCarti",
@@ -3965,7 +3969,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "bro_think_he_carti",
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "CartiSlayer",
@@ -3982,7 +3986,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampireSlayer",
@@ -3991,7 +3995,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "vampire_slayer",
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampireSlaying",
@@ -4008,7 +4012,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampireSpawn",
@@ -4041,7 +4045,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "Headbiter",
@@ -4176,7 +4180,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "VampireFlinted",
@@ -4197,7 +4201,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Vampire"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "FuseHurt",
@@ -5203,7 +5207,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "troll_spit",
-      "path": "~/Monsters/GhoulsAndGhosts"
+      "path": "~/Monsters/UndergroundGuys"
     },
     {
       "name": "TrollSpitHitsEntity",
@@ -5220,7 +5224,7 @@
           }
         ]
       },
-      "path": "~/Monsters/GhoulsAndGhosts"
+      "path": "~/Monsters/UndergroundGuys"
     },
     {
       "name": "GroundboundPotion",
@@ -6229,7 +6233,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "wolfsbane",
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "WolfsbaneModel",
@@ -6241,7 +6245,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "WolfsbaneLayer",
@@ -6253,7 +6257,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "Banedasher",
@@ -6262,7 +6266,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "banedasher",
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BanedasherModel",
@@ -6274,7 +6278,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BanedasherLayer",
@@ -6286,7 +6290,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BetterConfig",
@@ -6320,7 +6324,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BaneDaylight",
@@ -6353,7 +6357,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "BanedasherCalmDown",
@@ -6374,7 +6378,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "PropellerOneshot",
@@ -6399,7 +6403,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "PrecisionStrike",
@@ -6514,7 +6518,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "WitherDropsMiniWither",
@@ -6606,6 +6610,332 @@
         ]
       },
       "path": "~/Spawning"
+    },
+    {
+      "name": "Gladius",
+      "type": "livingentity",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius",
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiusSpawning",
+      "type": "procedure",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "GladiusModel",
+      "type": "procedure",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiusSpawn",
+      "type": "procedure",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiusTransform",
+      "type": "procedure",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius_transform",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiusKnockback",
+      "type": "procedure",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius_knockback",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiusInk",
+      "type": "rangeditem",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius_ink",
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladialSpitHitsEntity",
+      "type": "procedure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladial_spit_hits_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladialSpitParticles",
+      "type": "procedure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladial_spit_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "Gladilad",
+      "type": "livingentity",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladilad",
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiladBounce",
+      "type": "procedure",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladilad_bounce",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "GladiladSpawning",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladilad_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "GladiladModel",
+      "type": "procedure",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladilad_model",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Monsters/Transformers"
+    },
+    {
+      "name": "ReplaceWithGladilad",
+      "type": "procedure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_gladilad",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Gladling",
+      "type": "armor",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladling",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "GladlingSpitInk",
+      "type": "procedure",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladling_spit_ink",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -6712,6 +7042,7 @@
       "entity.enemyexpansion.scorpion": "Scorpion",
       "item.enemyexpansion.ghoul_spawn_egg": "Ghoul Spawn Egg",
       "gamerule.vampire_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "item.enemyexpansion.gladling_boots": "",
       "gamerule.crawler_replacement_rule": "intruderReplacementRule",
       "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
       "subtitles.bane.idle": "Wolfsbane snorts",
@@ -6755,6 +7086,7 @@
       "entity.enemyexpansion.gallant": "Gallant",
       "item.enemyexpansion.banemask_boots": "",
       "entity.enemyexpansion.pheromone_summon": "PheromoneSummon",
+      "item.enemyexpansion.gladling_chestplate": "",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
       "entity.enemyexpansion.sprinter": "Sprinter",
@@ -6800,6 +7132,7 @@
       "item.enemyexpansion.silverhat_leggings": "",
       "entity.enemyexpansion.vampire": "Vampire",
       "item.enemyexpansion.huntsman_punch": "Huntsman Punch",
+      "item.enemyexpansion.gladilad_spawn_egg": "Gladilad Spawn Egg",
       "item.enemyexpansion.horsehead_helmet": "Horsehead",
       "gamerule.intruder_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "entity.enemyexpansion.projectile_gallant_swings": "Gallant\u0027s blade",
@@ -6821,6 +7154,7 @@
       "gamerule.cinder_replacement_rule": "increaseddripstonetarantulas",
       "subtitles.silentstep": "",
       "item.enemyexpansion.spectral_helmet": "Spectral Hood",
+      "entity.enemyexpansion.gladilad": "Gladilad",
       "entity.enemyexpansion.projectile_wasp_sting_projectile": "Wasp\u0027s sting",
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
       "item.enemyexpansion.bull_skull_chestplate": "",
@@ -6877,6 +7211,7 @@
       "item.enemyexpansion.horsehead_leggings": "",
       "advancements.bro_think_he_carti.descr": "Wear a Headbiter",
       "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
+      "item.enemyexpansion.gladling_leggings": "",
       "entity.enemyexpansion.equestrian": "Equestrian",
       "item.enemyexpansion.sprintshorts_chestplate": "-",
       "item.enemyexpansion.intruder_spawn_egg": "Intruder Spawn Egg",
@@ -6903,11 +7238,13 @@
       "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
       "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
       "item.enemyexpansion.rooster_spawn_egg": "Rooster Spawn Egg",
+      "item.enemyexpansion.gladius_spawn_egg": "Gladius Spawn Egg",
       "item.enemyexpansion.senior_spawn_egg": "Senior Spawn Egg",
       "item.enemyexpansion.preposterous_portion": "Preposterous Portion",
       "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
       "item.enemyexpansion.slimehead_leggings": "",
       "gamerule.no_baby_zombies.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "entity.enemyexpansion.projectile_gladius_ink": "Gladius\u0027 Ink",
       "item.enemyexpansion.banemask_chestplate": "",
       "entity.enemyexpansion.projectile_troll_spit": "heavy troll saliva",
       "item.enemyexpansion.zadybug_spawn_egg": "Zadybug Spawn Egg",
@@ -6917,9 +7254,11 @@
       "gamerule.crawler_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
       "entity.enemyexpansion.slugger": "Slugger",
       "item.enemyexpansion.sprintshorts_leggings": "Sprintshorts",
+      "item.enemyexpansion.gladius_ink": "Ink",
       "item.enemyexpansion.petricrawler_spawn_egg": "Petricrawler Spawn Egg",
       "item.enemyexpansion.troll_invincible": "Troll Invincibility",
       "item.enemyexpansion.flutterfliers_leggings": "",
+      "item.enemyexpansion.gladling_helmet": "Gladling",
       "item.enemyexpansion.meathead_armor_helmet": "Meat Head",
       "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.horsehead_boots": "",
@@ -6935,6 +7274,7 @@
       "subtitles.troll.hurt.1": "Troll grunts",
       "subtitles.troll.hurt.2": "Troll growls",
       "item.enemyexpansion.bouncer_spawn_egg": "Bouncer Spawn Egg",
+      "entity.enemyexpansion.gladius": "Gladius",
       "entity.enemyexpansion.invisicreeper": "Invisicreeper",
       "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
       "gamerule.petriman_random_rule": "petrimanReplacementRule",
@@ -7010,7 +7350,7 @@
             "children": []
           },
           {
-            "name": "Vampire",
+            "name": "Transformers",
             "children": []
           }
         ]

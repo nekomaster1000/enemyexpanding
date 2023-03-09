@@ -43,6 +43,8 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.IntruderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.HuntsmanskeletonRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GoblinRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GoblinFearRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.GladiusRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.GladiladRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GhoulRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GallantRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GabbleRenderer;
@@ -131,5 +133,8 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_SPIT.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WOLFSBANE.get(), WolfsbaneRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.BANEDASHER.get(), BanedasherRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.GLADIUS.get(), GladiusRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.GLADIUS_INK.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.GLADILAD.get(), GladiladRenderer::new);
 	}
 }

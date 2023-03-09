@@ -26,6 +26,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> CHICKENROOSTERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPIDERTARANTULAREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPIDERSCORPIONREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> GLADILADSQUIDREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENTDEPTH;
@@ -44,6 +45,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> BRUTISHGARMENTWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> BULLSKULLWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> BANEMASKWEARERSPAWNING;
+	public static final ForgeConfigSpec.ConfigValue<Double> GLADLINGWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> LEATHERWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> CHAINMAILWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONWEARERSPAWNING;
@@ -87,12 +89,13 @@ public class BetterConfigConfiguration {
 		VAMPIRESKELETONREPLACEMENT = BUILDER.define("Vampire Skeleton Replacement", (double) 0.75);
 		TROLLENDERMANREPLACEMENT = BUILDER.define("Troll Enderman Replacement", (double) 1);
 		CINDERBLAZEREPLACEMENT = BUILDER.define("Cinder Blaze Replacement", (double) 0.2);
-		PIGBOARREPLACEMENT = BUILDER.define("Pig Boar Replacement", (double) 0.65);
-		COWBULLREPLACEMENT = BUILDER.define("Cow Bull Replacement", (double) 0.75);
-		SHEEPRAMREPLACEMENT = BUILDER.define("Sheep Ram Replacement", (double) 0.85);
-		CHICKENROOSTERREPLACEMENT = BUILDER.define("Chicken Rooster Replacement", (double) 0.55);
+		PIGBOARREPLACEMENT = BUILDER.define("Boar Pig Replacement", (double) 0.65);
+		COWBULLREPLACEMENT = BUILDER.define("Bull Cow Replacement", (double) 0.75);
+		SHEEPRAMREPLACEMENT = BUILDER.define("Ram Sheep Replacement", (double) 0.85);
+		CHICKENROOSTERREPLACEMENT = BUILDER.define("Rooster Chicken Replacement", (double) 0.55);
 		SPIDERTARANTULAREPLACEMENT = BUILDER.define("Tarantula Spider Replacement", (double) 1);
 		SPIDERSCORPIONREPLACEMENT = BUILDER.define("Scorpion Spider Replacement", (double) 1);
+		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.2);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);
@@ -117,6 +120,7 @@ public class BetterConfigConfiguration {
 		BRUTISHGARMENTWEARERSPAWNING = BUILDER.define("Brutish Garment Wearer Spawning", (double) 0.01);
 		BULLSKULLWEARERSPAWNING = BUILDER.define("Bull Skull Wearer Spawning", (double) 0.01);
 		BANEMASKWEARERSPAWNING = BUILDER.define("Bane Mask Wearer Spawning", (double) 0.01);
+		GLADLINGWEARERSPAWNING = BUILDER.define("Gladling Wearer Spawning", (double) 0.01);
 		BUILDER.pop();
 		BUILDER.push("armorWearerSpawning");
 		LEATHERWEARERSPAWNING = BUILDER.define("Leather Wearer Spawning", (double) 0.01);

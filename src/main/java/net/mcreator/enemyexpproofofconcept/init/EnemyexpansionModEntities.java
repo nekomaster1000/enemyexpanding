@@ -54,6 +54,9 @@ import net.mcreator.enemyexpproofofconcept.entity.HuntsmanPunchEntity;
 import net.mcreator.enemyexpproofofconcept.entity.HealingGooEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinFearEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinEntity;
+import net.mcreator.enemyexpproofofconcept.entity.GladiusInkEntity;
+import net.mcreator.enemyexpproofofconcept.entity.GladiusEntity;
+import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GhoulSpitEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GhoulSlashEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GhoulEntity;
@@ -373,6 +376,19 @@ public class EnemyexpansionModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BanedasherEntity::new)
 
 					.sized(1.7000000000000002f, 1.45f));
+	public static final RegistryObject<EntityType<GladiusEntity>> GLADIUS = register("gladius",
+			EntityType.Builder.<GladiusEntity>of(GladiusEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(GladiusEntity::new)
+
+					.sized(1.3f, 3.85f));
+	public static final RegistryObject<EntityType<GladiusInkEntity>> GLADIUS_INK = register("projectile_gladius_ink",
+			EntityType.Builder.<GladiusInkEntity>of(GladiusInkEntity::new, MobCategory.MISC).setCustomClientFactory(GladiusInkEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GladiladEntity>> GLADILAD = register("gladilad",
+			EntityType.Builder.<GladiladEntity>of(GladiladEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(GladiladEntity::new)
+
+					.sized(1.3f, 2.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -429,6 +445,8 @@ public class EnemyexpansionModEntities {
 			RamshearedEntity.init();
 			WolfsbaneEntity.init();
 			BanedasherEntity.init();
+			GladiusEntity.init();
+			GladiladEntity.init();
 		});
 	}
 
@@ -482,5 +500,7 @@ public class EnemyexpansionModEntities {
 		event.put(RAMSHEARED.get(), RamshearedEntity.createAttributes().build());
 		event.put(WOLFSBANE.get(), WolfsbaneEntity.createAttributes().build());
 		event.put(BANEDASHER.get(), BanedasherEntity.createAttributes().build());
+		event.put(GLADIUS.get(), GladiusEntity.createAttributes().build());
+		event.put(GLADILAD.get(), GladiladEntity.createAttributes().build());
 	}
 }

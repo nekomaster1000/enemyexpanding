@@ -284,7 +284,7 @@
             "logicField": 0,
             "numberField": 0.2,
             "textDefault": "",
-            "comment": "",
+            "comment": "(This is the only way in which Cinders will ever spawn - Disable at your own risk!)",
             "vardisplay": "Cinder Blaze Replacement",
             "varname": "cinderblazereplacement",
             "enablecomment": false,
@@ -303,7 +303,7 @@
             "numberField": 0.65,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Pig Boar Replacement",
+            "vardisplay": "Boar Pig Replacement",
             "varname": "pigboarreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -321,7 +321,7 @@
             "numberField": 0.75,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Cow Bull Replacement",
+            "vardisplay": "Bull Cow Replacement",
             "varname": "cowbullreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -339,7 +339,7 @@
             "numberField": 0.85,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Sheep Ram Replacement",
+            "vardisplay": "Ram Sheep Replacement",
             "varname": "sheepramreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -357,7 +357,7 @@
             "numberField": 0.55,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Chicken Rooster Replacement",
+            "vardisplay": "Rooster Chicken Replacement",
             "varname": "chickenroosterreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -395,6 +395,24 @@
             "comment": "",
             "vardisplay": "Scorpion Spider Replacement",
             "varname": "spiderscorpionreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.2,
+            "textDefault": "",
+            "comment": "(This is the only way in which Gladilads will ever spawn - Disable at your own risk!)",
+            "vardisplay": "Gladilad Squid Replacement",
+            "varname": "gladiladsquidreplacement",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
@@ -729,6 +747,24 @@
             "comment": "",
             "vardisplay": "Bane Mask Wearer Spawning",
             "varname": "banemaskwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Gladling Wearer Spawning",
+            "varname": "gladlingwearerspawning",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"

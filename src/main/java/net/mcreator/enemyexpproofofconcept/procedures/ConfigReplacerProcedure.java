@@ -15,11 +15,13 @@ import net.minecraft.world.entity.monster.Drowned;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.CaveSpider;
 import net.minecraft.world.entity.monster.Blaze;
+import net.minecraft.world.entity.animal.Squid;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.GlowSquid;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
@@ -136,6 +138,11 @@ public class ConfigReplacerProcedure {
 			if (entity instanceof Spider && !(entity instanceof CaveSpider) && !(entity instanceof TarantulaEntity)
 					&& new ResourceLocation("dripstone_caves").equals(world.getBiome(new BlockPos(x, y, z)).value().getRegistryName())) {
 				ReplaceWithTarantulaProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.GLADILADSQUIDREPLACEMENT.get()) {
+			if (entity instanceof Squid && !(entity instanceof GlowSquid)) {
+				ReplaceWithGladiladProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}
