@@ -31,8 +31,7 @@ public class ConfigDepthProcedure {
 				bufferedReader.close();
 				mainjsonobject = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if ((EnemyexpansionModVariables.WorldVariables.get(world).returnConfig).equals("SpawningDepth")) {
-					if (y < mainjsonobject.get((EnemyexpansionModVariables.WorldVariables.get(world).configMob + ""
-							+ EnemyexpansionModVariables.WorldVariables.get(world).returnConfig)).getAsDouble()
+					if (y < mainjsonobject.get((EnemyexpansionModVariables.WorldVariables.get(world).configMob + "" + EnemyexpansionModVariables.WorldVariables.get(world).returnConfig)).getAsDouble()
 							&& world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) < 5) {
 						spawning = true;
 					} else {

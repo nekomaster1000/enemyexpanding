@@ -18,8 +18,7 @@ public class PhantomHealthProcedure {
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
 					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							("/attribute @s generic.max_health base set phantomhealth".replace("phantomhealth",
-									"" + (double) BetterConfigConfiguration.PHANTOMHEALTH.get())));
+							("/attribute @s generic.max_health base set phantomhealth".replace("phantomhealth", "" + (double) BetterConfigConfiguration.PHANTOMHEALTH.get())));
 			}
 		}
 	}

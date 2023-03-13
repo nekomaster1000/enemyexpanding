@@ -8,8 +8,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.enemyexpproofofconcept.procedures.SilverkingModelProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.SilverkingLayerProcedure;
+import net.mcreator.enemyexpproofofconcept.entity.model.SilverkingModel;
+import net.mcreator.enemyexpproofofconcept.entity.layer.SilverkingLayer;
 import net.mcreator.enemyexpproofofconcept.entity.SilverkingEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -17,15 +17,14 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class SilverkingRenderer extends GeoEntityRenderer<SilverkingEntity> {
 	public SilverkingRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new SilverkingModelProcedure());
+		super(renderManager, new SilverkingModel());
 		this.shadowRadius = 0.5f;
-		this.addLayer(new SilverkingLayerProcedure(this));
+		this.addLayer(new SilverkingLayer(this));
 	}
 
 	@Override
-	public RenderType getRenderType(SilverkingEntity animatable, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer,
-			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
-		stack.scale(1.0F, 1.0F, 1.0F);
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public RenderType getRenderType(SilverkingEntity entity, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+		stack.scale(1f, 1f, 1f);
+		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
 }

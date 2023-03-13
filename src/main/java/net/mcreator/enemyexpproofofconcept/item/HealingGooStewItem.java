@@ -15,10 +15,9 @@ import net.mcreator.enemyexpproofofconcept.procedures.HealingGooStewUseProcedure
 
 public class HealingGooStewItem extends Item {
 	public HealingGooStewItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(1).rarity(Rarity.UNCOMMON)
-				.food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f)
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(1).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f)
 
-						.build()));
+				.build()));
 	}
 
 	@Override

@@ -37,14 +37,12 @@ public class MeatureLevelingProcedure {
 		String attribute_command = "";
 		if (sourceentity instanceof MeatureEntity) {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) < 40) {
-				max_health = new java.text.DecimalFormat("##.##")
-						.format((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 2);
+				max_health = new java.text.DecimalFormat("##.##").format((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 2);
 				attribute_command = "/attribute @s minecraft:generic.max_health base set (max_health)".replace("(max_health)", max_health);
 				{
 					Entity _ent = sourceentity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								attribute_command);
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), attribute_command);
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.HEART, (sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), 5, 3, 3, 3, 1);

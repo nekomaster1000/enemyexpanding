@@ -4,9 +4,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.WitherSkeleton;
-import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -26,8 +23,8 @@ public class HatSpawnsProcedure {
 			return;
 		File enemyexpansion = new File("");
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
-		if (entity instanceof Zombie || entity instanceof Skeleton) {
-			if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_meatury")))) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:can_display_armor")))) {
+			if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hat_appropriate")))) {
 				if (Math.random() < (double) BetterConfigConfiguration.MEATHEADWEARERSPAWNING.get()) {
 					{
 						Entity _entity = entity;
@@ -189,6 +186,8 @@ public class HatSpawnsProcedure {
 						}
 					}
 				}
+			}
+			if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_armor_appropriate")))) {
 				if (Math.random() < (double) BetterConfigConfiguration.NETHERITEWEARERSPAWNING.get()) {
 					{
 						Entity _entity = entity;
@@ -437,19 +436,6 @@ public class HatSpawnsProcedure {
 						} else if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
 						}
-					}
-				}
-			}
-		}
-		if (entity instanceof WitherSkeleton) {
-			if (Math.random() < (double) BetterConfigConfiguration.MINIWITHERWEARERSPAWNING.get()) {
-				{
-					Entity _entity = entity;
-					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
-						_player.getInventory().setChanged();
-					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
 					}
 				}
 			}

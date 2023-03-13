@@ -59,9 +59,7 @@ public class VampireReplacementProcedure {
 						if (!entity.level.isClientSide())
 							entity.discard();
 						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-											_level.getServer(), null).withSuppressedOutput(),
+							_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 									"/summon skeleton ~ ~ ~ {Health:30f,HandItems:[{id:\"minecraft:bow\",Count:1b,tag:{Unbreakable:0b,Damage:0.1-0.2}},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{},{id:\"enemyexpansion:headbiter_helmet\",Count:1b,tag:{Damage:0.1-0.3}}],ArmorDropChances:[0.085F,0.085F,0.085F,0.200F]}");
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);

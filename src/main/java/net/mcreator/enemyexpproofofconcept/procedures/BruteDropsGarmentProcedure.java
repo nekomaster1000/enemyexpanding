@@ -25,8 +25,7 @@ public class BruteDropsGarmentProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -38,8 +37,7 @@ public class BruteDropsGarmentProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof PiglinBrute) {
-			if (sourceentity instanceof Player && Math.random() < 0.13 + EnchantmentHelper.getItemEnchantmentLevel(Enchantments.MOB_LOOTING,
-					(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) / 8) {
+			if (sourceentity instanceof Player && Math.random() < 0.13 + EnchantmentHelper.getItemEnchantmentLevel(Enchantments.MOB_LOOTING, (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) / 8) {
 				if (world instanceof Level _level && !_level.isClientSide()) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(EnemyexpansionModItems.BRUTISH_CHESTPLATE.get()));
 					entityToSpawn.setPickUpDelay(10);

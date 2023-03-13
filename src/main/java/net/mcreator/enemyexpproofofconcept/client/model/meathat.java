@@ -30,24 +30,15 @@ public class meathat<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition head = partdefinition.addOrReplaceChild("head",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.1F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition rightArm_r1 = head.addOrReplaceChild("rightArm_r1",
-				CubeListBuilder.create().texOffs(40, 16).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
+		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.1F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition rightArm_r1 = head.addOrReplaceChild("rightArm_r1", CubeListBuilder.create().texOffs(40, 16).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(-2.0F, -2.0F, -2.0F, -0.7854F, 0.0F, 0.7854F));
-		PartDefinition leftArm_r1 = head.addOrReplaceChild(
-				"leftArm_r1", CubeListBuilder.create().texOffs(40, 16).mirror()
-						.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
+		PartDefinition leftArm_r1 = head.addOrReplaceChild("leftArm_r1", CubeListBuilder.create().texOffs(40, 16).mirror().addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
 				PartPose.offsetAndRotation(2.0F, -2.0F, -2.0F, -0.7854F, 0.0F, -0.7854F));
-		PartDefinition rightLeg_r1 = head.addOrReplaceChild("rightLeg_r1",
-				CubeListBuilder.create().texOffs(0, 16).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
+		PartDefinition rightLeg_r1 = head.addOrReplaceChild("rightLeg_r1", CubeListBuilder.create().texOffs(0, 16).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(-1.0F, -2.0F, 2.0F, 0.7854F, 0.0F, 0.7854F));
-		PartDefinition leftLeg_r1 = head
-				.addOrReplaceChild(
-						"leftLeg_r1", CubeListBuilder.create().texOffs(0, 16).mirror()
-								.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
-						PartPose.offsetAndRotation(1.0F, -2.0F, 2.0F, 0.7854F, 0.0F, -0.7854F));
+		PartDefinition leftLeg_r1 = head.addOrReplaceChild("leftLeg_r1", CubeListBuilder.create().texOffs(0, 16).mirror().addBox(-1.0F, 0.0F, -1.0F, 2.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
+				PartPose.offsetAndRotation(1.0F, -2.0F, 2.0F, 0.7854F, 0.0F, -0.7854F));
 		return LayerDefinition.create(meshdefinition, 64, 32);
 	}
 
@@ -56,8 +47,7 @@ public class meathat<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
-			float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 }

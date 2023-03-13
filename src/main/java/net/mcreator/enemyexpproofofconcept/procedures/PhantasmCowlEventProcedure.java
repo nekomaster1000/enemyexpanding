@@ -17,10 +17,8 @@ public class PhantasmCowlEventProcedure {
 			return;
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 300, 0, (false), (false)));
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
-				.getItem() == EnemyexpansionModItems.PHANTASM_HELMET.get()
-				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)
-						.getItem() == EnemyexpansionModItems.PHANTASM_CHESTPLATE.get()) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.PHANTASM_HELMET.get()
+				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.PHANTASM_CHESTPLATE.get()) {
 			if (world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) < 8) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 22, 0, (false), (false)));

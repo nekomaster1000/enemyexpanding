@@ -18,7 +18,6 @@ import net.mcreator.enemyexpproofofconcept.client.particle.ResistenceParticlePar
 public class EnemyexpansionModParticles {
 	@SubscribeEvent
 	public static void registerParticles(ParticleFactoryRegisterEvent event) {
-		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EnemyexpansionModParticleTypes.RESISTENCE_PARTICLE.get(),
-				ResistenceParticleParticle::provider);
+		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EnemyexpansionModParticleTypes.RESISTENCE_PARTICLE.get(), ResistenceParticleParticle::provider);
 	}
 }

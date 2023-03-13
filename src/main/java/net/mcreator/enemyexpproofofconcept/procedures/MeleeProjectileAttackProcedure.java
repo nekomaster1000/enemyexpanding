@@ -29,8 +29,6 @@ import net.mcreator.enemyexpproofofconcept.entity.ZobgoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SlimeballThrowEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RancherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
-import net.mcreator.enemyexpproofofconcept.entity.PetricrawlerEntity;
-import net.mcreator.enemyexpproofofconcept.entity.PetriboulderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinFearEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
@@ -51,8 +49,7 @@ public class MeleeProjectileAttackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -64,12 +61,16 @@ public class MeleeProjectileAttackProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof FrigidEntity) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1));
+			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBlocking() : false)) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1));
+			}
 		}
 		if (sourceentity instanceof ZobgoblinEntity) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
+			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBlocking() : false)) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
+			}
 		}
 		if (sourceentity instanceof CinderEntity) {
 			if (event != null && event.isCancelable()) {
@@ -128,8 +129,7 @@ public class MeleeProjectileAttackProcedure {
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getArrow(Level level, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(),
-									level);
+							AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);
 							entityToSpawn.setSilent(true);
@@ -174,8 +174,7 @@ public class MeleeProjectileAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new BouncerKickProjectileEntity(
-												EnemyexpansionModEntities.BOUNCER_KICK_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new BouncerKickProjectileEntity(EnemyexpansionModEntities.BOUNCER_KICK_PROJECTILE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
@@ -221,8 +220,7 @@ public class MeleeProjectileAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new SlimeballThrowEntity(EnemyexpansionModEntities.SLIMEBALL_THROW.get(),
-												level);
+										AbstractArrow entityToSpawn = new SlimeballThrowEntity(EnemyexpansionModEntities.SLIMEBALL_THROW.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
@@ -248,8 +246,7 @@ public class MeleeProjectileAttackProcedure {
 				Entity entityToSpawn = new GoblinFearEntity(EnemyexpansionModEntities.GOBLIN_FEAR.get(), _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null,
-							null);
+					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 				world.addFreshEntity(entityToSpawn);
 			}
 		}
@@ -285,8 +282,7 @@ public class MeleeProjectileAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(
-												EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
@@ -294,20 +290,15 @@ public class MeleeProjectileAttackProcedure {
 									}
 								}.getArrow(projectileLevel, 8, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z,
-										(float) 0.6, 0);
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.6, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
 							}
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
-										SoundSource.HOSTILE, 1, 0);
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0);
 							} else {
-								_level.playLocalSound(x, y, z,
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
-										SoundSource.HOSTILE, 1, 0, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0, false);
 							}
 						}
 					}
@@ -362,13 +353,9 @@ public class MeleeProjectileAttackProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.HOSTILE,
-									1, 0);
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.HOSTILE, 1, 0);
 						} else {
-							_level.playLocalSound(x, y, z,
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.HOSTILE,
-									1, 0, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.HOSTILE, 1, 0, false);
 						}
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
@@ -407,8 +394,7 @@ public class MeleeProjectileAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(
-												EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
@@ -424,106 +410,6 @@ public class MeleeProjectileAttackProcedure {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 10);
-		}
-		if (sourceentity instanceof PetricrawlerEntity) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			}
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					if (sourceentity.isAlive()) {
-						{
-							Entity _shootFrom = sourceentity;
-							Level projectileLevel = _shootFrom.level;
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(
-												EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, 5, 1);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
-						}
-					}
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, 10);
-		}
-		if (sourceentity instanceof PetriboulderEntity) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			}
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					if (sourceentity.isAlive()) {
-						{
-							Entity _shootFrom = sourceentity;
-							Level projectileLevel = _shootFrom.level;
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(
-												EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, 8, (int) 1.6);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
-						}
-					}
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, 18);
 		}
 	}
 }

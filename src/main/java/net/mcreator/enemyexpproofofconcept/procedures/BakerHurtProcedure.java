@@ -22,7 +22,7 @@ public class BakerHurtProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof BakerEntity) {
-			((BakerEntity) entity).animationprocedure = "sprint";
+			((BakerEntity) entity).setAnimation("sprint");
 		}
 		if (entity instanceof BakerEntity) {
 			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.DIG_SLOWDOWN) : false)) {
@@ -30,8 +30,7 @@ public class BakerHurtProcedure {
 					Entity entityToSpawn = new CakeroverEntity(EnemyexpansionModEntities.CAKEROVER.get(), _level);
 					entityToSpawn.moveTo(x, (y + 1.3), z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
-								null, null);
+						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 					world.addFreshEntity(entityToSpawn);
 				}
 			}

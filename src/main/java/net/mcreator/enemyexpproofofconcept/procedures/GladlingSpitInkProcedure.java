@@ -43,11 +43,8 @@ public class GladlingSpitInkProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
-				.getItem() == EnemyexpansionModItems.GLADLING_HELMET.get()) {
-			entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(sourceentity.getYRot() + 180)) * 1.5 * 1),
-					((Math.sin(Math.toRadians(0 - sourceentity.getXRot())) + 0.5) * 1.25),
-					((Math.cos(Math.toRadians(sourceentity.getYRot())) + 2) * 0.5)));
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.GLADLING_HELMET.get()) {
+			entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(sourceentity.getYRot() + 180)) * 1.5 * 1), ((Math.sin(Math.toRadians(0 - sourceentity.getXRot())) + 0.5) * 1.25), ((Math.cos(Math.toRadians(sourceentity.getYRot())) + 2) * 0.5)));
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -89,12 +86,9 @@ public class GladlingSpitInkProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.squirt")), SoundSource.HOSTILE, 1, 1);
+							_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.squirt")), SoundSource.HOSTILE, 1, 1);
 						} else {
-							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.squirt")), SoundSource.HOSTILE, 1, 1,
-									false);
+							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.squid.squirt")), SoundSource.HOSTILE, 1, 1, false);
 						}
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);

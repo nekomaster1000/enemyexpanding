@@ -18,8 +18,7 @@ public class BabyZombieHealthProcedure {
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
 					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							("/attribute @s generic.max_health base set babyzombiehealth".replace("babyzombiehealth",
-									"" + (double) BetterConfigConfiguration.BABYZOMBIEHEALTH.get())));
+							("/attribute @s generic.max_health base set babyzombiehealth".replace("babyzombiehealth", "" + (double) BetterConfigConfiguration.BABYZOMBIEHEALTH.get())));
 			}
 		}
 	}

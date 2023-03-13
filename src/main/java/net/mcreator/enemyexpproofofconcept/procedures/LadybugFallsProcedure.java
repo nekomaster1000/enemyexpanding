@@ -14,7 +14,7 @@ public class LadybugFallsProcedure {
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 20, 1, (false), (false)));
 		if (entity instanceof LadybugEntity) {
-			((LadybugEntity) entity).animationprocedure = "fly";
+			((LadybugEntity) entity).setAnimation("fly");
 		}
 	}
 }

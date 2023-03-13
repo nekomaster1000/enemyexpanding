@@ -65,13 +65,9 @@ public class RamshearedWoolRegrowalProcedure {
 					if (entity.isAlive()) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.powder_snow.step")), SoundSource.NEUTRAL, 1,
-										1);
+								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.powder_snow.step")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.powder_snow.step")), SoundSource.NEUTRAL, 1,
-										1, false);
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.powder_snow.step")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel _level) {
@@ -79,11 +75,9 @@ public class RamshearedWoolRegrowalProcedure {
 							entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), 0);
 							entityToSpawn.setYBodyRot(entity.getYRot());
 							entityToSpawn.setYHeadRot(entity.getYRot());
-							entityToSpawn.setDeltaMovement((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y()),
-									(entity.getDeltaMovement().z()));
+							entityToSpawn.setDeltaMovement((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y()), (entity.getDeltaMovement().z()));
 							if (entityToSpawn instanceof Mob _mobToSpawn)
-								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-										MobSpawnType.MOB_SUMMONED, null, null);
+								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 							world.addFreshEntity(entityToSpawn);
 						}
 						if (!entity.level.isClientSide())

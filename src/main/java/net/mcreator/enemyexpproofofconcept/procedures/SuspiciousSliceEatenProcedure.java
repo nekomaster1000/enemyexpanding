@@ -26,11 +26,9 @@ public class SuspiciousSliceEatenProcedure {
 			return;
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")),
-						SoundSource.PLAYERS, 1, 1);
+				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")), SoundSource.PLAYERS, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")), SoundSource.PLAYERS,
-						1, 1, false);
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
 		if (entity instanceof LivingEntity _entity)
@@ -110,13 +108,9 @@ public class SuspiciousSliceEatenProcedure {
 									if (entity.isAlive()) {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, new BlockPos(x, y, z),
-														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")),
-														SoundSource.PLAYERS, 1, 1);
+												_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")), SoundSource.PLAYERS, 1, 1);
 											} else {
-												_level.playLocalSound(x, y, z,
-														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")),
-														SoundSource.PLAYERS, 1, 1, false);
+												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
 										new Object() {
@@ -150,13 +144,9 @@ public class SuspiciousSliceEatenProcedure {
 									if (entity.isAlive()) {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, new BlockPos(x, y, z),
-														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")),
-														SoundSource.PLAYERS, 1, 1);
+												_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")), SoundSource.PLAYERS, 1, 1);
 											} else {
-												_level.playLocalSound(x, y, z,
-														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")),
-														SoundSource.PLAYERS, 1, 1, false);
+												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.burp")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
 										if (world instanceof ServerLevel _level)

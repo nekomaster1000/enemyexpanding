@@ -28,16 +28,20 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.CinderSlowFallProcedure;
@@ -46,8 +50,12 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 public class CinderEntity extends Monster implements IAnimatable {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CinderEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CinderEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(CinderEntity.class, EntityDataSerializers.STRING);
 	private AnimationFactory factory = GeckoLibUtil.createFactory(this);
 	private boolean swinging;
+	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
@@ -63,6 +71,22 @@ public class CinderEntity extends Monster implements IAnimatable {
 	}
 
 	@Override
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(SHOOT, false);
+		this.entityData.define(ANIMATION, "undefined");
+		this.entityData.define(TEXTURE, "cinder");
+	}
+
+	public void setTexture(String texture) {
+		this.entityData.set(TEXTURE, texture);
+	}
+
+	public String getTexture() {
+		return this.entityData.get(TEXTURE);
+	}
+
+	@Override
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
@@ -73,7 +97,7 @@ public class CinderEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
@@ -141,24 +165,12 @@ public class CinderEntity extends Monster implements IAnimatable {
 	public void baseTick() {
 		super.baseTick();
 		CinderSlowFallProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		this.refreshDimensions();
 	}
 
-	public void aiStep() {
-		super.aiStep();
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
-		for (int l = 0; l < 3; ++l) {
-			double x0 = x + random.nextFloat();
-			double y0 = y + random.nextFloat();
-			double z0 = z + random.nextFloat();
-			double dx = (random.nextFloat() - 0.5D) * 0.5D;
-			double dy = (random.nextFloat() - 0.5D) * 0.5D;
-			double dz = (random.nextFloat() - 0.5D) * 0.5D;
-			world.addParticle(ParticleTypes.LARGE_SMOKE, x0, y0, z0, dx, dy, dz);
-		}
+	@Override
+	public EntityDimensions getDimensions(Pose p_33597_) {
+		return super.getDimensions(p_33597_).scale((float) 1);
 	}
 
 	public static void init() {
@@ -176,26 +188,7 @@ public class CinderEntity extends Monster implements IAnimatable {
 	}
 
 	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
-		if (this.animationprocedure == "empty") {
-			if (event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP));
-				return PlayState.CONTINUE;
-			}
-			if (this.isDeadOrDying()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("death", EDefaultLoopTypes.PLAY_ONCE));
-				return PlayState.CONTINUE;
-			}
-			if (this.isInWaterOrBubble()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("swim", EDefaultLoopTypes.LOOP));
-				return PlayState.CONTINUE;
-			}
-			if (this.isShiftKeyDown()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("sneak", EDefaultLoopTypes.LOOP));
-				return PlayState.CONTINUE;
-			} else if (this.isSprinting()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("sprint", EDefaultLoopTypes.LOOP));
-				return PlayState.CONTINUE;
-			}
+		if (this.animationprocedure.equals("empty")) {
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP));
 			return PlayState.CONTINUE;
 		}
@@ -222,12 +215,28 @@ public class CinderEntity extends Monster implements IAnimatable {
 	}
 
 	private <E extends IAnimatable> PlayState procedurePredicate(AnimationEvent<E> event) {
-		if (!(this.animationprocedure == "empty")
-				&& event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
+		Entity entity = this;
+		Level world = entity.level;
+		boolean loop = false;
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
+		if (!loop && this.lastloop) {
+			this.lastloop = false;
 			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-			if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-				this.animationprocedure = "empty";
-				event.getController().markNeedsReload();
+			event.getController().clearAnimationCache();
+			return PlayState.STOP;
+		}
+		if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
+			if (!loop) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
+				if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
+					this.animationprocedure = "empty";
+					event.getController().markNeedsReload();
+				}
+			} else {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.LOOP));
+				this.lastloop = true;
 			}
 		}
 		return PlayState.CONTINUE;
@@ -238,7 +247,16 @@ public class CinderEntity extends Monster implements IAnimatable {
 		++this.deathTime;
 		if (this.deathTime == 20) {
 			this.remove(CinderEntity.RemovalReason.KILLED);
+			this.dropExperience();
 		}
+	}
+
+	public String getSyncedAnimation() {
+		return this.entityData.get(ANIMATION);
+	}
+
+	public void setAnimation(String animation) {
+		this.entityData.set(ANIMATION, animation);
 	}
 
 	@Override

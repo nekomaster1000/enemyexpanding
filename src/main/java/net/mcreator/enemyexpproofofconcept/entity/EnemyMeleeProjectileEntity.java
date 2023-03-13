@@ -72,22 +72,19 @@ public class EnemyMeleeProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static EnemyMeleeProjectileEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
-		EnemyMeleeProjectileEntity entityarrow = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), entity,
-				world);
+		EnemyMeleeProjectileEntity entityarrow = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")),
-				SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
 	public static EnemyMeleeProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		EnemyMeleeProjectileEntity entityarrow = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), entity,
-				entity.level);
+		EnemyMeleeProjectileEntity entityarrow = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
@@ -97,8 +94,7 @@ public class EnemyMeleeProjectileEntity extends AbstractArrow implements ItemSup
 		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")),
-				SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

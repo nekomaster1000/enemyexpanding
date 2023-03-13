@@ -34,9 +34,7 @@ public class WolfsbaneHealthLoggerProcedure {
 			world.addFreshEntity(entityToSpawn);
 		}
 		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performCommand(
-					new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(),
-							null).withSuppressedOutput(),
+			_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 					("/attribute @e[limit=1,sort=nearest] generic.max_health base set currenthealth".replace("currenthealth", "" + currentHealth)));
 	}
 }

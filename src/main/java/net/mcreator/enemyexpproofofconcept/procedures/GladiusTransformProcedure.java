@@ -24,20 +24,15 @@ public class GladiusTransformProcedure {
 		if (entity.isInWater()) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY() + 1.5), (entity.getZ())), Vec2.ZERO,
-								_level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-						("/summon enemyexpansion:gladilad ~ ~ ~ {Health:20f}".replace("{Health:20f}",
-								"{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
+						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY() + 1.5), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+						("/summon enemyexpansion:gladilad ~ ~ ~ {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 20, 0.6, 0.6, 0.6, 0.5);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, new BlockPos(x, y, z),
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.converted_to_drowned")), SoundSource.HOSTILE, 1,
-							1);
+					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.converted_to_drowned")), SoundSource.HOSTILE, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.converted_to_drowned")),
-							SoundSource.HOSTILE, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.converted_to_drowned")), SoundSource.HOSTILE, 1, 1, false);
 				}
 			}
 			if (!entity.level.isClientSide())

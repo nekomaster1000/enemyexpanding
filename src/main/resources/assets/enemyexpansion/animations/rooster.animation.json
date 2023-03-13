@@ -1023,21 +1023,6 @@
 			"loop": true,
 			"animation_length": 0.5,
 			"bones": {
-				"head": {
-					"rotation": {
-						"0.0": {
-							"vector": [22.5, 0, 0]
-						},
-						"0.25": {
-							"vector": [20, 0, 0],
-							"easing": "easeInOutSine"
-						},
-						"0.5": {
-							"vector": [22.5, 0, 0],
-							"easing": "easeInOutSine"
-						}
-					}
-				},
 				"all": {
 					"rotation": {
 						"0.0": {

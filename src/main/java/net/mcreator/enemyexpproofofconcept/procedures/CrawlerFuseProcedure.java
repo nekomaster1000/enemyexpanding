@@ -36,11 +36,9 @@ public class CrawlerFuseProcedure {
 				_level.sendParticles(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x, y, z, 10, 0.3, 0.3, 0.3, 1);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")),
-							SoundSource.HOSTILE, 1, 1);
+					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")), SoundSource.HOSTILE, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")),
-							SoundSource.HOSTILE, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.tnt.primed")), SoundSource.HOSTILE, 1, 1, false);
 				}
 			}
 			new Object() {
@@ -64,8 +62,7 @@ public class CrawlerFuseProcedure {
 				}
 
 				private void run() {
-					if (entity.isAlive() && !world.getEntitiesOfClass(Player.class,
-							AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 4, 4, 4), e -> true).isEmpty()) {
+					if (entity.isAlive() && !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 4, 4, 4), e -> true).isEmpty()) {
 						if (Math.random() < 0.25) {
 							entity.setDeltaMovement(new Vec3(0, 0.6, 0.4));
 						} else if (Math.random() < 0.5) {
@@ -77,8 +74,7 @@ public class CrawlerFuseProcedure {
 						}
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO,
-											_level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 									"/summon enemyexpansion:invisicreeper ~ ~ ~ {Silent:1b,NoAI:1b,Health:1f,Fuse:1,ignited:1b,ExplosionRadius:2b,CustomName:'{\"text\":\"Crawler\"}'}");
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);

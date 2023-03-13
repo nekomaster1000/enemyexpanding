@@ -53,8 +53,7 @@ public class BaneHurtProcedure {
 				private void run() {
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 35, 0, (false), (false)));
-					entity.setDeltaMovement(
-							new Vec3((entity.getLookAngle().x * 1.5), (Mth.nextDouble(new Random(), 0.3, 1)), (entity.getLookAngle().z * 1.5)));
+					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 1.5), (Mth.nextDouble(new Random(), 0.3, 1)), (entity.getLookAngle().z * 1.5)));
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 2);
@@ -84,10 +83,8 @@ public class BaneHurtProcedure {
 					private void run() {
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO,
-											_level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-									("/summon enemyexpansion:banedasher ~ ~ ~ {Health:20f}".replace("{Health:20f}",
-											"{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
+									new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+									("/summon enemyexpansion:banedasher ~ ~ ~ {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
 						if (!entity.level.isClientSide())
 							entity.discard();
 						MinecraftForge.EVENT_BUS.unregister(this);

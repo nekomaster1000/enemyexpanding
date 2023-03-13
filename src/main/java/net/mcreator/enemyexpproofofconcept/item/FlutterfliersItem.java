@@ -81,16 +81,10 @@ public abstract class FlutterfliersItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body",
-							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).all,
-							"left_arm",
-							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).leftarm,
-							"right_arm",
-							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).rightarm,
-							"head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).all, "left_arm",
+							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).leftarm, "right_arm",
+							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).rightarm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
 					armorModel.young = living.isBaby();

@@ -31,23 +31,17 @@ public class Modelbull_skull<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition head = partdefinition.addOrReplaceChild("head",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 6.0F, new CubeDeformation(0.3F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 6.0F, new CubeDeformation(0.3F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition horns = head.addOrReplaceChild("horns",
-				CubeListBuilder.create().texOffs(0, 15).mirror().addBox(-4.0F, 14.25F, 21.0F, 4.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
-						.mirror(false).texOffs(0, 21).mirror().addBox(-2.0F, 14.25F, 17.0F, 2.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false)
-						.texOffs(9, 20).mirror().addBox(-2.0F, 12.25F, 17.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false)
-						.texOffs(0, 15).addBox(-16.0F, 14.25F, 21.0F, 4.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 21)
-						.addBox(-16.0F, 14.25F, 17.0F, 2.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(9, 20)
-						.addBox(-16.0F, 12.25F, 17.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(0, 15).mirror().addBox(-4.0F, 14.25F, 21.0F, 4.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false).texOffs(0, 21).mirror().addBox(-2.0F, 14.25F, 17.0F, 2.0F, 2.0F, 4.0F, new CubeDeformation(0.0F))
+						.mirror(false).texOffs(9, 20).mirror().addBox(-2.0F, 12.25F, 17.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false).texOffs(0, 15).addBox(-16.0F, 14.25F, 21.0F, 4.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
+						.texOffs(0, 21).addBox(-16.0F, 14.25F, 17.0F, 2.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(9, 20).addBox(-16.0F, 12.25F, 17.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(8.0F, -22.25F, -24.25F));
 		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
-			float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 

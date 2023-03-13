@@ -24,8 +24,7 @@ public class WolfsbaneAttackNoiseProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -40,12 +39,9 @@ public class WolfsbaneAttackNoiseProcedure {
 			if (sourceentity instanceof WolfsbaneEntity || sourceentity instanceof BanedasherEntity) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:wolfsbane.attack")), SoundSource.HOSTILE,
-								1, 1);
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:wolfsbane.attack")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:wolfsbane.attack")),
-								SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:wolfsbane.attack")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}

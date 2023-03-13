@@ -56,7 +56,7 @@ public class TrollHurtProcedure {
 
 				private void run() {
 					if (entity instanceof TrollEntity) {
-						((TrollEntity) entity).animationprocedure = "roar";
+						((TrollEntity) entity).setAnimation("roar");
 					}
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 4000, 9, (false), (false)));
@@ -88,13 +88,9 @@ public class TrollHurtProcedure {
 							if (entity.isAlive()) {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, new BlockPos(x, y, z),
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:troll.roar")),
-												SoundSource.HOSTILE, 1, 1);
+										_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:troll.roar")), SoundSource.HOSTILE, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z,
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:troll.roar")),
-												SoundSource.HOSTILE, 1, 1, false);
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:troll.roar")), SoundSource.HOSTILE, 1, 1, false);
 									}
 								}
 								{
@@ -111,8 +107,7 @@ public class TrollHurtProcedure {
 											}
 										}.getArrow(projectileLevel, 1, 1);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z,
-												(float) 1.5, 0);
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 										projectileLevel.addFreshEntity(_entityToSpawn);
 									}
 								}
@@ -123,8 +118,7 @@ public class TrollHurtProcedure {
 										if (!projectileLevel.isClientSide()) {
 											Projectile _entityToSpawn = new Object() {
 												public Projectile getArrow(Level level, float damage, int knockback) {
-													AbstractArrow entityToSpawn = new TrollSpitEntity(EnemyexpansionModEntities.TROLL_SPIT.get(),
-															level);
+													AbstractArrow entityToSpawn = new TrollSpitEntity(EnemyexpansionModEntities.TROLL_SPIT.get(), level);
 													entityToSpawn.setBaseDamage(damage);
 													entityToSpawn.setKnockback(knockback);
 													entityToSpawn.setSilent(true);
@@ -132,8 +126,7 @@ public class TrollHurtProcedure {
 												}
 											}.getArrow(projectileLevel, 1, 1);
 											_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-											_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y,
-													_shootFrom.getLookAngle().z, 2, (float) Mth.nextDouble(new Random(), 1, 90));
+											_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, (float) Mth.nextDouble(new Random(), 1, 90));
 											projectileLevel.addFreshEntity(_entityToSpawn);
 										}
 									}
@@ -174,16 +167,28 @@ public class TrollHurtProcedure {
 		}
 		if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) > 13) {
 			if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z))) {
+				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
+					Entity _entityForSpawning = new PetrifiedtrollEntity(EnemyexpansionModEntities.PETRIFIEDTROLL.get(), _serverLevelForEntitySpawn);
+					_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+					{
+						Entity _ent = _entityForSpawning;
+						_ent.setYRot(entity.getYRot());
+						_ent.setXRot(0);
+						_ent.setYBodyRot(_ent.getYRot());
+						_ent.setYHeadRot(_ent.getYRot());
+						_ent.yRotO = _ent.getYRot();
+						_ent.xRotO = _ent.getXRot();
+						if (_ent instanceof LivingEntity _entity) {
+							_entity.yBodyRotO = _entity.getYRot();
+							_entity.yHeadRotO = _entity.getYRot();
+						}
+					}
+					if (_entityForSpawning instanceof Mob _mobForSpawning)
+						_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					world.addFreshEntity(_entityForSpawning);
+				}
 				if (!entity.level.isClientSide())
 					entity.discard();
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new PetrifiedtrollEntity(EnemyexpansionModEntities.PETRIFIEDTROLL.get(), _level);
-					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
-								null, null);
-					world.addFreshEntity(entityToSpawn);
-				}
 			}
 		}
 	}

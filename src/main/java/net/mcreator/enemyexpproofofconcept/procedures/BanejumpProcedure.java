@@ -39,8 +39,7 @@ public class BanejumpProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
-				.getItem() == EnemyexpansionModItems.BANEMASK_HELMET.get()) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.BANEMASK_HELMET.get()) {
 			if (entity.isAlive()) {
 				new Object() {
 					private int ticks = 0;
@@ -66,13 +65,9 @@ public class BanejumpProcedure {
 						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.2), 0.2, (entity.getLookAngle().z * 0.2)));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.NEUTRAL,
-										(float) 0.7, 1);
+								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.NEUTRAL, (float) 0.7, 1);
 							} else {
-								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.NEUTRAL,
-										(float) 0.7, 1, false);
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.NEUTRAL, (float) 0.7, 1, false);
 							}
 						}
 						new Object() {

@@ -102,14 +102,10 @@ public abstract class PhantasmItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body",
-							new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).Body, "left_arm",
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).Body, "left_arm",
 							new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).LeftArm, "right_arm",
-							new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).RightArm, "head",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg",
-							new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
+							new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
 					armorModel.young = living.isBaby();

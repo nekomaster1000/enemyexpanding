@@ -43,8 +43,7 @@ public class SwiftFlightMobEffect extends MobEffect {
 			}
 
 			@Override
-			public void renderInventoryEffect(MobEffectInstance effect, EffectRenderingInventoryScreen<?> gui, PoseStack mStack, int x, int y,
-					float z) {
+			public void renderInventoryEffect(MobEffectInstance effect, EffectRenderingInventoryScreen<?> gui, PoseStack mStack, int x, int y, float z) {
 			}
 
 			@Override

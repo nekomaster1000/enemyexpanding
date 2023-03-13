@@ -16,8 +16,7 @@ public class TrollParticlesProcedure {
 		if (immediatesourceentity == null)
 			return;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (EnemyexpansionModParticleTypes.RESISTENCE_PARTICLE.get()), x, (y - 1), z, 1, 0.7, 0.3, 0.7,
-					0.1);
+			_level.sendParticles((SimpleParticleType) (EnemyexpansionModParticleTypes.RESISTENCE_PARTICLE.get()), x, (y - 1), z, 1, 0.7, 0.3, 0.7, 0.1);
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;

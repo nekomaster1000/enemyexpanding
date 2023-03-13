@@ -43,10 +43,8 @@ public class BanedasherCalmDownProcedure {
 				if (entity.isAlive()) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO,
-										_level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-								("/summon enemyexpansion:wolfsbane ~ ~ ~ {Health:20f}".replace("{Health:20f}",
-										"{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
+								new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+								("/summon enemyexpansion:wolfsbane ~ ~ ~ {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.SQUID_INK, (entity.getX()), (entity.getY()), (entity.getZ()), 20, 1, 1, 1, 1);

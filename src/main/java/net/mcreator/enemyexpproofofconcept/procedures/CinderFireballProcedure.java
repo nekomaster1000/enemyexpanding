@@ -28,8 +28,7 @@ public class CinderFireballProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -40,8 +39,7 @@ public class CinderFireballProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof Player && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)
-				&& entity instanceof CinderEntity) {
+		if (sourceentity instanceof Player && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false) && entity instanceof CinderEntity) {
 			if (Math.random() < 0.5 && entity.isAlive()) {
 				entity.setSecondsOnFire(3);
 				new Object() {
@@ -71,8 +69,7 @@ public class CinderFireballProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new CinderFireChargeEntity(EnemyexpansionModEntities.CINDER_FIRE_CHARGE.get(),
-												level);
+										AbstractArrow entityToSpawn = new CinderFireChargeEntity(EnemyexpansionModEntities.CINDER_FIRE_CHARGE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);

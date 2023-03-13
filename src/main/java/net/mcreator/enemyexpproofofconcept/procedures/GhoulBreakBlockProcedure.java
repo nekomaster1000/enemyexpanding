@@ -23,7 +23,7 @@ public class GhoulBreakBlockProcedure {
 		double sz = 0;
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.TORCH) {
 			if (entity instanceof GhoulEntity) {
-				((GhoulEntity) entity).animationprocedure = "attack";
+				((GhoulEntity) entity).setAnimation("attack");
 			}
 			new Object() {
 				private int ticks = 0;
@@ -57,7 +57,7 @@ public class GhoulBreakBlockProcedure {
 		}
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.LANTERN) {
 			if (entity instanceof GhoulEntity) {
-				((GhoulEntity) entity).animationprocedure = "attack";
+				((GhoulEntity) entity).setAnimation("attack");
 			}
 			new Object() {
 				private int ticks = 0;

@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.enemyexpproofofconcept.procedures.EquestrianModelProcedure;
+import net.mcreator.enemyexpproofofconcept.entity.model.EquestrianModel;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -16,14 +16,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class EquestrianRenderer extends GeoEntityRenderer<EquestrianEntity> {
 	public EquestrianRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new EquestrianModelProcedure());
+		super(renderManager, new EquestrianModel());
 		this.shadowRadius = 0.6f;
 	}
 
 	@Override
-	public RenderType getRenderType(EquestrianEntity animatable, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer,
-			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
-		stack.scale(1.0F, 1.0F, 1.0F);
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public RenderType getRenderType(EquestrianEntity entity, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+		stack.scale(1f, 1f, 1f);
+		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
 }

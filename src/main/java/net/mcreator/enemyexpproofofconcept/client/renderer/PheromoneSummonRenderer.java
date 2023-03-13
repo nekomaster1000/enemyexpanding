@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.enemyexpproofofconcept.procedures.PheromoneSummonModelProcedure;
+import net.mcreator.enemyexpproofofconcept.entity.model.PheromoneSummonModel;
 import net.mcreator.enemyexpproofofconcept.entity.PheromoneSummonEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -16,14 +16,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class PheromoneSummonRenderer extends GeoEntityRenderer<PheromoneSummonEntity> {
 	public PheromoneSummonRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new PheromoneSummonModelProcedure());
+		super(renderManager, new PheromoneSummonModel());
 		this.shadowRadius = 0.5f;
 	}
 
 	@Override
-	public RenderType getRenderType(PheromoneSummonEntity animatable, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer,
-			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
-		stack.scale(1.0F, 1.0F, 1.0F);
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public RenderType getRenderType(PheromoneSummonEntity entity, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+		stack.scale(1f, 1f, 1f);
+		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
 }

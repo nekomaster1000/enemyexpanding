@@ -21,10 +21,9 @@ import java.util.List;
 
 public class PreposterousPortionItem extends Item {
 	public PreposterousPortionItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON)
-				.food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.5f).alwaysEat()
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.5f).alwaysEat()
 
-						.build()));
+				.build()));
 	}
 
 	@Override

@@ -22,8 +22,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class Modelsenior_zombie<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("enemyexpansion", "modelsenior_zombie"),
-			"main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("enemyexpansion", "modelsenior_zombie"), "main");
 	public final ModelPart RightLeg;
 	public final ModelPart LeftLeg;
 	public final ModelPart head;
@@ -43,34 +42,21 @@ public class Modelsenior_zombie<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition RightLeg = partdefinition.addOrReplaceChild("RightLeg",
-				CubeListBuilder.create().texOffs(51, 51).addBox(-5.4F, 0.0F, -2.0F, 8.0F, 18.0F, 7.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(-2.5F, 6.0F, 0.0F));
-		PartDefinition LeftLeg = partdefinition.addOrReplaceChild("LeftLeg", CubeListBuilder.create().texOffs(49, 0).mirror()
-				.addBox(-2.6F, 0.0F, -2.0F, 8.0F, 18.0F, 7.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(2.5F, 6.0F, 0.0F));
-		PartDefinition head = partdefinition.addOrReplaceChild("head",
-				CubeListBuilder.create().texOffs(0, 58).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, -11.0F, -8.0F));
+		PartDefinition RightLeg = partdefinition.addOrReplaceChild("RightLeg", CubeListBuilder.create().texOffs(51, 51).addBox(-5.4F, 0.0F, -2.0F, 8.0F, 18.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.5F, 6.0F, 0.0F));
+		PartDefinition LeftLeg = partdefinition.addOrReplaceChild("LeftLeg", CubeListBuilder.create().texOffs(49, 0).mirror().addBox(-2.6F, 0.0F, -2.0F, 8.0F, 18.0F, 7.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(2.5F, 6.0F, 0.0F));
+		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 58).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -11.0F, -8.0F));
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body", CubeListBuilder.create(), PartPose.offset(0.0F, 6.0F, 2.0F));
-		PartDefinition Body_r1 = Body.addOrReplaceChild("Body_r1",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-8.0F, -20.0F, -5.0F, 16.0F, 20.0F, 8.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 1.0F, 0.4363F, 0.0F, 0.0F));
-		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm",
-				CubeListBuilder.create().texOffs(29, 29).addBox(-6.0F, -2.0F, -2.0F, 6.0F, 20.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(58, 31)
-						.addBox(-5.0F, 18.0F, 0.0F, 4.0F, 15.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(58, 25)
-						.addBox(-5.0F, 18.0F, -2.0F, 4.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(-8.0F, -9.0F, -7.0F));
+		PartDefinition Body_r1 = Body.addOrReplaceChild("Body_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-8.0F, -20.0F, -5.0F, 16.0F, 20.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 1.0F, 0.4363F, 0.0F, 0.0F));
+		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm", CubeListBuilder.create().texOffs(29, 29).addBox(-6.0F, -2.0F, -2.0F, 6.0F, 20.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(58, 31)
+				.addBox(-5.0F, 18.0F, 0.0F, 4.0F, 15.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(58, 25).addBox(-5.0F, 18.0F, -2.0F, 4.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-8.0F, -9.0F, -7.0F));
 		PartDefinition LeftArm = partdefinition.addOrReplaceChild("LeftArm", CubeListBuilder.create(), PartPose.offset(8.0F, -9.0F, -7.0F));
-		PartDefinition LeftArm_r1 = LeftArm.addOrReplaceChild(
-				"LeftArm_r1", CubeListBuilder.create().texOffs(0, 29).mirror()
-						.addBox(0.0F, -2.0F, -2.0F, 6.0F, 20.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false),
+		PartDefinition LeftArm_r1 = LeftArm.addOrReplaceChild("LeftArm_r1", CubeListBuilder.create().texOffs(0, 29).mirror().addBox(0.0F, -2.0F, -2.0F, 6.0F, 20.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false),
 				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.829F, 0.0F, 0.0F));
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
-			float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		LeftLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

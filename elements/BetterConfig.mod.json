@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 39,
   "_type": "config",
   "definition": {
     "pools": [
@@ -68,7 +68,7 @@
         ]
       },
       {
-        "category": "spawningDepth",
+        "category": "naturalSpawningDepth",
         "entries": [
           {
             "item": {
@@ -174,6 +174,24 @@
             "comment": "",
             "vardisplay": "Intruder Spawning Depth",
             "varname": "intruderspawningdepth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 60.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Cockatrice Spawning Depth",
+            "varname": "cockatricespawningdepth",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"

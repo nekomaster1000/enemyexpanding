@@ -8,8 +8,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.enemyexpproofofconcept.procedures.GoblinModelProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.GoblinLayerProcedure;
+import net.mcreator.enemyexpproofofconcept.entity.model.GoblinModel;
+import net.mcreator.enemyexpproofofconcept.entity.layer.GoblinLayer;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -17,15 +17,14 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class GoblinRenderer extends GeoEntityRenderer<GoblinEntity> {
 	public GoblinRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new GoblinModelProcedure());
+		super(renderManager, new GoblinModel());
 		this.shadowRadius = 0.5f;
-		this.addLayer(new GoblinLayerProcedure(this));
+		this.addLayer(new GoblinLayer(this));
 	}
 
 	@Override
-	public RenderType getRenderType(GoblinEntity animatable, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer,
-			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
-		stack.scale(1.0F, 1.0F, 1.0F);
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public RenderType getRenderType(GoblinEntity entity, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+		stack.scale(1f, 1f, 1f);
+		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
 }

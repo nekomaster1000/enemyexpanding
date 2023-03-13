@@ -8,8 +8,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.enemyexpproofofconcept.procedures.CinderModelProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.CinderLayerProcedure;
+import net.mcreator.enemyexpproofofconcept.entity.model.CinderModel;
+import net.mcreator.enemyexpproofofconcept.entity.layer.CinderLayer;
 import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -17,15 +17,14 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class CinderRenderer extends GeoEntityRenderer<CinderEntity> {
 	public CinderRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new CinderModelProcedure());
+		super(renderManager, new CinderModel());
 		this.shadowRadius = 0.5f;
-		this.addLayer(new CinderLayerProcedure(this));
+		this.addLayer(new CinderLayer(this));
 	}
 
 	@Override
-	public RenderType getRenderType(CinderEntity animatable, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer,
-			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
-		stack.scale(1.0F, 1.0F, 1.0F);
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public RenderType getRenderType(CinderEntity entity, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+		stack.scale(1f, 1f, 1f);
+		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
 }

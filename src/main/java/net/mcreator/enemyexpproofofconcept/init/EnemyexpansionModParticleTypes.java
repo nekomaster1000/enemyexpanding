@@ -15,6 +15,5 @@ import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 public class EnemyexpansionModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, EnemyexpansionMod.MODID);
-	public static final RegistryObject<ParticleType<?>> RESISTENCE_PARTICLE = REGISTRY.register("resistence_particle",
-			() -> new SimpleParticleType(false));
+	public static final RegistryObject<ParticleType<?>> RESISTENCE_PARTICLE = REGISTRY.register("resistence_particle", () -> new SimpleParticleType(false));
 }

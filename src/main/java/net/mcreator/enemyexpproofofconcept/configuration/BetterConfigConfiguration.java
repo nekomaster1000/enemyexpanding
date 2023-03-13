@@ -14,6 +14,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> TROLLSPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> VAMPIRESPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> INTRUDERSPAWNINGDEPTH;
+	public static final ForgeConfigSpec.ConfigValue<Double> COCKATRICESPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENT;
@@ -62,25 +63,21 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> FIRERES;
 	static {
 		BUILDER.push("mobSpawning");
-		BABYZOMBIESPAWNING = BUILDER.comment(
-				"0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)")
-				.define("Baby Zombie Spawning", (double) 0.13);
+		BABYZOMBIESPAWNING = BUILDER.comment("0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)").define("Baby Zombie Spawning", (double) 0.13);
 		BUILDER.pop();
 		BUILDER.push("mobHealth");
-		BABYZOMBIEHEALTH = BUILDER.comment(
-				"Allows you to set the amount of health mobs spawn with (if they're allowed to spawn at all.) I made it really low by default so as to make them less annoying to deal with if you do have to encounter them.")
+		BABYZOMBIEHEALTH = BUILDER.comment("Allows you to set the amount of health mobs spawn with (if they're allowed to spawn at all.) I made it really low by default so as to make them less annoying to deal with if you do have to encounter them.")
 				.define("Baby Zombie Health", (double) 2);
 		PHANTOMHEALTH = BUILDER.define("Phantom Health", (double) 6);
 		BUILDER.pop();
-		BUILDER.push("spawningDepth");
-		PETRIMANSPAWNINGDEPTH = BUILDER.comment(
-				"The specified mob will only naturally spawn below the specified y-level. This is so certain mobs are cave-exclusive by default.")
-				.define("Petriman Spawning Depth", (double) 55);
+		BUILDER.push("naturalSpawningDepth");
+		PETRIMANSPAWNINGDEPTH = BUILDER.comment("The specified mob will only naturally spawn below the specified y-level. This is so certain mobs are cave-exclusive by default.").define("Petriman Spawning Depth", (double) 55);
 		SILVERKINGSPAWNINGDEPTH = BUILDER.define("Silverking Spawning Depth", (double) -10);
 		CRAWLERSPAWNINGDEPTH = BUILDER.define("Crawler Spawning Depth", (double) -10);
 		TROLLSPAWNINGDEPTH = BUILDER.define("Troll Spawning Depth", (double) -10);
 		VAMPIRESPAWNINGDEPTH = BUILDER.define("Vampire Spawning Depth", (double) -10);
 		INTRUDERSPAWNINGDEPTH = BUILDER.define("Intruder Spawning Depth", (double) 35);
+		COCKATRICESPAWNINGDEPTH = BUILDER.define("Cockatrice Spawning Depth", (double) 60);
 		BUILDER.pop();
 		BUILDER.push("mobReplacement");
 		PETRIMANZOMBIEREPLACEMENT = BUILDER.define("Petriman Zombie Replacement", (double) 1);
@@ -105,9 +102,7 @@ public class BetterConfigConfiguration {
 		TROLLENDERMANREPLACEMENTDEPTH = BUILDER.define("Troll Enderman Replacement Depth", (double) -10);
 		BUILDER.pop();
 		BUILDER.push("hatWearerSpawning");
-		MEATHEADWEARERSPAWNING = BUILDER.comment(
-				"Some Zombies and Skeletons will spawn wearing certain special gear. edit the minecraft:is_meatury tag to choose what biomes these mobs spawn in.")
-				.define("Meat Head Wearer Spawning", (double) 0.01);
+		MEATHEADWEARERSPAWNING = BUILDER.comment("Some Zombies and Skeletons will spawn wearing certain special gear. edit the minecraft:is_meatury tag to choose what biomes these mobs spawn in.").define("Meat Head Wearer Spawning", (double) 0.01);
 		HEADBITTENWEARERSPAWNING = BUILDER.define("Headbitten Wearer Spawning", (double) 0.01);
 		SLIMEHEADWEARERSPAWNING = BUILDER.define("Slimehead Wearer Spawning", (double) 0.01);
 		SPIDERLATCHWEARERSPAWNING = BUILDER.define("Spiderlatch Wearer Spawning", (double) 0.01);

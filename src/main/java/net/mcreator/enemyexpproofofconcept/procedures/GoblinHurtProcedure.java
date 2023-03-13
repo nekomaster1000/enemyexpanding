@@ -37,7 +37,7 @@ public class GoblinHurtProcedure {
 			return;
 		if (entity instanceof CasterEntity) {
 			if (entity instanceof CasterEntity) {
-				((CasterEntity) entity).animationprocedure = "sprint";
+				((CasterEntity) entity).setAnimation("sprint");
 			}
 			if (Math.random() < 0.5) {
 				entity.setDeltaMovement(new Vec3(0.6, 1, 0.6));
@@ -66,7 +66,7 @@ public class GoblinHurtProcedure {
 
 				private void run() {
 					if (entity instanceof CasterEntity) {
-						((CasterEntity) entity).animationprocedure = "attack";
+						((CasterEntity) entity).setAnimation("attack");
 					}
 					new Object() {
 						private int ticks = 0;
@@ -92,13 +92,9 @@ public class GoblinHurtProcedure {
 							if (entity.isAlive()) {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, new BlockPos(x, y, z),
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")),
-												SoundSource.HOSTILE, 1, 1);
+										_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")), SoundSource.HOSTILE, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z,
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")),
-												SoundSource.HOSTILE, 1, 1, false);
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")), SoundSource.HOSTILE, 1, 1, false);
 									}
 								}
 								{
@@ -115,8 +111,7 @@ public class GoblinHurtProcedure {
 											}
 										}.getArrow(projectileLevel, 3, 1);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1,
-												0);
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 										projectileLevel.addFreshEntity(_entityToSpawn);
 									}
 								}
@@ -133,34 +128,31 @@ public class GoblinHurtProcedure {
 				Entity entityToSpawn = new GoblinFearEntity(EnemyexpansionModEntities.GOBLIN_FEAR.get(), _level);
 				entityToSpawn.moveTo((x - 2), y, (z - 2), world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null,
-							null);
+					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 				world.addFreshEntity(entityToSpawn);
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fox.screech")),
-							SoundSource.HOSTILE, 1, 1);
+					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fox.screech")), SoundSource.HOSTILE, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fox.screech")),
-							SoundSource.HOSTILE, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fox.screech")), SoundSource.HOSTILE, 1, 1, false);
 				}
 			}
 			if (entity instanceof ZobgoblinEntity) {
-				((ZobgoblinEntity) entity).animationprocedure = "sprint";
+				((ZobgoblinEntity) entity).setAnimation("sprint");
 			}
 			if (entity instanceof GoblinEntity) {
-				((GoblinEntity) entity).animationprocedure = "sprint";
+				((GoblinEntity) entity).setAnimation("sprint");
 			}
 			if (entity instanceof GoblinEntity) {
 				if (world instanceof Level _level && !_level.isClientSide())
 					_level.addFreshEntity(new ExperienceOrb(_level, x, y, z, 2));
 			}
 			if (entity instanceof BouncerEntity) {
-				((BouncerEntity) entity).animationprocedure = "sprint";
+				((BouncerEntity) entity).setAnimation("sprint");
 			}
 			if (entity instanceof RancherEntity) {
-				((RancherEntity) entity).animationprocedure = "sprint";
+				((RancherEntity) entity).setAnimation("sprint");
 			}
 			if (entity instanceof RancherEntity) {
 				if (Math.random() < 0.5) {
@@ -196,8 +188,7 @@ public class GoblinHurtProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new SlimeballThrowEntity(EnemyexpansionModEntities.SLIMEBALL_THROW.get(),
-													level);
+											AbstractArrow entityToSpawn = new SlimeballThrowEntity(EnemyexpansionModEntities.SLIMEBALL_THROW.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -215,7 +206,7 @@ public class GoblinHurtProcedure {
 				}.start(world, 60);
 			}
 			if (entity instanceof ErrantEntity) {
-				((ErrantEntity) entity).animationprocedure = "sprint";
+				((ErrantEntity) entity).setAnimation("sprint");
 			}
 		}
 	}

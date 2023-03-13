@@ -31,27 +31,18 @@ public class Modelgladling<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition gladling = partdefinition.addOrReplaceChild("gladling",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-6.1F, -10.0F, -6.0F, 12.0F, 8.0F, 12.0F, new CubeDeformation(0.2F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition tentacle = gladling.addOrReplaceChild("tentacle",
-				CubeListBuilder.create().texOffs(36, 3).addBox(-4.5F, 2.5867F, -1.7825F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)).texOffs(36, 3)
-						.mirror().addBox(0.5F, 2.5867F, -1.7825F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)).mirror(false),
-				PartPose.offsetAndRotation(-0.1F, -5.0F, -3.0F, -0.7854F, 0.0F, 0.0F));
-		PartDefinition cube_r1 = tentacle
-				.addOrReplaceChild(
-						"cube_r1", CubeListBuilder.create().texOffs(36, 3).mirror()
-								.addBox(0.0F, 1.0F, -1.0F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)).mirror(false),
-						PartPose.offsetAndRotation(2.0F, 3.5867F, 0.2175F, 0.0F, 0.0F, -0.7854F));
-		PartDefinition cube_r2 = tentacle.addOrReplaceChild("cube_r2",
-				CubeListBuilder.create().texOffs(36, 3).addBox(-4.0F, 1.0F, -1.0F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)),
+		PartDefinition gladling = partdefinition.addOrReplaceChild("gladling", CubeListBuilder.create().texOffs(0, 0).addBox(-6.1F, -10.0F, -6.0F, 12.0F, 8.0F, 12.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition tentacle = gladling.addOrReplaceChild("tentacle", CubeListBuilder.create().texOffs(36, 3).addBox(-4.5F, 2.5867F, -1.7825F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)).texOffs(36, 3).mirror()
+				.addBox(0.5F, 2.5867F, -1.7825F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)).mirror(false), PartPose.offsetAndRotation(-0.1F, -5.0F, -3.0F, -0.7854F, 0.0F, 0.0F));
+		PartDefinition cube_r1 = tentacle.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(36, 3).mirror().addBox(0.0F, 1.0F, -1.0F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)).mirror(false),
+				PartPose.offsetAndRotation(2.0F, 3.5867F, 0.2175F, 0.0F, 0.0F, -0.7854F));
+		PartDefinition cube_r2 = tentacle.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(36, 3).addBox(-4.0F, 1.0F, -1.0F, 4.0F, 6.0F, 3.0F, new CubeDeformation(0.01F)),
 				PartPose.offsetAndRotation(-2.0F, 3.5867F, 0.2175F, 0.0F, 0.0F, 0.7854F));
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
-			float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		gladling.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 

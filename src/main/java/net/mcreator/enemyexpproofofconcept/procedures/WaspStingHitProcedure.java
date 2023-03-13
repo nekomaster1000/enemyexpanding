@@ -16,7 +16,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -33,8 +32,7 @@ public class WaspStingHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -46,9 +44,6 @@ public class WaspStingHitProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof WaspEntity) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			}
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -72,20 +67,14 @@ public class WaspStingHitProcedure {
 				private void run() {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9,
-									(float) 1.5);
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9, (float) 1.5);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")),
-									SoundSource.HOSTILE, (float) 0.9, (float) 1.5, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9, (float) 1.5, false);
 						}
 					}
-					entity.hurt(DamageSource.GENERIC, 3);
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 60, 0, (true), (true)));
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0, (true), (true)));
-					if (Math.random() < 0.3) {
+					if (Math.random() < 0.15) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x, y, z, 5, (-9), (-9), (-9), 1);
 						new Object() {
@@ -113,8 +102,7 @@ public class WaspStingHitProcedure {
 									Entity entityToSpawn = new WaspEntity(EnemyexpansionModEntities.WASP.get(), _level);
 									entityToSpawn.moveTo((x - 9), y, (z - 9), world.getRandom().nextFloat() * 360F, 0);
 									if (entityToSpawn instanceof Mob _mobToSpawn)
-										_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-												MobSpawnType.MOB_SUMMONED, null, null);
+										_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 									world.addFreshEntity(entityToSpawn);
 								}
 								MinecraftForge.EVENT_BUS.unregister(this);
@@ -123,7 +111,7 @@ public class WaspStingHitProcedure {
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 12);
+			}.start(world, 3);
 		}
 	}
 }

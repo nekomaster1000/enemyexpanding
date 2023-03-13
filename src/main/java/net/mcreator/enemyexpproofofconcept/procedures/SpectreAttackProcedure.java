@@ -40,8 +40,7 @@ public class SpectreAttackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -83,29 +82,22 @@ public class SpectreAttackProcedure {
 						_level.sendParticles(ParticleTypes.LARGE_SMOKE, x, y, z, 5, 0.4, 0.4, 0.4, 0.5);
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.HOSTILE,
-									(float) 0.5, 2);
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.HOSTILE, (float) 0.5, 2);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")),
-									SoundSource.HOSTILE, (float) 0.5, 2, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.HOSTILE, (float) 0.5, 2, false);
 						}
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z),
-									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.HOSTILE,
-									(float) 0.5, 0);
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.HOSTILE, (float) 0.5, 0);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")),
-									SoundSource.HOSTILE, (float) 0.5, 0, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.HOSTILE, (float) 0.5, 0, false);
 						}
 					}
 					if (entity instanceof Player && !(entity instanceof LivingEntity _livEnt ? _livEnt.isBlocking() : false)) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
-							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true)
-									.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 									.collect(Collectors.toList());
 							for (Entity entityiterator : _entfound) {
 								if (entity instanceof LivingEntity _entity)
@@ -152,8 +144,7 @@ public class SpectreAttackProcedure {
 							_level.sendParticles(ParticleTypes.ENCHANTED_HIT, x, y, z, 4, 0.4, 0.4, 0.4, 0.3);
 						for (int index0 = 0; index0 < (int) (10); index0++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.SQUID_INK, (sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), 8,
-										0.5, 0.2, 0.5, 0.4);
+								_level.sendParticles(ParticleTypes.SQUID_INK, (sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), 8, 0.5, 0.2, 0.5, 0.4);
 						}
 						new Object() {
 							private int ticks = 0;

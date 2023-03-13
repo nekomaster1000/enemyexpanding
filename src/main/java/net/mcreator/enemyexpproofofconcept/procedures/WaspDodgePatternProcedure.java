@@ -5,176 +5,62 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.Mth;
+
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
+import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
+
+import java.util.stream.Collectors;
+import java.util.Random;
+import java.util.List;
+import java.util.Comparator;
 
 public class WaspDodgePatternProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		entity.setDeltaMovement(new Vec3(0, 0.8, 0));
-		if (sourceentity instanceof Player) {
-			if (Math.random() < 0.3) {
-				entity.setDeltaMovement(new Vec3((-0.4), 0.4, 0));
-			}
-			if (Math.random() < 0.3) {
-				entity.setDeltaMovement(new Vec3(0.4, (-0.4), 0));
-			}
-			if (Math.random() < 0.3) {
-				entity.setDeltaMovement(new Vec3(0, 0.7, 0.2));
-			}
-			if (Math.random() < 0.3) {
-				entity.setDeltaMovement(new Vec3(0, (-0.2), (-0.4)));
-			}
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeAllEffects();
+		entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1.5, 1.5)), 0, (Mth.nextDouble(new Random(), -1.5, 1.5))));
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private LevelAccessor world;
 
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
+			public void start(LevelAccessor world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
 				}
+			}
 
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
+			private void run() {
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+							.collect(Collectors.toList());
+					for (Entity entityiterator : _entfound) {
+						if (entityiterator instanceof WaspEntity) {
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), 60, 1, (false), (false)));
+						}
 					}
 				}
-
-				private void run() {
-					entity.setDeltaMovement(new Vec3(0, 0.1, 0));
-					if (Math.random() < 0.6) {
-						entity.setDeltaMovement(new Vec3((-0.5), 0.5, 0.3));
-					}
-					if (Math.random() < 0.3) {
-						entity.setDeltaMovement(new Vec3(0.5, (-0.2), 0));
-					}
-					if (Math.random() < 0.3) {
-						entity.setDeltaMovement(new Vec3(0, 0.7, 0.03));
-					}
-					if (Math.random() < 0.3) {
-						entity.setDeltaMovement(new Vec3(0, 0.1, (-0.5)));
-					}
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							entity.setDeltaMovement(new Vec3(0, 0.1, 0));
-							if (Math.random() < 0.3) {
-								entity.setDeltaMovement(new Vec3((-0.4), 0.7, 0.2));
-							}
-							if (Math.random() < 0.6) {
-								entity.setDeltaMovement(new Vec3(0.4, (-0.3), 0));
-							}
-							if (Math.random() < 0.3) {
-								entity.setDeltaMovement(new Vec3(0, 0.4, (-0.1)));
-							}
-							if (Math.random() < 0.3) {
-								entity.setDeltaMovement(new Vec3(0, (-0.4), 0));
-							}
-							new Object() {
-								private int ticks = 0;
-								private float waitTicks;
-								private LevelAccessor world;
-
-								public void start(LevelAccessor world, int waitTicks) {
-									this.waitTicks = waitTicks;
-									MinecraftForge.EVENT_BUS.register(this);
-									this.world = world;
-								}
-
-								@SubscribeEvent
-								public void tick(TickEvent.ServerTickEvent event) {
-									if (event.phase == TickEvent.Phase.END) {
-										this.ticks += 1;
-										if (this.ticks >= this.waitTicks)
-											run();
-									}
-								}
-
-								private void run() {
-									entity.setDeltaMovement(new Vec3(0, 0.1, 0));
-									if (Math.random() < 0.3) {
-										entity.setDeltaMovement(new Vec3((-0.4), 0.6, 0.1));
-									}
-									if (Math.random() < 0.3) {
-										entity.setDeltaMovement(new Vec3(0.4, 0.3, 0));
-									}
-									if (Math.random() < 0.3) {
-										entity.setDeltaMovement(new Vec3(0, 0.4, 0.4));
-									}
-									if (Math.random() < 0.6) {
-										entity.setDeltaMovement(new Vec3(0, (-0.4), (-0.2)));
-									}
-									new Object() {
-										private int ticks = 0;
-										private float waitTicks;
-										private LevelAccessor world;
-
-										public void start(LevelAccessor world, int waitTicks) {
-											this.waitTicks = waitTicks;
-											MinecraftForge.EVENT_BUS.register(this);
-											this.world = world;
-										}
-
-										@SubscribeEvent
-										public void tick(TickEvent.ServerTickEvent event) {
-											if (event.phase == TickEvent.Phase.END) {
-												this.ticks += 1;
-												if (this.ticks >= this.waitTicks)
-													run();
-											}
-										}
-
-										private void run() {
-											entity.setDeltaMovement(new Vec3(0, 0.1, 0));
-											if (Math.random() < 0.6) {
-												entity.setDeltaMovement(new Vec3((-0.4), (-0.2), 0.3));
-											}
-											if (Math.random() < 0.3) {
-												entity.setDeltaMovement(new Vec3(0.4, 0, 0));
-											}
-											if (Math.random() < 0.3) {
-												entity.setDeltaMovement(new Vec3(0, 0.3, 0.4));
-											}
-											if (Math.random() < 0.3) {
-												entity.setDeltaMovement(new Vec3(0, 0.2, (-0.4)));
-											}
-											MinecraftForge.EVENT_BUS.unregister(this);
-										}
-									}.start(world, 10);
-									MinecraftForge.EVENT_BUS.unregister(this);
-								}
-							}.start(world, 10);
-							MinecraftForge.EVENT_BUS.unregister(this);
-						}
-					}.start(world, 10);
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, 10);
-		}
+				MinecraftForge.EVENT_BUS.unregister(this);
+			}
+		}.start(world, 20);
 	}
 }

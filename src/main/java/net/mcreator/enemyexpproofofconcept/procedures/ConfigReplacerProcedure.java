@@ -58,35 +58,30 @@ public class ConfigReplacerProcedure {
 		boolean spawning = false;
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		File enemyexpansion = new File("");
-		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get()
-				&& y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
+		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get() && y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
 			if (entity instanceof Zombie && (!(entity instanceof Drowned) || !(entity instanceof ZombifiedPiglin))) {
 				ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
 			}
 		}
-		if (Math.random() < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENT.get()
-				&& y < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENTDEPTH.get()) {
+		if (Math.random() < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENT.get() && y < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENTDEPTH.get()) {
 			if (entity instanceof Spider && !(entity instanceof CaveSpider) && !(entity instanceof SilverkingEntity)) {
-				if (!new ResourceLocation("dripstone_caves").equals(world.getBiome(new BlockPos(x, y, z)).value().getRegistryName()) && !world
-						.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
+				if (!new ResourceLocation("dripstone_caves").equals(world.getBiome(new BlockPos(x, y, z)).value().getRegistryName())
+						&& !world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
 					ReplacewithSilverkingProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		}
-		if (Math.random() < (double) BetterConfigConfiguration.CREEPSREPLACEMENT.get()
-				&& y < (double) BetterConfigConfiguration.CREEPSREPLACEMENTDEPTH.get()) {
+		if (Math.random() < (double) BetterConfigConfiguration.CREEPSREPLACEMENT.get() && y < (double) BetterConfigConfiguration.CREEPSREPLACEMENTDEPTH.get()) {
 			if (entity instanceof Creeper) {
 				ReplaceWithCreepsProcedure.execute(world, x, y, z, entity);
 			}
 		}
-		if (Math.random() < (double) BetterConfigConfiguration.VAMPIRESKELETONREPLACEMENT.get()
-				&& y < (double) BetterConfigConfiguration.VAMPIRESKELETONREPLACEMENTDEPTH.get()) {
+		if (Math.random() < (double) BetterConfigConfiguration.VAMPIRESKELETONREPLACEMENT.get() && y < (double) BetterConfigConfiguration.VAMPIRESKELETONREPLACEMENTDEPTH.get()) {
 			if (entity instanceof Skeleton) {
 				ReplaceWithVampireProcedure.execute(world, x, y, z, entity);
 			}
 		}
-		if (Math.random() < (double) BetterConfigConfiguration.TROLLENDERMANREPLACEMENT.get()
-				&& y < (double) BetterConfigConfiguration.TROLLENDERMANREPLACEMENTDEPTH.get()) {
+		if (Math.random() < (double) BetterConfigConfiguration.TROLLENDERMANREPLACEMENT.get() && y < (double) BetterConfigConfiguration.TROLLENDERMANREPLACEMENTDEPTH.get()) {
 			if (entity instanceof EnderMan) {
 				ReplaceWithTrollProcedure.execute(world, x, y, z, entity);
 			}
@@ -97,46 +92,40 @@ public class ConfigReplacerProcedure {
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.PIGBOARREPLACEMENT.get()) {
-			if (entity instanceof Pig && !(entity instanceof BoarEntity)
-					&& world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_taiga")))) {
+			if (entity instanceof Pig && !(entity instanceof BoarEntity) && world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_taiga")))) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 					ReplaceWithBoarProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.COWBULLREPLACEMENT.get()) {
-			if (entity instanceof Cow && !(entity instanceof BullEntity)
-					&& world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
+			if (entity instanceof Cow && !(entity instanceof BullEntity) && world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 					ReplaceWithBullProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.SHEEPRAMREPLACEMENT.get()) {
-			if (entity instanceof Sheep && !(entity instanceof RamEntity) && world.getBiome(new BlockPos(x, y, z))
-					.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_mountain")))) {
+			if (entity instanceof Sheep && !(entity instanceof RamEntity) && world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_mountain")))) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 					ReplaceWithRamProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.CHICKENROOSTERREPLACEMENT.get()) {
-			if (entity instanceof Chicken && !(entity instanceof RoosterEntity) && world.getBiome(new BlockPos(x, y, z))
-					.is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_jungle")))) {
+			if (entity instanceof Chicken && !(entity instanceof RoosterEntity) && world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_jungle")))) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 					ReplaceWithRoosterProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.SPIDERSCORPIONREPLACEMENT.get()) {
-			if (entity instanceof Spider && !(entity instanceof CaveSpider) && !(entity instanceof ScorpionEntity)
-					&& world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
+			if (entity instanceof Spider && !(entity instanceof CaveSpider) && !(entity instanceof ScorpionEntity) && world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
 				ReplaceWithScorpionProcedure.execute(world, x, y, z, entity);
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.SPIDERTARANTULAREPLACEMENT.get()) {
-			if (entity instanceof Spider && !(entity instanceof CaveSpider) && !(entity instanceof TarantulaEntity)
-					&& new ResourceLocation("dripstone_caves").equals(world.getBiome(new BlockPos(x, y, z)).value().getRegistryName())) {
+			if (entity instanceof Spider && !(entity instanceof CaveSpider) && !(entity instanceof TarantulaEntity) && new ResourceLocation("dripstone_caves").equals(world.getBiome(new BlockPos(x, y, z)).value().getRegistryName())) {
 				ReplaceWithTarantulaProcedure.execute(world, x, y, z, entity);
 			}
 		}

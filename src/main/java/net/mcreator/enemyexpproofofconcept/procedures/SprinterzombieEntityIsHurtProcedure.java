@@ -23,7 +23,7 @@ public class SprinterzombieEntityIsHurtProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1, (false), (true)));
 			if (entity instanceof SprinterEntity) {
-				((SprinterEntity) entity).animationprocedure = "staggered";
+				((SprinterEntity) entity).setAnimation("staggered");
 			}
 			new Object() {
 				private int ticks = 0;

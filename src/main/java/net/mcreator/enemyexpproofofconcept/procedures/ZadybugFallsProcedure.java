@@ -14,7 +14,7 @@ public class ZadybugFallsProcedure {
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 20, 1, (false), (false)));
 		if (entity instanceof ZadybugEntity) {
-			((ZadybugEntity) entity).animationprocedure = "sneak";
+			((ZadybugEntity) entity).setAnimation("sneak");
 		}
 	}
 }

@@ -90,8 +90,7 @@ public class CastSpellRandomEffectProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-											MobSpawnType.MOB_SUMMONED, null, null);
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 								world.addFreshEntity(entityToSpawn);
 							}
 							MinecraftForge.EVENT_BUS.unregister(this);
@@ -124,11 +123,9 @@ public class CastSpellRandomEffectProcedure {
 			entity.hurt(DamageSource.MAGIC, 1);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, new BlockPos(x, y, z),
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")), SoundSource.HOSTILE, 1, 1);
+					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")), SoundSource.HOSTILE, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")),
-							SoundSource.HOSTILE, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")), SoundSource.HOSTILE, 1, 1, false);
 				}
 			}
 			if (Math.random() < 0.1) {

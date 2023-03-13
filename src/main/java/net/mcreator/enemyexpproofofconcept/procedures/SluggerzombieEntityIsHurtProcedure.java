@@ -18,8 +18,7 @@ public class SluggerzombieEntityIsHurtProcedure {
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (!entity.isOnFire() && (sourceentity instanceof LivingEntity || sourceentity instanceof Arrow)
-				&& !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+		if (!entity.isOnFire() && (sourceentity instanceof LivingEntity || sourceentity instanceof Arrow) && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 24, 6));
 			new Object() {
@@ -44,7 +43,7 @@ public class SluggerzombieEntityIsHurtProcedure {
 
 				private void run() {
 					if (entity instanceof SluggerEntity) {
-						((SluggerEntity) entity).animationprocedure = "sprint";
+						((SluggerEntity) entity).setAnimation("sprint");
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}

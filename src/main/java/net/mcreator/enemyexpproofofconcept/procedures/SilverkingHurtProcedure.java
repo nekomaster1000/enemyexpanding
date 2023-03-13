@@ -29,8 +29,7 @@ public class SilverkingHurtProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -65,17 +64,14 @@ public class SilverkingHurtProcedure {
 				private void run() {
 					for (int index0 = 0; index0 < (int) (Mth.nextDouble(new Random(), 0, 3)); index0++) {
 						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y + 0.5), z), Vec2.ZERO, _level, 4, "",
-											new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+							_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y + 0.5), z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 									"/summon silverfish ~ ~ ~ {Health:1f}");
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 6);
 		}
-		if (sourceentity instanceof Player && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)
-				&& entity instanceof SilverkingEntity) {
+		if (sourceentity instanceof Player && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false) && entity instanceof SilverkingEntity) {
 			if (Math.random() < 0.2) {
 				new Object() {
 					private int ticks = 0;
@@ -100,9 +96,7 @@ public class SilverkingHurtProcedure {
 					private void run() {
 						for (int index1 = 0; index1 < (int) (Mth.nextDouble(new Random(), 0, 3)); index1++) {
 							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performCommand(
-										new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y + 0.5), z), Vec2.ZERO, _level, 4, "",
-												new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+								_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y + 0.5), z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 										"/summon silverfish ~ ~ ~ {Health:1f}");
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);

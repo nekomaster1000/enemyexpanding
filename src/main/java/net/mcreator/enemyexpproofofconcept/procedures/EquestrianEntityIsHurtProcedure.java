@@ -16,7 +16,7 @@ public class EquestrianEntityIsHurtProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof EquestrianEntity) {
-			((EquestrianEntity) entity).animationprocedure = "panicked";
+			((EquestrianEntity) entity).setAnimation("panicked");
 		}
 		new Object() {
 			private int ticks = 0;

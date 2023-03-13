@@ -10,7 +10,7 @@ public class SpectreSpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 4, 4, 4), e -> true).isEmpty()) {
+		if (!world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 2, 2, 2), e -> true).isEmpty()) {
 			entity.setDeltaMovement(new Vec3(0, 2, 0));
 		}
 	}

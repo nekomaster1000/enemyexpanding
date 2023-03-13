@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.enemyexpproofofconcept.procedures.GladiusModelProcedure;
+import net.mcreator.enemyexpproofofconcept.entity.model.GladiusModel;
 import net.mcreator.enemyexpproofofconcept.entity.GladiusEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -16,14 +16,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class GladiusRenderer extends GeoEntityRenderer<GladiusEntity> {
 	public GladiusRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new GladiusModelProcedure());
+		super(renderManager, new GladiusModel());
 		this.shadowRadius = 1f;
 	}
 
 	@Override
-	public RenderType getRenderType(GladiusEntity animatable, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer,
-			VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
-		stack.scale(1.0F, 1.0F, 1.0F);
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public RenderType getRenderType(GladiusEntity entity, float partialTicks, PoseStack stack, MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, ResourceLocation textureLocation) {
+		stack.scale(1f, 1f, 1f);
+		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
 }

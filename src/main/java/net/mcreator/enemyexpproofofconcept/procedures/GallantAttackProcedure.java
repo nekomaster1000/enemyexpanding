@@ -31,8 +31,7 @@ public class GallantAttackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(),
-					event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getSource().getEntity());
 		}
 	}
 
@@ -83,20 +82,15 @@ public class GallantAttackProcedure {
 									}
 								}.getArrow(projectileLevel, 2, (int) 1.5);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1,
-										(float) Mth.nextDouble(new Random(), 0, 10));
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, (float) Mth.nextDouble(new Random(), 0, 10));
 								projectileLevel.addFreshEntity(_entityToSpawn);
 							}
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z),
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
-										SoundSource.HOSTILE, 1, 0);
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0);
 							} else {
-								_level.playLocalSound(x, y, z,
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
-										SoundSource.HOSTILE, 1, 0, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0, false);
 							}
 						}
 					}
@@ -128,8 +122,7 @@ public class GallantAttackProcedure {
 									if (!projectileLevel.isClientSide()) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new GallantSwingsEntity(EnemyexpansionModEntities.GALLANT_SWINGS.get(),
-														level);
+												AbstractArrow entityToSpawn = new GallantSwingsEntity(EnemyexpansionModEntities.GALLANT_SWINGS.get(), level);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
 												entityToSpawn.setSilent(true);
@@ -137,20 +130,15 @@ public class GallantAttackProcedure {
 											}
 										}.getArrow(projectileLevel, 2, (int) 1.5);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1,
-												(float) Mth.nextDouble(new Random(), 0, 10));
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, (float) Mth.nextDouble(new Random(), 0, 10));
 										projectileLevel.addFreshEntity(_entityToSpawn);
 									}
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, new BlockPos(x, y, z),
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
-												SoundSource.HOSTILE, 1, 0);
+										_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0);
 									} else {
-										_level.playLocalSound(x, y, z,
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
-												SoundSource.HOSTILE, 1, 0, false);
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0, false);
 									}
 								}
 							}

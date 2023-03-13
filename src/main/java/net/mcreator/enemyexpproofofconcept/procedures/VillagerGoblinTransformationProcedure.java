@@ -76,8 +76,7 @@ public class VillagerGoblinTransformationProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-											MobSpawnType.MOB_SUMMONED, null, null);
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 								world.addFreshEntity(entityToSpawn);
 							}
 						} else if (Math.random() < 0.4) {
@@ -88,8 +87,7 @@ public class VillagerGoblinTransformationProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-											MobSpawnType.MOB_SUMMONED, null, null);
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 								world.addFreshEntity(entityToSpawn);
 							}
 						} else if (Math.random() < 0.6) {
@@ -100,8 +98,7 @@ public class VillagerGoblinTransformationProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-											MobSpawnType.MOB_SUMMONED, null, null);
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 								world.addFreshEntity(entityToSpawn);
 							}
 						} else if (Math.random() < 0.8) {
@@ -112,8 +109,7 @@ public class VillagerGoblinTransformationProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-											MobSpawnType.MOB_SUMMONED, null, null);
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 								world.addFreshEntity(entityToSpawn);
 							}
 						} else if (Math.random() < 0.99) {
@@ -124,8 +120,7 @@ public class VillagerGoblinTransformationProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()),
-											MobSpawnType.MOB_SUMMONED, null, null);
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 								world.addFreshEntity(entityToSpawn);
 							}
 						}
