@@ -67,6 +67,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.enemyexpproofofconcept.procedures.MeaturePlayerHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -147,7 +148,17 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 		this.goalSelector.addGoal(9, new FloatGoal(this));
 		this.goalSelector.addGoal(10, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(11, new OwnerHurtTargetGoal(this));
-		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = MeatureEntity.this.getX();
+				double y = MeatureEntity.this.getY();
+				double z = MeatureEntity.this.getZ();
+				Entity entity = MeatureEntity.this;
+				Level world = MeatureEntity.this.level;
+				return super.canUse() && MeaturePlayerHostilityProcedure.execute(entity);
+			}
+		});
 		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
 	}
 

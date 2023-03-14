@@ -7945,6 +7945,88 @@
         ]
       },
       "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "MeaturePlayerHostility",
+      "type": "procedure",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_player_hostility",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MeaturePlayerHostilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "MeatureTamedTexture",
+      "type": "procedure",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_tamed_texture",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MeatureTamedTextureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "WaspPlayerHostility",
+      "type": "procedure",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_player_hostility",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/WaspPlayerHostilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
+    },
+    {
+      "name": "WaspHostileTexture",
+      "type": "procedure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_hostile_texture",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/WaspHostileTextureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
     }
   ],
   "variable_elements": [

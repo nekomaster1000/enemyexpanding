@@ -44,74 +44,76 @@ public class WaspStingHitProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof WaspEntity) {
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
+			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBlocking() : false)) {
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private LevelAccessor world;
 
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
+					public void start(LevelAccessor world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
 					}
-				}
 
-				private void run() {
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9, (float) 1.5);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9, (float) 1.5, false);
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
 						}
 					}
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 60, 0, (true), (true)));
-					if (Math.random() < 0.15) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x, y, z, 5, (-9), (-9), (-9), 1);
-						new Object() {
-							private int ticks = 0;
-							private float waitTicks;
-							private LevelAccessor world;
 
-							public void start(LevelAccessor world, int waitTicks) {
-								this.waitTicks = waitTicks;
-								MinecraftForge.EVENT_BUS.register(this);
-								this.world = world;
+					private void run() {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9, (float) 1.5);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.sting")), SoundSource.HOSTILE, (float) 0.9, (float) 1.5, false);
 							}
+						}
+						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 60, 0, (true), (true)));
+						if (Math.random() < 0.15) {
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x, y, z, 5, (-9), (-9), (-9), 1);
+							new Object() {
+								private int ticks = 0;
+								private float waitTicks;
+								private LevelAccessor world;
 
-							@SubscribeEvent
-							public void tick(TickEvent.ServerTickEvent event) {
-								if (event.phase == TickEvent.Phase.END) {
-									this.ticks += 1;
-									if (this.ticks >= this.waitTicks)
-										run();
+								public void start(LevelAccessor world, int waitTicks) {
+									this.waitTicks = waitTicks;
+									MinecraftForge.EVENT_BUS.register(this);
+									this.world = world;
 								}
-							}
 
-							private void run() {
-								if (world instanceof ServerLevel _level) {
-									Entity entityToSpawn = new WaspEntity(EnemyexpansionModEntities.WASP.get(), _level);
-									entityToSpawn.moveTo((x - 9), y, (z - 9), world.getRandom().nextFloat() * 360F, 0);
-									if (entityToSpawn instanceof Mob _mobToSpawn)
-										_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-									world.addFreshEntity(entityToSpawn);
+								@SubscribeEvent
+								public void tick(TickEvent.ServerTickEvent event) {
+									if (event.phase == TickEvent.Phase.END) {
+										this.ticks += 1;
+										if (this.ticks >= this.waitTicks)
+											run();
+									}
 								}
-								MinecraftForge.EVENT_BUS.unregister(this);
-							}
-						}.start(world, 10);
+
+								private void run() {
+									if (world instanceof ServerLevel _level) {
+										Entity entityToSpawn = new WaspEntity(EnemyexpansionModEntities.WASP.get(), _level);
+										entityToSpawn.moveTo((x - 9), y, (z - 9), world.getRandom().nextFloat() * 360F, 0);
+										if (entityToSpawn instanceof Mob _mobToSpawn)
+											_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+										world.addFreshEntity(entityToSpawn);
+									}
+									MinecraftForge.EVENT_BUS.unregister(this);
+								}
+							}.start(world, 10);
+						}
+						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, 3);
+				}.start(world, 3);
+			}
 		}
 	}
 }

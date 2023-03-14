@@ -67,6 +67,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.WaspSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.WaspSlowFallingProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.WaspPlayerHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.WaspDodgePatternProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -156,7 +157,17 @@ public class WaspEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
 		this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 0.8));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = WaspEntity.this.getX();
+				double y = WaspEntity.this.getY();
+				double z = WaspEntity.this.getZ();
+				Entity entity = WaspEntity.this;
+				Level world = WaspEntity.this.level;
+				return super.canUse() && WaspPlayerHostilityProcedure.execute(world);
+			}
+		});
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, Bee.class, false, false));
 		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Villager.class, false, false));
 		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, IronGolem.class, false, false));
@@ -260,17 +271,19 @@ public class WaspEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 16);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 12);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 28);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.32);
 		return builder;
 	}
 
 	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
 		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-			) {
+			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.isOnGround()) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP));
+				return PlayState.CONTINUE;
+			}
+			if (!this.isOnGround()) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("flying", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP));
