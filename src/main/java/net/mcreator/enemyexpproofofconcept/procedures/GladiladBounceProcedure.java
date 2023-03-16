@@ -32,7 +32,7 @@ public class GladiladBounceProcedure {
 							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 							("/summon enemyexpansion:gladius ~ ~ ~ {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 20, 1, 1, 1, 1);
+					_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 30, 1, 1, 1, 0.3);
 				if (!entity.level.isClientSide())
 					entity.discard();
 			}

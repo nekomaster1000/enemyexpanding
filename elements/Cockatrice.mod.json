@@ -199,15 +199,6 @@
         "value": "dripstone_caves"
       },
       {
-        "value": "end_barrens"
-      },
-      {
-        "value": "end_highlands"
-      },
-      {
-        "value": "end_midlands"
-      },
-      {
         "value": "mutated_mesa"
       },
       {
@@ -277,9 +268,6 @@
         "value": "mushroom_field_shore"
       },
       {
-        "value": "mushroom_fields"
-      },
-      {
         "value": "mutated_birch_forest"
       },
       {
@@ -311,9 +299,6 @@
       },
       {
         "value": "mutated_savanna_rock"
-      },
-      {
-        "value": "small_end_islands"
       },
       {
         "value": "snowy_slopes"
@@ -362,12 +347,6 @@
       },
       {
         "value": "mutated_taiga"
-      },
-      {
-        "value": "the_end"
-      },
-      {
-        "value": "void"
       },
       {
         "value": "warm_ocean"

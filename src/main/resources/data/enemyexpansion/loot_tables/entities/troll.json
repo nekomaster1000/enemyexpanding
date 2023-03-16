@@ -36,7 +36,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_pickaxe"
+          "name": "enemyexpansion:trollface_helmet"
         },
         {
           "type": "minecraft:item",
@@ -57,7 +57,7 @@
         },
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.15,
+          "chance": 0.25,
           "looting_multiplier": 0.01
         }
       ]

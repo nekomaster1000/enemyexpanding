@@ -85,7 +85,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:SuspiciousSlice"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.parrot.imitate.witch"

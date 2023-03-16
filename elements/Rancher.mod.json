@@ -85,7 +85,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Blocks.SLIME_BLOCK"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.parrot.imitate.witch"

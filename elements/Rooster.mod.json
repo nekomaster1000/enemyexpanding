@@ -99,6 +99,9 @@
     "stepSound": {
       "value": "entity.chicken.step"
     },
+    "whenMobIsHurt": {
+      "name": "RoosterHurt"
+    },
     "onMobTickUpdate": {
       "name": "RoosterFlap"
     },

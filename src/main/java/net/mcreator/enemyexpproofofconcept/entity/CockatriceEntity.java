@@ -74,15 +74,14 @@ public class CockatriceEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("mushroom_fields"), new ResourceLocation("warm_ocean"), new ResourceLocation("sunflower_plains"), new ResourceLocation("end_midlands"),
-			new ResourceLocation("flower_forest"), new ResourceLocation("lush_caves"), new ResourceLocation("cold_ocean"), new ResourceLocation("the_end"), new ResourceLocation("ice_spikes"), new ResourceLocation("lukewarm_ocean"),
-			new ResourceLocation("dark_forest"), new ResourceLocation("savanna"), new ResourceLocation("stony_peaks"), new ResourceLocation("snowy_beach"), new ResourceLocation("frozen_ocean"), new ResourceLocation("savanna_plateau"),
-			new ResourceLocation("dripstone_caves"), new ResourceLocation("snowy_plains"), new ResourceLocation("jagged_peaks"), new ResourceLocation("eroded_badlands"), new ResourceLocation("badlands"), new ResourceLocation("windswept_hills"),
-			new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"), new ResourceLocation("jungle"), new ResourceLocation("frozen_river"), new ResourceLocation("forest"), new ResourceLocation("stony_shore"),
-			new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("snowy_slopes"), new ResourceLocation("bamboo_jungle"), new ResourceLocation("small_end_islands"), new ResourceLocation("plains"),
-			new ResourceLocation("frozen_peaks"), new ResourceLocation("end_highlands"), new ResourceLocation("meadow"), new ResourceLocation("end_barrens"), new ResourceLocation("old_growth_spruce_taiga"), new ResourceLocation("taiga"),
-			new ResourceLocation("snowy_taiga"), new ResourceLocation("swamp"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("grove"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"),
-			new ResourceLocation("the_void"), new ResourceLocation("windswept_forest"), new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"), new ResourceLocation("desert"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_river"), new ResourceLocation("mushroom_fields"), new ResourceLocation("warm_ocean"), new ResourceLocation("forest"),
+			new ResourceLocation("stony_shore"), new ResourceLocation("sunflower_plains"), new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("lush_caves"),
+			new ResourceLocation("snowy_slopes"), new ResourceLocation("cold_ocean"), new ResourceLocation("bamboo_jungle"), new ResourceLocation("ice_spikes"), new ResourceLocation("lukewarm_ocean"), new ResourceLocation("dark_forest"),
+			new ResourceLocation("plains"), new ResourceLocation("savanna"), new ResourceLocation("stony_peaks"), new ResourceLocation("frozen_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"),
+			new ResourceLocation("snowy_beach"), new ResourceLocation("frozen_ocean"), new ResourceLocation("savanna_plateau"), new ResourceLocation("dripstone_caves"), new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"),
+			new ResourceLocation("jagged_peaks"), new ResourceLocation("snowy_taiga"), new ResourceLocation("swamp"), new ResourceLocation("eroded_badlands"), new ResourceLocation("badlands"), new ResourceLocation("old_growth_birch_forest"),
+			new ResourceLocation("grove"), new ResourceLocation("windswept_hills"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"), new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"),
+			new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"), new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"), new ResourceLocation("desert"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {

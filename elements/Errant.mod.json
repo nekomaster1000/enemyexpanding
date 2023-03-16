@@ -85,7 +85,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Items.RAW_IRON"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.parrot.imitate.witch"

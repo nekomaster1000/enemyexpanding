@@ -85,7 +85,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Items.GUNPOWDER"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.bat.ambient"

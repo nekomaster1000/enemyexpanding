@@ -6,12 +6,9 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.EnderMan;
-import net.minecraft.world.entity.monster.Drowned;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.CaveSpider;
 import net.minecraft.world.entity.monster.Blaze;
@@ -59,7 +56,7 @@ public class ConfigReplacerProcedure {
 		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		File enemyexpansion = new File("");
 		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get() && y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
-			if (entity instanceof Zombie && (!(entity instanceof Drowned) || !(entity instanceof ZombifiedPiglin))) {
+			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:petrimanreplaces")))) {
 				ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
 			}
 		}

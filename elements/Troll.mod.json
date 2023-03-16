@@ -85,7 +85,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:Trollface.helmet"
+      "value": ""
     },
     "livingSound": {
       "value": "CUSTOM:troll.idle.1"

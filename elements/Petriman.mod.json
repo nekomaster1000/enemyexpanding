@@ -85,7 +85,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Blocks.TUFF"
+      "value": ""
     },
     "livingSound": {
       "value": ""
@@ -103,7 +103,7 @@
       "name": "PetrimanHurt"
     },
     "onInitialSpawn": {
-      "name": "NoBabyZombies"
+      "name": "NoBabies"
     },
     "hasAI": true,
     "aiBase": "(none)",

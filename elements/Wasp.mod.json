@@ -85,7 +85,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:PheromoneProjectile"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.bee.loop"
@@ -101,9 +101,6 @@
     },
     "whenMobIsHurt": {
       "name": "WaspDodgePattern"
-    },
-    "onInitialSpawn": {
-      "name": "WaspSlowFalling"
     },
     "hasAI": true,
     "aiBase": "(none)",

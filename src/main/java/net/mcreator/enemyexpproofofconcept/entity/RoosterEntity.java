@@ -53,6 +53,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.RoosterHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.RoosterFlapProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.BullSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -156,6 +157,12 @@ public class RoosterEntity extends Chicken implements IAnimatable {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.chicken.death"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		RoosterHurtProcedure.execute(this);
+		return super.hurt(source, amount);
 	}
 
 	@Override

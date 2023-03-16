@@ -100,6 +100,34 @@ public class GladiusKnockbackProcedure {
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, 10);
+				if (entity instanceof GladiladEntity && !sourceentity.isInWater()) {
+					entity.setDeltaMovement(new Vec3(0, 0.6, 0));
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private LevelAccessor world;
+
+						public void start(LevelAccessor world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1, 1.5)), (Mth.nextDouble(new Random(), 0.3, 1)), (Mth.nextDouble(new Random(), -1, 1.5))));
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, 2);
+				}
 			}
 		}
 	}

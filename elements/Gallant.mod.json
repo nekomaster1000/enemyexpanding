@@ -85,7 +85,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Items.IRON_NUGGET"
+      "value": ""
     },
     "livingSound": {
       "value": "CUSTOM:silentstep"

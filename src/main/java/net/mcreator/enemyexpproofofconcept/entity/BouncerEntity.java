@@ -18,8 +18,6 @@ import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.animal.IronGolem;
@@ -130,11 +128,6 @@ public class BouncerEntity extends Monster implements IAnimatable {
 	@Override
 	public double getPassengersRidingOffset() {
 		return super.getPassengersRidingOffset() + 0.5;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Items.CLOCK));
 	}
 
 	@Override

@@ -85,7 +85,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:CinderScrap"
+      "value": ""
     },
     "livingSound": {
       "value": "entity.blaze.ambient"
