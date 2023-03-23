@@ -149,4 +149,6 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> TROLL_INVINCIBLE = REGISTRY.register("troll_invincible", () -> new TrollInvincibleItem());
 	public static final RegistryObject<Item> TROLL_SPIT = REGISTRY.register("troll_spit", () -> new TrollSpitItem());
 	public static final RegistryObject<Item> GLADIUS_INK = REGISTRY.register("gladius_ink", () -> new GladiusInkItem());
+	public static final RegistryObject<Item> ANGLER_SPAWN_EGG = REGISTRY.register("angler_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ANGLER, -12230306, -6708074, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> KELPIE_SPAWN_EGG = REGISTRY.register("kelpie_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.KELPIE, -11899790, -14259169, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

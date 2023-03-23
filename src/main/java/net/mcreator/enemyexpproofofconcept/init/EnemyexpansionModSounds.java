@@ -26,6 +26,8 @@ public class EnemyexpansionModSounds {
 		REGISTRY.put(new ResourceLocation("enemyexpansion", "troll.hurt.1"), new SoundEvent(new ResourceLocation("enemyexpansion", "troll.hurt.1")));
 		REGISTRY.put(new ResourceLocation("enemyexpansion", "bane.idle"), new SoundEvent(new ResourceLocation("enemyexpansion", "bane.idle")));
 		REGISTRY.put(new ResourceLocation("enemyexpansion", "bane.hurt"), new SoundEvent(new ResourceLocation("enemyexpansion", "bane.hurt")));
+		REGISTRY.put(new ResourceLocation("enemyexpansion", "kelpie_idle"), new SoundEvent(new ResourceLocation("enemyexpansion", "kelpie_idle")));
+		REGISTRY.put(new ResourceLocation("enemyexpansion", "kelpie.reinforcement"), new SoundEvent(new ResourceLocation("enemyexpansion", "kelpie.reinforcement")));
 	}
 
 	@SubscribeEvent

@@ -28,6 +28,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Drowned;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -162,7 +163,8 @@ public class GladiladEntity extends Monster implements IAnimatable {
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 1, 40));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Drowned.class, false, false));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
 	}
 
 	@Override

@@ -36,6 +36,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.PetrimanRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PetrifiedtrollRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.MeatureRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.LadybugRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.KelpieRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.InvisicreeperRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.IntruderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.HuntsmanskeletonRenderer;
@@ -62,6 +63,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.BoarRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BiterRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BanedasherRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.BakerRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.AnglerRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EnemyexpansionModEntityRenderers {
@@ -134,5 +136,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_INVINCIBLE.get(), TrollInvincibleRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL_SPIT.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.GLADIUS_INK.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.ANGLER.get(), AnglerRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.KELPIE.get(), KelpieRenderer::new);
 	}
 }

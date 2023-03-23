@@ -338,6 +338,9 @@
       },
       {
         "value": "wooded_badlands_plateau"
+      },
+      {
+        "value": "soul_sand_valley"
       }
     ],
     "spawnInDungeons": true

@@ -14,8 +14,10 @@ import net.minecraft.world.entity.monster.CaveSpider;
 import net.minecraft.world.entity.monster.Blaze;
 import net.minecraft.world.entity.animal.Squid;
 import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.animal.Salmon;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.animal.Cow;
+import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.GlowSquid;
@@ -58,6 +60,11 @@ public class ConfigReplacerProcedure {
 		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get() && y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
 			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:petrimanreplaces")))) {
 				ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.HORDEZOMBIEREPLACEMENT.get()) {
+			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:hordereplaces")))) {
+				ReplaceWithHordeProcedure.execute(world, x, y, z, entity);
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENT.get() && y < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENTDEPTH.get()) {
@@ -129,6 +136,13 @@ public class ConfigReplacerProcedure {
 		if (Math.random() < (double) BetterConfigConfiguration.GLADILADSQUIDREPLACEMENT.get()) {
 			if (entity instanceof Squid && !(entity instanceof GlowSquid)) {
 				ReplaceWithGladiladProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.ANGLERCOMMONFISHREPLACEMENT.get()) {
+			if (entity instanceof Cod || entity instanceof Salmon) {
+				if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_deep_ocean")))) {
+					ReplaceWithAnglerProcedure.execute(world, x, y, z, entity);
+				}
 			}
 		}
 	}

@@ -45,6 +45,7 @@ import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
+import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.InvisicreeperEntity;
 import net.mcreator.enemyexpproofofconcept.entity.IntruderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.HuntsmanskeletonEntity;
@@ -83,6 +84,7 @@ import net.mcreator.enemyexpproofofconcept.entity.BoarEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BiterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BanedasherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BakerEntity;
+import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -97,15 +99,15 @@ public class EnemyexpansionModEntities {
 	public static final RegistryObject<EntityType<SluggerEntity>> SLUGGER = register("slugger",
 			EntityType.Builder.<SluggerEntity>of(SluggerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SluggerEntity::new)
 
-					.sized(0.8f, 1.8f));
+					.sized(0.8f, 2.3000000000000003f));
 	public static final RegistryObject<EntityType<SeniorEntity>> SENIOR = register("senior",
 			EntityType.Builder.<SeniorEntity>of(SeniorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SeniorEntity::new)
 
-					.sized(0.9f, 1.8f));
+					.sized(0.9f, 2.5f));
 	public static final RegistryObject<EntityType<EquestrianEntity>> EQUESTRIAN = register("equestrian",
 			EntityType.Builder.<EquestrianEntity>of(EquestrianEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EquestrianEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.9f, 2.5f));
 	public static final RegistryObject<EntityType<FrigidEntity>> FRIGID = register("frigid",
 			EntityType.Builder.<FrigidEntity>of(FrigidEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FrigidEntity::new).fireImmune().sized(0.8f, 0.95f));
 	public static final RegistryObject<EntityType<HuntsmanskeletonEntity>> HUNTSMANSKELETON = register("huntsmanskeleton",
@@ -312,6 +314,14 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<TrollSpitEntity>of(TrollSpitEntity::new, MobCategory.MISC).setCustomClientFactory(TrollSpitEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GladiusInkEntity>> GLADIUS_INK = register("projectile_gladius_ink",
 			EntityType.Builder.<GladiusInkEntity>of(GladiusInkEntity::new, MobCategory.MISC).setCustomClientFactory(GladiusInkEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AnglerEntity>> ANGLER = register("angler",
+			EntityType.Builder.<AnglerEntity>of(AnglerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerEntity::new)
+
+					.sized(0.95f, 0.95f));
+	public static final RegistryObject<EntityType<KelpieEntity>> KELPIE = register("kelpie",
+			EntityType.Builder.<KelpieEntity>of(KelpieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KelpieEntity::new)
+
+					.sized(1.95f, 2.45f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -369,6 +379,8 @@ public class EnemyexpansionModEntities {
 			RamshearedEntity.init();
 			GoblinFearEntity.init();
 			InvisicreeperEntity.init();
+			AnglerEntity.init();
+			KelpieEntity.init();
 		});
 	}
 
@@ -423,5 +435,7 @@ public class EnemyexpansionModEntities {
 		event.put(RAMSHEARED.get(), RamshearedEntity.createAttributes().build());
 		event.put(GOBLIN_FEAR.get(), GoblinFearEntity.createAttributes().build());
 		event.put(INVISICREEPER.get(), InvisicreeperEntity.createAttributes().build());
+		event.put(ANGLER.get(), AnglerEntity.createAttributes().build());
+		event.put(KELPIE.get(), KelpieEntity.createAttributes().build());
 	}
 }

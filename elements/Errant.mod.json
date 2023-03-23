@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Errant",
+    "mobName": "Goblin Errant",
     "mobLabel": "",
     "mobModelTexture": "goblin_errant.png",
     "mobModelGlowTexture": "",
@@ -158,6 +158,15 @@
       },
       {
         "value": "mutated_roofed_forest"
+      },
+      {
+        "value": "swamp"
+      },
+      {
+        "value": "mangrove_swamp"
+      },
+      {
+        "value": "mutated_swampland"
       }
     ],
     "spawnInDungeons": true

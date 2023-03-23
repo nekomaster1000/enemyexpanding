@@ -1,0 +1,189 @@
+{
+  "_fv": 39,
+  "_type": "animatedentity",
+  "definition": {
+    "mobName": "Kelpie",
+    "mobLabel": "",
+    "mobModelTexture": "kelpie.png",
+    "mobModelGlowTexture": "",
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelWidth": 1.95,
+    "modelHeight": 2.45,
+    "modelShadowSize": 0.7999999999999999,
+    "mountedYOffset": 1.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -11899790,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -14259169,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "WATER",
+    "attackStrength": 8,
+    "attackKnockback": 1.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.30000000000000004,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 32,
+    "health": 40,
+    "xpAmount": 15,
+    "waterMob": true,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "deathTime": 20,
+    "lerp": 4,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "CUSTOM:kelpie_idle"
+    },
+    "hurtSound": {
+      "value": "entity.drowned.hurt_water"
+    },
+    "deathSound": {
+      "value": "entity.drowned.death_water"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "whenMobDies": {
+      "name": "KelpieDies"
+    },
+    "whenMobIsHurt": {
+      "name": "KelpieHurt"
+    },
+    "onMobTickUpdate": {
+      "name": "AnglerTick"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "kelpie.geo.json",
+    "groupName": "head",
+    "animation1": "idle",
+    "animation2": "walk",
+    "animation3": "",
+    "animation4": "",
+    "animation5": "walk",
+    "animation6": "",
+    "animation7": "",
+    "animation8": "",
+    "animation9": "",
+    "animation10": "walk",
+    "enable2": false,
+    "enable3": false,
+    "enable4": false,
+    "enable5": false,
+    "enable6": false,
+    "enable7": false,
+    "enable8": false,
+    "enable9": false,
+    "enable10": false,
+    "breedable": false,
+    "tameable": false,
+    "disableDeathRotation": false,
+    "headMovement": true,
+    "eyeHeight": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "height": 1.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "GladiladSpawning"
+    },
+    "spawningProbability": 10,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [
+      {
+        "value": "cold_ocean"
+      },
+      {
+        "value": "deep_cold_ocean"
+      },
+      {
+        "value": "deep_frozen_ocean"
+      },
+      {
+        "value": "deep_ocean"
+      },
+      {
+        "value": "frozen_ocean"
+      },
+      {
+        "value": "lukewarm_ocean"
+      },
+      {
+        "value": "ocean"
+      },
+      {
+        "value": "warm_ocean"
+      },
+      {
+        "value": "deep_lukewarm_ocean"
+      }
+    ],
+    "spawnInDungeons": false
+  }
+}

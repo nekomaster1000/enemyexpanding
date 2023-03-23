@@ -5,11 +5,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.Registry;
 
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
@@ -31,7 +33,7 @@ public class BurningSpeedUpProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.getMobType() == MobType.UNDEAD : false) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:burning_speed_up")))) {
 			if (entity.isOnFire()) {
 				if (Math.random() < (double) BetterConfigConfiguration.BURNINGUNDEADSPEEDUP.get()) {
 					if (entity instanceof LivingEntity _entity)

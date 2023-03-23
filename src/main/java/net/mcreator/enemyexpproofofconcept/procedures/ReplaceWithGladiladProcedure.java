@@ -5,6 +5,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
@@ -38,15 +39,17 @@ public class ReplaceWithGladiladProcedure {
 			}
 
 			private void run() {
-				if (entity.isAlive()) {
-					if (!entity.level.isClientSide())
-						entity.discard();
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new GladiladEntity(EnemyexpansionModEntities.GLADILAD.get(), _level);
-						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+				if (!(world instanceof Level _lvl && _lvl.isDay())) {
+					if (entity.isAlive()) {
+						if (!entity.level.isClientSide())
+							entity.discard();
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = new GladiladEntity(EnemyexpansionModEntities.GLADILAD.get(), _level);
+							entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+							if (entityToSpawn instanceof Mob _mobToSpawn)
+								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+							world.addFreshEntity(entityToSpawn);
+						}
 					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);

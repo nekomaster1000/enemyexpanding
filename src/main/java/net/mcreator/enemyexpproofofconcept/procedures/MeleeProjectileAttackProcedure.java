@@ -366,6 +366,9 @@ public class MeleeProjectileAttackProcedure {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
+			if (sourceentity instanceof PetrimanEntity) {
+				((PetrimanEntity) sourceentity).setAnimation("attack");
+			}
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;

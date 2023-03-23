@@ -22,7 +22,6 @@ import net.minecraftforge.common.DungeonHooks;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -35,10 +34,8 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -46,22 +43,17 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.GladiusTransformProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GladiusSpawningProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.GladiusSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-
-import javax.annotation.Nullable;
 
 import java.util.Set;
 
@@ -164,13 +156,6 @@ public class GladiusEntity extends Monster implements IAnimatable {
 		if (source == DamageSource.DROWN)
 			return false;
 		return super.hurt(source, amount);
-	}
-
-	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		GladiusSpawnProcedure.execute(this);
-		return retval;
 	}
 
 	@Override

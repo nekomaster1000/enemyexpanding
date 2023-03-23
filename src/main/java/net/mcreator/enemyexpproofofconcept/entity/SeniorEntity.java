@@ -103,7 +103,7 @@ public class SeniorEntity extends Zombie implements IAnimatable {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "senior_zombie");
+		this.entityData.define(TEXTURE, "senior_calm");
 	}
 
 	public void setTexture(String texture) {
@@ -200,7 +200,7 @@ public class SeniorEntity extends Zombie implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.19);
 		builder = builder.add(Attributes.MAX_HEALTH, 48);
 		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 15);
@@ -217,6 +217,10 @@ public class SeniorEntity extends Zombie implements IAnimatable {
 
 			) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP));
+				return PlayState.CONTINUE;
+			}
+			if (this.isSprinting()) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("sprint", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP));

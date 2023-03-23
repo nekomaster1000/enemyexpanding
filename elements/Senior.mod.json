@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Senior",
     "mobLabel": "",
-    "mobModelTexture": "senior_zombie.png",
+    "mobModelTexture": "senior_calm.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -13,7 +13,7 @@
       "fixedValue": 1.0
     },
     "modelWidth": 0.9,
-    "modelHeight": 1.8,
+    "modelHeight": 2.5,
     "modelShadowSize": 0.6,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -54,7 +54,7 @@
     "attackStrength": 15,
     "attackKnockback": 4.0,
     "knockbackResistance": 0.6,
-    "movementSpeed": 0.2,
+    "movementSpeed": 0.19,
     "armorBaseValue": 10.0,
     "trackingRange": 64,
     "followRange": 10,
@@ -116,7 +116,7 @@
     "animation4": "",
     "animation5": "",
     "animation6": "",
-    "animation7": "",
+    "animation7": "sprint",
     "animation8": "",
     "animation9": "",
     "animation10": "",
@@ -125,7 +125,7 @@
     "enable4": false,
     "enable5": false,
     "enable6": false,
-    "enable7": false,
+    "enable7": true,
     "enable8": false,
     "enable9": false,
     "enable10": false,

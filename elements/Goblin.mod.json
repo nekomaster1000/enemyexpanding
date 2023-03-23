@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Goblin",
+    "mobName": "Goblin Thief",
     "mobLabel": "",
     "mobModelTexture": "goblin_thief.png",
     "mobModelGlowTexture": "goblin_thief_glow.png",

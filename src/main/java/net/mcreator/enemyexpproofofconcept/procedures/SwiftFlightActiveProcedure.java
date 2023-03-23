@@ -12,10 +12,10 @@ public class SwiftFlightActiveProcedure {
 			return;
 		entity.setDeltaMovement(new Vec3(
 				(Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.5
-						* (0.2 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()).getAmplifier() : 0) / 5)),
+						* (0.1 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()).getAmplifier() : 0) / 10)),
 				((Math.sin(Math.toRadians(0 - entity.getXRot())) + 0)
-						* (0.2 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()).getAmplifier() : 0) / 5)),
+						* (0.1 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()).getAmplifier() : 0) / 10)),
 				(Math.cos(Math.toRadians(entity.getYRot())) * 2
-						* (0.1 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()).getAmplifier() : 0) / 10))));
+						* (0.1 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()).getAmplifier() : 0) / 20))));
 	}
 }

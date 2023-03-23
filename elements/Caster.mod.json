@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Caster",
+    "mobName": "Goblin Caster",
     "mobLabel": "",
     "mobModelTexture": "goblin_witch.png",
     "mobModelGlowTexture": "",

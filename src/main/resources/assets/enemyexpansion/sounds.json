@@ -97,5 +97,29 @@
         "stream": false
       }
     ]
+  },
+  "kelpie_idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.kelpie_idle",
+    "sounds": [
+      {
+        "name": "enemyexpansion:kelpie_idle_1",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:kelpie_idle_2",
+        "stream": false
+      }
+    ]
+  },
+  "kelpie.reinforcement": {
+    "category": "hostile",
+    "subtitle": "subtitles.kelpie.reinforcement",
+    "sounds": [
+      {
+        "name": "enemyexpansion:kelpie_reinforcement",
+        "stream": false
+      }
+    ]
   }
 }

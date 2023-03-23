@@ -28,6 +28,8 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> SPIDERTARANTULAREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPIDERSCORPIONREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> GLADILADSQUIDREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> ANGLERCOMMONFISHREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> HORDEZOMBIEREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENTDEPTH;
@@ -92,7 +94,9 @@ public class BetterConfigConfiguration {
 		CHICKENROOSTERREPLACEMENT = BUILDER.define("Rooster Chicken Replacement", (double) 0.55);
 		SPIDERTARANTULAREPLACEMENT = BUILDER.define("Tarantula Spider Replacement", (double) 1);
 		SPIDERSCORPIONREPLACEMENT = BUILDER.define("Scorpion Spider Replacement", (double) 1);
-		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.2);
+		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.05);
+		ANGLERCOMMONFISHREPLACEMENT = BUILDER.define("Angler Common Fish Replacement", (double) 0.05);
+		HORDEZOMBIEREPLACEMENT = BUILDER.define("Random Enemy Expansion Zombie Replacement", (double) 0);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);

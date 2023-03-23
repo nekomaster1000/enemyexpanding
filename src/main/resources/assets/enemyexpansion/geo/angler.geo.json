@@ -1,0 +1,79 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.angler",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "all",
+					"pivot": [0, 4.5, -2],
+					"cubes": [
+						{"origin": [-4, 6, -9], "size": [8, 7, 8], "inflate": 0.01, "uv": [0, 23]}
+					]
+				},
+				{
+					"name": "jaw",
+					"parent": "head",
+					"pivot": [0, 7, -1],
+					"rotation": [22.5, 0, 0],
+					"cubes": [
+						{"origin": [-4, 5, -9], "size": [8, 3, 8], "inflate": 0.1, "uv": [24, 15]}
+					]
+				},
+				{
+					"name": "light",
+					"parent": "head",
+					"pivot": [0, 12, -9],
+					"rotation": [22.5, 0, 0],
+					"cubes": [
+						{"origin": [0, 12, -18], "size": [0, 8, 10], "uv": [0, 30]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "all",
+					"pivot": [0, 6.5, -1],
+					"cubes": [
+						{"origin": [-3, 3.5, -2], "size": [6, 4, 10], "uv": [18, 0]},
+						{"origin": [-1, 4.5, -1], "size": [2, 9, 14], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "botharms",
+					"parent": "body",
+					"pivot": [0, 6.5, 0]
+				},
+				{
+					"name": "leftarm",
+					"parent": "botharms",
+					"pivot": [3.5, 6.5, 1],
+					"rotation": [45, -22.5, 0],
+					"cubes": [
+						{"origin": [3.5, 4.5, -6], "size": [3, 3, 8], "uv": [24, 30]}
+					]
+				},
+				{
+					"name": "rightarm",
+					"parent": "botharms",
+					"pivot": [-3.5, 6.5, 1],
+					"rotation": [45, 22.5, 0],
+					"cubes": [
+						{"origin": [-6.5, 4.5, -6], "size": [3, 3, 8], "uv": [24, 30], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

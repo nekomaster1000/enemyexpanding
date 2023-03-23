@@ -28,6 +28,7 @@ import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
+import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.IntruderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiusEntity;
@@ -49,6 +50,7 @@ import net.mcreator.enemyexpproofofconcept.entity.BoarEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BiterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BanedasherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BakerEntity;
+import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -364,6 +366,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof RamshearedEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AnglerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof KelpieEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
