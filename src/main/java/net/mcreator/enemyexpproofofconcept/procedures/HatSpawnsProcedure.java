@@ -15,14 +15,10 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
-import java.io.File;
-
 public class HatSpawnsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:can_display_armor")))) {
 			if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hat_appropriate")))) {
 				if (Math.random() < (double) BetterConfigConfiguration.MEATHEADWEARERSPAWNING.get()) {

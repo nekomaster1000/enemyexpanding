@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Slugger",
     "mobLabel": "",
-    "mobModelTexture": "slugger_zombie.png",
+    "mobModelTexture": "slugger.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0

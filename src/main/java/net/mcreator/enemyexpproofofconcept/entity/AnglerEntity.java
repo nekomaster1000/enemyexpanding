@@ -35,6 +35,7 @@ import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -154,18 +155,19 @@ public class AnglerEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new PanicGoal(this, 2));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, true) {
+		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, GoblinFearEntity.class, (float) 6, 3, 4));
+		this.goalSelector.addGoal(2, new PanicGoal(this, 3));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1, 40));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
 	}
 
 	@Override
@@ -190,7 +192,7 @@ public class AnglerEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		AnglerHurtProcedure.execute(this);
+		AnglerHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		return super.hurt(source, amount);
 	}
 

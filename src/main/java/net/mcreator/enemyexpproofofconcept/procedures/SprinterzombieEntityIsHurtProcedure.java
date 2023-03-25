@@ -46,8 +46,10 @@ public class SprinterzombieEntityIsHurtProcedure {
 				}
 
 				private void run() {
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
+					if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false)) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
+					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 36);

@@ -106,7 +106,7 @@ public class SluggerEntity extends Zombie implements IAnimatable {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "slugger_zombie");
+		this.entityData.define(TEXTURE, "slugger");
 	}
 
 	public void setTexture(String texture) {

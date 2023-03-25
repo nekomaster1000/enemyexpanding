@@ -1,0 +1,20 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:zombie",
+        "minecraft:husk",
+        "minecraft:drowned",
+        "minecraft:spider",
+        "minecraft:creeper",
+        "minecraft:chicken",
+        "minecraft:iron_golem",
+        "minecraft:wither_skeleton",
+        "minecraft:hoglin",
+
+        "enemyexpansion:spectre",
+        "enemyexpansion:equestrian",
+        "enemyexpansion:tarantula",
+        "enemyexpansion:scorpion",
+        "enemyexpansion:gladius"
+    ]
+  }

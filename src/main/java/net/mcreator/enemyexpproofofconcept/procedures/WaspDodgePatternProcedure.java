@@ -25,7 +25,7 @@ public class WaspDodgePatternProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.removeAllEffects();
+			_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
 		entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1.5, 1.5)), 0, (Mth.nextDouble(new Random(), -1.5, 1.5))));
 		{
 			final Vec3 _center = new Vec3(x, y, z);
@@ -33,7 +33,7 @@ public class WaspDodgePatternProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof WaspEntity) {
 					if (entityiterator instanceof LivingEntity _entity)
-						_entity.removeAllEffects();
+						_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
 					entityiterator.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1.5, 1.5)), 0, (Mth.nextDouble(new Random(), -1.5, 1.5))));
 					new Object() {
 						private int ticks = 0;

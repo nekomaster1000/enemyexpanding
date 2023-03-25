@@ -5,12 +5,9 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
-import java.io.File;
-
 public class TrollSpawningProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		boolean spawning = false;
-		File enemyexpansion = new File("");
 		if (y < (double) BetterConfigConfiguration.TROLLSPAWNINGDEPTH.get() && world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) < 5) {
 			spawning = true;
 		} else {

@@ -102,7 +102,7 @@ public class WaspEntity extends Monster implements IAnimatable {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "wasp_redux");
+		this.entityData.define(TEXTURE, "wasp");
 	}
 
 	public void setTexture(String texture) {

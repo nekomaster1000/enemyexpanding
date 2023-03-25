@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Senior",
     "mobLabel": "",
-    "mobModelTexture": "senior_calm.png",
+    "mobModelTexture": "senior.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0

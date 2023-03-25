@@ -103,7 +103,7 @@ public class EquestrianEntity extends Zombie implements IAnimatable {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "equestrian_zombie");
+		this.entityData.define(TEXTURE, "equestrian");
 	}
 
 	public void setTexture(String texture) {

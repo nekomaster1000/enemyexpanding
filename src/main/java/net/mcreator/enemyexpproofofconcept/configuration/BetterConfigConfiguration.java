@@ -58,6 +58,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> PUNCHINGRAMDROPSWOOLCHANCE;
 	public static final ForgeConfigSpec.ConfigValue<Double> WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE;
 	public static final ForgeConfigSpec.ConfigValue<Double> BURNINGUNDEADSPEEDUP;
+	public static final ForgeConfigSpec.ConfigValue<Double> VARYINGSPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> STRENGTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> RESISTANCE;
@@ -133,6 +134,7 @@ public class BetterConfigConfiguration {
 		PUNCHINGRAMDROPSWOOLCHANCE = BUILDER.define("Punching Ram Drops Wool Chance", (double) 0);
 		WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE = BUILDER.define("Wandering Trader becomes Illusioner on-death Chance", (double) 0.95);
 		BURNINGUNDEADSPEEDUP = BUILDER.define("Burning Undead mobs gain Speed III Chance", (double) 0.2);
+		VARYINGSPEED = BUILDER.define("Mobs Sometimes Spawn With Varying Speed", (double) 0.3);
 		BUILDER.pop();
 		BUILDER.push("effectSpawning");
 		STRENGTH = BUILDER.define("Chance of Strength effect applied on mob-spawn", (double) 0.01);

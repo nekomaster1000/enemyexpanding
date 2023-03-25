@@ -994,6 +994,24 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.3,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Mobs Sometimes Spawn With Varying Speed",
+            "varname": "varyingspeed",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       },

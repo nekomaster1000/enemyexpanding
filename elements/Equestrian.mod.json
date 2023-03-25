@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Equestrian",
     "mobLabel": "",
-    "mobModelTexture": "equestrian_zombie.png",
+    "mobModelTexture": "equestrian.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0

@@ -12,8 +12,6 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import java.io.File;
-
 @Mod.EventBusSubscriber
 public class HatSpawnsCallProcedure {
 	@SubscribeEvent
@@ -28,8 +26,6 @@ public class HatSpawnsCallProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		if (entity instanceof Zombie || entity instanceof Skeleton) {
 			HatSpawnsProcedure.execute(world, x, y, z, entity);
 		}

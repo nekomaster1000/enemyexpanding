@@ -38,8 +38,6 @@ import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfigurati
 
 import javax.annotation.Nullable;
 
-import java.io.File;
-
 @Mod.EventBusSubscriber
 public class ConfigReplacerProcedure {
 	@SubscribeEvent
@@ -54,9 +52,6 @@ public class ConfigReplacerProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		boolean spawning = false;
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
-		File enemyexpansion = new File("");
 		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get() && y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
 			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:petrimanreplaces")))) {
 				ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
@@ -65,6 +60,11 @@ public class ConfigReplacerProcedure {
 		if (Math.random() < (double) BetterConfigConfiguration.HORDEZOMBIEREPLACEMENT.get()) {
 			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:hordereplaces")))) {
 				ReplaceWithHordeProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.CINDERBLAZEREPLACEMENT.get()) {
+			if (entity instanceof Blaze) {
+				ReplaceWithCinderProcedure.execute(world, x, y, z, entity);
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENT.get() && y < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENTDEPTH.get()) {
@@ -88,11 +88,6 @@ public class ConfigReplacerProcedure {
 		if (Math.random() < (double) BetterConfigConfiguration.TROLLENDERMANREPLACEMENT.get() && y < (double) BetterConfigConfiguration.TROLLENDERMANREPLACEMENTDEPTH.get()) {
 			if (entity instanceof EnderMan) {
 				ReplaceWithTrollProcedure.execute(world, x, y, z, entity);
-			}
-		}
-		if (Math.random() < (double) BetterConfigConfiguration.CINDERBLAZEREPLACEMENT.get()) {
-			if (entity instanceof Blaze) {
-				ReplaceWithCinderProcedure.execute(world, x, y, z, entity);
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.PIGBOARREPLACEMENT.get()) {

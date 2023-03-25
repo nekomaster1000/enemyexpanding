@@ -19,14 +19,10 @@ import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfigurati
 
 import java.util.Random;
 
-import java.io.File;
-
 public class RamHurtWoolDropProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		if (Math.random() < (double) BetterConfigConfiguration.PUNCHINGRAMDROPSWOOLCHANCE.get()) {
 			if (entity instanceof RamEntity) {
 				for (int index0 = 0; index0 < (int) (Mth.nextDouble(new Random(), 1, 3)); index0++) {

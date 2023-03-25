@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Wasp",
     "mobLabel": "",
-    "mobModelTexture": "wasp_redux.png",
+    "mobModelTexture": "wasp.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0

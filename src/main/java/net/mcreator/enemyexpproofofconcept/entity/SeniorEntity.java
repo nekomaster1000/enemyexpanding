@@ -103,7 +103,7 @@ public class SeniorEntity extends Zombie implements IAnimatable {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "senior_calm");
+		this.entityData.define(TEXTURE, "senior");
 	}
 
 	public void setTexture(String texture) {

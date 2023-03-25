@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Sprinter",
     "mobLabel": "",
-    "mobModelTexture": "sprinter_zombie.png",
+    "mobModelTexture": "sprinter.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0

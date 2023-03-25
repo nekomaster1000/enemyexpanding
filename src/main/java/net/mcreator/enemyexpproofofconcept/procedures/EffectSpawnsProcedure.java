@@ -16,8 +16,6 @@ import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfigurati
 
 import javax.annotation.Nullable;
 
-import java.io.File;
-
 @Mod.EventBusSubscriber
 public class EffectSpawnsProcedure {
 	@SubscribeEvent
@@ -32,8 +30,6 @@ public class EffectSpawnsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		if (entity instanceof Zombie || entity instanceof Skeleton) {
 			if (Math.random() < (double) BetterConfigConfiguration.STRENGTH.get()) {
 				if (entity instanceof LivingEntity _entity)

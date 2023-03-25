@@ -5,7 +5,10 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
 
@@ -18,6 +21,8 @@ public class EquestrianEntityIsHurtProcedure {
 		if (entity instanceof EquestrianEntity) {
 			((EquestrianEntity) entity).setAnimation("panicked");
 		}
+		if (entity instanceof LivingEntity _entity)
+			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 109, 0, (false), (false)));
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
@@ -39,8 +44,10 @@ public class EquestrianEntityIsHurtProcedure {
 			}
 
 			private void run() {
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.BLINDNESS) : false)) {
+					if (world instanceof ServerLevel _level)
+						_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
+				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, 110);

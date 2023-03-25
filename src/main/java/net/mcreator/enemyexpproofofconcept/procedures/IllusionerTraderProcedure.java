@@ -24,8 +24,6 @@ import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfigurati
 
 import javax.annotation.Nullable;
 
-import java.io.File;
-
 @Mod.EventBusSubscriber
 public class IllusionerTraderProcedure {
 	@SubscribeEvent
@@ -43,8 +41,6 @@ public class IllusionerTraderProcedure {
 		if (entity == null)
 			return;
 		boolean spawning = false;
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
-		File enemyexpansion = new File("");
 		if (Math.random() < (double) BetterConfigConfiguration.WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE.get()) {
 			if (entity instanceof WanderingTrader) {
 				if (world instanceof ServerLevel _level)

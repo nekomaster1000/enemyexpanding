@@ -10,8 +10,6 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import java.io.File;
-
 @Mod.EventBusSubscriber
 public class PhantomHealthCallProcedure {
 	@SubscribeEvent
@@ -26,8 +24,6 @@ public class PhantomHealthCallProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		if (entity instanceof Phantom) {
 			PhantomHealthProcedure.execute(entity);
 		}

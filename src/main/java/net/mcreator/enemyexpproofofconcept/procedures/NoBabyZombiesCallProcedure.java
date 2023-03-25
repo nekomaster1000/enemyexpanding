@@ -13,8 +13,6 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import java.io.File;
-
 @Mod.EventBusSubscriber
 public class NoBabyZombiesCallProcedure {
 	@SubscribeEvent
@@ -29,8 +27,6 @@ public class NoBabyZombiesCallProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		if ((entity instanceof Zombie || entity instanceof ZombieVillager) && (entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 			BabyZombieHealthProcedure.execute(entity);
 			NoBabyZombiesProcedure.execute(world, entity);

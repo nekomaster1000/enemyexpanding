@@ -4,14 +4,10 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
-import java.io.File;
-
 public class PhantomHealthProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		File enemyexpansion = new File("");
-		com.google.gson.JsonObject mainjsonobject = new com.google.gson.JsonObject();
 		double currentHealth = 0;
 		if (entity.isAlive()) {
 			{
