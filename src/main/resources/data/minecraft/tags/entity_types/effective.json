@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:zombie",
+        "minecraft:husk",
+        "minecraft:drowned",
+        "minecraft:spider",
+        "minecraft:enderman",
+
+        "enemyexpansion:tarantula",
+        "enemyexpansion:scorpion"
+    ]
+  }

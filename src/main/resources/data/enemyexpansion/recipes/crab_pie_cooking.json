@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 2,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "enemyexpansion:crab_pie"
+  },
+  "result": "enemyexpansion:cooked_crab_pie"
+}

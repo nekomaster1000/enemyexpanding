@@ -32,8 +32,6 @@ import net.mcreator.enemyexpproofofconcept.entity.GoblinFearEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EnemyMeleeProjectileEntity;
-import net.mcreator.enemyexpproofofconcept.entity.CinderSliceEntity;
-import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CasterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CastSpellEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CakeroverEntity;
@@ -70,53 +68,6 @@ public class MeleeProjectileAttackProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
 			}
-		}
-		if (sourceentity instanceof CinderEntity) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			}
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
-					}
-				}
-
-				private void run() {
-					{
-						Entity _shootFrom = sourceentity;
-						Level projectileLevel = _shootFrom.level;
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new CinderSliceEntity(EnemyexpansionModEntities.CINDER_SLICE.get(), level);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, 4, 2);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, 8);
 		}
 		if (sourceentity instanceof BakerEntity && entity instanceof Player) {
 			if (event != null && event.isCancelable()) {

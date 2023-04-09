@@ -5,12 +5,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
-import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.Registry;
 
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
@@ -30,7 +31,7 @@ public class EffectSpawnsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Zombie || entity instanceof Skeleton) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:effective")))) {
 			if (Math.random() < (double) BetterConfigConfiguration.STRENGTH.get()) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50000, 0, (false), (true)));

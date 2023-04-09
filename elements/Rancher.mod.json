@@ -100,7 +100,7 @@
       "value": "entity.small_slime.squish"
     },
     "whenMobIsHurt": {
-      "name": "GoblinHurt"
+      "name": "RancherHurt"
     },
     "onMobTickUpdate": {
       "name": "RainRegen"

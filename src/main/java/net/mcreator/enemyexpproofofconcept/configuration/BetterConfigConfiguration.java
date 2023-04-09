@@ -30,6 +30,9 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> GLADILADSQUIDREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> ANGLERCOMMONFISHREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> HORDEZOMBIEREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> KELPIEANGLERREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> ILLAGERVILLAGERREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> IRONGOLEMRAVAGERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENTDEPTH;
@@ -59,6 +62,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE;
 	public static final ForgeConfigSpec.ConfigValue<Double> BURNINGUNDEADSPEEDUP;
 	public static final ForgeConfigSpec.ConfigValue<Double> VARYINGSPEED;
+	public static final ForgeConfigSpec.ConfigValue<Double> SKELETONSWITCHUP;
 	public static final ForgeConfigSpec.ConfigValue<Double> STRENGTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> RESISTANCE;
@@ -98,6 +102,9 @@ public class BetterConfigConfiguration {
 		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.05);
 		ANGLERCOMMONFISHREPLACEMENT = BUILDER.define("Angler Common Fish Replacement", (double) 0.05);
 		HORDEZOMBIEREPLACEMENT = BUILDER.define("Random Enemy Expansion Zombie Replacement", (double) 0);
+		KELPIEANGLERREPLACEMENT = BUILDER.define("Kelpie Angler Replacement", (double) 0.05);
+		ILLAGERVILLAGERREPLACEMENT = BUILDER.define("Illager Villager Replacement", (double) 0);
+		IRONGOLEMRAVAGERREPLACEMENT = BUILDER.define("Iron Golem Ravager Replacement", (double) 0);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);
@@ -134,7 +141,8 @@ public class BetterConfigConfiguration {
 		PUNCHINGRAMDROPSWOOLCHANCE = BUILDER.define("Punching Ram Drops Wool Chance", (double) 0);
 		WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE = BUILDER.define("Wandering Trader becomes Illusioner on-death Chance", (double) 0.95);
 		BURNINGUNDEADSPEEDUP = BUILDER.define("Burning Undead mobs gain Speed III Chance", (double) 0.2);
-		VARYINGSPEED = BUILDER.define("Mobs Sometimes Spawn With Varying Speed", (double) 0.3);
+		VARYINGSPEED = BUILDER.define("Mobs Sometimes Spawn With Varying Speed", (double) 0.5);
+		SKELETONSWITCHUP = BUILDER.define("Skeletons Switch Weapons Mid-Fight Chance", (double) 0.2);
 		BUILDER.pop();
 		BUILDER.push("effectSpawning");
 		STRENGTH = BUILDER.define("Chance of Strength effect applied on mob-spawn", (double) 0.01);

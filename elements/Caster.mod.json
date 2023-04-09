@@ -100,7 +100,7 @@
       "value": "entity.frog.step"
     },
     "whenMobIsHurt": {
-      "name": "GoblinHurt"
+      "name": "CasterHurt"
     },
     "onMobTickUpdate": {
       "name": "RainRegen"

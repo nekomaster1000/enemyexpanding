@@ -123,6 +123,8 @@ public class KelpieAggressionProcedure {
 								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.GROUND_BOUND.get(), 20, 2, (false), (false)));
 							if (entityiterator instanceof LivingEntity _entity)
 								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.GROUND_BOUND.get(), 20, 2, (false), (false)));
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 20, 0, (false), (false)));
 						}
 					}
 				}

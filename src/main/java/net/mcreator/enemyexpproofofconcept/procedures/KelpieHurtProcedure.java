@@ -41,7 +41,7 @@ public class KelpieHurtProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 0));
 			if (sourceentity instanceof Player) {
-				entity.setDeltaMovement(new Vec3((sourceentity.getLookAngle().x * 2), 0, (sourceentity.getLookAngle().z * 2)));
+				entity.setDeltaMovement(new Vec3((sourceentity.getLookAngle().x * 2), (-0.5), (sourceentity.getLookAngle().z * 2)));
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
@@ -159,7 +159,7 @@ public class KelpieHurtProcedure {
 								if (entityiterator instanceof LivingEntity _entity)
 									_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, (int) Mth.nextDouble(new Random(), 150, 250), 0, (false), (true)));
 								if (entityiterator instanceof LivingEntity _entity)
-									_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 2));
+									_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 4));
 								MinecraftForge.EVENT_BUS.unregister(this);
 							}
 						}.start(world, 20);

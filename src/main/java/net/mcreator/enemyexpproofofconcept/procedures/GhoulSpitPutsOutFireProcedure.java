@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +13,9 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 public class GhoulSpitPutsOutFireProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
+			return;
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.FIRE) {
 			world.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			if (world instanceof ServerLevel _level)
@@ -25,5 +28,7 @@ public class GhoulSpitPutsOutFireProcedure {
 				}
 			}
 		}
+		if (!immediatesourceentity.level.isClientSide())
+			immediatesourceentity.discard();
 	}
 }

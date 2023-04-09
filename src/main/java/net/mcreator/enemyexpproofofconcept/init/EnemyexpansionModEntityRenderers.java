@@ -31,6 +31,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.RancherRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.RamshearedRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.RamRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PropellerRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.PiecrabRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PheromoneSummonRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PetrimanRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PetrifiedtrollRenderer;
@@ -138,5 +139,6 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.GLADIUS_INK.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ANGLER.get(), AnglerRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.KELPIE.get(), KelpieRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.PIECRAB.get(), PiecrabRenderer::new);
 	}
 }

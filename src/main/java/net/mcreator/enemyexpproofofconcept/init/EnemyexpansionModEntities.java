@@ -39,6 +39,7 @@ import net.mcreator.enemyexpproofofconcept.entity.RancherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PropellerEntity;
+import net.mcreator.enemyexpproofofconcept.entity.PiecrabEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PheromoneSummonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PheromoneProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
@@ -322,6 +323,10 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<KelpieEntity>of(KelpieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KelpieEntity::new)
 
 					.sized(1.95f, 2.45f));
+	public static final RegistryObject<EntityType<PiecrabEntity>> PIECRAB = register("piecrab",
+			EntityType.Builder.<PiecrabEntity>of(PiecrabEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PiecrabEntity::new)
+
+					.sized(1.5f, 1.3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -381,6 +386,7 @@ public class EnemyexpansionModEntities {
 			InvisicreeperEntity.init();
 			AnglerEntity.init();
 			KelpieEntity.init();
+			PiecrabEntity.init();
 		});
 	}
 
@@ -437,5 +443,6 @@ public class EnemyexpansionModEntities {
 		event.put(INVISICREEPER.get(), InvisicreeperEntity.createAttributes().build());
 		event.put(ANGLER.get(), AnglerEntity.createAttributes().build());
 		event.put(KELPIE.get(), KelpieEntity.createAttributes().build());
+		event.put(PIECRAB.get(), PiecrabEntity.createAttributes().build());
 	}
 }

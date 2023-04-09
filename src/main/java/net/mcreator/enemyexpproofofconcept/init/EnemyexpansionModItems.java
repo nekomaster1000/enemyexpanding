@@ -46,6 +46,8 @@ import net.mcreator.enemyexpproofofconcept.item.FrigidTouchProjectileItem;
 import net.mcreator.enemyexpproofofconcept.item.FlutterfliersItem;
 import net.mcreator.enemyexpproofofconcept.item.EnemyMeleeProjectileItem;
 import net.mcreator.enemyexpproofofconcept.item.CrawlerExplosiveItem;
+import net.mcreator.enemyexpproofofconcept.item.CrabPieItem;
+import net.mcreator.enemyexpproofofconcept.item.CookedCrabPieItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderSliceItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderScrapItem;
 import net.mcreator.enemyexpproofofconcept.item.CinderHelmItem;
@@ -151,4 +153,7 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> GLADIUS_INK = REGISTRY.register("gladius_ink", () -> new GladiusInkItem());
 	public static final RegistryObject<Item> ANGLER_SPAWN_EGG = REGISTRY.register("angler_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ANGLER, -12230306, -6708074, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> KELPIE_SPAWN_EGG = REGISTRY.register("kelpie_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.KELPIE, -11899790, -14259169, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> PIECRAB_SPAWN_EGG = REGISTRY.register("piecrab_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PIECRAB, -10140123, -7641023, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> CRAB_PIE = REGISTRY.register("crab_pie", () -> new CrabPieItem());
+	public static final RegistryObject<Item> COOKED_CRAB_PIE = REGISTRY.register("cooked_crab_pie", () -> new CookedCrabPieItem());
 }

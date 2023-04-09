@@ -470,6 +470,60 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.05,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Kelpie Angler Replacement",
+            "varname": "kelpieanglerreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Illager Villager Replacement",
+            "varname": "illagervillagerreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Iron Golem Ravager Replacement",
+            "varname": "irongolemravagerreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       },
@@ -1004,11 +1058,29 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.3,
+            "numberField": 0.5,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Mobs Sometimes Spawn With Varying Speed",
             "varname": "varyingspeed",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.2,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Skeletons Switch Weapons Mid-Fight Chance",
+            "varname": "skeletonswitchup",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"

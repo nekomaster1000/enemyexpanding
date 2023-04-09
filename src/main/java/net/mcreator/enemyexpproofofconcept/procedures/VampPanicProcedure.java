@@ -47,8 +47,12 @@ public class VampPanicProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof VampireEntity || entity instanceof BiterEntity) {
-			if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z)) && world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) > 13) {
-				entity.setSecondsOnFire(15);
+			if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z))) {
+				if (world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) > 13) {
+					entity.setSecondsOnFire(15);
+				} else {
+					entity.clearFire();
+				}
 			}
 		}
 		if (entity instanceof VampireEntity) {

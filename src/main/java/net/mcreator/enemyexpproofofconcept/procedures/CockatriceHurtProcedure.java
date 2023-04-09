@@ -9,8 +9,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModParticleTypes;
 import net.mcreator.enemyexpproofofconcept.entity.CockatriceEntity;
 
 import java.util.Random;
@@ -49,5 +52,7 @@ public class CockatriceHurtProcedure {
 				}.start(world, 2);
 			}
 		}
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles((SimpleParticleType) (EnemyexpansionModParticleTypes.FEATHER_PARTICLE.get()), x, (y + 1), z, 10, 0.2, 0.2, 0.2, 0.2);
 	}
 }

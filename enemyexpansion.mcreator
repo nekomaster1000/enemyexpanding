@@ -1686,6 +1686,10 @@
         ],
         "dependencies": [
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -3458,7 +3462,7 @@
           }
         ]
       },
-      "path": "~/Monsters/UndergroundGuys"
+      "path": "~/Monsters"
     },
     {
       "name": "TrollParticles",
@@ -3855,7 +3859,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Transformers"
+      "path": "~/Monsters"
     },
     {
       "name": "Headbiter",
@@ -8082,6 +8086,7 @@
           "src/main/resources/assets/enemyexpansion/models/item/kelpie_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/KelpieEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/KelpieModel.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/KelpieLayer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/KelpieRenderer.java"
         ]
       },
@@ -8258,6 +8263,602 @@
         ]
       },
       "path": "~/Spawning"
+    },
+    {
+      "name": "KelpieTick",
+      "type": "procedure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kelpie_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/KelpieTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "KelpieSpawn",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kelpie_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/KelpieSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "HealInstantly",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_instantly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/HealInstantlyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Heal",
+      "type": "command",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/command/HealCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "HurtInstantly",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hurt_instantly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/HurtInstantlyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Hurt",
+      "type": "command",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/command/HurtCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "KelpieTongueWrapDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kelpie_tongue_wrap_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/KelpieTongueWrapDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "KelpieTongueWrap",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kelpie_tongue_wrap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/gui/KelpieTongueWrapOverlay.java"
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "SkeletonSwitchup",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_switchup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/SkeletonSwitchupProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "ReplaceWithKelpie",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_kelpie",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ReplaceWithKelpieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "Piecrab",
+      "type": "animatedentity",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piecrab",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/PiecrabModel.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/PiecrabEntity.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/PiecrabRenderer.java",
+          "src/main/resources/assets/enemyexpansion/models/item/piecrab_spawn_egg.json"
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "PiecrabHostility",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piecrab_hostility",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/PiecrabHostilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "PiecrabCowardice",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piecrab_cowardice",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/PiecrabCowardiceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "PiecrabKill",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piecrab_kill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/PiecrabKillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "PiecrabSpawn",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piecrab_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/PiecrabSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "CrabPieResistance",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crab_pie_resistance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/CrabPieResistanceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CrabPie",
+      "type": "item",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crab_pie",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/item/CrabPieItem.java",
+          "src/main/resources/assets/enemyexpansion/models/item/crab_pie.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CookedCrabPie",
+      "type": "item",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_crab_pie",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/item/CookedCrabPieItem.java",
+          "src/main/resources/assets/enemyexpansion/models/item/cooked_crab_pie.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CrabPieCooking",
+      "type": "recipe",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crab_pie_cooking",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/recipes/crab_pie_cooking.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ReplaceWithIllager",
+      "type": "procedure",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_illager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ReplaceWithIllagerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "ReplaceWithRavager",
+      "type": "procedure",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_ravager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ReplaceWithRavagerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "CasterHurt",
+      "type": "procedure",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caster_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/CasterHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "RancherHurt",
+      "type": "procedure",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rancher_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/RancherHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Goblins"
+    },
+    {
+      "name": "FeatherParticle",
+      "type": "particle",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feather_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/particles/feather_particle.json",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/particle/FeatherParticleParticle.java"
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "ChickenToCockatriceTransformation",
+      "type": "procedure",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_to_cockatrice_transformation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ChickenToCockatriceTransformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/UndergroundGuys"
     }
   ],
   "variable_elements": [
@@ -8451,6 +9052,7 @@
       "item.enemyexpansion.pheromone_summon_spawn_egg": "Wasp Drone Spawn Egg",
       "item.enemyexpansion.slimehead_boots": "",
       "entity.enemyexpansion.rooster": "Rooster",
+      "item.enemyexpansion.cooked_crab_pie": "Crab Pie",
       "item.enemyexpansion.trollface_boots": "Phantasm Boots",
       "entity.enemyexpansion.frigid": "Frigid",
       "death.attack.spectre": "%1$s was swallowed by the Spectre\u0027s grasp",
@@ -8499,6 +9101,7 @@
       "item.enemyexpansion.spectral_helmet": "Spectral Hood",
       "entity.enemyexpansion.gladilad": "Gladilad",
       "entity.enemyexpansion.projectile_wasp_sting_projectile": "Wasp\u0027s sting",
+      "item.enemyexpansion.piecrab_spawn_egg": "Piecrab Spawn Egg",
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
       "item.enemyexpansion.bull_skull_chestplate": "",
       "item.enemyexpansion.mini_wither_chestplate": "",
@@ -8539,6 +9142,7 @@
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
       "entity.enemyexpansion.ghoul": "Ghoul",
       "item.enemyexpansion.flutterfliers_chestplate": "Flutterfliers",
+      "item.enemyexpansion.crab_pie": "Crab Pie",
       "subtitles.troll.roar": "Troll roars",
       "item.enemyexpansion.kelpie_spawn_egg": "Kelpie Spawn Egg",
       "entity.enemyexpansion.wolfsbane": "Wolfsbane",
@@ -8568,6 +9172,7 @@
       "item.enemyexpansion.flutterfly_spawn_egg": "Flutterfly Spawn Egg",
       "item.enemyexpansion.meature_meatball": "Meature Meatball",
       "item.minecraft.tipped_arrow.effect.groundbound_potion": "Arrow of Groundbinding",
+      "entity.enemyexpansion.piecrab": "Piecrab",
       "entity.enemyexpansion.bouncer": "Goblin Bouncer",
       "item.enemyexpansion.horsehead_chestplate": "",
       "item.enemyexpansion.trollface_helmet": "Trollface",
@@ -8716,6 +9321,10 @@
       },
       {
         "name": "Spawning",
+        "children": []
+      },
+      {
+        "name": "Commands",
         "children": []
       }
     ]

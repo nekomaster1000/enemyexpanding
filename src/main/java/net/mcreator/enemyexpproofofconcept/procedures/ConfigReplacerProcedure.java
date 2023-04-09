@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.EnderMan;
@@ -16,6 +17,7 @@ import net.minecraft.world.entity.animal.Squid;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.animal.Salmon;
 import net.minecraft.world.entity.animal.Pig;
+import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.animal.Cow;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.Chicken;
@@ -34,6 +36,7 @@ import net.mcreator.enemyexpproofofconcept.entity.RoosterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BullEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BoarEntity;
+import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
 import javax.annotation.Nullable;
@@ -138,6 +141,23 @@ public class ConfigReplacerProcedure {
 				if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_deep_ocean")))) {
 					ReplaceWithAnglerProcedure.execute(world, x, y, z, entity);
 				}
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.KELPIEANGLERREPLACEMENT.get()) {
+			if (entity instanceof AnglerEntity) {
+				if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_deep_ocean")))) {
+					ReplaceWithKelpieProcedure.execute(world, x, y, z, entity);
+				}
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.ILLAGERVILLAGERREPLACEMENT.get()) {
+			if (entity instanceof Villager) {
+				ReplaceWithIllagerProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.IRONGOLEMRAVAGERREPLACEMENT.get()) {
+			if (entity instanceof IronGolem) {
+				ReplaceWithRavagerProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

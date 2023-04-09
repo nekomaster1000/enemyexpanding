@@ -102,9 +102,6 @@
     "whenMobDies": {
       "name": "VampireSlaying"
     },
-    "onRightClickedOn": {
-      "name": "VampireFlinted"
-    },
     "onMobTickUpdate": {
       "name": "VampRegen"
     },

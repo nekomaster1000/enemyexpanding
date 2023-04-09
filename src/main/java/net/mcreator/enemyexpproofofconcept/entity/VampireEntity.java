@@ -24,7 +24,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.Monster;
@@ -50,8 +49,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -65,7 +62,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.enemyexpproofofconcept.procedures.VampireSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.VampireSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.VampireSlayingProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.VampireFlintedProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.VampRegenProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -200,21 +196,6 @@ public class VampireEntity extends Monster implements IAnimatable {
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		VampireSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
-		return retval;
-	}
-
-	@Override
-	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
-		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
-		super.mobInteract(sourceentity, hand);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
-
-		VampireFlintedProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 

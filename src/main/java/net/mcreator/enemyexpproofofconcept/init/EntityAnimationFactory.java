@@ -23,6 +23,7 @@ import net.mcreator.enemyexpproofofconcept.entity.RancherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PropellerEntity;
+import net.mcreator.enemyexpproofofconcept.entity.PiecrabEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PheromoneSummonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
@@ -380,6 +381,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof KelpieEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof PiecrabEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

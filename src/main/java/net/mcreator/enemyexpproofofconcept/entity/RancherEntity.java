@@ -62,9 +62,9 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.RancherHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.RainRegenProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.GoblinHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -174,7 +174,7 @@ public class RancherEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		GoblinHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		RancherHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		if (source == DamageSource.FALL)
 			return false;
 		return super.hurt(source, amount);

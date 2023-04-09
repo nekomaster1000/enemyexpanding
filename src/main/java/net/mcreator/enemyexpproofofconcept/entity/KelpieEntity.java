@@ -22,6 +22,7 @@ import net.minecraftforge.common.ForgeMod;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -37,8 +38,10 @@ import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -46,6 +49,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -53,12 +57,16 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.enemyexpproofofconcept.procedures.KelpieTickProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.KelpieSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieDiesProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GladiladSpawningProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.AnglerTickProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
+
+import javax.annotation.Nullable;
 
 import java.util.Set;
 
@@ -172,7 +180,7 @@ public class KelpieEntity extends Monster implements IAnimatable {
 
 	@Override
 	public double getPassengersRidingOffset() {
-		return super.getPassengersRidingOffset() + 1;
+		return super.getPassengersRidingOffset() + -0.4;
 	}
 
 	@Override
@@ -203,9 +211,16 @@ public class KelpieEntity extends Monster implements IAnimatable {
 	}
 
 	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		KelpieSpawnProcedure.execute(this);
+		return retval;
+	}
+
+	@Override
 	public void baseTick() {
 		super.baseTick();
-		AnglerTickProcedure.execute(this);
+		KelpieTickProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
@@ -244,7 +259,7 @@ public class KelpieEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 40);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 48);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.30000000000000004);
 		return builder;

@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.enemyexpproofofconcept.entity.model.KelpieModel;
+import net.mcreator.enemyexpproofofconcept.entity.layer.KelpieLayer;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -18,6 +19,7 @@ public class KelpieRenderer extends GeoEntityRenderer<KelpieEntity> {
 	public KelpieRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new KelpieModel());
 		this.shadowRadius = 0.7999999999999999f;
+		this.addLayer(new KelpieLayer(this));
 	}
 
 	@Override

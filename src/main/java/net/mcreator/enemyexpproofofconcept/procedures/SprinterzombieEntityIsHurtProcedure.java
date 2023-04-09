@@ -22,6 +22,8 @@ public class SprinterzombieEntityIsHurtProcedure {
 		if (sourceentity instanceof LivingEntity && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1, (false), (true)));
+			if (entity instanceof LivingEntity _entity)
+				_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 35, 1, (false), (true)));
 			if (entity instanceof SprinterEntity) {
 				((SprinterEntity) entity).setAnimation("staggered");
 			}
@@ -46,7 +48,7 @@ public class SprinterzombieEntityIsHurtProcedure {
 				}
 
 				private void run() {
-					if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false)) {
+					if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.UNLUCK) : false)) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
 					}

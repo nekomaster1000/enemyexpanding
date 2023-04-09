@@ -5,7 +5,7 @@
     "mobName": "Kelpie",
     "mobLabel": "",
     "mobModelTexture": "kelpie.png",
-    "mobModelGlowTexture": "",
+    "mobModelGlowTexture": "kelpie_glow.png",
     "visualScale": {
       "fixedValue": 1.0
     },
@@ -15,7 +15,7 @@
     "modelWidth": 1.95,
     "modelHeight": 2.45,
     "modelShadowSize": 0.7999999999999999,
-    "mountedYOffset": 1.0,
+    "mountedYOffset": -0.4,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -11899790,
@@ -57,7 +57,7 @@
     "movementSpeed": 0.30000000000000004,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 32,
+    "followRange": 48,
     "health": 40,
     "xpAmount": 15,
     "waterMob": true,
@@ -106,7 +106,10 @@
       "name": "KelpieHurt"
     },
     "onMobTickUpdate": {
-      "name": "AnglerTick"
+      "name": "KelpieTick"
+    },
+    "onInitialSpawn": {
+      "name": "KelpieSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
