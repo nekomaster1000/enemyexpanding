@@ -16,7 +16,7 @@ public class BouncerKickImpactProcedure {
 			return;
 		entity.setDeltaMovement(new Vec3((-0.3), 1, (-0.3)));
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1, (false), (false)));
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0, (false), (true)));
 		world.levelEvent(2001, new BlockPos(x, y, z), Block.getId(Blocks.GLASS.defaultBlockState()));

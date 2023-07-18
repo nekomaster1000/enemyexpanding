@@ -13,7 +13,7 @@ import net.mcreator.enemyexpproofofconcept.procedures.CrabPieResistanceProcedure
 
 public class CookedCrabPieItem extends Item {
 	public CookedCrabPieItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(14f)
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(1.6f)
 
 				.meat().build()));
 	}

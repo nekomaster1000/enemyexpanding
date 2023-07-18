@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "cooked_crab_pie",
+    "texture": "bottled_flutterflies",
     "customModelName": "Normal",
-    "name": "Crab Pie",
+    "name": "Bottled Flutterflies",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "FOOD"
+      "value": "MISC"
     },
-    "stackSize": 64,
+    "stackSize": 16,
     "enchantability": 0,
     "useDuration": 32,
     "toolType": 1.0,
@@ -29,16 +29,13 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
-      "name": "CrabPieResistance"
-    },
-    "isFood": true,
-    "nutritionalValue": 8,
-    "saturation": 1.6,
+    "isFood": false,
+    "nutritionalValue": 1,
+    "saturation": 0.3,
     "eatResultItem": {
-      "value": ""
+      "value": "Items.GLASS_BOTTLE"
     },
-    "isMeat": true,
+    "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "eat"
   }

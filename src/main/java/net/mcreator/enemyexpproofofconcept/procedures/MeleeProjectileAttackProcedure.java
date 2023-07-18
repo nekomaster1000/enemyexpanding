@@ -37,7 +37,6 @@ import net.mcreator.enemyexpproofofconcept.entity.CastSpellEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CakeroverEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BouncerKickProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BouncerEntity;
-import net.mcreator.enemyexpproofofconcept.entity.BakerEntity;
 
 import javax.annotation.Nullable;
 
@@ -69,32 +68,12 @@ public class MeleeProjectileAttackProcedure {
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 0));
 			}
 		}
-		if (sourceentity instanceof BakerEntity && entity instanceof Player) {
+		if (sourceentity instanceof BouncerEntity) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
-			{
-				Entity _shootFrom = sourceentity;
-				Level projectileLevel = _shootFrom.level;
-				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new EnemyMeleeProjectileEntity(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), level);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, 3, (int) 0.5);
-					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-			}
-		}
-		if (sourceentity instanceof BouncerEntity && entity instanceof Player) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+			if (sourceentity instanceof BouncerEntity) {
+				((BouncerEntity) sourceentity).setAnimation("attack");
 			}
 			new Object() {
 				private int ticks = 0;
@@ -204,6 +183,9 @@ public class MeleeProjectileAttackProcedure {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
+			if (sourceentity instanceof ErrantEntity) {
+				((ErrantEntity) sourceentity).setAnimation("attack");
+			}
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -226,6 +208,13 @@ public class MeleeProjectileAttackProcedure {
 
 				private void run() {
 					if (sourceentity.isAlive()) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 1, false);
+							}
+						}
 						{
 							Entity _shootFrom = sourceentity;
 							Level projectileLevel = _shootFrom.level;
@@ -240,15 +229,8 @@ public class MeleeProjectileAttackProcedure {
 									}
 								}.getArrow(projectileLevel, 8, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.6, 0);
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
-						}
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0);
-							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0, false);
 							}
 						}
 					}

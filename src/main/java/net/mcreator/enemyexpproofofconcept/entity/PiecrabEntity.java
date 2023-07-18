@@ -134,7 +134,7 @@ public class PiecrabEntity extends Monster implements IAnimatable {
 				return super.canUse() && PiecrabCowardiceProcedure.execute(entity);
 			}
 		});
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PropellerEntity.class, false, false) {
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, false) {
 			@Override
 			public boolean canUse() {
 				double x = PiecrabEntity.this.getX();
@@ -145,7 +145,7 @@ public class PiecrabEntity extends Monster implements IAnimatable {
 				return super.canUse() && PiecrabHostilityProcedure.execute(entity);
 			}
 		});
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PropellerEntity.class, false, false) {
 			@Override
 			public boolean canUse() {
 				double x = PiecrabEntity.this.getX();

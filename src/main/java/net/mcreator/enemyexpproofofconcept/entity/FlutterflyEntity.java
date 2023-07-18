@@ -225,7 +225,7 @@ public class FlutterflyEntity extends PathfinderMob implements IAnimatable {
 		Entity entity = this;
 		Level world = this.level;
 
-		FlutterflyPlayerTouchProcedure.execute(entity, sourceentity);
+		FlutterflyPlayerTouchProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 

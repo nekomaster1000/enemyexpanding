@@ -95,7 +95,7 @@ public class BetterConfigConfiguration {
 		CINDERBLAZEREPLACEMENT = BUILDER.define("Cinder Blaze Replacement", (double) 0.2);
 		PIGBOARREPLACEMENT = BUILDER.define("Boar Pig Replacement", (double) 0.65);
 		COWBULLREPLACEMENT = BUILDER.define("Bull Cow Replacement", (double) 0.75);
-		SHEEPRAMREPLACEMENT = BUILDER.define("Ram Sheep Replacement", (double) 0.85);
+		SHEEPRAMREPLACEMENT = BUILDER.define("Ram Sheep Replacement", (double) 0.35);
 		CHICKENROOSTERREPLACEMENT = BUILDER.define("Rooster Chicken Replacement", (double) 0.55);
 		SPIDERTARANTULAREPLACEMENT = BUILDER.define("Tarantula Spider Replacement", (double) 1);
 		SPIDERSCORPIONREPLACEMENT = BUILDER.define("Scorpion Spider Replacement", (double) 1);

@@ -4768,6 +4768,22 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4796,22 +4812,6 @@
         ]
       },
       "path": "~/Monsters/Arthropods"
-    },
-    {
-      "name": "ConfigDepth",
-      "type": "procedure",
-      "sortid": 239,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "config_depth",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ConfigDepthProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "ConfigReplacer",
@@ -8859,6 +8859,57 @@
         ]
       },
       "path": "~/Monsters/UndergroundGuys"
+    },
+    {
+      "name": "BottledFlutterfliesUse",
+      "type": "procedure",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottled_flutterflies_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/BottledFlutterfliesUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BottledFlutterflies",
+      "type": "item",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottled_flutterflies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/bottled_flutterflies.json",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/item/BottledFlutterfliesItem.java"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -8989,22 +9040,22 @@
       "item.enemyexpansion.ram_spawn_egg": "Ram Spawn Egg",
       "subtitles.kelpie_idle": "Kelpie whistles",
       "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "entity.enemyexpansion.spectre": "Spectre",
-      "item.enemyexpansion.cinder_helm_chestplate": "",
       "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
+      "entity.enemyexpansion.spectre": "Spectre",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
       "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
       "item.enemyexpansion.spectral_boots": "",
       "item.enemyexpansion.silverhat_helmet": "Silverhat",
       "entity.enemyexpansion.caster": "Goblin Caster",
-      "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrified Troll Spawn Egg",
       "subtitles.wolfsbane.attack": "Wolfsbane roars",
+      "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrified Troll Spawn Egg",
       "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
       "entity.enemyexpansion.zadybug": "Zadybug",
       "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
-      "item.enemyexpansion.gallant_swings": "Gallant Swings",
       "item.enemyexpansion.cast_spell": "Caster Spell",
+      "item.enemyexpansion.gallant_swings": "Gallant Swings",
       "item.enemyexpansion.flutterfliers_boots": "",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
       "item.minecraft.potion.effect.groundbound_potion": "Potion of Groundbinding",
@@ -9238,6 +9289,7 @@
       "entity.enemyexpansion.silverpet": "Silverpet",
       "entity.enemyexpansion.gabble": "Gabble",
       "entity.enemyexpansion.rancher": "Goblin Rancher",
+      "item.enemyexpansion.bottled_flutterflies": "Bottled Flutterflies",
       "item.enemyexpansion.silverpet_spawn_egg": "Silverpet Spawn Egg",
       "gamerule.petriman_dont_spawn_above_ground_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "item.enemyexpansion.rancher_spawn_egg": "Goblin Rancher Spawn Egg",

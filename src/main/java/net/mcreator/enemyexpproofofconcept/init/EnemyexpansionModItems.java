@@ -56,6 +56,7 @@ import net.mcreator.enemyexpproofofconcept.item.CastSpellItem;
 import net.mcreator.enemyexpproofofconcept.item.BullSkullItem;
 import net.mcreator.enemyexpproofofconcept.item.BrutishItem;
 import net.mcreator.enemyexpproofofconcept.item.BouncerKickProjectileItem;
+import net.mcreator.enemyexpproofofconcept.item.BottledFlutterfliesItem;
 import net.mcreator.enemyexpproofofconcept.item.BanemaskItem;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
@@ -156,4 +157,5 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> PIECRAB_SPAWN_EGG = REGISTRY.register("piecrab_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PIECRAB, -10140123, -7641023, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> CRAB_PIE = REGISTRY.register("crab_pie", () -> new CrabPieItem());
 	public static final RegistryObject<Item> COOKED_CRAB_PIE = REGISTRY.register("cooked_crab_pie", () -> new CookedCrabPieItem());
+	public static final RegistryObject<Item> BOTTLED_FLUTTERFLIES = REGISTRY.register("bottled_flutterflies", () -> new BottledFlutterfliesItem());
 }

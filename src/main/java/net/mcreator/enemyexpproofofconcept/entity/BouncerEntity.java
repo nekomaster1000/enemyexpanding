@@ -105,7 +105,7 @@ public class BouncerEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, GoblinFearEntity.class, (float) 16, 1.5, 1.6));
 		this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, ZobgoblinEntity.class, (float) 12, 1.2, 1.6));
 		this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, IronGolem.class, (float) 4, 1.2, 1.6));
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1, true) {
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();

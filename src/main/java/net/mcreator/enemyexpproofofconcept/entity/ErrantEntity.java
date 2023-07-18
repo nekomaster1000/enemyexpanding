@@ -122,7 +122,7 @@ public class ErrantEntity extends Monster implements IAnimatable {
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, IronGolem.class, (float) 4, 1.2, 1.6));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, true) {
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.3, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -198,7 +198,7 @@ public class ErrantEntity extends Monster implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.22);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.24);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 12);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);

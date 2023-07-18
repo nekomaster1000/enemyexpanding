@@ -31,7 +31,7 @@
     "inventoryStackSize": 64,
     "isFood": true,
     "nutritionalValue": 4,
-    "saturation": 8.0,
+    "saturation": 1.0,
     "eatResultItem": {
       "value": ""
     },
