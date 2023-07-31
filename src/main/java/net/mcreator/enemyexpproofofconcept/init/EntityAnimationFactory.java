@@ -19,6 +19,7 @@ import net.mcreator.enemyexpproofofconcept.entity.SilverkingEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SeniorEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ScorpionEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RoosterEntity;
+import net.mcreator.enemyexpproofofconcept.entity.ReaverEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RancherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
@@ -27,6 +28,7 @@ import net.mcreator.enemyexpproofofconcept.entity.PiecrabEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PheromoneSummonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
+import net.mcreator.enemyexpproofofconcept.entity.OrbEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
@@ -37,9 +39,11 @@ import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GhoulEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GallantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
+import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
+import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CockatriceEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
@@ -388,6 +392,34 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof PiecrabEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FlyEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DreadnoughtEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof OrbEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ReaverEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

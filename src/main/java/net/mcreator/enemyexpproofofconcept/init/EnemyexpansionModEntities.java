@@ -35,6 +35,7 @@ import net.mcreator.enemyexpproofofconcept.entity.SilverkingEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SeniorEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ScorpionEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RoosterEntity;
+import net.mcreator.enemyexpproofofconcept.entity.ReaverEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RancherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
@@ -44,6 +45,7 @@ import net.mcreator.enemyexpproofofconcept.entity.PheromoneSummonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PheromoneProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
+import net.mcreator.enemyexpproofofconcept.entity.OrbEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
@@ -65,10 +67,12 @@ import net.mcreator.enemyexpproofofconcept.entity.GallantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GabbleEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidTouchProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
+import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EnemyMeleeProjectileEntity;
+import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerExplosiveEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CockatriceEntity;
@@ -92,7 +96,9 @@ import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 public class EnemyexpansionModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, EnemyexpansionMod.MODID);
 	public static final RegistryObject<EntityType<MeatureEntity>> MEATURE = register("meature",
-			EntityType.Builder.<MeatureEntity>of(MeatureEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MeatureEntity::new).fireImmune().sized(0.6f, 0.95f));
+			EntityType.Builder.<MeatureEntity>of(MeatureEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MeatureEntity::new)
+
+					.sized(0.6f, 0.95f));
 	public static final RegistryObject<EntityType<SprinterEntity>> SPRINTER = register("sprinter",
 			EntityType.Builder.<SprinterEntity>of(SprinterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SprinterEntity::new)
 
@@ -114,7 +120,7 @@ public class EnemyexpansionModEntities {
 	public static final RegistryObject<EntityType<HuntsmanskeletonEntity>> HUNTSMANSKELETON = register("huntsmanskeleton",
 			EntityType.Builder.<HuntsmanskeletonEntity>of(HuntsmanskeletonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HuntsmanskeletonEntity::new)
 
-					.sized(0.7f, 1.95f));
+					.sized(0.7f, 2.25f));
 	public static final RegistryObject<EntityType<SpectreEntity>> SPECTRE = register("spectre",
 			EntityType.Builder.<SpectreEntity>of(SpectreEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpectreEntity::new)
 
@@ -277,6 +283,22 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<InvisicreeperEntity>of(InvisicreeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(InvisicreeperEntity::new)
 
 					.sized(0f, 0f));
+	public static final RegistryObject<EntityType<AnglerEntity>> ANGLER = register("angler",
+			EntityType.Builder.<AnglerEntity>of(AnglerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerEntity::new)
+
+					.sized(0.95f, 0.95f));
+	public static final RegistryObject<EntityType<KelpieEntity>> KELPIE = register("kelpie",
+			EntityType.Builder.<KelpieEntity>of(KelpieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KelpieEntity::new)
+
+					.sized(1.95f, 2.45f));
+	public static final RegistryObject<EntityType<PiecrabEntity>> PIECRAB = register("piecrab",
+			EntityType.Builder.<PiecrabEntity>of(PiecrabEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PiecrabEntity::new)
+
+					.sized(1.5f, 1.3f));
+	public static final RegistryObject<EntityType<FlyEntity>> FLY = register("fly",
+			EntityType.Builder.<FlyEntity>of(FlyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyEntity::new)
+
+					.sized(0.65f, 0.65f));
 	public static final RegistryObject<EntityType<PheromoneProjectileEntity>> PHEROMONE_PROJECTILE = register("projectile_pheromone_projectile", EntityType.Builder.<PheromoneProjectileEntity>of(PheromoneProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(PheromoneProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HuntsmanPunchEntity>> HUNTSMAN_PUNCH = register("projectile_huntsman_punch",
@@ -315,18 +337,18 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<TrollSpitEntity>of(TrollSpitEntity::new, MobCategory.MISC).setCustomClientFactory(TrollSpitEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GladiusInkEntity>> GLADIUS_INK = register("projectile_gladius_ink",
 			EntityType.Builder.<GladiusInkEntity>of(GladiusInkEntity::new, MobCategory.MISC).setCustomClientFactory(GladiusInkEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<AnglerEntity>> ANGLER = register("angler",
-			EntityType.Builder.<AnglerEntity>of(AnglerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerEntity::new)
+	public static final RegistryObject<EntityType<DreadnoughtEntity>> DREADNOUGHT = register("dreadnought",
+			EntityType.Builder.<DreadnoughtEntity>of(DreadnoughtEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DreadnoughtEntity::new)
 
-					.sized(0.95f, 0.95f));
-	public static final RegistryObject<EntityType<KelpieEntity>> KELPIE = register("kelpie",
-			EntityType.Builder.<KelpieEntity>of(KelpieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KelpieEntity::new)
+					.sized(0.95f, 1.95f));
+	public static final RegistryObject<EntityType<OrbEntity>> ORB = register("orb",
+			EntityType.Builder.<OrbEntity>of(OrbEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OrbEntity::new)
 
-					.sized(1.95f, 2.45f));
-	public static final RegistryObject<EntityType<PiecrabEntity>> PIECRAB = register("piecrab",
-			EntityType.Builder.<PiecrabEntity>of(PiecrabEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PiecrabEntity::new)
+					.sized(0.35f, 0.35f));
+	public static final RegistryObject<EntityType<ReaverEntity>> REAVER = register("reaver",
+			EntityType.Builder.<ReaverEntity>of(ReaverEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReaverEntity::new)
 
-					.sized(1.5f, 1.3f));
+					.sized(1.5f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -387,6 +409,10 @@ public class EnemyexpansionModEntities {
 			AnglerEntity.init();
 			KelpieEntity.init();
 			PiecrabEntity.init();
+			FlyEntity.init();
+			DreadnoughtEntity.init();
+			OrbEntity.init();
+			ReaverEntity.init();
 		});
 	}
 
@@ -444,5 +470,9 @@ public class EnemyexpansionModEntities {
 		event.put(ANGLER.get(), AnglerEntity.createAttributes().build());
 		event.put(KELPIE.get(), KelpieEntity.createAttributes().build());
 		event.put(PIECRAB.get(), PiecrabEntity.createAttributes().build());
+		event.put(FLY.get(), FlyEntity.createAttributes().build());
+		event.put(DREADNOUGHT.get(), DreadnoughtEntity.createAttributes().build());
+		event.put(ORB.get(), OrbEntity.createAttributes().build());
+		event.put(REAVER.get(), ReaverEntity.createAttributes().build());
 	}
 }

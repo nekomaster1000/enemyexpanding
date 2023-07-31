@@ -34,12 +34,14 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -47,6 +49,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.PropellerTickProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.PropellerStruckByLightningProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -124,27 +128,35 @@ public class PropellerEntity extends Skeleton implements IAnimatable {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.hit"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.copper.place"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lantern.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.attack_wooden_door"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ui.stonecutter.take_result"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.break_wooden_door"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.item.break"));
+	}
+
+	@Override
+	public void thunderHit(ServerLevel serverWorld, LightningBolt lightningBolt) {
+		super.thunderHit(serverWorld, lightningBolt);
+		PropellerStruckByLightningProcedure.execute(this);
 	}
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		if (source == DamageSource.FALL)
+			return false;
+		if (source == DamageSource.LIGHTNING_BOLT)
 			return false;
 		return super.hurt(source, amount);
 	}
@@ -152,6 +164,7 @@ public class PropellerEntity extends Skeleton implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		PropellerTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

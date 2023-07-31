@@ -115,7 +115,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": -10.0,
+            "numberField": 65.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Crawler Spawning Depth",
@@ -426,7 +426,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.05,
+            "numberField": 0.01,
             "textDefault": "",
             "comment": "(This is the only way in which Gladilads properly spawn - Disable at your own risk!)",
             "vardisplay": "Gladilad Squid Replacement",
@@ -1061,7 +1061,7 @@
             "numberField": 0.5,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Mobs Sometimes Spawn With Varying Speed",
+            "vardisplay": "Mobs Sometimes Spawn With Varying Speed Chance",
             "varname": "varyingspeed",
             "enablecomment": false,
             "onlyComment": false,
@@ -1081,6 +1081,42 @@
             "comment": "",
             "vardisplay": "Skeletons Switch Weapons Mid-Fight Chance",
             "varname": "skeletonswitchup",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.05,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Flies Spawn From Killed Zombies Chance",
+            "varname": "fliesfromzombies",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.16,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Pillagers Spawn with Reaver Chance",
+            "varname": "pillagerwithreaver",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"

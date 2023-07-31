@@ -63,6 +63,8 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> BURNINGUNDEADSPEEDUP;
 	public static final ForgeConfigSpec.ConfigValue<Double> VARYINGSPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> SKELETONSWITCHUP;
+	public static final ForgeConfigSpec.ConfigValue<Double> FLIESFROMZOMBIES;
+	public static final ForgeConfigSpec.ConfigValue<Double> PILLAGERWITHREAVER;
 	public static final ForgeConfigSpec.ConfigValue<Double> STRENGTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> RESISTANCE;
@@ -80,7 +82,7 @@ public class BetterConfigConfiguration {
 		BUILDER.push("naturalSpawningDepth");
 		PETRIMANSPAWNINGDEPTH = BUILDER.comment("The specified mob will only naturally spawn below the specified y-level. This is so certain mobs are cave-exclusive by default.").define("Petriman Spawning Depth", (double) 55);
 		SILVERKINGSPAWNINGDEPTH = BUILDER.define("Silverking Spawning Depth", (double) -10);
-		CRAWLERSPAWNINGDEPTH = BUILDER.define("Crawler Spawning Depth", (double) -10);
+		CRAWLERSPAWNINGDEPTH = BUILDER.define("Crawler Spawning Depth", (double) 65);
 		TROLLSPAWNINGDEPTH = BUILDER.define("Troll Spawning Depth", (double) -10);
 		VAMPIRESPAWNINGDEPTH = BUILDER.define("Vampire Spawning Depth", (double) -10);
 		INTRUDERSPAWNINGDEPTH = BUILDER.define("Intruder Spawning Depth", (double) 35);
@@ -99,7 +101,7 @@ public class BetterConfigConfiguration {
 		CHICKENROOSTERREPLACEMENT = BUILDER.define("Rooster Chicken Replacement", (double) 0.55);
 		SPIDERTARANTULAREPLACEMENT = BUILDER.define("Tarantula Spider Replacement", (double) 1);
 		SPIDERSCORPIONREPLACEMENT = BUILDER.define("Scorpion Spider Replacement", (double) 1);
-		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.05);
+		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.01);
 		ANGLERCOMMONFISHREPLACEMENT = BUILDER.define("Angler Common Fish Replacement", (double) 0.05);
 		HORDEZOMBIEREPLACEMENT = BUILDER.define("Random Enemy Expansion Zombie Replacement", (double) 0);
 		KELPIEANGLERREPLACEMENT = BUILDER.define("Kelpie Angler Replacement", (double) 0.05);
@@ -141,8 +143,10 @@ public class BetterConfigConfiguration {
 		PUNCHINGRAMDROPSWOOLCHANCE = BUILDER.define("Punching Ram Drops Wool Chance", (double) 0);
 		WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE = BUILDER.define("Wandering Trader becomes Illusioner on-death Chance", (double) 0.95);
 		BURNINGUNDEADSPEEDUP = BUILDER.define("Burning Undead mobs gain Speed III Chance", (double) 0.2);
-		VARYINGSPEED = BUILDER.define("Mobs Sometimes Spawn With Varying Speed", (double) 0.5);
+		VARYINGSPEED = BUILDER.define("Mobs Sometimes Spawn With Varying Speed Chance", (double) 0.5);
 		SKELETONSWITCHUP = BUILDER.define("Skeletons Switch Weapons Mid-Fight Chance", (double) 0.2);
+		FLIESFROMZOMBIES = BUILDER.define("Flies Spawn From Killed Zombies Chance", (double) 0.05);
+		PILLAGERWITHREAVER = BUILDER.define("Pillagers Spawn with Reaver Chance", (double) 0.16);
 		BUILDER.pop();
 		BUILDER.push("effectSpawning");
 		STRENGTH = BUILDER.define("Chance of Strength effect applied on mob-spawn", (double) 0.01);

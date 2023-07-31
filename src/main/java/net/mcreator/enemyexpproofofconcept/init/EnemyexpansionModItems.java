@@ -73,7 +73,7 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> SPECTRE_SPAWN_EGG = REGISTRY.register("spectre_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SPECTRE, -16777216, -14278357, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> GHOUL_SPAWN_EGG = REGISTRY.register("ghoul_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.GHOUL, -8564393, -6048317, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> GALLANT_SPAWN_EGG = REGISTRY.register("gallant_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.GALLANT, -10192776, -3332032, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> PROPELLER_SPAWN_EGG = REGISTRY.register("propeller_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PROPELLER, -7048125, -6052694, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> PROPELLER_SPAWN_EGG = REGISTRY.register("propeller_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PROPELLER, -3640234, -6052694, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> CINDER_SPAWN_EGG = REGISTRY.register("cinder_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.CINDER, -238848, -11132, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> GOBLIN_SPAWN_EGG = REGISTRY.register("goblin_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.GOBLIN, -12038042, -11433587, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BOUNCER_SPAWN_EGG = REGISTRY.register("bouncer_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BOUNCER, -10656906, -11433587, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
@@ -107,6 +107,11 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> BULL_SPAWN_EGG = REGISTRY.register("bull_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BULL, -14278628, -10461088, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> ROOSTER_SPAWN_EGG = REGISTRY.register("rooster_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ROOSTER, -156144, -16746667, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> RAM_SPAWN_EGG = REGISTRY.register("ram_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.RAM, -526345, -11123407, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ANGLER_SPAWN_EGG = REGISTRY.register("angler_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ANGLER, -12230306, -6708074, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> KELPIE_SPAWN_EGG = REGISTRY.register("kelpie_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.KELPIE, -11899790, -14259169, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> PIECRAB_SPAWN_EGG = REGISTRY.register("piecrab_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PIECRAB, -10140123, -7641023, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FLY_SPAWN_EGG = REGISTRY.register("fly_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.FLY, -12768729, -6718359, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BOTTLED_FLUTTERFLIES = REGISTRY.register("bottled_flutterflies", () -> new BottledFlutterfliesItem());
 	public static final RegistryObject<Item> PHEROMONE_PROJECTILE = REGISTRY.register("pheromone_projectile", () -> new PheromoneProjectileItem());
 	public static final RegistryObject<Item> HEALING_GOO_ITEM = REGISTRY.register("healing_goo_item", () -> new HealingGooItemItem());
 	public static final RegistryObject<Item> MEATHEAD_ARMOR_HELMET = REGISTRY.register("meathead_armor_helmet", () -> new MeatheadArmorItem.Helmet());
@@ -134,6 +139,8 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> HEALING_GOO_SOUP = REGISTRY.register("healing_goo_soup", () -> new HealingGooStewItem());
 	public static final RegistryObject<Item> SUSPICIOUS_SLICE = REGISTRY.register("suspicious_slice", () -> new SuspiciousSliceItem());
 	public static final RegistryObject<Item> PREPOSTEROUS_PORTION = REGISTRY.register("preposterous_portion", () -> new PreposterousPortionItem());
+	public static final RegistryObject<Item> CRAB_PIE = REGISTRY.register("crab_pie", () -> new CrabPieItem());
+	public static final RegistryObject<Item> COOKED_CRAB_PIE = REGISTRY.register("cooked_crab_pie", () -> new CookedCrabPieItem());
 	public static final RegistryObject<Item> HUNTSMAN_PUNCH = REGISTRY.register("huntsman_punch", () -> new HuntsmanPunchItem());
 	public static final RegistryObject<Item> ENEMY_MELEE_PROJECTILE = REGISTRY.register("enemy_melee_projectile", () -> new EnemyMeleeProjectileItem());
 	public static final RegistryObject<Item> WASP_STING_PROJECTILE = REGISTRY.register("wasp_sting_projectile", () -> new WaspStingProjectileItem());
@@ -152,10 +159,6 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> TROLL_INVINCIBLE = REGISTRY.register("troll_invincible", () -> new TrollInvincibleItem());
 	public static final RegistryObject<Item> TROLL_SPIT = REGISTRY.register("troll_spit", () -> new TrollSpitItem());
 	public static final RegistryObject<Item> GLADIUS_INK = REGISTRY.register("gladius_ink", () -> new GladiusInkItem());
-	public static final RegistryObject<Item> ANGLER_SPAWN_EGG = REGISTRY.register("angler_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ANGLER, -12230306, -6708074, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> KELPIE_SPAWN_EGG = REGISTRY.register("kelpie_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.KELPIE, -11899790, -14259169, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> PIECRAB_SPAWN_EGG = REGISTRY.register("piecrab_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.PIECRAB, -10140123, -7641023, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> CRAB_PIE = REGISTRY.register("crab_pie", () -> new CrabPieItem());
-	public static final RegistryObject<Item> COOKED_CRAB_PIE = REGISTRY.register("cooked_crab_pie", () -> new CookedCrabPieItem());
-	public static final RegistryObject<Item> BOTTLED_FLUTTERFLIES = REGISTRY.register("bottled_flutterflies", () -> new BottledFlutterfliesItem());
+	public static final RegistryObject<Item> DREADNOUGHT_SPAWN_EGG = REGISTRY.register("dreadnought_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.DREADNOUGHT, -16777216, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> REAVER_SPAWN_EGG = REGISTRY.register("reaver_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.REAVER, -13027015, -8939368, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

@@ -7,8 +7,11 @@
     "mobModelName": "Modelhuntsman",
     "mobModelTexture": "huntsman.png",
     "mobModelGlowTexture": "",
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "modelWidth": 0.7,
-    "modelHeight": 1.95,
+    "modelHeight": 2.25,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.5,
     "hasSpawnEgg": true,

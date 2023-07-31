@@ -18,7 +18,7 @@
     "mountedYOffset": 0.5,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -7048125,
+      "value": -3640234,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -76,7 +76,7 @@
     "immuneToFallDamage": true,
     "immuneToCactus": false,
     "immuneToDrowning": false,
-    "immuneToLightning": false,
+    "immuneToLightning": true,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
@@ -88,16 +88,22 @@
       "value": ""
     },
     "livingSound": {
-      "value": "block.wood.hit"
+      "value": "block.copper.place"
     },
     "hurtSound": {
-      "value": "entity.zombie.attack_door_wood"
+      "value": "ui.stonecutter.take_result"
     },
     "deathSound": {
-      "value": "entity.zombie.break_door_wood"
+      "value": "entity.item.break"
     },
     "stepSound": {
-      "value": "block.wood.step"
+      "value": "block.lantern.step"
+    },
+    "onStruckByLightning": {
+      "name": "PropellerStruckByLightning"
+    },
+    "onMobTickUpdate": {
+      "name": "PropellerTick"
     },
     "hasAI": true,
     "aiBase": "Skeleton",

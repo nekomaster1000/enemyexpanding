@@ -109,7 +109,7 @@ public class HuntsmanskeletonEntity extends Skeleton {
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		HuntsmanGetAwayProcedure.execute(this);
+		HuntsmanGetAwayProcedure.execute(this, sourceentity);
 	}
 
 	public static void init() {

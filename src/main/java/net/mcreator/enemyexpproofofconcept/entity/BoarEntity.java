@@ -23,10 +23,8 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.animal.Pig;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -121,8 +119,7 @@ public class BoarEntity extends Pig implements IAnimatable {
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(4, new FloatGoal(this));
 		this.goalSelector.addGoal(5, new AvoidEntityGoal<>(this, Zombie.class, (float) 8, 1, 1.2));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
 	@Override
