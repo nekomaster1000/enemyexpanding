@@ -149,6 +149,9 @@
     "height": 0.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
+    "spawningCondition": {
+      "name": "WolfsbaneSpawning"
+    },
     "spawningProbability": 10,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

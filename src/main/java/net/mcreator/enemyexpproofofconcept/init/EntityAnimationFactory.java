@@ -11,6 +11,7 @@ import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
 import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TarantulaEntity;
+import net.mcreator.enemyexpproofofconcept.entity.StarvedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SluggerEntity;
@@ -30,6 +31,7 @@ import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.OrbEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
+import net.mcreator.enemyexpproofofconcept.entity.MarauderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.IntruderEntity;
@@ -420,6 +422,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof ReaverEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof StarvedEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MarauderEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

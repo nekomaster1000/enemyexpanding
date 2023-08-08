@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:bull_skull_helmet"
+    },
+    "title": {
+      "translate": "advancements.enter_the_reaver.title"
+    },
+    "description": {
+      "translate": "advancements.enter_the_reaver.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_the_reaver": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

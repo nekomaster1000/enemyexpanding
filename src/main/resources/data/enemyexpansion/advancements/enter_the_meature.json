@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:meathead_armor_helmet"
+    },
+    "title": {
+      "translate": "advancements.enter_the_meature.title"
+    },
+    "description": {
+      "translate": "advancements.enter_the_meature.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_the_meature": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

@@ -161,4 +161,6 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> GLADIUS_INK = REGISTRY.register("gladius_ink", () -> new GladiusInkItem());
 	public static final RegistryObject<Item> DREADNOUGHT_SPAWN_EGG = REGISTRY.register("dreadnought_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.DREADNOUGHT, -16777216, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> REAVER_SPAWN_EGG = REGISTRY.register("reaver_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.REAVER, -13027015, -8939368, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> STARVED_SPAWN_EGG = REGISTRY.register("starved_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.STARVED, -5200239, -9413817, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> MARAUDER_SPAWN_EGG = REGISTRY.register("marauder_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.MARAUDER, -10792887, -7098707, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

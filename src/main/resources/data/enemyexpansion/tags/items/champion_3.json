@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+
+
+
+
+    "minecraft:raw_copper",
+    "minecraft:raw_gold",
+    "minecraft:raw_iron",
+    "minecraft:diamond",
+    "minecraft:ender_pearl",
+    
+    "minecraft:chorus_fruit",
+    "minecraft:ghast_tear",
+    "minecraft:enchanted_book",
+    "minecraft:experience_bottle",
+    "minecraft:trident",
+    "minecraft:ender_eye",
+    "minecraft:golden_apple",
+    
+    "enemyexpansion:cinder_scrap",
+    "minecraft:netherite_scrap",
+    "minecraft:enchanted_golden_apple"
+  ]
+}

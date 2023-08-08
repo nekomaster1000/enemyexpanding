@@ -19,6 +19,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.VampireRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.TrollRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.TrollInvincibleRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.TarantulaRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.StarvedRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SprinterRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SpectreRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SluggerRenderer;
@@ -38,6 +39,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.PetrimanRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.PetrifiedtrollRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.OrbRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.MeatureRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.MarauderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.LadybugRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.KelpieRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.InvisicreeperRenderer;
@@ -148,5 +150,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.DREADNOUGHT.get(), DreadnoughtRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ORB.get(), OrbRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.REAVER.get(), ReaverRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.STARVED.get(), StarvedRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.MARAUDER.get(), MarauderRenderer::new);
 	}
 }

@@ -7,12 +7,10 @@ import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfigurati
 
 public class TrollSpawningProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		boolean spawning = false;
+		boolean advancementCheck = false;
 		if (y < (double) BetterConfigConfiguration.TROLLSPAWNINGDEPTH.get() && world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) < 5) {
-			spawning = true;
-		} else {
-			spawning = false;
+			return true;
 		}
-		return spawning;
+		return false;
 	}
 }

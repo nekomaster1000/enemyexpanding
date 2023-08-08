@@ -13,6 +13,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
 
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
 import javax.annotation.Nullable;
@@ -51,6 +52,10 @@ public class EffectSpawnsProcedure {
 			if (Math.random() < (double) BetterConfigConfiguration.FIRERES.get()) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 50000, 0, (false), (true)));
+			}
+			if (Math.random() < (double) BetterConfigConfiguration.CHAMPION.get()) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.CHAMPION.get(), 50000, 0, (false), (true)));
 			}
 		}
 	}

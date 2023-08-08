@@ -4,70 +4,6 @@
   "definition": {
     "pools": [
       {
-        "category": "mobSpawning",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.13,
-            "textDefault": "",
-            "comment": "0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)",
-            "vardisplay": "Baby Zombie Spawning",
-            "varname": "babyzombiespawning",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          }
-        ]
-      },
-      {
-        "category": "mobHealth",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 2.0,
-            "textDefault": "",
-            "comment": "Allows you to set the amount of health mobs spawn with (if they're allowed to spawn at all.) I made it really low by default so as to make them less annoying to deal with if you do have to encounter them.",
-            "vardisplay": "Baby Zombie Health",
-            "varname": "babyzombiehealth",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 6.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Phantom Health",
-            "varname": "phantomhealth",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          }
-        ]
-      },
-      {
         "category": "naturalSpawningDepth",
         "entries": [
           {
@@ -230,7 +166,7 @@
             "logicField": 0,
             "numberField": 0.4,
             "textDefault": "",
-            "comment": "cinderblazereplacement",
+            "comment": "",
             "vardisplay": "Silverking Spider Replacement",
             "varname": "silverkingspiderreplacement",
             "enablecomment": false,
@@ -305,7 +241,7 @@
             "comment": "(This is the only way in which Cinders will ever spawn - Disable at your own risk!)",
             "vardisplay": "Cinder Blaze Replacement",
             "varname": "cinderblazereplacement",
-            "enablecomment": false,
+            "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
           },
@@ -431,7 +367,7 @@
             "comment": "(This is the only way in which Gladilads properly spawn - Disable at your own risk!)",
             "vardisplay": "Gladilad Squid Replacement",
             "varname": "gladiladsquidreplacement",
-            "enablecomment": false,
+            "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
           },
@@ -522,6 +458,42 @@
             "vardisplay": "Iron Golem Ravager Replacement",
             "varname": "irongolemravagerreplacement",
             "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "Ravagers are replaced with Marauders on spawn, but only if they spawn in water",
+            "vardisplay": "Ravager Marauder Replacement",
+            "varname": "ravagermarauderreplacement",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.05,
+            "textDefault": "",
+            "comment": "('Common Fish' being Cod and Salmon) (This is the only way in which Marauders properly spawn without Ravagers spawning in water - Disable at your own risk!)",
+            "vardisplay": "Marauder Common Fish Replacement",
+            "varname": "maraudercommonfishreplacement",
+            "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
           }
@@ -1120,6 +1092,78 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Mob spawning is controlled by whether their given advancement has been unlocked or not. This toggle is designed for modpack authors who want to fine-tune control when certain mobs are added to the enemy roster through either datapacks or FTBQuests. Mob spawning advancements are prefixed with 'Enter the ...'",
+            "vardisplay": "Advancement-Based Spawning",
+            "varname": "advancementbasedspawning",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.13,
+            "textDefault": "",
+            "comment": "0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)",
+            "vardisplay": "Baby Zombie Spawning",
+            "varname": "babyzombiespawning",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 2.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Baby Zombie Health Amount",
+            "varname": "babyzombiehealth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 6.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Phantom Health Amount",
+            "varname": "phantomhealth",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       },
@@ -1215,6 +1259,24 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Chance of a mob being a Champion upon spawning",
+            "varname": "champion",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       }

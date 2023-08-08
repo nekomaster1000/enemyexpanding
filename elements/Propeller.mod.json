@@ -340,6 +340,6 @@
         "value": "wooded_badlands_plateau"
       }
     ],
-    "spawnInDungeons": true
+    "spawnInDungeons": false
   }
 }

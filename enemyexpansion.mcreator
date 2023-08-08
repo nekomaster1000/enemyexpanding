@@ -26,7 +26,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "TarantulaEntityIsHurt",
@@ -141,7 +141,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "SprinterzombieEntityIsHurt",
@@ -169,7 +169,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "MeatheadArmorHelmetTickEvent",
@@ -260,7 +260,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "EatMeatball",
@@ -451,7 +451,7 @@
           "src/main/resources/data/enemyexpansion/advancements/meathead_obtained.json"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "PheroTimer",
@@ -629,7 +629,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "ScorpionSting",
@@ -677,7 +677,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Spawning"
     },
     {
       "name": "Zombievariants",
@@ -691,7 +691,7 @@
           "src/main/resources/data/enemyexpansion/tags/entity_types/zombievariants.json"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "EnemyMeleeProjectile",
@@ -792,7 +792,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "FrigidHurt",
@@ -828,7 +828,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "WaspStingProjectile",
@@ -908,7 +908,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "FrigidTouchProjectile",
@@ -924,7 +924,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/item/FrigidTouchProjectileItem.java"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "FrigidTouch",
@@ -944,7 +944,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "LadybugZombification",
@@ -2935,7 +2935,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "PetrimanHurt",
@@ -3466,7 +3466,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "TrollParticles",
@@ -3863,7 +3863,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/Transformers"
     },
     {
       "name": "Headbiter",
@@ -4138,7 +4138,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "HuntsmanPushback",
@@ -4247,7 +4247,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "SilverkingSpawning",
@@ -4280,7 +4280,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "CrawlerSpawning",
@@ -4313,7 +4313,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "TrollSpawning",
@@ -4346,7 +4346,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "VampireSpawning",
@@ -4379,7 +4379,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "EquestrianSpawning",
@@ -4412,40 +4412,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "WaspSpawning",
-      "type": "procedure",
-      "sortid": 234,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wasp_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/WaspSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "Spiderlatch",
@@ -4751,7 +4718,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "FlutterflyPlayerTouch",
@@ -4851,7 +4818,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "BullSkull",
@@ -5059,39 +5026,6 @@
       "path": "~/Items"
     },
     {
-      "name": "BullSpawning",
-      "type": "procedure",
-      "sortid": 253,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bull_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/BullSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "HatSpawns",
       "type": "procedure",
       "sortid": 254,
@@ -5125,7 +5059,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "ReplaceWithTarantula",
@@ -5161,7 +5095,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithScorpion",
@@ -5197,7 +5131,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithBoar",
@@ -5233,7 +5167,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithBull",
@@ -5269,7 +5203,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplacewithSilverking",
@@ -5305,7 +5239,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithTroll",
@@ -5341,7 +5275,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithVampire",
@@ -5377,7 +5311,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithCreeps",
@@ -5413,7 +5347,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithCinder",
@@ -5449,7 +5383,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithPetrimen",
@@ -5485,7 +5419,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "RamShearing",
@@ -5621,7 +5555,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithRooster",
@@ -5657,7 +5591,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "DespawnBabyZombies",
@@ -5681,7 +5615,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "NoBabyZombiesCall",
@@ -5705,7 +5639,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "HatSpawnsCall",
@@ -5741,7 +5675,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "Horsehead",
@@ -5859,7 +5793,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "SwiftFlightActive",
@@ -6010,7 +5944,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "PhantomHealthCall",
@@ -6030,7 +5964,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "PhantomHealth",
@@ -6050,7 +5984,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "BetterConfig",
@@ -6213,7 +6147,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "BurningSpeedUp",
@@ -6233,7 +6167,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "Banemask",
@@ -6389,60 +6323,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "IntruderSpawning",
-      "type": "procedure",
-      "sortid": 297,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "intruder_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/IntruderSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
-      "name": "GladiusSpawning",
-      "type": "procedure",
-      "sortid": 298,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gladius_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/GladiusSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "GladiusTransform",
@@ -6613,39 +6493,6 @@
       "path": "~/Monsters/Transformers"
     },
     {
-      "name": "GladiladSpawning",
-      "type": "procedure",
-      "sortid": 305,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gladilad_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/GladiladSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "ReplaceWithGladilad",
       "type": "procedure",
       "sortid": 306,
@@ -6679,7 +6526,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "Gladling",
@@ -6819,7 +6666,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/MeatureRenderer.java"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "Sprinter",
@@ -6836,7 +6683,7 @@
           "src/main/resources/assets/enemyexpansion/models/item/sprinter_spawn_egg.json"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "Slugger",
@@ -6853,7 +6700,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SluggerEntity.java"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "Senior",
@@ -6870,7 +6717,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SeniorRenderer.java"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "Equestrian",
@@ -6887,7 +6734,7 @@
           "src/main/resources/assets/enemyexpansion/models/item/equestrian_spawn_egg.json"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "Frigid",
@@ -6904,7 +6751,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/FrigidRenderer.java"
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "Propeller",
@@ -7590,7 +7437,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "RoosterFlap",
@@ -7676,7 +7523,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/SpecialSpawners"
     },
     {
       "name": "CockatriceHurt",
@@ -7829,7 +7676,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "MeatureTamedTexture",
@@ -7849,7 +7696,7 @@
           }
         ]
       },
-      "path": "~/Monsters"
+      "path": "~/Monsters/ZombieGuys"
     },
     {
       "name": "WaspPlayerHostility",
@@ -7948,7 +7795,7 @@
           }
         ]
       },
-      "path": "~/Monsters/Marine"
+      "path": "~/Spawning"
     },
     {
       "name": "AnglerHurt",
@@ -8020,7 +7867,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithHorde",
@@ -8056,7 +7903,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "AnglerTick",
@@ -8266,7 +8113,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "KelpieTick",
@@ -8441,7 +8288,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "ReplaceWithKelpie",
@@ -8477,7 +8324,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "Piecrab",
@@ -8704,7 +8551,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "ReplaceWithRavager",
@@ -8740,7 +8587,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/ReplaceWith"
     },
     {
       "name": "CasterHurt",
@@ -9011,7 +8858,7 @@
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "Dreadnought",
@@ -9141,39 +8988,6 @@
         ]
       },
       "path": "~/Monsters/UndergroundGuys"
-    },
-    {
-      "name": "DreadnoughSpawning",
-      "type": "procedure",
-      "sortid": 363,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dreadnough_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/DreadnoughSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
     },
     {
       "name": "DreadSpawn",
@@ -9377,27 +9191,6 @@
       "path": "~/Monsters"
     },
     {
-      "name": "MeatureSpawning",
-      "type": "procedure",
-      "sortid": 372,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "meature_spawning",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MeatureSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spawning"
-    },
-    {
       "name": "ReaverSpawn",
       "type": "procedure",
       "sortid": 373,
@@ -9472,10 +9265,26 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Spawning"
+      "path": "~/Spawning/MiscConfig"
     },
     {
       "name": "PropellerTick",
@@ -9532,6 +9341,1091 @@
         ]
       },
       "path": "~/Monsters"
+    },
+    {
+      "name": "SpecialLoot",
+      "type": "procedure",
+      "sortid": 378,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_loot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/SpecialLootProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Champions"
+    },
+    {
+      "name": "Champion",
+      "type": "potioneffect",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "champion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/potion/ChampionMobEffect.java"
+        ]
+      },
+      "path": "~/Champions"
+    },
+    {
+      "name": "ChampionActive",
+      "type": "procedure",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "champion_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ChampionActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Champions"
+    },
+    {
+      "name": "ChampionPotion",
+      "type": "potion",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "champion_potion",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Champions"
+    },
+    {
+      "name": "ChampionAbsorption",
+      "type": "procedure",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "champion_absorption",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ChampionAbsorptionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Champions"
+    },
+    {
+      "name": "MeatureIdleDespawn",
+      "type": "procedure",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_idle_despawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MeatureIdleDespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/ZombieGuys"
+    },
+    {
+      "name": "EnemyExpansionAdvancements",
+      "type": "achievement",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_expansion_advancements",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enemy_expansion_advancements.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheEquestrian",
+      "type": "achievement",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_equestrian",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_equestrian.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSprinter",
+      "type": "achievement",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_sprinter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_sprinter.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "ChampionSpawns",
+      "type": "procedure",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "champion_spawns",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ChampionSpawnsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Champions"
+    },
+    {
+      "name": "EnterTheSlugger",
+      "type": "achievement",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_slugger",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_slugger.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSenior",
+      "type": "achievement",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_senior",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_senior.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheFrigid",
+      "type": "achievement",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_frigid",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_frigid.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheMeature",
+      "type": "achievement",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_meature",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_meature.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheZombie",
+      "type": "achievement",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_zombie",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_zombie.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheHusk",
+      "type": "achievement",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_husk",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_husk.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheDrowned",
+      "type": "achievement",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_drowned",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_drowned.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSkeleton",
+      "type": "achievement",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_skeleton",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_skeleton.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheHuntsman",
+      "type": "achievement",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_huntsman",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_huntsman.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSpider",
+      "type": "achievement",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_spider",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_spider.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheTarantula",
+      "type": "achievement",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_tarantula",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_tarantula.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheScorpion",
+      "type": "achievement",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_scorpion",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_scorpion.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheWasp",
+      "type": "achievement",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_wasp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_wasp.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheFlutterfly",
+      "type": "achievement",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_flutterfly",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_flutterfly.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheEnderman",
+      "type": "achievement",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_enderman",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_enderman.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheTroll",
+      "type": "achievement",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_troll",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_troll.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheVampire",
+      "type": "achievement",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_vampire",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_vampire.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterThePetrimen",
+      "type": "achievement",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_petrimen",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_petrimen.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheCreeper",
+      "type": "achievement",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_creeper",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_creeper.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheCrawler",
+      "type": "achievement",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_crawler",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_crawler.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheIntruder",
+      "type": "achievement",
+      "sortid": 409,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_intruder",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_intruder.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheCockatrice",
+      "type": "achievement",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_cockatrice",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_cockatrice.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSlime",
+      "type": "achievement",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_slime",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_slime.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheGoblins",
+      "type": "achievement",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_goblins",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_goblins.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheGallant",
+      "type": "achievement",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_gallant",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_gallant.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheGhoul",
+      "type": "achievement",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_ghoul",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_ghoul.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSpectre",
+      "type": "achievement",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_spectre",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_spectre.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterThePropeller",
+      "type": "achievement",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_propeller",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_propeller.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheWolfsbane",
+      "type": "achievement",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_wolfsbane",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_wolfsbane.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheGladius",
+      "type": "achievement",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_gladius",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_gladius.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheAngler",
+      "type": "achievement",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_angler",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_angler.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheDreadnought",
+      "type": "achievement",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_dreadnought",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_dreadnought.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheReaver",
+      "type": "achievement",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_reaver",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_reaver.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheSilverking",
+      "type": "achievement",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_silverking",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_silverking.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheZadybug",
+      "type": "achievement",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_zadybug",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_zadybug.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheFly",
+      "type": "achievement",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_fly",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_fly.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterThePiecrab",
+      "type": "achievement",
+      "sortid": 449,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_piecrab",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_piecrab.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheKelpie",
+      "type": "achievement",
+      "sortid": 452,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_kelpie",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_kelpie.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "EnterTheWitch",
+      "type": "achievement",
+      "sortid": 455,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_witch",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_witch.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "Starved",
+      "type": "animatedentity",
+      "sortid": 458,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/starved_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/StarvedEntity.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/StarvedRenderer.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/StarvedModel.java"
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "EnterTheStarved",
+      "type": "achievement",
+      "sortid": 457,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_the_starved",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enter_the_starved.json"
+        ]
+      },
+      "path": "~/Spawning/AdvancementActivation"
+    },
+    {
+      "name": "StarvedGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/world/inventory/StarvedGUIMenu.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/gui/StarvedGUIScreen.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/network/StarvedGUISlotMessage.java"
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "OpenStarvedGUI",
+      "type": "procedure",
+      "sortid": 460,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_starved_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/OpenStarvedGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "StarvedHostility",
+      "type": "procedure",
+      "sortid": 461,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_hostility",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/StarvedHostilityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "StarvedHurt",
+      "type": "procedure",
+      "sortid": 463,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/StarvedHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "StarvedStolenFrom",
+      "type": "procedure",
+      "sortid": 464,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_stolen_from",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/StarvedStolenFromProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "StarvedSpawn",
+      "type": "procedure",
+      "sortid": 465,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/StarvedSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "Marauder",
+      "type": "animatedentity",
+      "sortid": 466,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marauder",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/marauder_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/MarauderRenderer.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/MarauderModel.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/MarauderEntity.java"
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "ReplaceWithMarauder",
+      "type": "procedure",
+      "sortid": 467,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_marauder",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ReplaceWithMarauderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning/ReplaceWith"
+    },
+    {
+      "name": "MarauderKnockedback",
+      "type": "procedure",
+      "sortid": 468,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marauder_knockedback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MarauderKnockedbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "PetrimanSpawn",
+      "type": "procedure",
+      "sortid": 469,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petriman_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/PetrimanSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MeatureSpawning",
+      "type": "procedure",
+      "sortid": 470,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MeatureSpawningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning/SpecialSpawners"
     }
   ],
   "variable_elements": [
@@ -9646,234 +10540,384 @@
       ],
       "category": "hostile",
       "subtitle": "Kelpie calls for help"
+    },
+    {
+      "name": "dreadnought.idle",
+      "files": [
+        "dreadnought_idle"
+      ],
+      "category": "hostile",
+      "subtitle": "Dreadnought growls"
+    },
+    {
+      "name": "dreadnought.hurt",
+      "files": [
+        "dreadnought_hurt_1",
+        "dreadnought_hurt_2"
+      ],
+      "category": "hostile",
+      "subtitle": "Dreadnought groans"
+    },
+    {
+      "name": "dreadnought.death",
+      "files": [
+        "dreadnought_death"
+      ],
+      "category": "hostile",
+      "subtitle": "Dreadnought dies"
+    },
+    {
+      "name": "starved.chomp",
+      "files": [
+        "starved_chomp"
+      ],
+      "category": "hostile",
+      "subtitle": "Starved chomps"
     }
   ],
   "language_map": {
     "en_us": {
       "item.enemyexpansion.dreadnought_spawn_egg": "Dreadnought Spawn Egg",
-      "entity.enemyexpansion.errant": "Goblin Errant",
+      "advancements.enter_the_intruder.descr": "Back off!!",
       "entity.enemyexpansion.scorpion": "Scorpion",
-      "item.enemyexpansion.ghoul_spawn_egg": "Ghoul Spawn Egg",
-      "gamerule.vampire_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "advancements.enter_the_zombie.descr": "The undead rise!",
       "death.attack.dread.player": "%1$s couldn\u0027t escape the dread",
-      "item.enemyexpansion.gladling_boots": "",
+      "advancements.enemy_expansion_advancements.descr": "This fight just got a whole lot bigger...",
       "gamerule.crawler_replacement_rule": "intruderReplacementRule",
       "entity.enemyexpansion.fly": "Fly",
-      "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
+      "advancements.enter_the_ghoul.title": "Enter The Ghoul",
+      "advancements.enter_the_wolfsbane.title": "Enter The Wolfsbane",
+      "item.minecraft.tipped_arrow.effect.champion_potion": "Arrow of Championship",
+      "subtitles.dreadnought.idle": "Dreadnought growls",
       "subtitles.bane.idle": "Wolfsbane snorts",
-      "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
-      "item.enemyexpansion.ram_spawn_egg": "Ram Spawn Egg",
-      "subtitles.kelpie_idle": "Kelpie whistles",
-      "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
-      "entity.enemyexpansion.spectre": "Spectre",
-      "item.enemyexpansion.cinder_helm_chestplate": "",
       "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
+      "entity.enemyexpansion.spectre": "Spectre",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
-      "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
-      "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
-      "item.enemyexpansion.spectral_boots": "",
+      "advancements.enter_the_gladius.title": "Enter The Gladius",
       "item.enemyexpansion.silverhat_helmet": "Silverhat",
       "entity.enemyexpansion.caster": "Goblin Caster",
-      "subtitles.wolfsbane.attack": "Wolfsbane roars",
+      "advancements.enter_the_starved.descr": "IT BITES!!",
       "item.enemyexpansion.petrifiedtroll_spawn_egg": "Petrified Troll Spawn Egg",
+      "advancements.enter_the_frigid.descr": "Shiver down my backbone~!",
       "item.enemyexpansion.crawler_explosive": "Crawler Explosion",
-      "entity.enemyexpansion.zadybug": "Zadybug",
-      "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
-      "item.enemyexpansion.gallant_swings": "Gallant Swings",
-      "item.enemyexpansion.cast_spell": "Caster Spell",
-      "item.enemyexpansion.flutterfliers_boots": "",
-      "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
+      "advancements.enter_the_skeleton.descr": "Look out, they\u0027ve got bows!",
       "item.minecraft.potion.effect.groundbound_potion": "Potion of Groundbinding",
       "item.enemyexpansion.suspicious_slice": "Suspicious Slice",
       "gamerule.silverking_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "subtitles.bane.hurt": "Wolfsbane growls",
-      "item.enemyexpansion.orb_spawn_egg": "Orb Spawn Egg",
       "gamerule.petriman_spawn_above_ground": "petrimanReplacementRule",
       "item.enemyexpansion.frigid_spawn_egg": "Frigid Spawn Egg",
-      "effect.enemyexpansion.ground_bound": "Groundbound",
       "item.enemyexpansion.brutish_leggings": "",
-      "entity.enemyexpansion.cakerover": "Goblin Cake Rover",
       "item.enemyexpansion.silverhat_chestplate": "",
-      "entity.enemyexpansion.cinder": "Cinder",
+      "advancements.enter_the_vampire.descr": "Burn them up!",
       "subtitles.troll.idle.1": "Troll growls",
       "item.enemyexpansion.angler_spawn_egg": "Angler Spawn Egg",
+      "advancements.enter_the_enderman.title": "Enter The Enderman",
       "item.enemyexpansion.healing_goo_item": "Healing Goo",
       "entity.enemyexpansion.projectile_cinder_fire_charge": "Cinder\u0027s fireball",
       "item.enemyexpansion.trollface_leggings": "Phantasm Leggings",
       "entity.enemyexpansion.gallant": "Gallant",
       "item.enemyexpansion.biter_spawn_egg": "Biter Spawn Egg",
       "item.enemyexpansion.banemask_boots": "",
-      "item.enemyexpansion.gladling_chestplate": "",
-      "entity.enemyexpansion.pheromone_summon": "Wasp Drone",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
-      "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
+      "advancements.enter_the_slugger.title": "Enter The Slugger",
       "entity.enemyexpansion.sprinter": "Sprinter",
       "gamerule.blazes_do_cinder_jump": "cindersoccasionallyreplaceblazes",
-      "entity.enemyexpansion.crawler": "Crawler",
+      "advancements.enter_the_dreadnought.descr": "Dark, darker, yet darker...",
       "entity.enemyexpansion.kelpie": "Kelpie",
       "subtitles.kelpie.reinforcement": "Kelpie calls for help",
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
       "item.enemyexpansion.slugvest_leggings": "-",
-      "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "advancements.enter_the_crawler.title": "Enter The Crawler",
       "entity.enemyexpansion.baker": "Goblin Baker",
-      "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
-      "entity.enemyexpansion.boar": "Boar",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
       "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
-      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
       "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
-      "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
-      "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
       "advancements.precision_strike.descr": "Shoot a Propeller out of the air with an arrow",
-      "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "Wasp Drone Spawn Egg",
-      "item.enemyexpansion.slimehead_boots": "",
-      "entity.enemyexpansion.rooster": "Rooster",
-      "item.enemyexpansion.cooked_crab_pie": "Crab Pie",
       "item.enemyexpansion.trollface_boots": "Phantasm Boots",
       "entity.enemyexpansion.frigid": "Frigid",
-      "death.attack.spectre": "%1$s was swallowed by the Spectre\u0027s grasp",
       "item.enemyexpansion.frigid_touch_projectile": "Frigid Touch",
-      "item.enemyexpansion.invisicreeper_spawn_egg": "Invisicreeper Spawn Egg",
-      "item.enemyexpansion.ghoul_spit": "Spit",
-      "entity.enemyexpansion.banedasher": "Wolfsbane",
+      "advancements.enter_the_zadybug.descr": "They\u0027re infected! Put \u0027em down!",
       "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
-      "entity.enemyexpansion.tarantula": "Tarantula",
-      "item.enemyexpansion.slugvest_chestplate": "Slugvest",
+      "advancements.enter_the_slime.descr": "Oooh, squishy!",
       "item.enemyexpansion.trollface_chestplate": "",
       "entity.enemyexpansion.cockatrice": "Cockatrice",
+      "advancements.enter_the_wasp.title": "Enter The Wasp",
       "item.enemyexpansion.pheromone_projectile": "Wasp Pheromone",
-      "entity.enemyexpansion.orb": "Orb",
-      "entity.enemyexpansion.projectile_slimeball_throw": "a stray Slimeball",
       "item.enemyexpansion.mini_wither_helmet": "Mini-Wither",
-      "entity.enemyexpansion.senior": "Senior",
-      "gamerule.petriman_dont_spawn_above_ground": "petrimanReplacementRule",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
       "item.enemyexpansion.banemask_helmet": "Banemask",
+      "item.enemyexpansion.marauder_spawn_egg": "Marauder Spawn Egg",
       "item.enemyexpansion.healing_goo": "Healing Goo",
       "item.enemyexpansion.silverhat_leggings": "",
       "entity.enemyexpansion.troll": "Troll",
-      "entity.enemyexpansion.vampire": "Vampire",
-      "item.enemyexpansion.huntsman_punch": "Huntsman Punch",
       "item.enemyexpansion.gladilad_spawn_egg": "Gladilad Spawn Egg",
+      "advancements.enter_the_fly.title": "Enter The Fly",
       "item.enemyexpansion.horsehead_helmet": "Horsehead",
-      "gamerule.intruder_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
-      "entity.enemyexpansion.projectile_gallant_swings": "Gallant\u0027s blade",
-      "entity.enemyexpansion.flutterfly": "Flutterfly",
-      "entity.enemyexpansion.projectile_ghoul_spit": "ghoulish spit",
-      "item.enemyexpansion.mini_wither_boots": "",
+      "advancements.enter_the_petrimen.descr": "ROCK hard men!",
       "entity.enemyexpansion.goblin": "Goblin Thief",
       "gamerule.blazes_do_cinder_jump.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
       "gamerule.silverking_dont_spawn_above_ground_rule": "petrimanDontSpawnAboveGroundRule",
-      "item.enemyexpansion.bull_skull_boots": "",
-      "entity.enemyexpansion.projectile_scorpion_sting_projectile": "Scorpion\u0027s sting",
+      "advancements.enter_the_senior.title": "Enter The Senior",
       "entity.enemyexpansion.angler": "Angler",
-      "advancements.vampire_slayer.descr": "Slay a Vampire before it turns into a Biter",
+      "subtitles.starved.chomp": "Starved chomps",
+      "item.minecraft.lingering_potion.effect.champion_potion": "Lingering Potion of Championship",
       "gamerule.cinder_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
       "item.enemyexpansion.flutterfliers_helmet": "",
-      "item.enemyexpansion.troll_spit": "Spit",
-      "entity.enemyexpansion.ladybug": "Ladybug",
-      "entity.enemyexpansion.projectile_ghoul_slash": "Ghoul slash",
       "gamerule.cinder_replacement_rule": "increaseddripstonetarantulas",
-      "subtitles.silentstep": "",
       "item.enemyexpansion.spectral_helmet": "Spectral Hood",
       "entity.enemyexpansion.gladilad": "Gladilad",
-      "entity.enemyexpansion.projectile_wasp_sting_projectile": "Wasp\u0027s sting",
       "entity.enemyexpansion.dreadnought": "Dreadnought",
       "item.enemyexpansion.piecrab_spawn_egg": "Piecrab Spawn Egg",
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
       "item.enemyexpansion.bull_skull_chestplate": "",
-      "item.enemyexpansion.mini_wither_chestplate": "",
       "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
-      "item.enemyexpansion.cockatrice_spawn_egg": "Cockatrice Spawn Egg",
       "item.enemyexpansion.bull_spawn_egg": "Bull Spawn Egg",
-      "gamerule.petriman_replacement_rule": "cindersoccasionallyreplaceblazes",
-      "entity.enemyexpansion.silverking": "Silverking",
-      "entity.enemyexpansion.projectile_enemy_melee_projectile": "enemy attack",
       "item.enemyexpansion.cinder_helm_boots": "",
-      "effect.enemyexpansion.superhealing": "Superhealing",
-      "entity.enemyexpansion.meature": "Meature",
       "item.enemyexpansion.caster_spawn_egg": "Goblin Caster Spawn Egg",
       "entity.enemyexpansion.tarantulam": "Tarantula",
-      "gamerule.petriman_random_rule.description": "Petrimen will replace Zombies that spawn in caves.",
-      "item.enemyexpansion.banedasher_spawn_egg": "Wolfsbane Spawn Egg",
-      "item.enemyexpansion.fly_spawn_egg": "Fly Spawn Egg",
-      "entity.enemyexpansion.ramsheared": "Ramsheared",
+      "advancements.enter_the_zadybug.title": "Enter The Zadybug",
       "item.enemyexpansion.bull_skull_leggings": "",
+      "advancements.enter_the_petrimen.title": "Enter The Petrimen",
       "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
-      "subtitles.wolfsbane.hurt": "Wolfbane barks",
       "item.enemyexpansion.cinder_helm_leggings": "",
-      "entity.enemyexpansion.wasp": "Wasp",
-      "item.enemyexpansion.headbiter_helmet": "Headbiter",
-      "item.enemyexpansion.brutish_boots": "",
       "death.attack.dread": "%1$s was consumed by dread",
       "item.enemyexpansion.slimehead_helmet": "Slimehead",
       "entity.enemyexpansion.petriman": "Petriman",
-      "advancements.meathead_obtained.title": "Nice to Meature",
-      "entity.enemyexpansion.huntsmanskeleton": "Huntsman Skeleton",
+      "advancements.enter_the_spider.descr": "Creepy Crawlies!",
       "item.enemyexpansion.phantasm_chestplate": "Phantasm Cape",
-      "item.enemyexpansion.cinder_helm_helmet": "Cinder Crown",
       "item.enemyexpansion.cakerover_spawn_egg": "Goblin Cake Rover Spawn Egg",
+      "advancements.enter_the_slime.title": "Enter The Slime",
       "advancements.on_my_wasp_biz.title": "\"I\u0027m on my Wasp Bizz\"",
       "gamerule.no_baby_zombies": "cindersoccasionallyreplaceblazes",
       "item.enemyexpansion.slugvest_helmet": "-",
-      "gamerule.silverking_replacement_rule": "petrimanReplacementRule",
       "item.minecraft.splash_potion.effect.groundbound_potion": "Splash Potion of Groundbinding",
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
       "entity.enemyexpansion.ghoul": "Ghoul",
-      "item.enemyexpansion.flutterfliers_chestplate": "Flutterfliers",
-      "item.enemyexpansion.crab_pie": "Crab Pie",
       "subtitles.troll.roar": "Troll roars",
       "item.enemyexpansion.kelpie_spawn_egg": "Kelpie Spawn Egg",
-      "entity.enemyexpansion.wolfsbane": "Wolfsbane",
+      "advancements.enter_the_witch.title": "Enter The Witch",
+      "advancements.enter_the_huntsman.title": "Enter The Huntsman",
       "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
-      "item.enemyexpansion.slugvest_boots": "-",
+      "advancements.enter_the_drowned.descr": "They\u0027re sopping wet!",
       "item.enemyexpansion.headbiter_chestplate": "Phantasm Cape",
-      "item.enemyexpansion.mini_wither_leggings": "",
-      "item.enemyexpansion.petriman_spawn_egg": "Petriman Spawn Egg",
-      "item.enemyexpansion.meathead_armor_chestplate": "Meathead Chestplate",
+      "advancements.enter_the_reaver.title": "Enter The Reaver",
+      "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
       "entity.enemyexpansion.biter": "Biter",
-      "item.enemyexpansion.ramsheared_spawn_egg": "Ramsheared Spawn Egg",
       "item.enemyexpansion.bull_skull_helmet": "Bull Skull",
-      "item.enemyexpansion.propeller_spawn_egg": "Propeller Spawn Egg",
-      "item.enemyexpansion.horsehead_leggings": "",
+      "entity.enemyexpansion.starved": "Starved",
       "advancements.bro_think_he_carti.descr": "Wear a Headbiter",
       "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
-      "item.enemyexpansion.gladling_leggings": "",
       "item.enemyexpansion.sprintshorts_chestplate": "-",
-      "entity.enemyexpansion.equestrian": "Equestrian",
       "item.enemyexpansion.intruder_spawn_egg": "Intruder Spawn Egg",
-      "item.enemyexpansion.killstick": "Killstick",
-      "subtitles.wolfsbane.idle": "Wolfsbane growls",
-      "item.enemyexpansion.wasp_sting_projectile": "Wasp Sting",
       "entity.enemyexpansion.projectile_huntsman_punch": "Huntsman\u0027s punch",
       "item.enemyexpansion.headbiter_leggings": "Phantasm Leggings",
-      "item.enemyexpansion.spiderlatch_leggings": "Phantasm Leggings",
       "item.enemyexpansion.flutterfly_spawn_egg": "Flutterfly Spawn Egg",
-      "item.enemyexpansion.meature_meatball": "Meature Meatball",
       "item.minecraft.tipped_arrow.effect.groundbound_potion": "Arrow of Groundbinding",
       "entity.enemyexpansion.piecrab": "Piecrab",
       "entity.enemyexpansion.bouncer": "Goblin Bouncer",
-      "item.enemyexpansion.horsehead_chestplate": "",
-      "item.enemyexpansion.trollface_helmet": "Trollface",
+      "item.minecraft.splash_potion.effect.champion_potion": "Splash Potion of Championship",
       "item.enemyexpansion.ghoul_slash": "Slash",
       "item.enemyexpansion.wolfsbane_spawn_egg": "Wolfsbane Spawn Egg",
-      "entity.enemyexpansion.projectile_frigid_touch_projectile": "a frigid touch",
-      "item.enemyexpansion.spiderlatch_chestplate": "Phantasm Cape",
+      "advancements.enter_the_scorpion.descr": "Look for the eyes!",
       "item.enemyexpansion.healing_goo_soup": "Healing Goo Stew",
-      "item.enemyexpansion.zobgoblin_spawn_egg": "Zobgoblin Spawn Egg",
       "item.enemyexpansion.banemask_leggings": "",
-      "item.enemyexpansion.spectral_leggings": "",
       "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
+      "advancements.enter_the_wasp.descr": "Don\u0027t get stung!",
+      "advancements.enter_the_flutterfly.descr": "They\u0027re so beautiful...",
       "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
-      "item.enemyexpansion.rooster_spawn_egg": "Rooster Spawn Egg",
-      "item.enemyexpansion.gladius_spawn_egg": "Gladius Spawn Egg",
       "item.enemyexpansion.preposterous_portion": "Preposterous Portion",
       "item.enemyexpansion.senior_spawn_egg": "Senior Spawn Egg",
       "item.enemyexpansion.slimehead_leggings": "",
       "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
       "gamerule.no_baby_zombies.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
+      "advancements.enter_the_piecrab.descr": "Mm, yummy pilot!",
+      "gamerule.crawler_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
+      "entity.enemyexpansion.slugger": "Slugger",
+      "item.enemyexpansion.troll_invincible": "Troll Invincibility",
+      "item.enemyexpansion.flutterfliers_leggings": "",
+      "advancements.enter_the_tarantula.descr": "Oh god, they\u0027re fast!",
+      "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
+      "item.enemyexpansion.horsehead_boots": "",
+      "item.enemyexpansion.silverhat_boots": "",
+      "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
+      "advancements.enter_the_cockatrice.descr": "Fly away, foul fowl!",
+      "advancements.on_my_wasp_biz.descr": "Summon a Wasp Drone",
+      "entity.enemyexpansion.intruder": "Intruder",
+      "entity.enemyexpansion.gladius": "Gladius",
+      "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
+      "advancements.enter_the_slugger.descr": "Fists up!",
+      "advancements.enter_the_crawler.descr": "Look out above you!",
+      "entity.enemyexpansion.bull": "Bull",
+      "item.enemyexpansion.cinder_scrap": "Cinder Scrap",
+      "item.minecraft.potion.effect.champion_potion": "Potion of Championship",
+      "entity.enemyexpansion.zobgoblin": "Zobgoblin",
+      "config.enemyexpansion.better_config": "enemyexpansion",
+      "entity.enemyexpansion.marauder": "Marauder",
+      "entity.enemyexpansion.reaver": "Reaver",
+      "gamerule.petriman_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
+      "advancements.bro_think_he_carti.title": "Bro Think He Carti",
+      "entity.enemyexpansion.rancher": "Goblin Rancher",
+      "advancements.enter_the_angler.descr": "Oooh, glowy!",
+      "item.enemyexpansion.bottled_flutterflies": "Bottled Flutterflies",
+      "item.enemyexpansion.silverpet_spawn_egg": "Silverpet Spawn Egg",
+      "advancements.enter_the_silverking.title": "Enter The Silverking",
+      "advancements.enter_the_troll.title": "Enter The Troll",
+      "advancements.vampire_slayer.title": "Vampire Slayer",
+      "entity.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "gamerule.intruder_replacement_rule": "petrimanReplacementRule",
+      "advancements.enter_the_scorpion.title": "Enter The Scorpion",
+      "advancements.enter_the_fly.descr": "I watched you change...",
+      "gamerule.petriman_dont_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
+      "item.enemyexpansion.cinder_fire_charge": "Cinder Fire Charge",
+      "advancements.enter_the_witch.descr": "Don\u0027t breath in those potions!",
+      "item.enemyexpansion.huntsmanskeleton_spawn_egg": "Huntsman Skeleton Spawn Egg",
+      "entity.enemyexpansion.propeller": "Propeller",
+      "entity.enemyexpansion.petrifiedtroll": "Petrified Troll",
+      "advancements.enter_the_skeleton.title": "Enter The Skeleton",
+      "item.enemyexpansion.spectral_chestplate": "Spectral Cloak",
+      "advancements.precision_strike.title": "Precision Strike",
+      "item.minecraft.lingering_potion.effect.groundbound_potion": "Lingering Potion of Groundbinding",
+      "advancements.enter_the_drowned.title": "Enter The Drowned",
+      "entity.enemyexpansion.errant": "Goblin Errant",
+      "item.enemyexpansion.ghoul_spawn_egg": "Ghoul Spawn Egg",
+      "gamerule.vampire_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
+      "item.enemyexpansion.gladling_boots": "",
+      "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
+      "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
+      "advancements.enter_the_gallant.title": "Enter The Gallant",
+      "item.enemyexpansion.ram_spawn_egg": "Ram Spawn Egg",
+      "advancements.enter_the_cockatrice.title": "Enter The Cockatrice",
+      "subtitles.kelpie_idle": "Kelpie whistles",
+      "entity.enemyexpansion.projectile_cinder_slice": "Cinder\u0027s shields",
+      "item.enemyexpansion.headbiter_boots": "Phantasm Boots",
+      "item.enemyexpansion.spectral_boots": "",
+      "item.enemyexpansion.gallant_spawn_egg": "Gallant Spawn Egg",
+      "subtitles.wolfsbane.attack": "Wolfsbane roars",
+      "advancements.enter_the_piecrab.title": "Enter The Piecrab",
+      "entity.enemyexpansion.zadybug": "Zadybug",
+      "advancements.enter_the_spectre.descr": "Ooo, REAL scary!",
+      "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
+      "advancements.enter_the_propeller.descr": "Fly away now!",
+      "item.enemyexpansion.cast_spell": "Caster Spell",
+      "item.enemyexpansion.gallant_swings": "Gallant Swings",
+      "item.enemyexpansion.flutterfliers_boots": "",
+      "advancements.enter_the_vampire.title": "Enter The Vampire",
+      "advancements.enter_the_troll.descr": "Problem?",
+      "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
+      "item.enemyexpansion.orb_spawn_egg": "Orb Spawn Egg",
+      "effect.enemyexpansion.ground_bound": "Groundbound",
+      "entity.enemyexpansion.cakerover": "Goblin Cake Rover",
+      "entity.enemyexpansion.cinder": "Cinder",
+      "advancements.enter_the_creeper.descr": "Look out behind you!",
+      "item.enemyexpansion.gladling_chestplate": "",
+      "entity.enemyexpansion.pheromone_summon": "Wasp Drone",
+      "item.enemyexpansion.meathead_armor_leggings": "Meathead Leggings",
+      "entity.enemyexpansion.crawler": "Crawler",
+      "item.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
+      "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
+      "entity.enemyexpansion.boar": "Boar",
+      "gamerule.troll_replacement_rule.description": "Silverking will replace Spiders that spawn in Deepslate caves.",
+      "item.enemyexpansion.slimeball_throw": "Rancher Slimeball",
+      "item.enemyexpansion.spiderlatch_helmet": "Spiderlatch",
+      "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
+      "item.enemyexpansion.slimehead_boots": "",
+      "entity.enemyexpansion.rooster": "Rooster",
+      "item.enemyexpansion.cooked_crab_pie": "Crab Pie",
+      "death.attack.spectre": "%1$s was swallowed by the Spectre\u0027s grasp",
+      "item.enemyexpansion.invisicreeper_spawn_egg": "Invisicreeper Spawn Egg",
+      "advancements.enemy_expansion_advancements.title": "Enemy Expansion",
+      "item.enemyexpansion.ghoul_spit": "Spit",
+      "entity.enemyexpansion.banedasher": "Wolfsbane",
+      "entity.enemyexpansion.tarantula": "Tarantula",
+      "item.enemyexpansion.slugvest_chestplate": "Slugvest",
+      "entity.enemyexpansion.orb": "Orb",
+      "entity.enemyexpansion.projectile_slimeball_throw": "a stray Slimeball",
+      "entity.enemyexpansion.senior": "Senior",
+      "gamerule.petriman_dont_spawn_above_ground": "petrimanReplacementRule",
+      "advancements.enter_the_meature.title": "Enter The Meature",
+      "advancements.enter_the_enderman.descr": "What\u0027s Up?",
+      "advancements.enter_the_intruder.title": "Enter The Intruder",
+      "entity.enemyexpansion.vampire": "Vampire",
+      "advancements.enter_the_silverking.descr": "They\u0027re multiplying! Ahh!",
+      "item.enemyexpansion.huntsman_punch": "Huntsman Punch",
+      "gamerule.intruder_replacement_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "entity.enemyexpansion.projectile_gallant_swings": "Gallant\u0027s blade",
+      "entity.enemyexpansion.flutterfly": "Flutterfly",
+      "advancements.enter_the_angler.title": "Enter The Angler",
+      "advancements.enter_the_kelpie.descr": "Is it a horse? Is it a squid? No, it\u0027s...!",
+      "entity.enemyexpansion.projectile_ghoul_spit": "ghoulish spit",
+      "item.enemyexpansion.mini_wither_boots": "",
+      "item.enemyexpansion.bull_skull_boots": "",
+      "entity.enemyexpansion.projectile_scorpion_sting_projectile": "Scorpion\u0027s sting",
+      "advancements.vampire_slayer.descr": "Slay a Vampire before it turns into a Biter",
+      "item.enemyexpansion.troll_spit": "Spit",
+      "entity.enemyexpansion.ladybug": "Ladybug",
+      "advancements.enter_the_husk.descr": "Are you my mummy?",
+      "entity.enemyexpansion.projectile_ghoul_slash": "Ghoul slash",
+      "subtitles.silentstep": "",
+      "advancements.enter_the_equestrian.descr": "No more horsing around...",
+      "entity.enemyexpansion.projectile_wasp_sting_projectile": "Wasp\u0027s sting",
+      "item.enemyexpansion.mini_wither_chestplate": "",
+      "item.enemyexpansion.cockatrice_spawn_egg": "Cockatrice Spawn Egg",
+      "gamerule.petriman_replacement_rule": "cindersoccasionallyreplaceblazes",
+      "entity.enemyexpansion.silverking": "Silverking",
+      "entity.enemyexpansion.projectile_enemy_melee_projectile": "enemy attack",
+      "effect.enemyexpansion.superhealing": "Superhealing",
+      "entity.enemyexpansion.meature": "Meature",
+      "gamerule.petriman_random_rule.description": "Petrimen will replace Zombies that spawn in caves.",
+      "item.enemyexpansion.banedasher_spawn_egg": "Wolfsbane Spawn Egg",
+      "item.enemyexpansion.fly_spawn_egg": "Fly Spawn Egg",
+      "entity.enemyexpansion.ramsheared": "Ramsheared",
+      "subtitles.wolfsbane.hurt": "Wolfbane barks",
+      "entity.enemyexpansion.wasp": "Wasp",
+      "item.enemyexpansion.brutish_boots": "",
+      "item.enemyexpansion.headbiter_helmet": "Headbiter",
+      "advancements.enter_the_husk.title": "Enter The Husk",
+      "advancements.meathead_obtained.title": "Nice to Meature",
+      "entity.enemyexpansion.huntsmanskeleton": "Huntsman Skeleton",
+      "item.enemyexpansion.cinder_helm_helmet": "Cinder Crown",
+      "advancements.enter_the_meature.descr": "What IS that thing!?",
+      "advancements.enter_the_goblins.descr": "Ew, Goblins! I don\u0027t like \u0027em! ",
+      "gamerule.silverking_replacement_rule": "petrimanReplacementRule",
+      "advancements.enter_the_tarantula.title": "Enter The Tarantula",
+      "effect.enemyexpansion.champion": "Champion",
+      "item.enemyexpansion.flutterfliers_chestplate": "Flutterfliers",
+      "item.enemyexpansion.crab_pie": "Crab Pie",
+      "advancements.enter_the_flutterfly.title": "Enter The Flutterfly",
+      "entity.enemyexpansion.wolfsbane": "Wolfsbane",
+      "advancements.enter_the_sprinter.title": "Enter The Sprinter",
+      "item.enemyexpansion.slugvest_boots": "-",
+      "advancements.enter_the_kelpie.title": "Enter The Kelpie",
+      "item.enemyexpansion.mini_wither_leggings": "",
+      "item.enemyexpansion.petriman_spawn_egg": "Petriman Spawn Egg",
+      "item.enemyexpansion.meathead_armor_chestplate": "Meathead Chestplate",
+      "item.enemyexpansion.ramsheared_spawn_egg": "Ramsheared Spawn Egg",
+      "item.enemyexpansion.propeller_spawn_egg": "Propeller Spawn Egg",
+      "item.enemyexpansion.horsehead_leggings": "",
+      "item.enemyexpansion.gladling_leggings": "",
+      "entity.enemyexpansion.equestrian": "Equestrian",
+      "item.enemyexpansion.killstick": "Killstick",
+      "subtitles.wolfsbane.idle": "Wolfsbane growls",
+      "item.enemyexpansion.wasp_sting_projectile": "Wasp Sting",
+      "item.enemyexpansion.spiderlatch_leggings": "Phantasm Leggings",
+      "item.enemyexpansion.meature_meatball": "Meature Meatball",
+      "advancements.enter_the_starved.title": "Enter The Starved",
+      "item.enemyexpansion.horsehead_chestplate": "",
+      "item.enemyexpansion.trollface_helmet": "Trollface",
+      "item.enemyexpansion.spiderlatch_chestplate": "Phantasm Cape",
+      "entity.enemyexpansion.projectile_frigid_touch_projectile": "a frigid touch",
+      "item.enemyexpansion.zobgoblin_spawn_egg": "Zobgoblin Spawn Egg",
+      "advancements.enter_the_reaver.descr": "They fly now? They fly now.",
+      "advancements.enter_the_propeller.title": "Enter The Propeller",
+      "advancements.enter_the_sprinter.descr": "Run for your life!",
+      "item.enemyexpansion.spectral_leggings": "",
+      "advancements.enter_the_huntsman.descr": "Look out, they\u0027ve got... Fists!?",
+      "item.enemyexpansion.rooster_spawn_egg": "Rooster Spawn Egg",
+      "item.enemyexpansion.gladius_spawn_egg": "Gladius Spawn Egg",
       "entity.enemyexpansion.projectile_gladius_ink": "Gladius\u0027 Ink",
       "item.enemyexpansion.banemask_chestplate": "",
       "entity.enemyexpansion.projectile_troll_spit": "heavy troll saliva",
@@ -9881,57 +10925,43 @@
       "gamerule.troll_replacement_rule": "silverkingReplacementRule",
       "advancements.meathead_obtained.descr": "Obtain a Meat Hat",
       "item.enemyexpansion.silverking_spawn_egg": "Silverking Spawn Egg",
-      "gamerule.crawler_dont_spawn_above_deepslate_rule.description": "Silverkings will not spawn above Y0.",
+      "advancements.enter_the_frigid.title": "Enter The Frigid",
+      "advancements.enter_the_zombie.title": "Enter The Zombie",
       "item.enemyexpansion.sprintshorts_leggings": "Sprintshorts",
-      "entity.enemyexpansion.slugger": "Slugger",
       "item.enemyexpansion.gladius_ink": "Ink",
-      "item.enemyexpansion.troll_invincible": "Troll Invincibility",
-      "item.enemyexpansion.flutterfliers_leggings": "",
+      "advancements.enter_the_gladius.descr": "Cthulu, is that you?",
       "item.enemyexpansion.gladling_helmet": "Gladling",
       "item.enemyexpansion.meathead_armor_helmet": "Meat Head",
-      "gamerule.troll_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
-      "item.enemyexpansion.horsehead_boots": "",
-      "item.enemyexpansion.silverhat_boots": "",
       "gamerule.silverhead_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
-      "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
-      "advancements.on_my_wasp_biz.descr": "Summon a Wasp Drone",
+      "advancements.enter_the_wolfsbane.descr": "It don\u0027t bite!",
       "item.enemyexpansion.spectre_spawn_egg": "Spectre Spawn Egg",
+      "advancements.enter_the_goblins.title": "Enter The Goblins",
       "item.enemyexpansion.errant_spawn_egg": "Goblin Errant Spawn Egg",
       "effect.enemyexpansion.invulnerability": "Invulnerability",
-      "entity.enemyexpansion.intruder": "Intruder",
       "gamerule.petriman_replacement_rule.description": "A fifth of all Blazes will be replaced by Cinders upon spawning (This is the only way Cinders can spawn, disabling this rule will stop Cinder spawning completely)",
       "subtitles.troll.hurt.1": "Troll grunts",
       "subtitles.troll.hurt.2": "Troll growls",
+      "advancements.enter_the_dreadnought.title": "Enter The Dread",
       "item.enemyexpansion.bouncer_spawn_egg": "Goblin Bouncer Spawn Egg",
-      "entity.enemyexpansion.gladius": "Gladius",
+      "advancements.enter_the_spider.title": "Enter The Spider",
       "entity.enemyexpansion.invisicreeper": "Invisicreeper",
-      "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
       "gamerule.petriman_random_rule": "petrimanReplacementRule",
       "item.enemyexpansion.cinder_spawn_egg": "Cinder Spawn Egg",
-      "entity.enemyexpansion.bull": "Bull",
       "item.enemyexpansion.reaver_spawn_egg": "Reaver Spawn Egg",
       "item.enemyexpansion.sprintshorts_boots": "-",
-      "item.enemyexpansion.cinder_scrap": "Cinder Scrap",
-      "entity.enemyexpansion.zobgoblin": "Zobgoblin",
-      "config.enemyexpansion.better_config": "enemyexpansion",
       "gamerule.silverking_dont_spawn_above_deepslate_rule.description": "Petrimen will not spawn above Y25.",
-      "entity.enemyexpansion.reaver": "Reaver",
-      "gamerule.petriman_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
-      "advancements.bro_think_he_carti.title": "Bro Think He Carti",
       "entity.enemyexpansion.silverpet": "Silverpet",
       "entity.enemyexpansion.gabble": "Gabble",
-      "entity.enemyexpansion.rancher": "Goblin Rancher",
-      "item.enemyexpansion.bottled_flutterflies": "Bottled Flutterflies",
-      "item.enemyexpansion.silverpet_spawn_egg": "Silverpet Spawn Egg",
+      "advancements.enter_the_senior.descr": "Treat your elders with respect! (Kill them)",
       "gamerule.petriman_dont_spawn_above_ground_rule.description": "Petrimen will replace Zombies that spawn in caves.",
       "item.enemyexpansion.rancher_spawn_egg": "Goblin Rancher Spawn Egg",
       "subtitles.troll.death": "Troll dies",
       "item.enemyexpansion.brutish_helmet": "",
       "item.enemyexpansion.phantasm_helmet": "Phantasm Cowl",
-      "advancements.vampire_slayer.title": "Vampire Slayer",
-      "entity.enemyexpansion.projectile_goblin_theft_projectile": "Goblin theft",
-      "gamerule.intruder_replacement_rule": "petrimanReplacementRule",
+      "subtitles.dreadnought.hurt": "Dreadnought groans",
+      "advancements.enter_the_equestrian.title": "Enter The Equestrian",
       "item.enemyexpansion.slimehead_chestplate": "",
+      "advancements.enter_the_creeper.title": "Enter The Creeper",
       "item.enemyexpansion.enemy_melee_projectile": "Melee Attack",
       "gamerule.vampire_dont_spawn_above_deepslate_rule": "crawlerDontSpawnAboveDeepslateRule",
       "gamerule.scorpion_replacement_rule": "increaseddripstonetarantulas",
@@ -9939,19 +10969,15 @@
       "entity.enemyexpansion.projectile_bouncer_kick_projectile": "Bouncer\u0027s kick",
       "entity.enemyexpansion.goblin_fear": "Goblin Fear",
       "entity.enemyexpansion.projectile_cast_spell": "Caster\u0027s spell",
-      "gamerule.petriman_dont_spawn_above_ground.description": "Petrimen will replace Zombies that spawn in caves.",
+      "subtitles.dreadnought.death": "Dreadnought dies",
       "entity.enemyexpansion.ram": "Ram",
-      "item.enemyexpansion.cinder_fire_charge": "Cinder Fire Charge",
-      "item.enemyexpansion.huntsmanskeleton_spawn_egg": "Huntsman Skeleton Spawn Egg",
-      "entity.enemyexpansion.propeller": "Propeller",
-      "entity.enemyexpansion.petrifiedtroll": "Petrified Troll",
       "item.enemyexpansion.brutish_chestplate": "Brutish Garment",
       "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
+      "advancements.enter_the_ghoul.descr": "Kill it with fire!",
       "item.enemyexpansion.cinder_slice": "Cinder Slice",
       "effect.enemyexpansion.swift_flight": "Swift Flight",
-      "item.enemyexpansion.spectral_chestplate": "Spectral Cloak",
-      "advancements.precision_strike.title": "Precision Strike",
-      "item.minecraft.lingering_potion.effect.groundbound_potion": "Lingering Potion of Groundbinding",
+      "advancements.enter_the_gallant.descr": "Steel thy blade!",
+      "advancements.enter_the_spectre.title": "Enter The Spectre",
       "item.enemyexpansion.sprintshorts_helmet": "-"
     }
   },
@@ -9996,6 +11022,10 @@
           {
             "name": "Marine",
             "children": []
+          },
+          {
+            "name": "ZombieGuys",
+            "children": []
           }
         ]
       },
@@ -10005,10 +11035,31 @@
       },
       {
         "name": "Spawning",
-        "children": []
+        "children": [
+          {
+            "name": "AdvancementActivation",
+            "children": []
+          },
+          {
+            "name": "ReplaceWith",
+            "children": []
+          },
+          {
+            "name": "MiscConfig",
+            "children": []
+          },
+          {
+            "name": "SpecialSpawners",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Champions",
         "children": []
       }
     ]

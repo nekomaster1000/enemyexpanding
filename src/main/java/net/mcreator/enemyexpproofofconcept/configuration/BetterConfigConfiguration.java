@@ -5,9 +5,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
-	public static final ForgeConfigSpec.ConfigValue<Double> BABYZOMBIESPAWNING;
-	public static final ForgeConfigSpec.ConfigValue<Double> BABYZOMBIEHEALTH;
-	public static final ForgeConfigSpec.ConfigValue<Double> PHANTOMHEALTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANSPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPAWNINGDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CRAWLERSPAWNINGDEPTH;
@@ -33,6 +30,8 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> KELPIEANGLERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> ILLAGERVILLAGERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONGOLEMRAVAGERREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> RAVAGERMARAUDERREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> MARAUDERCOMMONFISHREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENTDEPTH;
@@ -65,20 +64,17 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> SKELETONSWITCHUP;
 	public static final ForgeConfigSpec.ConfigValue<Double> FLIESFROMZOMBIES;
 	public static final ForgeConfigSpec.ConfigValue<Double> PILLAGERWITHREAVER;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ADVANCEMENTBASEDSPAWNING;
+	public static final ForgeConfigSpec.ConfigValue<Double> BABYZOMBIESPAWNING;
+	public static final ForgeConfigSpec.ConfigValue<Double> BABYZOMBIEHEALTH;
+	public static final ForgeConfigSpec.ConfigValue<Double> PHANTOMHEALTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> STRENGTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> RESISTANCE;
 	public static final ForgeConfigSpec.ConfigValue<Double> HASTE;
 	public static final ForgeConfigSpec.ConfigValue<Double> FIRERES;
+	public static final ForgeConfigSpec.ConfigValue<Double> CHAMPION;
 	static {
-		BUILDER.push("mobSpawning");
-		BABYZOMBIESPAWNING = BUILDER.comment("0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)").define("Baby Zombie Spawning", (double) 0.13);
-		BUILDER.pop();
-		BUILDER.push("mobHealth");
-		BABYZOMBIEHEALTH = BUILDER.comment("Allows you to set the amount of health mobs spawn with (if they're allowed to spawn at all.) I made it really low by default so as to make them less annoying to deal with if you do have to encounter them.")
-				.define("Baby Zombie Health", (double) 2);
-		PHANTOMHEALTH = BUILDER.define("Phantom Health", (double) 6);
-		BUILDER.pop();
 		BUILDER.push("naturalSpawningDepth");
 		PETRIMANSPAWNINGDEPTH = BUILDER.comment("The specified mob will only naturally spawn below the specified y-level. This is so certain mobs are cave-exclusive by default.").define("Petriman Spawning Depth", (double) 55);
 		SILVERKINGSPAWNINGDEPTH = BUILDER.define("Silverking Spawning Depth", (double) -10);
@@ -94,19 +90,22 @@ public class BetterConfigConfiguration {
 		CREEPSREPLACEMENT = BUILDER.define("Crawler/Intruder Creeper Replacement", (double) 0.3);
 		VAMPIRESKELETONREPLACEMENT = BUILDER.define("Vampire Skeleton Replacement", (double) 0.75);
 		TROLLENDERMANREPLACEMENT = BUILDER.define("Troll Enderman Replacement", (double) 1);
-		CINDERBLAZEREPLACEMENT = BUILDER.define("Cinder Blaze Replacement", (double) 0.2);
+		CINDERBLAZEREPLACEMENT = BUILDER.comment("(This is the only way in which Cinders will ever spawn - Disable at your own risk!)").define("Cinder Blaze Replacement", (double) 0.2);
 		PIGBOARREPLACEMENT = BUILDER.define("Boar Pig Replacement", (double) 0.65);
 		COWBULLREPLACEMENT = BUILDER.define("Bull Cow Replacement", (double) 0.75);
 		SHEEPRAMREPLACEMENT = BUILDER.define("Ram Sheep Replacement", (double) 0.35);
 		CHICKENROOSTERREPLACEMENT = BUILDER.define("Rooster Chicken Replacement", (double) 0.55);
 		SPIDERTARANTULAREPLACEMENT = BUILDER.define("Tarantula Spider Replacement", (double) 1);
 		SPIDERSCORPIONREPLACEMENT = BUILDER.define("Scorpion Spider Replacement", (double) 1);
-		GLADILADSQUIDREPLACEMENT = BUILDER.define("Gladilad Squid Replacement", (double) 0.01);
+		GLADILADSQUIDREPLACEMENT = BUILDER.comment("(This is the only way in which Gladilads properly spawn - Disable at your own risk!)").define("Gladilad Squid Replacement", (double) 0.01);
 		ANGLERCOMMONFISHREPLACEMENT = BUILDER.define("Angler Common Fish Replacement", (double) 0.05);
 		HORDEZOMBIEREPLACEMENT = BUILDER.define("Random Enemy Expansion Zombie Replacement", (double) 0);
 		KELPIEANGLERREPLACEMENT = BUILDER.define("Kelpie Angler Replacement", (double) 0.05);
 		ILLAGERVILLAGERREPLACEMENT = BUILDER.define("Illager Villager Replacement", (double) 0);
 		IRONGOLEMRAVAGERREPLACEMENT = BUILDER.define("Iron Golem Ravager Replacement", (double) 0);
+		RAVAGERMARAUDERREPLACEMENT = BUILDER.comment("Ravagers are replaced with Marauders on spawn, but only if they spawn in water").define("Ravager Marauder Replacement", (double) 1);
+		MARAUDERCOMMONFISHREPLACEMENT = BUILDER.comment("('Common Fish' being Cod and Salmon) (This is the only way in which Marauders properly spawn without Ravagers spawning in water - Disable at your own risk!)")
+				.define("Marauder Common Fish Replacement", (double) 0.05);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);
@@ -147,6 +146,12 @@ public class BetterConfigConfiguration {
 		SKELETONSWITCHUP = BUILDER.define("Skeletons Switch Weapons Mid-Fight Chance", (double) 0.2);
 		FLIESFROMZOMBIES = BUILDER.define("Flies Spawn From Killed Zombies Chance", (double) 0.05);
 		PILLAGERWITHREAVER = BUILDER.define("Pillagers Spawn with Reaver Chance", (double) 0.16);
+		ADVANCEMENTBASEDSPAWNING = BUILDER.comment(
+				"Mob spawning is controlled by whether their given advancement has been unlocked or not. This toggle is designed for modpack authors who want to fine-tune control when certain mobs are added to the enemy roster through either datapacks or FTBQuests. Mob spawning advancements are prefixed with 'Enter the ...'")
+				.define("Advancement-Based Spawning", false);
+		BABYZOMBIESPAWNING = BUILDER.comment("0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)").define("Baby Zombie Spawning", (double) 0.13);
+		BABYZOMBIEHEALTH = BUILDER.define("Baby Zombie Health Amount", (double) 2);
+		PHANTOMHEALTH = BUILDER.define("Phantom Health Amount", (double) 6);
 		BUILDER.pop();
 		BUILDER.push("effectSpawning");
 		STRENGTH = BUILDER.define("Chance of Strength effect applied on mob-spawn", (double) 0.01);
@@ -154,6 +159,7 @@ public class BetterConfigConfiguration {
 		RESISTANCE = BUILDER.define("Chance of Resistance effect applied on mob-spawn", (double) 0.01);
 		HASTE = BUILDER.define("Chance of Haste effect applied on mob-spawn", (double) 0.01);
 		FIRERES = BUILDER.define("Chance of Fire Resistance effect applied on mob-spawn", (double) 0.01);
+		CHAMPION = BUILDER.define("Chance of a mob being a Champion upon spawning", (double) 0.01);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

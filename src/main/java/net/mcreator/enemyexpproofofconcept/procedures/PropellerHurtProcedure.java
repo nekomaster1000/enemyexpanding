@@ -98,12 +98,12 @@ public class PropellerHurtProcedure {
 					}
 				}.start(world, 2);
 			}
-		}
-		if (Math.random() < 0.25 && (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 8) {
-			if (entity instanceof PropellerEntity animatable)
-				animatable.setTexture("propeller_weathered");
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 2, (false), (true)));
+			if (Math.random() < 0.25 && (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 8) {
+				if (entity instanceof PropellerEntity animatable)
+					animatable.setTexture("propeller_weathered");
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 2, (false), (true)));
+			}
 		}
 	}
 }

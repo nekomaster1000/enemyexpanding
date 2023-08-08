@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:healing_goo"
+    },
+    "title": {
+      "translate": "advancements.enter_the_zadybug.title"
+    },
+    "description": {
+      "translate": "advancements.enter_the_zadybug.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_the_zadybug": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

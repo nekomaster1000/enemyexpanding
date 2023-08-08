@@ -26,6 +26,7 @@ import net.mcreator.enemyexpproofofconcept.entity.TrollSpitEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollInvincibleEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TarantulaEntity;
+import net.mcreator.enemyexpproofofconcept.entity.StarvedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SluggerEntity;
@@ -47,6 +48,7 @@ import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.PetrifiedtrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.OrbEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
+import net.mcreator.enemyexpproofofconcept.entity.MarauderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.InvisicreeperEntity;
@@ -349,6 +351,14 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<ReaverEntity>of(ReaverEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReaverEntity::new)
 
 					.sized(1.5f, 1.8f));
+	public static final RegistryObject<EntityType<StarvedEntity>> STARVED = register("starved",
+			EntityType.Builder.<StarvedEntity>of(StarvedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StarvedEntity::new)
+
+					.sized(2.1f, 0.95f));
+	public static final RegistryObject<EntityType<MarauderEntity>> MARAUDER = register("marauder",
+			EntityType.Builder.<MarauderEntity>of(MarauderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarauderEntity::new)
+
+					.sized(1.6f, 1.3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -413,6 +423,8 @@ public class EnemyexpansionModEntities {
 			DreadnoughtEntity.init();
 			OrbEntity.init();
 			ReaverEntity.init();
+			StarvedEntity.init();
+			MarauderEntity.init();
 		});
 	}
 
@@ -474,5 +486,7 @@ public class EnemyexpansionModEntities {
 		event.put(DREADNOUGHT.get(), DreadnoughtEntity.createAttributes().build());
 		event.put(ORB.get(), OrbEntity.createAttributes().build());
 		event.put(REAVER.get(), ReaverEntity.createAttributes().build());
+		event.put(STARVED.get(), StarvedEntity.createAttributes().build());
+		event.put(MARAUDER.get(), MarauderEntity.createAttributes().build());
 	}
 }

@@ -33,6 +33,7 @@ import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
+import net.minecraft.world.entity.ai.goal.RestrictSunGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -67,6 +68,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.enemyexpproofofconcept.procedures.MeatureSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.MeaturePlayerHostilityProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.MeatureIdleDespawnProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -133,21 +135,22 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.ROTTEN_FLESH), false));
 		this.goalSelector.addGoal(2, new BreedGoal(this, 1));
-		this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1, false) {
+		this.goalSelector.addGoal(3, new RestrictSunGoal(this));
+		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(6, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
-		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(9, new FloatGoal(this));
-		this.goalSelector.addGoal(10, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(11, new OwnerHurtTargetGoal(this));
-		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(7, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
+		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.goalSelector.addGoal(11, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(12, new OwnerHurtTargetGoal(this));
+		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, Player.class, false, false) {
 			@Override
 			public boolean canUse() {
 				double x = MeatureEntity.this.getX();
@@ -158,7 +161,7 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 				return super.canUse() && MeaturePlayerHostilityProcedure.execute(entity);
 			}
 		});
-		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
+		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, Zombie.class, false, false));
 	}
 
 	@Override
@@ -222,6 +225,7 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		MeatureIdleDespawnProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

@@ -5,10 +5,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
+import net.minecraft.world.entity.monster.Ravager;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.CaveSpider;
@@ -158,6 +160,20 @@ public class ConfigReplacerProcedure {
 		if (Math.random() < (double) BetterConfigConfiguration.IRONGOLEMRAVAGERREPLACEMENT.get()) {
 			if (entity instanceof IronGolem) {
 				ReplaceWithRavagerProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.RAVAGERMARAUDERREPLACEMENT.get()) {
+			if (entity instanceof Ravager) {
+				if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.WATER) {
+					ReplaceWithMarauderProcedure.execute(world, x, y, z, entity);
+				}
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.MARAUDERCOMMONFISHREPLACEMENT.get()) {
+			if (entity instanceof Cod || entity instanceof Salmon) {
+				if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_deep_ocean")))) {
+					ReplaceWithMarauderProcedure.execute(world, x, y, z, entity);
+				}
 			}
 		}
 	}

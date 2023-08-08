@@ -154,58 +154,13 @@
     "maxNumberOfMobsPerGroup": 5,
     "restrictionBiomes": [
       {
-        "value": "bamboo_jungle"
-      },
-      {
-        "value": "bamboo_jungle_hills"
-      },
-      {
-        "value": "birch_forest"
-      },
-      {
-        "value": "birch_forest_hills"
-      },
-      {
-        "value": "roofed_forest"
-      },
-      {
-        "value": "mutated_roofed_forest"
-      },
-      {
-        "value": "dripstone_caves"
-      },
-      {
-        "value": "mutated_forest"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "forest_hills"
-      },
-      {
         "value": "frozen_peaks"
-      },
-      {
-        "value": "grove"
       },
       {
         "value": "mutated_ice_flats"
       },
       {
         "value": "jagged_peaks"
-      },
-      {
-        "value": "jungle"
-      },
-      {
-        "value": "jungle_hills"
-      },
-      {
-        "value": "lush_caves"
-      },
-      {
-        "value": "meadow"
       },
       {
         "value": "mutated_extreme_hills_with_trees"
@@ -220,12 +175,6 @@
         "value": "smaller_extreme_hills"
       },
       {
-        "value": "mutated_birch_forest"
-      },
-      {
-        "value": "mutated_birch_forest_hills"
-      },
-      {
         "value": "redwood_taiga"
       },
       {
@@ -236,12 +185,6 @@
       },
       {
         "value": "mutated_redwood_taiga_hills"
-      },
-      {
-        "value": "plains"
-      },
-      {
-        "value": "river"
       },
       {
         "value": "snowy_slopes"
@@ -265,13 +208,7 @@
         "value": "mutated_taiga_cold"
       },
       {
-        "value": "jungle_edge"
-      },
-      {
         "value": "stony_peaks"
-      },
-      {
-        "value": "stone_beach"
       },
       {
         "value": "mutated_plains"

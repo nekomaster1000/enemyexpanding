@@ -51,7 +51,7 @@ public class GabbleEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GABBLE.get(), 5, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GABBLE.get(), 1, 1, 1));
 	}
 
 	public GabbleEntity(PlayMessages.SpawnEntity packet, Level world) {

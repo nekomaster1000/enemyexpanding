@@ -148,6 +148,9 @@
     "height": 0.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
+    "spawningCondition": {
+      "name": "VampireSpawning"
+    },
     "spawningProbability": 75,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

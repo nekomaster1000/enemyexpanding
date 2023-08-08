@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:flutterfliers_chestplate"
+    },
+    "title": {
+      "translate": "advancements.enter_the_flutterfly.title"
+    },
+    "description": {
+      "translate": "advancements.enter_the_flutterfly.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_the_flutterfly": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

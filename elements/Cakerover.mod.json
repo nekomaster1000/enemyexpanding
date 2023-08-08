@@ -145,6 +145,9 @@
     "height": 0.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
+    "spawningCondition": {
+      "name": "GoblinSpawning"
+    },
     "spawningProbability": 35,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

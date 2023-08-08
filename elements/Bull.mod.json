@@ -139,9 +139,6 @@
     "height": 0.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningCondition": {
-      "name": "BullSpawning"
-    },
     "spawningProbability": 15,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

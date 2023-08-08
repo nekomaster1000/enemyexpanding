@@ -24,9 +24,7 @@ public class PropellerTickProcedure {
 				}
 				if (entity.isInWaterRainOrBubble()) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 2, (false), (false)));
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 600, 0, (false), (true)));
+						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2, (false), (false)));
 				}
 			}
 		}

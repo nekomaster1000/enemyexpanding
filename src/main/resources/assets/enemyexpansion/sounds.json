@@ -121,5 +121,49 @@
         "stream": false
       }
     ]
+  },
+  "dreadnought.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.dreadnought.idle",
+    "sounds": [
+      {
+        "name": "enemyexpansion:dreadnought_idle",
+        "stream": false
+      }
+    ]
+  },
+  "dreadnought.hurt": {
+    "category": "hostile",
+    "subtitle": "subtitles.dreadnought.hurt",
+    "sounds": [
+      {
+        "name": "enemyexpansion:dreadnought_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:dreadnought_hurt_2",
+        "stream": false
+      }
+    ]
+  },
+  "dreadnought.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.dreadnought.death",
+    "sounds": [
+      {
+        "name": "enemyexpansion:dreadnought_death",
+        "stream": false
+      }
+    ]
+  },
+  "starved.chomp": {
+    "category": "hostile",
+    "subtitle": "subtitles.starved.chomp",
+    "sounds": [
+      {
+        "name": "enemyexpansion:starved_chomp",
+        "stream": false
+      }
+    ]
   }
 }

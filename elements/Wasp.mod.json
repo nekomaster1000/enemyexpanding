@@ -142,9 +142,6 @@
     "height": 0.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningCondition": {
-      "name": "WaspSpawning"
-    },
     "spawningProbability": 35,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

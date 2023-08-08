@@ -9,6 +9,7 @@ import net.minecraftforge.common.ForgeMod;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.enemyexpproofofconcept.entity.PiecrabEntity;
+import net.mcreator.enemyexpproofofconcept.entity.MarauderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
 import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
@@ -37,6 +38,8 @@ public class SwimSpeedProcedure {
 			((KelpieEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(3.5);
 		} else if (entity instanceof PiecrabEntity) {
 			((PiecrabEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(5.5);
+		} else if (entity instanceof MarauderEntity) {
+			((MarauderEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(8.0);
 		}
 	}
 }

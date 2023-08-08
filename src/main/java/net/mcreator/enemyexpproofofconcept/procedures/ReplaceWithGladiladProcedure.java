@@ -4,20 +4,31 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
+import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class ReplaceWithGladiladProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		boolean advancementCheck = false;
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
@@ -40,7 +51,30 @@ public class ReplaceWithGladiladProcedure {
 
 			private void run() {
 				if (!(world instanceof Level _lvl && _lvl.isDay())) {
-					if (entity.isAlive()) {
+					if (BetterConfigConfiguration.ADVANCEMENTBASEDSPAWNING.get() == true) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(256 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof Player) {
+									if (entityiterator instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+											? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:enter_the_gladius"))).isDone()
+											: false) {
+										if (!entity.level.isClientSide())
+											entity.discard();
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = new GladiladEntity(EnemyexpansionModEntities.GLADILAD.get(), _level);
+											entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+											if (entityToSpawn instanceof Mob _mobToSpawn)
+												_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+											world.addFreshEntity(entityToSpawn);
+										}
+									}
+								}
+							}
+						}
+					} else if (BetterConfigConfiguration.ADVANCEMENTBASEDSPAWNING.get() == false) {
 						if (!entity.level.isClientSide())
 							entity.discard();
 						if (world instanceof ServerLevel _level) {

@@ -17,7 +17,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
@@ -182,7 +181,6 @@ public class PropellerEntity extends Skeleton implements IAnimatable {
 	public static void init() {
 		SpawnPlacements.register(EnemyexpansionModEntities.PROPELLER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
-		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.PROPELLER.get(), 180);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
