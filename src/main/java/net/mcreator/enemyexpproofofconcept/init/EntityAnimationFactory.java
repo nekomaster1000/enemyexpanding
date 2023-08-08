@@ -12,6 +12,7 @@ import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TarantulaEntity;
 import net.mcreator.enemyexpproofofconcept.entity.StarvedEntity;
+import net.mcreator.enemyexpproofofconcept.entity.SputterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SluggerEntity;
@@ -436,6 +437,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MarauderEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SputterEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

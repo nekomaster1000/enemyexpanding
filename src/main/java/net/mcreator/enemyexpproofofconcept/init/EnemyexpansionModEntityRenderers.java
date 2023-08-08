@@ -20,6 +20,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.TrollRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.TrollInvincibleRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.TarantulaRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.StarvedRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.SputterRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SprinterRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SpectreRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.SluggerRenderer;
@@ -152,5 +153,8 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.REAVER.get(), ReaverRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.STARVED.get(), StarvedRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.MARAUDER.get(), MarauderRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER.get(), SputterRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER_FIRE_CHARGE.get(), ThrownItemRenderer::new);
 	}
 }

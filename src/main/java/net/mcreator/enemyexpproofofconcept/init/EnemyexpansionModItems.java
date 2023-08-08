@@ -17,6 +17,7 @@ import net.mcreator.enemyexpproofofconcept.item.TrollfaceItem;
 import net.mcreator.enemyexpproofofconcept.item.TrollSpitItem;
 import net.mcreator.enemyexpproofofconcept.item.TrollInvincibleItem;
 import net.mcreator.enemyexpproofofconcept.item.SuspiciousSliceItem;
+import net.mcreator.enemyexpproofofconcept.item.SputterFireChargeItem;
 import net.mcreator.enemyexpproofofconcept.item.SprintshortsItem;
 import net.mcreator.enemyexpproofofconcept.item.SpiderlatchItem;
 import net.mcreator.enemyexpproofofconcept.item.SpectralItem;
@@ -163,4 +164,6 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> REAVER_SPAWN_EGG = REGISTRY.register("reaver_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.REAVER, -13027015, -8939368, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> STARVED_SPAWN_EGG = REGISTRY.register("starved_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.STARVED, -5200239, -9413817, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> MARAUDER_SPAWN_EGG = REGISTRY.register("marauder_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.MARAUDER, -10792887, -7098707, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SPUTTER_SPAWN_EGG = REGISTRY.register("sputter_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SPUTTER, -4106944, -597825, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SPUTTER_FIRE_CHARGE = REGISTRY.register("sputter_fire_charge", () -> new SputterFireChargeItem());
 }
