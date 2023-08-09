@@ -276,7 +276,7 @@ public class CasterEntity extends Monster implements RangedAttackMob, IAnimatabl
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		NoBabiesProcedure.execute(this);
+		NoBabiesProcedure.execute(world, this);
 		return retval;
 	}
 

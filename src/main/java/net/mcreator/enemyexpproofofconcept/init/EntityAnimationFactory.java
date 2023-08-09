@@ -44,6 +44,7 @@ import net.mcreator.enemyexpproofofconcept.entity.GallantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
+import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
@@ -444,6 +445,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof SputterEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FishCarrierEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

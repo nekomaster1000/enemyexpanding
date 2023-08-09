@@ -18,6 +18,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.Strider;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -26,6 +27,7 @@ import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -105,9 +107,11 @@ public class SputterEntity extends Monster implements RangedAttackMob, IAnimatab
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.1));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(1, new SputterEntity.RangedAttackGoal(this, 1.25, 20, 10f) {
+		this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, (float) 10));
+		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Strider.class, (float) 10));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(1, new SputterEntity.RangedAttackGoal(this, 1.25, 40, 10f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
@@ -247,12 +251,7 @@ public class SputterEntity extends Monster implements RangedAttackMob, IAnimatab
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		SputterEntityProjectile entityarrow = new SputterEntityProjectile(EnemyexpansionModEntities.SPUTTER_PROJECTILE.get(), this, this.level);
-		double d0 = target.getY() + target.getEyeHeight() - 1.1;
-		double d1 = target.getX() - this.getX();
-		double d3 = target.getZ() - this.getZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-		level.addFreshEntity(entityarrow);
+		SputterFireChargeEntity.shoot(this, target);
 	}
 
 	public static void init() {

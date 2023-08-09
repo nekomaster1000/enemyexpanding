@@ -5,14 +5,16 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.TagKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.Registry;
+import net.minecraft.server.level.ServerLevel;
 
-public class NoBabiesProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
+import net.mcreator.enemyexpproofofconcept.entity.SputterEntity;
+
+public class ReplaceWithSputterProcedure {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		new Object() {
@@ -36,15 +38,19 @@ public class NoBabiesProcedure {
 			}
 
 			private void run() {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false) && entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:zombievariants")))) {
+				if (entity.isAlive()) {
 					if (!entity.level.isClientSide())
 						entity.discard();
-				} else if (entity.isInWall()) {
-					if (!entity.level.isClientSide())
-						entity.discard();
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = new SputterEntity(EnemyexpansionModEntities.SPUTTER.get(), _level);
+						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+						if (entityToSpawn instanceof Mob _mobToSpawn)
+							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+						world.addFreshEntity(entityToSpawn);
+					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 2);
+		}.start(world, 1);
 	}
 }

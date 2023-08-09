@@ -10,7 +10,7 @@ public class SputterTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.LAVA) {
+		if ((world.getBlockState(new BlockPos(x, y + 0.2, z))).getBlock() == Blocks.LAVA) {
 			entity.setDeltaMovement(new Vec3(0, 0.01, 0));
 		}
 	}

@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.enemyexpproofofconcept.procedures.SputterSpitsProcedure;
 import net.mcreator.enemyexpproofofconcept.entity.SputterFireChargeEntity;
 
 public class SputterFireChargeItem extends Item {
@@ -43,9 +44,11 @@ public class SputterFireChargeItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				SputterFireChargeEntity entityarrow = SputterFireChargeEntity.shoot(world, entity, world.getRandom(), 1f, 3, 1);
+				SputterFireChargeEntity entityarrow = SputterFireChargeEntity.shoot(world, entity, world.getRandom(), 0.4f, 3, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				SputterSpitsProcedure.execute(world, x, y, z);
 			}
 		}
 	}

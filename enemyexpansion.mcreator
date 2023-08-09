@@ -674,6 +674,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -9539,26 +9543,6 @@
       "path": "~/Spawning/AdvancementActivation"
     },
     {
-      "name": "ChampionSpawns",
-      "type": "procedure",
-      "sortid": 388,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "champion_spawns",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ChampionSpawnsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Champions"
-    },
-    {
       "name": "EnterTheSlugger",
       "type": "achievement",
       "sortid": 389,
@@ -10404,7 +10388,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Monsters/UndergroundGuys"
     },
     {
       "name": "MeatureSpawning",
@@ -10438,7 +10423,6 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SputterRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/SputterModel.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SputterEntityProjectile.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SputterEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/sputter_spawn_egg.json"
         ]
@@ -10544,6 +10528,191 @@
         ]
       },
       "path": "~/Monsters"
+    },
+    {
+      "name": "ReplaceWithSputter",
+      "type": "procedure",
+      "sortid": 477,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_sputter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ReplaceWithSputterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning/ReplaceWith"
+    },
+    {
+      "name": "SputterSpits",
+      "type": "procedure",
+      "sortid": 478,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sputter_spits",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/SputterSpitsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "BurnBlock",
+      "type": "procedure",
+      "sortid": 479,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burn_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/BurnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters"
+    },
+    {
+      "name": "FishCarrier",
+      "type": "animatedentity",
+      "sortid": 480,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fish_carrier",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/FishCarrierRenderer.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/FishCarrierEntity.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/FishCarrierModel.java"
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "MarauderTick",
+      "type": "procedure",
+      "sortid": 481,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marauder_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/MarauderTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Marine"
+    },
+    {
+      "name": "DreadnoughtSpawning",
+      "type": "procedure",
+      "sortid": 482,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dreadnought_spawning",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/DreadnoughtSpawningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning/SpecialSpawners"
     }
   ],
   "variable_elements": [
@@ -10907,6 +11076,7 @@
       "item.enemyexpansion.ghoul_spawn_egg": "Ghoul Spawn Egg",
       "gamerule.vampire_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
       "item.enemyexpansion.gladling_boots": "",
+      "item.enemyexpansion.fish_carrier_spawn_egg": "Fish Carrier Spawn Egg",
       "gamerule.petriman_dont_spawn_above_ground_rule": "petrimanReplacementRule",
       "item.enemyexpansion.baker_spawn_egg": "Goblin Baker Spawn Egg",
       "advancements.enter_the_gallant.title": "Enter The Gallant",
@@ -10953,6 +11123,7 @@
       "advancements.enemy_expansion_advancements.title": "Enemy Expansion",
       "item.enemyexpansion.ghoul_spit": "Spit",
       "entity.enemyexpansion.banedasher": "Wolfsbane",
+      "entity.enemyexpansion.fish_carrier": "Fish Carrier",
       "entity.enemyexpansion.tarantula": "Tarantula",
       "item.enemyexpansion.slugvest_chestplate": "Slugvest",
       "entity.enemyexpansion.orb": "Orb",

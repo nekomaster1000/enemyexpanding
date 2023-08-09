@@ -8,6 +8,7 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.monster.Strider;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.Ravager;
@@ -59,7 +60,9 @@ public class ConfigReplacerProcedure {
 			return;
 		if (Math.random() < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENT.get() && y < (double) BetterConfigConfiguration.PETRIMANZOMBIEREPLACEMENTDEPTH.get()) {
 			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:petrimanreplaces")))) {
-				ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
+				if (!world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_nether")))) {
+					ReplaceWithPetrimenProcedure.execute(world, x, y, z, entity);
+				}
 			}
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.HORDEZOMBIEREPLACEMENT.get()) {
@@ -174,6 +177,11 @@ public class ConfigReplacerProcedure {
 				if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_deep_ocean")))) {
 					ReplaceWithMarauderProcedure.execute(world, x, y, z, entity);
 				}
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.SPUTTERSTRIDERREPLACEMENT.get()) {
+			if (entity instanceof Strider) {
+				ReplaceWithSputterProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

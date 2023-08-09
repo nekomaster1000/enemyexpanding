@@ -11,7 +11,7 @@ public class AnglerTickProcedure {
 		if (entity == null)
 			return;
 		if (entity.isOnGround() && !entity.isInWater()) {
-			entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1, 1)), (Mth.nextDouble(new Random(), 0.6, 1.2)), (Mth.nextDouble(new Random(), -1, 1))));
+			entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -1, 1)), (Mth.nextDouble(new Random(), 0.3, 0.9)), (Mth.nextDouble(new Random(), -1, 1))));
 		}
 	}
 }

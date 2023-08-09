@@ -32,6 +32,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONGOLEMRAVAGERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> RAVAGERMARAUDERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> MARAUDERCOMMONFISHREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> SPUTTERSTRIDERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENTDEPTH;
@@ -106,6 +107,7 @@ public class BetterConfigConfiguration {
 		RAVAGERMARAUDERREPLACEMENT = BUILDER.comment("Ravagers are replaced with Marauders on spawn, but only if they spawn in water").define("Ravager Marauder Replacement", (double) 1);
 		MARAUDERCOMMONFISHREPLACEMENT = BUILDER.comment("('Common Fish' being Cod and Salmon) (This is the only way in which Marauders properly spawn without Ravagers spawning in water - Disable at your own risk!)")
 				.define("Marauder Common Fish Replacement", (double) 0.05);
+		SPUTTERSTRIDERREPLACEMENT = BUILDER.comment("(This is the only way in which Sputters naturally spawn - Disable at your own risk!)").define("Sputter Strider Replacement", (double) 0.21);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);

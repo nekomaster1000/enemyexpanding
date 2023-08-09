@@ -28,7 +28,6 @@ import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TarantulaEntity;
 import net.mcreator.enemyexpproofofconcept.entity.StarvedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SputterFireChargeEntity;
-import net.mcreator.enemyexpproofofconcept.entity.SputterEntityProjectile;
 import net.mcreator.enemyexpproofofconcept.entity.SputterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
@@ -74,6 +73,7 @@ import net.mcreator.enemyexpproofofconcept.entity.FrigidTouchProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
+import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EnemyMeleeProjectileEntity;
@@ -364,10 +364,12 @@ public class EnemyexpansionModEntities {
 					.sized(1.6f, 1.3f));
 	public static final RegistryObject<EntityType<SputterEntity>> SPUTTER = register("sputter",
 			EntityType.Builder.<SputterEntity>of(SputterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SputterEntity::new).fireImmune().sized(1f, 0.7f));
-	public static final RegistryObject<EntityType<SputterEntityProjectile>> SPUTTER_PROJECTILE = register("projectile_sputter", EntityType.Builder.<SputterEntityProjectile>of(SputterEntityProjectile::new, MobCategory.MISC)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(SputterEntityProjectile::new).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<SputterFireChargeEntity>> SPUTTER_FIRE_CHARGE = register("projectile_sputter_fire_charge", EntityType.Builder.<SputterFireChargeEntity>of(SputterFireChargeEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(SputterFireChargeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FishCarrierEntity>> FISH_CARRIER = register("fish_carrier",
+			EntityType.Builder.<FishCarrierEntity>of(FishCarrierEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(FishCarrierEntity::new)
+
+					.sized(0.01f, 0.01f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -435,6 +437,7 @@ public class EnemyexpansionModEntities {
 			StarvedEntity.init();
 			MarauderEntity.init();
 			SputterEntity.init();
+			FishCarrierEntity.init();
 		});
 	}
 
@@ -499,5 +502,6 @@ public class EnemyexpansionModEntities {
 		event.put(STARVED.get(), StarvedEntity.createAttributes().build());
 		event.put(MARAUDER.get(), MarauderEntity.createAttributes().build());
 		event.put(SPUTTER.get(), SputterEntity.createAttributes().build());
+		event.put(FISH_CARRIER.get(), FishCarrierEntity.createAttributes().build());
 	}
 }

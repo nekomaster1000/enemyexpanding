@@ -56,6 +56,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.GabbleRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.FrigidRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.FlyRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.FlutterflyRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.FishCarrierRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.ErrantRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.EquestrianRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.DreadnoughtRenderer;
@@ -154,7 +155,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.STARVED.get(), StarvedRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.MARAUDER.get(), MarauderRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER.get(), SputterRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER_FIRE_CHARGE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.FISH_CARRIER.get(), FishCarrierRenderer::new);
 	}
 }

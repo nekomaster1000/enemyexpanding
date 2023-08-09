@@ -496,6 +496,24 @@
             "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.21,
+            "textDefault": "",
+            "comment": "(This is the only way in which Sputters naturally spawn - Disable at your own risk!)",
+            "vardisplay": "Sputter Strider Replacement",
+            "varname": "sputterstriderreplacement",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       },

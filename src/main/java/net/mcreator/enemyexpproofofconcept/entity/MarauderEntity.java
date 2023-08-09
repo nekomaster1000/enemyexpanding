@@ -58,8 +58,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.MarauderTickProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.MarauderKnockedbackProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.AnglerTickProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -202,7 +202,7 @@ public class MarauderEntity extends Monster implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		AnglerTickProcedure.execute(this);
+		MarauderTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

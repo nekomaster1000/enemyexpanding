@@ -17,13 +17,16 @@
     "shootConstantly": false,
     "usageCount": 100,
     "actionSound": {
-      "value": "item.firecharge.use"
+      "value": "entity.donkey.chest"
     },
     "hasGlow": false,
     "animation": "none",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 1.0,
+    "onRangedItemUsed": {
+      "name": "SputterSpits"
+    },
+    "bulletPower": 0.4,
     "bulletDamage": 3.0,
     "bulletKnockback": 1,
     "bulletParticles": false,
@@ -34,7 +37,7 @@
     "bulletModel": "Default",
     "customBulletModelTexture": "",
     "onBulletHitsBlock": {
-      "name": "CinderFireExplode"
+      "name": "BurnBlock"
     },
     "onBulletHitsEntity": {
       "name": "SputterChargeHit"

@@ -16,10 +16,6 @@ public class FrigidHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.isInWall()) {
-			if (!entity.level.isClientSide())
-				entity.discard();
-		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < 19) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 0, (false), (false)));
