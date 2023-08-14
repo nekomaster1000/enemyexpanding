@@ -48,6 +48,7 @@ import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
+import net.mcreator.enemyexpproofofconcept.entity.DragonflyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CockatriceEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
@@ -452,6 +453,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof FishCarrierEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DragonflyEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

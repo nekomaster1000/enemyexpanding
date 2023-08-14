@@ -815,6 +815,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -7955,9 +7959,6 @@
       "locked_code": false,
       "registry_name": "kelpie_hurt",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/KelpieHurtProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -10713,6 +10714,67 @@
         ]
       },
       "path": "~/Spawning/SpecialSpawners"
+    },
+    {
+      "name": "Dragonfly",
+      "type": "animatedentity",
+      "sortid": 483,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragonfly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/DragonflyRenderer.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/DragonflyModel.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/DragonflyEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/dragonfly_spawn_egg.json"
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
+    },
+    {
+      "name": "DragonflyErraticFlight",
+      "type": "procedure",
+      "sortid": 484,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragonfly_erratic_flight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/DragonflyErraticFlightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
+    },
+    {
+      "name": "DragonflyDodgePattern",
+      "type": "procedure",
+      "sortid": 485,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragonfly_dodge_pattern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/DragonflyDodgePatternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
     }
   ],
   "variable_elements": [
@@ -11092,6 +11154,7 @@
       "entity.enemyexpansion.zadybug": "Zadybug",
       "advancements.enter_the_spectre.descr": "Ooo, REAL scary!",
       "item.enemyexpansion.gabble_spawn_egg": "Gabble Spawn Egg",
+      "entity.enemyexpansion.dragonfly": "Dragonfly",
       "advancements.enter_the_propeller.descr": "Fly away now!",
       "item.enemyexpansion.cast_spell": "Caster Spell",
       "item.enemyexpansion.gallant_swings": "Gallant Swings",
@@ -11145,6 +11208,7 @@
       "item.enemyexpansion.mini_wither_boots": "",
       "item.enemyexpansion.bull_skull_boots": "",
       "entity.enemyexpansion.projectile_scorpion_sting_projectile": "Scorpion\u0027s sting",
+      "item.enemyexpansion.dragonfly_spawn_egg": "Dragonfly Spawn Egg",
       "advancements.vampire_slayer.descr": "Slay a Vampire before it turns into a Biter",
       "item.enemyexpansion.troll_spit": "Spit",
       "entity.enemyexpansion.ladybug": "Ladybug",

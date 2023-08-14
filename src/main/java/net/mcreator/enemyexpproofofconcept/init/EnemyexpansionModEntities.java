@@ -78,6 +78,7 @@ import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EnemyMeleeProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
+import net.mcreator.enemyexpproofofconcept.entity.DragonflyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerExplosiveEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CockatriceEntity;
@@ -370,6 +371,10 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<FishCarrierEntity>of(FishCarrierEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(FishCarrierEntity::new)
 
 					.sized(0.01f, 0.01f));
+	public static final RegistryObject<EntityType<DragonflyEntity>> DRAGONFLY = register("dragonfly",
+			EntityType.Builder.<DragonflyEntity>of(DragonflyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonflyEntity::new)
+
+					.sized(2f, 1.6f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -438,6 +443,7 @@ public class EnemyexpansionModEntities {
 			MarauderEntity.init();
 			SputterEntity.init();
 			FishCarrierEntity.init();
+			DragonflyEntity.init();
 		});
 	}
 
@@ -503,5 +509,6 @@ public class EnemyexpansionModEntities {
 		event.put(MARAUDER.get(), MarauderEntity.createAttributes().build());
 		event.put(SPUTTER.get(), SputterEntity.createAttributes().build());
 		event.put(FISH_CARRIER.get(), FishCarrierEntity.createAttributes().build());
+		event.put(DRAGONFLY.get(), DragonflyEntity.createAttributes().build());
 	}
 }
