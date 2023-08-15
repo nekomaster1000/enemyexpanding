@@ -167,4 +167,5 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> SPUTTER_SPAWN_EGG = REGISTRY.register("sputter_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SPUTTER, -4106944, -597825, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> SPUTTER_FIRE_CHARGE = REGISTRY.register("sputter_fire_charge", () -> new SputterFireChargeItem());
 	public static final RegistryObject<Item> DRAGONFLY_SPAWN_EGG = REGISTRY.register("dragonfly_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.DRAGONFLY, -10117792, -5843863, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> HORNET_SPAWN_EGG = REGISTRY.register("hornet_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.HORNET, -527646, -13620425, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

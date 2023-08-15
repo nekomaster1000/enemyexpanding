@@ -8,6 +8,7 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.monster.Vex;
 import net.minecraft.world.entity.monster.Strider;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
@@ -182,6 +183,11 @@ public class ConfigReplacerProcedure {
 		if (Math.random() < (double) BetterConfigConfiguration.SPUTTERSTRIDERREPLACEMENT.get()) {
 			if (entity instanceof Strider) {
 				ReplaceWithSputterProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (Math.random() < (double) BetterConfigConfiguration.HORNETVEXREPLACEMENT.get()) {
+			if (entity instanceof Vex) {
+				ReplaceWithHornetProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

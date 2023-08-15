@@ -36,6 +36,7 @@ import net.mcreator.enemyexpproofofconcept.entity.MarauderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.IntruderEntity;
+import net.mcreator.enemyexpproofofconcept.entity.HornetEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiusEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
@@ -460,6 +461,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof DragonflyEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof HornetEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

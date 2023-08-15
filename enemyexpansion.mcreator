@@ -9270,22 +9270,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -10769,12 +10753,125 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
       "path": "~/Monsters/Arthropods"
+    },
+    {
+      "name": "Hornet",
+      "type": "animatedentity",
+      "sortid": 486,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hornet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/hornet_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/HornetRenderer.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/HornetModel.java",
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/HornetEntity.java"
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
+    },
+    {
+      "name": "HornetDodgePattern",
+      "type": "procedure",
+      "sortid": 487,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hornet_dodge_pattern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/HornetDodgePatternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Monsters/Arthropods"
+    },
+    {
+      "name": "ReplaceWithHornet",
+      "type": "procedure",
+      "sortid": 488,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replace_with_hornet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/ReplaceWithHornetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning/ReplaceWith"
+    },
+    {
+      "name": "AngryZompiglins",
+      "type": "procedure",
+      "sortid": 489,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angry_zompiglins",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpproofofconcept/procedures/AngryZompiglinsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Spawning/MiscConfig"
     }
   ],
   "variable_elements": [
@@ -10939,6 +11036,7 @@
       "item.minecraft.tipped_arrow.effect.champion_potion": "Arrow of Championship",
       "subtitles.dreadnought.idle": "Dreadnought growls",
       "subtitles.bane.idle": "Wolfsbane snorts",
+      "entity.enemyexpansion.hornet": "Hornet",
       "entity.enemyexpansion.spectre": "Spectre",
       "item.enemyexpansion.cinder_helm_chestplate": "",
       "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
@@ -10978,6 +11076,7 @@
       "subtitles.kelpie.reinforcement": "Kelpie calls for help",
       "entity.enemyexpansion.kelpie": "Kelpie",
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
+      "item.enemyexpansion.hornet_spawn_egg": "Hornet Spawn Egg",
       "item.enemyexpansion.slugvest_leggings": "-",
       "advancements.enter_the_crawler.title": "Enter The Crawler",
       "entity.enemyexpansion.baker": "Goblin Baker",
@@ -11423,7 +11522,7 @@
   "workspaceSettings": {
     "modid": "enemyexpansion",
     "modName": "Enemy Expansion",
-    "version": "1.14",
+    "version": "1.15",
     "description": "Adding variety to combat encounters!",
     "author": "nekomaster",
     "websiteURL": "https://mcreator.net",

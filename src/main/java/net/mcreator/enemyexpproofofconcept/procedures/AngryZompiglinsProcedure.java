@@ -5,7 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
-import net.minecraft.world.entity.monster.Pillager;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
@@ -13,7 +13,7 @@ import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfigurati
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class PillagerReaverCompanionChanceProcedure {
+public class AngryZompiglinsProcedure {
 	@SubscribeEvent
 	public static void onEntitySpawned(EntityJoinWorldEvent event) {
 		execute(event, event.getEntity());
@@ -26,13 +26,13 @@ public class PillagerReaverCompanionChanceProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		boolean advancementCheck = false;
-		if (entity instanceof Pillager) {
-			if (Math.random() < (double) BetterConfigConfiguration.PILLAGERWITHREAVER.get()) {
+		if (entity instanceof ZombifiedPiglin) {
+			if (Math.random() < (double) BetterConfigConfiguration.ANGRYZOMBIFIEDPIGLINS.get()) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "summon enemyexpansion:reaver ~ ~ ~ {Health:22f,Attributes:[{Name:generic.max_health,Base:22}]}");
+						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+								"/data modify entity @e[type=minecraft:zombified_piglin,limit=1,sort=nearest] AngryAt set from entity @e[limit=1,sort=nearest,type=minecraft:player,gamemode=!spectator,gamemode=!creative,distance=0..10] UUID");
 				}
 			}
 		}

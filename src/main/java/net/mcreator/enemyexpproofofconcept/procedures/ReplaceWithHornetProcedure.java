@@ -5,20 +5,18 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
+import net.mcreator.enemyexpproofofconcept.entity.HornetEntity;
 
-public class ReplaceWithKelpieProcedure {
+public class ReplaceWithHornetProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		boolean advancementCheck = false;
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
@@ -40,11 +38,11 @@ public class ReplaceWithKelpieProcedure {
 			}
 
 			private void run() {
-				if (entity.isAlive() && !(world instanceof Level _lvl && _lvl.isDay())) {
+				if (entity.isAlive()) {
 					if (!entity.level.isClientSide())
 						entity.discard();
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new KelpieEntity(EnemyexpansionModEntities.KELPIE.get(), _level);
+						Entity entityToSpawn = new HornetEntity(EnemyexpansionModEntities.HORNET.get(), _level);
 						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 						if (entityToSpawn instanceof Mob _mobToSpawn)
 							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);

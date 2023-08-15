@@ -46,6 +46,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.KelpieRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.InvisicreeperRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.IntruderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.HuntsmanskeletonRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.HornetRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GoblinRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GoblinFearRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GladiusRenderer;
@@ -159,5 +160,6 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER_FIRE_CHARGE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.FISH_CARRIER.get(), FishCarrierRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.DRAGONFLY.get(), DragonflyRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.HORNET.get(), HornetRenderer::new);
 	}
 }

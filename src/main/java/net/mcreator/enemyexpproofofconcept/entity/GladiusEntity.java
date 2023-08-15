@@ -74,7 +74,7 @@ public class GladiusEntity extends Monster implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADIUS.get(), 30, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADIUS.get(), 10, 1, 1));
 	}
 
 	public GladiusEntity(PlayMessages.SpawnEntity packet, Level world) {

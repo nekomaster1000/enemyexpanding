@@ -514,6 +514,24 @@
             "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Hornet Vex Replacement",
+            "varname": "hornetvexreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       },
@@ -1115,24 +1133,6 @@
             "item": {
               "value": ""
             },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 1,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "Mob spawning is controlled by whether their given advancement has been unlocked or not. This toggle is designed for modpack authors who want to fine-tune control when certain mobs are added to the enemy roster through either datapacks or FTBQuests. Mob spawning advancements are prefixed with 'Enter the ...'",
-            "vardisplay": "Advancement-Based Spawning",
-            "varname": "advancementbasedspawning",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Angler"
-          },
-          {
-            "item": {
-              "value": ""
-            },
             "silkTouchMode": 1,
             "block": {
               "value": ""
@@ -1180,6 +1180,24 @@
             "vardisplay": "Phantom Health Amount",
             "varname": "phantomhealth",
             "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "Chance a Zombified Piglin will spawn hostile",
+            "vardisplay": "Hostile Zombified Piglin Chance",
+            "varname": "angryzombifiedpiglins",
+            "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
           }
