@@ -506,10 +506,10 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.21,
+            "numberField": 0.35,
             "textDefault": "",
             "comment": "(This is the only way in which Sputters naturally spawn - Disable at your own risk!)",
-            "vardisplay": "Sputter Strider Replacement",
+            "vardisplay": "Sputter Strider Addition",
             "varname": "sputterstriderreplacement",
             "enablecomment": true,
             "onlyComment": false,
@@ -529,6 +529,24 @@
             "comment": "",
             "vardisplay": "Hornet Vex Replacement",
             "varname": "hornetvexreplacement",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.06,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Skeleton Horseman Addition",
+            "varname": "skeletalhorserideraddition",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
@@ -884,6 +902,24 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Guardsmask Wearer Spawning",
+            "varname": "guardsmaskwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
           }
         ]
       },
@@ -1198,6 +1234,168 @@
             "vardisplay": "Hostile Zombified Piglin Chance",
             "varname": "angryzombifiedpiglins",
             "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Players move faster while charging a bow",
+            "varname": "playerbowspeed",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Players gain the Streak effect upon killing two mobs in succession, giving them special effects defined in an mcfunction (Speed and Strength by default)",
+            "vardisplay": "Streak Effect",
+            "varname": "killstreakeffect",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 10.0,
+            "textDefault": "",
+            "comment": "Number of seconds until a Streak is lost and reset",
+            "vardisplay": "Streak Effect Duration",
+            "varname": "killstreakduration",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Skeletons become susceptible to lethal amounts of extra damage if shot with an arrow shortly after firing their bow. Enabling faster movement whilst charging a bow with this is option enabled is recommended.",
+            "vardisplay": "Skeleton Quick Draw Effect",
+            "varname": "quickdraw",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Just for fun!",
+            "vardisplay": "All Attacks Knock You Backwards",
+            "varname": "allattacksknockyouback",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.33,
+            "textDefault": "",
+            "comment": "Chance landing a critical strike on a bow-weilding Skeleton will disarm them.",
+            "vardisplay": "Skeleton Bow Break on Crit Chance",
+            "varname": "skeletonbowbreakoncrit",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 3.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Phantom's Get Groundbound When Hurt Duration (In Seconds)",
+            "varname": "phantomgroundbinding",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Phantoms spawn bigger than normal, making them easier to hit (but allowing them to deal more damage, too.)",
+            "vardisplay": "Random Phantom Size",
+            "varname": "randomphantomsize",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.95,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Skeleton Death Kills Skeleton Horses Chance",
+            "varname": "skeletondeathkillsskeletonhorses",
+            "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
           }

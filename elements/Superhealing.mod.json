@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Superhealing",
-    "icon": "flutterfliers.png",
+    "icon": "healinggoo.png",
     "color": {
       "value": -26164,
       "falpha": 0.0

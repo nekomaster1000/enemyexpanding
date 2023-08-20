@@ -16,6 +16,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 
+import net.mcreator.enemyexpproofofconcept.entity.HuntsmanskeletonEntity;
+import net.mcreator.enemyexpproofofconcept.entity.GuardsmanEntity;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
 import javax.annotation.Nullable;
@@ -36,26 +38,54 @@ public class SkeletonSwitchupProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
-		if (sourceentity instanceof Skeleton) {
-			if (Math.random() < (double) BetterConfigConfiguration.SKELETONSWITCHUP.get()) {
+		if (Math.random() < (double) BetterConfigConfiguration.SKELETONSWITCHUP.get()) {
+			if (sourceentity instanceof Skeleton && !(sourceentity instanceof HuntsmanskeletonEntity)) {
 				if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.BOW) {
-					if (Math.random() < 0.5) {
+					if (Math.random() < 0.2) {
 						if (sourceentity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.IRON_SWORD);
+							ItemStack _setstack = new ItemStack(Items.STONE_SWORD);
 							_setstack.setCount(1);
 							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
-					} else {
+					} else if (Math.random() < 0.4) {
 						if (sourceentity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.IRON_AXE);
+							ItemStack _setstack = new ItemStack(Items.STONE_AXE);
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+					} else if (Math.random() < 0.6) {
+						if (sourceentity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(Items.STONE_SHOVEL);
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+					} else if (Math.random() < 0.8) {
+						if (sourceentity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(Items.STONE_HOE);
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+					} else if (Math.random() < 0.8) {
+						if (sourceentity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(Items.STONE_PICKAXE);
 							_setstack.setCount(1);
 							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
 					}
+					if (sourceentity instanceof HuntsmanskeletonEntity animatable)
+						animatable.setTexture("huntsman_bowless");
+					if (sourceentity instanceof GuardsmanEntity animatable)
+						animatable.setTexture("guardsman_bowless");
 					new Object() {
 						private int ticks = 0;
 						private float waitTicks;
@@ -84,6 +114,10 @@ public class SkeletonSwitchupProcedure {
 								if (_entity instanceof Player _player)
 									_player.getInventory().setChanged();
 							}
+							if (sourceentity instanceof HuntsmanskeletonEntity animatable)
+								animatable.setTexture("huntsman");
+							if (sourceentity instanceof GuardsmanEntity animatable)
+								animatable.setTexture("guardsman");
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
 					}.start(world, 200);

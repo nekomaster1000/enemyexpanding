@@ -190,5 +190,12 @@ public class ConfigReplacerProcedure {
 				ReplaceWithHornetProcedure.execute(world, x, y, z, entity);
 			}
 		}
+		if (Math.random() < (double) BetterConfigConfiguration.SKELETALHORSERIDERADDITION.get()) {
+			if (entity instanceof Skeleton) {
+				if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z))) {
+					ReplaceWithSkeletonHorsemanProcedure.execute(world, x, y, z, entity);
+				}
+			}
+		}
 	}
 }

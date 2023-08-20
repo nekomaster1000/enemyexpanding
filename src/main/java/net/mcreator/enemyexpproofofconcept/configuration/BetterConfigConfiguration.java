@@ -34,6 +34,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> MARAUDERCOMMONFISHREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPUTTERSTRIDERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> HORNETVEXREPLACEMENT;
+	public static final ForgeConfigSpec.ConfigValue<Double> SKELETALHORSERIDERADDITION;
 	public static final ForgeConfigSpec.ConfigValue<Double> PETRIMANZOMBIEREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SILVERKINGSPIDERREPLACEMENTDEPTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> CREEPSREPLACEMENTDEPTH;
@@ -53,6 +54,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> BULLSKULLWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> BANEMASKWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> GLADLINGWEARERSPAWNING;
+	public static final ForgeConfigSpec.ConfigValue<Double> GUARDSMASKWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> LEATHERWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> CHAINMAILWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONWEARERSPAWNING;
@@ -70,6 +72,15 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> BABYZOMBIEHEALTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> PHANTOMHEALTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> ANGRYZOMBIFIEDPIGLINS;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> PLAYERBOWSPEED;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> KILLSTREAKEFFECT;
+	public static final ForgeConfigSpec.ConfigValue<Double> KILLSTREAKDURATION;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> QUICKDRAW;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ALLATTACKSKNOCKYOUBACK;
+	public static final ForgeConfigSpec.ConfigValue<Double> SKELETONBOWBREAKONCRIT;
+	public static final ForgeConfigSpec.ConfigValue<Double> PHANTOMGROUNDBINDING;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> RANDOMPHANTOMSIZE;
+	public static final ForgeConfigSpec.ConfigValue<Double> SKELETONDEATHKILLSSKELETONHORSES;
 	public static final ForgeConfigSpec.ConfigValue<Double> STRENGTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> RESISTANCE;
@@ -108,8 +119,9 @@ public class BetterConfigConfiguration {
 		RAVAGERMARAUDERREPLACEMENT = BUILDER.comment("Ravagers are replaced with Marauders on spawn, but only if they spawn in water").define("Ravager Marauder Replacement", (double) 1);
 		MARAUDERCOMMONFISHREPLACEMENT = BUILDER.comment("('Common Fish' being Cod and Salmon) (This is the only way in which Marauders properly spawn without Ravagers spawning in water - Disable at your own risk!)")
 				.define("Marauder Common Fish Replacement", (double) 0.05);
-		SPUTTERSTRIDERREPLACEMENT = BUILDER.comment("(This is the only way in which Sputters naturally spawn - Disable at your own risk!)").define("Sputter Strider Replacement", (double) 0.21);
+		SPUTTERSTRIDERREPLACEMENT = BUILDER.comment("(This is the only way in which Sputters naturally spawn - Disable at your own risk!)").define("Sputter Strider Addition", (double) 0.35);
 		HORNETVEXREPLACEMENT = BUILDER.define("Hornet Vex Replacement", (double) 0);
+		SKELETALHORSERIDERADDITION = BUILDER.define("Skeleton Horseman Addition", (double) 0.06);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);
@@ -133,6 +145,7 @@ public class BetterConfigConfiguration {
 		BULLSKULLWEARERSPAWNING = BUILDER.define("Bull Skull Wearer Spawning", (double) 0.01);
 		BANEMASKWEARERSPAWNING = BUILDER.define("Bane Mask Wearer Spawning", (double) 0.01);
 		GLADLINGWEARERSPAWNING = BUILDER.define("Gladling Wearer Spawning", (double) 0.01);
+		GUARDSMASKWEARERSPAWNING = BUILDER.define("Guardsmask Wearer Spawning", (double) 0.01);
 		BUILDER.pop();
 		BUILDER.push("armorWearerSpawning");
 		LEATHERWEARERSPAWNING = BUILDER.define("Leather Wearer Spawning", (double) 0.01);
@@ -154,6 +167,16 @@ public class BetterConfigConfiguration {
 		BABYZOMBIEHEALTH = BUILDER.define("Baby Zombie Health Amount", (double) 2);
 		PHANTOMHEALTH = BUILDER.define("Phantom Health Amount", (double) 6);
 		ANGRYZOMBIFIEDPIGLINS = BUILDER.comment("Chance a Zombified Piglin will spawn hostile").define("Hostile Zombified Piglin Chance", (double) 0.01);
+		PLAYERBOWSPEED = BUILDER.define("Players move faster while charging a bow", false);
+		KILLSTREAKEFFECT = BUILDER.comment("Players gain the Streak effect upon killing two mobs in succession, giving them special effects defined in an mcfunction (Speed and Strength by default)").define("Streak Effect", false);
+		KILLSTREAKDURATION = BUILDER.comment("Number of seconds until a Streak is lost and reset").define("Streak Effect Duration", (double) 10);
+		QUICKDRAW = BUILDER.comment("Skeletons become susceptible to lethal amounts of extra damage if shot with an arrow shortly after firing their bow. Enabling faster movement whilst charging a bow with this is option enabled is recommended.")
+				.define("Skeleton Quick Draw Effect", true);
+		ALLATTACKSKNOCKYOUBACK = BUILDER.comment("Just for fun!").define("All Attacks Knock You Backwards", false);
+		SKELETONBOWBREAKONCRIT = BUILDER.comment("Chance landing a critical strike on a bow-weilding Skeleton will disarm them.").define("Skeleton Bow Break on Crit Chance", (double) 0.33);
+		PHANTOMGROUNDBINDING = BUILDER.define("Phantom's Get Groundbound When Hurt Duration (In Seconds)", (double) 3);
+		RANDOMPHANTOMSIZE = BUILDER.comment("Phantoms spawn bigger than normal, making them easier to hit (but allowing them to deal more damage, too.)").define("Random Phantom Size", true);
+		SKELETONDEATHKILLSSKELETONHORSES = BUILDER.define("Skeleton Death Kills Skeleton Horses Chance", (double) 0.95);
 		BUILDER.pop();
 		BUILDER.push("effectSpawning");
 		STRENGTH = BUILDER.define("Chance of Strength effect applied on mob-spawn", (double) 0.01);

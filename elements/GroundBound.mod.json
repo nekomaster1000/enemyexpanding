@@ -8,11 +8,14 @@
       "value": -13434778,
       "falpha": 0.0
     },
-    "isInstant": true,
+    "isInstant": false,
     "isBad": true,
     "isBenefitical": false,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "GroundBoundActive"
+    },
     "onActiveTick": {
       "name": "GroundBoundActive"
     }

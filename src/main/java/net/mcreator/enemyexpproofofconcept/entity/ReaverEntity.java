@@ -81,7 +81,6 @@ public class ReaverEntity extends Monster implements IAnimatable {
 		super(type, world);
 		xpReward = 10;
 		setNoAi(false);
-		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -178,11 +177,6 @@ public class ReaverEntity extends Monster implements IAnimatable {
 	@Override
 	public MobType getMobType() {
 		return MobType.ILLAGER;
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

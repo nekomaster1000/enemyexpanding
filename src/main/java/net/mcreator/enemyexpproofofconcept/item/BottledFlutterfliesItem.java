@@ -9,7 +9,7 @@ import net.minecraft.world.item.CreativeModeTab;
 
 public class BottledFlutterfliesItem extends Item {
 	public BottledFlutterfliesItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(16).rarity(Rarity.COMMON));
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(16).rarity(Rarity.COMMON));
 	}
 
 	@Override

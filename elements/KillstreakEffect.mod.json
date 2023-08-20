@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "function",
+  "definition": {
+    "code": "effect give @p strength 10 0 true\neffect give @p speed 10 0 true",
+    "name": "killstreak_effect",
+    "namespace": "mod"
+  }
+}

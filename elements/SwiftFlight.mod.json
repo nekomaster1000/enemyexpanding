@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Swift Flight",
-    "icon": "flutterfliers.png",
+    "icon": "swift_flight.png",
     "color": {
       "value": -6750157,
       "falpha": 0.0

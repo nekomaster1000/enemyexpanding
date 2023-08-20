@@ -151,18 +151,6 @@
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
-        "value": "badlands"
-      },
-      {
-        "value": "badlands_plateau"
-      },
-      {
-        "value": "bamboo_jungle"
-      },
-      {
-        "value": "bamboo_jungle_hills"
-      },
-      {
         "value": "beaches"
       },
       {
@@ -176,15 +164,6 @@
       },
       {
         "value": "mutated_roofed_forest"
-      },
-      {
-        "value": "desert"
-      },
-      {
-        "value": "mutated_desert"
-      },
-      {
-        "value": "desert_hills"
       },
       {
         "value": "dripstone_caves"
@@ -266,15 +245,6 @@
       },
       {
         "value": "plains"
-      },
-      {
-        "value": "savanna"
-      },
-      {
-        "value": "savanna_rock"
-      },
-      {
-        "value": "mutated_savanna_rock"
       },
       {
         "value": "snowy_slopes"

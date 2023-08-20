@@ -10,6 +10,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -103,8 +104,10 @@ public class DreadAttackProcedure {
 									private void run() {
 										if (world instanceof ServerLevel _level)
 											_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 30, 1, 1, 1, 0.3);
-										if (!entity.level.isClientSide())
-											entity.discard();
+										if (entity instanceof Player) {
+											if (!sourceentity.level.isClientSide())
+												sourceentity.discard();
+										}
 										MinecraftForge.EVENT_BUS.unregister(this);
 									}
 								}.start(world, 6);

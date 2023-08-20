@@ -36,7 +36,9 @@ import net.mcreator.enemyexpproofofconcept.entity.MarauderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 import net.mcreator.enemyexpproofofconcept.entity.IntruderEntity;
+import net.mcreator.enemyexpproofofconcept.entity.HuntsmanskeletonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.HornetEntity;
+import net.mcreator.enemyexpproofofconcept.entity.GuardsmanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiusEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
@@ -50,6 +52,7 @@ import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
 import net.mcreator.enemyexpproofofconcept.entity.DragonflyEntity;
+import net.mcreator.enemyexpproofofconcept.entity.DirewolfEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CrawlerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CockatriceEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
@@ -104,6 +107,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof FrigidEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof HuntsmanskeletonEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GuardsmanEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -468,6 +485,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof HornetEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DirewolfEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

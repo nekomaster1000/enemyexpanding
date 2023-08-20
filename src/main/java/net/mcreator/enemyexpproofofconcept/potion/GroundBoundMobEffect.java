@@ -1,6 +1,7 @@
 
 package net.mcreator.enemyexpproofofconcept.potion;
 
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
@@ -18,8 +19,8 @@ public class GroundBoundMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean isInstantenous() {
-		return true;
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		GroundBoundActiveProcedure.execute(entity);
 	}
 
 	@Override

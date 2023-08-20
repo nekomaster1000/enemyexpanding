@@ -85,7 +85,7 @@ public class EquestrianEntity extends Zombie implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.EQUESTRIAN.get(), 30, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.EQUESTRIAN.get(), 15, 1, 1));
 	}
 
 	public EquestrianEntity(PlayMessages.SpawnEntity packet, Level world) {

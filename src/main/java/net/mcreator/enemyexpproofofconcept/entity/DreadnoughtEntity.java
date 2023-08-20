@@ -57,6 +57,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.enemyexpproofofconcept.procedures.DreadnoughtHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DreadSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DreadLightVanishProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DreadDamageVanishProcedure;
@@ -135,7 +136,17 @@ public class DreadnoughtEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(5, new AvoidEntityGoal<>(this, SpectreEntity.class, (float) 6, 1, 1.2));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = DreadnoughtEntity.this.getX();
+				double y = DreadnoughtEntity.this.getY();
+				double z = DreadnoughtEntity.this.getZ();
+				Entity entity = DreadnoughtEntity.this;
+				Level world = DreadnoughtEntity.this.level;
+				return super.canUse() && DreadnoughtHostilityProcedure.execute();
+			}
+		});
 		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 	}
 

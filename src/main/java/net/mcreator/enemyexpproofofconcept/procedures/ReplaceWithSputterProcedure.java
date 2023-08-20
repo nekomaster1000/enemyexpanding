@@ -39,8 +39,6 @@ public class ReplaceWithSputterProcedure {
 
 			private void run() {
 				if (entity.isAlive()) {
-					if (!entity.level.isClientSide())
-						entity.discard();
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = new SputterEntity(EnemyexpansionModEntities.SPUTTER.get(), _level);
 						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
