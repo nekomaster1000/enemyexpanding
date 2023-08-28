@@ -58,46 +58,6 @@
       }
     ]
   },
-  "bane.idle": {
-    "category": "hostile",
-    "subtitle": "subtitles.bane.idle",
-    "sounds": [
-      {
-        "name": "enemyexpansion:bane_idle_1",
-        "stream": false
-      },
-      {
-        "name": "enemyexpansion:bane_idle_2",
-        "stream": false
-      },
-      {
-        "name": "enemyexpansion:bane_idle_3",
-        "stream": false
-      }
-    ]
-  },
-  "bane.hurt": {
-    "category": "hostile",
-    "subtitle": "subtitles.bane.hurt",
-    "sounds": [
-      {
-        "name": "enemyexpansion:bane_hurt_1",
-        "stream": false
-      },
-      {
-        "name": "enemyexpansion:bane_hurt_2",
-        "stream": false
-      },
-      {
-        "name": "enemyexpansion:bane_hurt_3",
-        "stream": false
-      },
-      {
-        "name": "enemyexpansion:bane_hurt_4",
-        "stream": false
-      }
-    ]
-  },
   "kelpie_idle": {
     "category": "hostile",
     "subtitle": "subtitles.kelpie_idle",
@@ -162,6 +122,46 @@
     "sounds": [
       {
         "name": "enemyexpansion:starved_chomp",
+        "stream": false
+      }
+    ]
+  },
+  "bane.hurt": {
+    "category": "hostile",
+    "subtitle": "subtitles.bane.hurt",
+    "sounds": [
+      {
+        "name": "enemyexpansion:bane_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:bane_hurt_2",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:bane_hurt_3",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:bane_hurt_4",
+        "stream": false
+      }
+    ]
+  },
+  "bane.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.bane.idle",
+    "sounds": [
+      {
+        "name": "enemyexpansion:bane_idle_1",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:bane_idle_2",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:bane_idle_3",
         "stream": false
       }
     ]

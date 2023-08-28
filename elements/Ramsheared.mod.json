@@ -126,12 +126,16 @@
     "enable8": false,
     "enable9": false,
     "enable10": false,
-    "breedable": false,
+    "breedable": true,
     "tameable": false,
     "disableDeathRotation": false,
     "headMovement": true,
     "eyeHeight": false,
-    "breedTriggerItems": [],
+    "breedTriggerItems": [
+      {
+        "value": "Blocks.WHEAT"
+      }
+    ],
     "ranged": false,
     "rangedAttackItem": {
       "value": ""

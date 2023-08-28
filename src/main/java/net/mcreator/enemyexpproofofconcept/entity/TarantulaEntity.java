@@ -72,7 +72,7 @@ public class TarantulaEntity extends Spider implements IAnimatable {
 			new ResourceLocation("stony_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"), new ResourceLocation("savanna_plateau"), new ResourceLocation("dripstone_caves"), new ResourceLocation("taiga"),
 			new ResourceLocation("jagged_peaks"), new ResourceLocation("swamp"), new ResourceLocation("eroded_badlands"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("windswept_hills"),
 			new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"), new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"), new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"),
-			new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"), new ResourceLocation("desert"));
+			new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {

@@ -362,65 +362,11 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
-            "textDefault": "",
-            "comment": "(This is the only way in which Gladilads properly spawn - Disable at your own risk!)",
-            "vardisplay": "Gladilad Squid Replacement",
-            "varname": "gladiladsquidreplacement",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.05,
-            "textDefault": "",
-            "comment": "('Common Fish' being Cod and Salmon) (This is the only way in which Anglers properly spawn - Disable at your own risk!)",
-            "vardisplay": "Angler Common Fish Replacement",
-            "varname": "anglercommonfishreplacement",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Angler"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
             "numberField": 0.0,
             "textDefault": "",
             "comment": "Zombies are randomly replaced with Enemy Expansion variants, making them more common. Potentially useful for making EE mobs spawn in modded biomes.",
             "vardisplay": "Random Enemy Expansion Zombie Replacement",
             "varname": "hordezombiereplacement",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Angler"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.05,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Kelpie Angler Replacement",
-            "varname": "kelpieanglerreplacement",
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
@@ -475,24 +421,6 @@
             "comment": "Ravagers are replaced with Marauders on spawn, but only if they spawn in water",
             "vardisplay": "Ravager Marauder Replacement",
             "varname": "ravagermarauderreplacement",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Angler"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.05,
-            "textDefault": "",
-            "comment": "('Common Fish' being Cod and Salmon) (This is the only way in which Marauders properly spawn without Ravagers spawning in water - Disable at your own risk!)",
-            "vardisplay": "Marauder Common Fish Replacement",
-            "varname": "maraudercommonfishreplacement",
             "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"

@@ -59,6 +59,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.FrigidRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.FlyRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.FlutterflyRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.FishCarrierRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.EyestalkerRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.ErrantRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.EquestrianRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.DreadnoughtRenderer;
@@ -121,6 +122,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.TARANTULA.get(), TarantulaRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SCORPION.get(), ScorpionRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WASP.get(), WaspRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.HORNET.get(), HornetRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHEROMONE_SUMMON.get(), PheromoneSummonRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.LADYBUG.get(), LadybugRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ZADYBUG.get(), ZadybugRenderer::new);
@@ -130,6 +132,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.ROOSTER.get(), RoosterRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.RAM.get(), RamRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.RAMSHEARED.get(), RamshearedRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.DIREWOLF.get(), DirewolfRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.GOBLIN_FEAR.get(), GoblinFearRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.INVISICREEPER.get(), InvisicreeperRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ANGLER.get(), AnglerRenderer::new);
@@ -144,8 +147,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.SPUTTER.get(), SputterRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.FISH_CARRIER.get(), FishCarrierRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.DRAGONFLY.get(), DragonflyRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.HORNET.get(), HornetRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.DIREWOLF.get(), DirewolfRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.EYESTALKER.get(), EyestalkerRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHEROMONE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HUNTSMAN_PUNCH.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.ENEMY_MELEE_PROJECTILE.get(), ThrownItemRenderer::new);

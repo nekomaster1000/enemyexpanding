@@ -40,7 +40,7 @@ public class CinderFireballProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof Player && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false) && entity instanceof CinderEntity) {
-			if (Math.random() < 0.5 && entity.isAlive()) {
+			if (Math.random() < 0.5) {
 				entity.setSecondsOnFire(3);
 				new Object() {
 					private int ticks = 0;
@@ -63,22 +63,24 @@ public class CinderFireballProcedure {
 					}
 
 					private void run() {
-						{
-							Entity _shootFrom = entity;
-							Level projectileLevel = _shootFrom.level;
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new CinderFireChargeEntity(EnemyexpansionModEntities.CINDER_FIRE_CHARGE.get(), level);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, 5, 1);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 1);
-								projectileLevel.addFreshEntity(_entityToSpawn);
+						if (entity.isAlive()) {
+							{
+								Entity _shootFrom = entity;
+								Level projectileLevel = _shootFrom.level;
+								if (!projectileLevel.isClientSide()) {
+									Projectile _entityToSpawn = new Object() {
+										public Projectile getArrow(Level level, float damage, int knockback) {
+											AbstractArrow entityToSpawn = new CinderFireChargeEntity(EnemyexpansionModEntities.CINDER_FIRE_CHARGE.get(), level);
+											entityToSpawn.setBaseDamage(damage);
+											entityToSpawn.setKnockback(knockback);
+											entityToSpawn.setSilent(true);
+											return entityToSpawn;
+										}
+									}.getArrow(projectileLevel, 5, 1);
+									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 1);
+									projectileLevel.addFreshEntity(_entityToSpawn);
+								}
 							}
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);

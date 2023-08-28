@@ -17,7 +17,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -48,7 +47,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -57,7 +55,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.procedures.WaspPlayerHostilityProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DragonflyErraticFlightProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DragonflyDodgePatternProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -152,7 +150,7 @@ public class DragonflyEntity extends Monster implements IAnimatable {
 				double z = DragonflyEntity.this.getZ();
 				Entity entity = DragonflyEntity.this;
 				Level world = DragonflyEntity.this.level;
-				return super.canUse() && WaspPlayerHostilityProcedure.execute(world);
+				return super.canUse() && IfNightReturnTrueProcedure.execute(world);
 			}
 		});
 	}
@@ -229,9 +227,12 @@ public class DragonflyEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.DRAGONFLY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
-		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.DRAGONFLY.get(), 180);
+		SpawnPlacements.register(EnemyexpansionModEntities.DRAGONFLY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfNightReturnTrueProcedure.execute(world);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

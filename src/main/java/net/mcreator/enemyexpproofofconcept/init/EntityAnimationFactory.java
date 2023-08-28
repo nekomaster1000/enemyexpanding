@@ -48,6 +48,7 @@ import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
+import net.mcreator.enemyexpproofofconcept.entity.EyestalkerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
@@ -337,6 +338,13 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
+			if (event.getEntity() instanceof HornetEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
 			if (event.getEntity() instanceof PheromoneSummonEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
@@ -394,6 +402,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof RamshearedEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DirewolfEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -484,14 +499,7 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof HornetEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof DirewolfEntity syncable) {
+			if (event.getEntity() instanceof EyestalkerEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -55,6 +55,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.ScorpionStingProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.ScorpionEntityIsHurtProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -120,7 +121,17 @@ public class ScorpionEntity extends Spider implements IAnimatable {
 		});
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = ScorpionEntity.this.getX();
+				double y = ScorpionEntity.this.getY();
+				double z = ScorpionEntity.this.getZ();
+				Entity entity = ScorpionEntity.this;
+				Level world = ScorpionEntity.this.level;
+				return super.canUse() && IfNightReturnTrueProcedure.execute(world);
+			}
+		});
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
 	}
@@ -170,7 +181,7 @@ public class ScorpionEntity extends Spider implements IAnimatable {
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		ScorpionStingProcedure.execute(this.level, this, sourceentity);
+		ScorpionStingProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, sourceentity);
 	}
 
 	@Override

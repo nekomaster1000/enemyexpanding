@@ -36,6 +36,6 @@ public class GallantSwingDespawnProcedure {
 					immediatesourceentity.discard();
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 3);
+		}.start(world, 2);
 	}
 }

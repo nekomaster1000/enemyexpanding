@@ -142,7 +142,7 @@ public class PiecrabEntity extends Monster implements IAnimatable {
 				double z = PiecrabEntity.this.getZ();
 				Entity entity = PiecrabEntity.this;
 				Level world = PiecrabEntity.this.level;
-				return super.canUse() && PiecrabHostilityProcedure.execute(entity);
+				return super.canUse() && PiecrabHostilityProcedure.execute(world, entity);
 			}
 		});
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PropellerEntity.class, false, false) {
@@ -153,7 +153,7 @@ public class PiecrabEntity extends Monster implements IAnimatable {
 				double z = PiecrabEntity.this.getZ();
 				Entity entity = PiecrabEntity.this;
 				Level world = PiecrabEntity.this.level;
-				return super.canUse() && PiecrabHostilityProcedure.execute(entity);
+				return super.canUse() && PiecrabHostilityProcedure.execute(world, entity);
 			}
 		});
 		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
@@ -169,7 +169,7 @@ public class PiecrabEntity extends Monster implements IAnimatable {
 				double z = PiecrabEntity.this.getZ();
 				Entity entity = PiecrabEntity.this;
 				Level world = PiecrabEntity.this.level;
-				return super.canUse() && PiecrabHostilityProcedure.execute(entity);
+				return super.canUse() && PiecrabHostilityProcedure.execute(world, entity);
 			}
 
 		});
@@ -181,7 +181,7 @@ public class PiecrabEntity extends Monster implements IAnimatable {
 				double z = PiecrabEntity.this.getZ();
 				Entity entity = PiecrabEntity.this;
 				Level world = PiecrabEntity.this.level;
-				return super.canUse() && PiecrabHostilityProcedure.execute(entity);
+				return super.canUse() && PiecrabHostilityProcedure.execute(world, entity);
 			}
 		});
 		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 0.8));

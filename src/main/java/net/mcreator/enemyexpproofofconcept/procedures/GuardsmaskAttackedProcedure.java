@@ -33,10 +33,17 @@ public class GuardsmaskAttackedProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity immediatesourceentity) {
 		if (entity == null || immediatesourceentity == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.GUARDSMASK_HELMET.get()) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.GUARDSMASK_HELMET.get()
+				|| (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.GUARDSMASK_CHESTPLATE.get()) {
 			if (immediatesourceentity instanceof Arrow) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 2, (true), (true)));
+			}
+		} else if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.GUARDSMASK_HELMET.get()
+				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.GUARDSMASK_CHESTPLATE.get()) {
+			if (immediatesourceentity instanceof Arrow) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 4, (true), (true)));
 			}
 		}
 	}

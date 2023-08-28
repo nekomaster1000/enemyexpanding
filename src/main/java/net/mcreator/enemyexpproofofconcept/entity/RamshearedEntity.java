@@ -16,11 +16,13 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Skeleton;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -38,9 +40,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -54,7 +58,9 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
 
-public class RamshearedEntity extends Monster implements IAnimatable {
+import java.util.List;
+
+public class RamshearedEntity extends Animal implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(RamshearedEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(RamshearedEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(RamshearedEntity.class, EntityDataSerializers.STRING);
@@ -159,6 +165,24 @@ public class RamshearedEntity extends Monster implements IAnimatable {
 	@Override
 	public EntityDimensions getDimensions(Pose p_33597_) {
 		return super.getDimensions(p_33597_).scale((float) 1);
+	}
+
+	@Override
+	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
+		RamshearedEntity retval = EnemyexpansionModEntities.RAMSHEARED.get().create(serverWorld);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
+		return retval;
+	}
+
+	@Override
+	public boolean isFood(ItemStack stack) {
+		return List.of(Blocks.WHEAT.asItem()).contains(stack.getItem());
+	}
+
+	@Override
+	public void aiStep() {
+		super.aiStep();
+		this.updateSwingTime();
 	}
 
 	public static void init() {

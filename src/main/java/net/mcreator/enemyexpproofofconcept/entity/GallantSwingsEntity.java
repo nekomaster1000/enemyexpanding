@@ -7,7 +7,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -19,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.enemyexpproofofconcept.procedures.GallantSwingDespawnProcedure;
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Random;
@@ -49,7 +49,7 @@ public class GallantSwingsEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(Blocks.AIR);
+		return new ItemStack(EnemyexpansionModItems.CRESCENT_DISC.get());
 	}
 
 	@Override

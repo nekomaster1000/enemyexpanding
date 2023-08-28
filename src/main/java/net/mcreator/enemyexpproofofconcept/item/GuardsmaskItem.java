@@ -2,6 +2,9 @@
 package net.mcreator.enemyexpproofofconcept.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -10,10 +13,19 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.enemyexpproofofconcept.client.model.Modelguardsman_cloak;
+
+import java.util.Map;
+import java.util.Collections;
 
 public abstract class GuardsmaskItem extends ArmorItem {
 	public GuardsmaskItem(EquipmentSlot slot, Item.Properties properties) {
@@ -25,7 +37,7 @@ public abstract class GuardsmaskItem extends ArmorItem {
 
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{0, 0, 0, 2}[slot.getIndex()];
+				return new int[]{0, 0, 6, 2}[slot.getIndex()];
 			}
 
 			@Override
@@ -68,6 +80,34 @@ public abstract class GuardsmaskItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "enemyexpansion:textures/models/armor/guardsman_layer_1.png";
+		}
+	}
+
+	public static class Chestplate extends GuardsmaskItem {
+		public Chestplate() {
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+		}
+
+		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
+			consumer.accept(new IItemRenderProperties() {
+				@Override
+				@OnlyIn(Dist.CLIENT)
+				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelguardsman_cloak(Minecraft.getInstance().getEntityModels().bakeLayer(Modelguardsman_cloak.LAYER_LOCATION)).Body,
+							"left_arm", new Modelguardsman_cloak(Minecraft.getInstance().getEntityModels().bakeLayer(Modelguardsman_cloak.LAYER_LOCATION)).LeftArm, "right_arm",
+							new Modelguardsman_cloak(Minecraft.getInstance().getEntityModels().bakeLayer(Modelguardsman_cloak.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
+					armorModel.crouching = living.isShiftKeyDown();
+					armorModel.riding = defaultModel.riding;
+					armorModel.young = living.isBaby();
+					return armorModel;
+				}
+			});
+		}
+
+		@Override
+		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+			return "enemyexpansion:textures/entities/guardsman_cloak.png";
 		}
 	}
 }

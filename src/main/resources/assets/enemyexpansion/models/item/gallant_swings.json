@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "enemyexpansion:items/huntsmanpunch"
+    "layer0": "enemyexpansion:items/crescent_disc"
   },
   "display": {
     "thirdperson_righthand": {

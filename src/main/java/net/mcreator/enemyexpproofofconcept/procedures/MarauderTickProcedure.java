@@ -1,12 +1,10 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
@@ -15,6 +13,10 @@ public class MarauderTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
 		if (Math.random() < 0.05) {
 			if (entity.isOnGround() && !entity.isInWater()) {
 				if (!entity.isPassenger()) {
@@ -28,9 +30,6 @@ public class MarauderTickProcedure {
 					}
 				}
 			}
-		}
-		if ((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.ICE) {
-			world.destroyBlock(new BlockPos(x, y + 1, z), false);
 		}
 	}
 }

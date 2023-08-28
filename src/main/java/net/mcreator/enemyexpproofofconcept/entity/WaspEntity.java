@@ -51,7 +51,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -60,8 +59,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.procedures.WaspPlayerHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.WaspDodgePatternProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -155,7 +154,7 @@ public class WaspEntity extends Monster implements IAnimatable {
 				double z = WaspEntity.this.getZ();
 				Entity entity = WaspEntity.this;
 				Level world = WaspEntity.this.level;
-				return super.canUse() && WaspPlayerHostilityProcedure.execute(world);
+				return super.canUse() && IfNightReturnTrueProcedure.execute(world);
 			}
 		});
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, Bee.class, false, false));
@@ -234,8 +233,12 @@ public class WaspEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.WASP.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.WASP.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfNightReturnTrueProcedure.execute(world);
+		});
 		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.WASP.get(), 180);
 	}
 

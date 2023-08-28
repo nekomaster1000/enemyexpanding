@@ -123,12 +123,22 @@
     "enable8": false,
     "enable9": false,
     "enable10": false,
-    "breedable": false,
+    "breedable": true,
     "tameable": false,
     "disableDeathRotation": false,
     "headMovement": true,
     "eyeHeight": false,
-    "breedTriggerItems": [],
+    "breedTriggerItems": [
+      {
+        "value": "Items.POTATO"
+      },
+      {
+        "value": "Items.CARROT"
+      },
+      {
+        "value": "Items.BEETROOT"
+      }
+    ],
     "ranged": false,
     "rangedAttackItem": {
       "value": ""
@@ -139,7 +149,10 @@
     "height": 0.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 20,
+    "spawningCondition": {
+      "name": "BoarSpawning"
+    },
+    "spawningProbability": 10,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 5,

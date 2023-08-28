@@ -24,14 +24,10 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> CHICKENROOSTERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPIDERTARANTULAREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPIDERSCORPIONREPLACEMENT;
-	public static final ForgeConfigSpec.ConfigValue<Double> GLADILADSQUIDREPLACEMENT;
-	public static final ForgeConfigSpec.ConfigValue<Double> ANGLERCOMMONFISHREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> HORDEZOMBIEREPLACEMENT;
-	public static final ForgeConfigSpec.ConfigValue<Double> KELPIEANGLERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> ILLAGERVILLAGERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONGOLEMRAVAGERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> RAVAGERMARAUDERREPLACEMENT;
-	public static final ForgeConfigSpec.ConfigValue<Double> MARAUDERCOMMONFISHREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPUTTERSTRIDERREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> HORNETVEXREPLACEMENT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SKELETALHORSERIDERADDITION;
@@ -110,15 +106,10 @@ public class BetterConfigConfiguration {
 		CHICKENROOSTERREPLACEMENT = BUILDER.define("Rooster Chicken Replacement", (double) 0.55);
 		SPIDERTARANTULAREPLACEMENT = BUILDER.define("Tarantula Spider Replacement", (double) 1);
 		SPIDERSCORPIONREPLACEMENT = BUILDER.define("Scorpion Spider Replacement", (double) 1);
-		GLADILADSQUIDREPLACEMENT = BUILDER.comment("(This is the only way in which Gladilads properly spawn - Disable at your own risk!)").define("Gladilad Squid Replacement", (double) 0.01);
-		ANGLERCOMMONFISHREPLACEMENT = BUILDER.define("Angler Common Fish Replacement", (double) 0.05);
 		HORDEZOMBIEREPLACEMENT = BUILDER.define("Random Enemy Expansion Zombie Replacement", (double) 0);
-		KELPIEANGLERREPLACEMENT = BUILDER.define("Kelpie Angler Replacement", (double) 0.05);
 		ILLAGERVILLAGERREPLACEMENT = BUILDER.define("Illager Villager Replacement", (double) 0);
 		IRONGOLEMRAVAGERREPLACEMENT = BUILDER.define("Iron Golem Ravager Replacement", (double) 0);
 		RAVAGERMARAUDERREPLACEMENT = BUILDER.comment("Ravagers are replaced with Marauders on spawn, but only if they spawn in water").define("Ravager Marauder Replacement", (double) 1);
-		MARAUDERCOMMONFISHREPLACEMENT = BUILDER.comment("('Common Fish' being Cod and Salmon) (This is the only way in which Marauders properly spawn without Ravagers spawning in water - Disable at your own risk!)")
-				.define("Marauder Common Fish Replacement", (double) 0.05);
 		SPUTTERSTRIDERREPLACEMENT = BUILDER.comment("(This is the only way in which Sputters naturally spawn - Disable at your own risk!)").define("Sputter Strider Addition", (double) 0.35);
 		HORNETVEXREPLACEMENT = BUILDER.define("Hornet Vex Replacement", (double) 0);
 		SKELETALHORSERIDERADDITION = BUILDER.define("Skeleton Horseman Addition", (double) 0.06);

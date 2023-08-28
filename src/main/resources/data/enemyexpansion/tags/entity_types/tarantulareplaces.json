@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:spider",
+    "minecraft:zombie",
+    "enemyexpansion:sprinter",
+    "enemyexpansion:slugger",
+    "enemyexpansion:senior",
+    "enemyexpansion:ghoul",
+    "enemyexpansion:gallant",
+    "enemyexpansion:petriman"
+  ]
+}

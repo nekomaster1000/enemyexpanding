@@ -60,7 +60,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.GhoulSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GhoulHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GhoulBreakBlockProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -80,7 +80,7 @@ public class GhoulEntity extends Monster implements IAnimatable {
 	private long lastSwing;
 	public String animationprocedure = "empty";
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_ocean"), new ResourceLocation("deep_cold_ocean"), new ResourceLocation("grove"), new ResourceLocation("windswept_hills"),
-			new ResourceLocation("snowy_plains"), new ResourceLocation("ice_spikes"), new ResourceLocation("snowy_slopes"), new ResourceLocation("snowy_taiga"), new ResourceLocation("snowy_beach"));
+			new ResourceLocation("snowy_plains"), new ResourceLocation("ice_spikes"), new ResourceLocation("snowy_slopes"), new ResourceLocation("snowy_taiga"), new ResourceLocation("deep_frozen_ocean"), new ResourceLocation("snowy_beach"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -178,7 +178,7 @@ public class GhoulEntity extends Monster implements IAnimatable {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		NoBabiesProcedure.execute(world, this);
+		GhoulSpawnProcedure.execute(world, this);
 		return retval;
 	}
 
@@ -202,7 +202,7 @@ public class GhoulEntity extends Monster implements IAnimatable {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
-		builder = builder.add(Attributes.MAX_HEALTH, 32);
+		builder = builder.add(Attributes.MAX_HEALTH, 40);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 20);

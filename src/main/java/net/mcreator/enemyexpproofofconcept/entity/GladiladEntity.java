@@ -48,7 +48,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -58,6 +57,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GladiladBounceProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -80,7 +80,7 @@ public class GladiladEntity extends Monster implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADILAD.get(), 30, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.UNDERGROUND_WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADILAD.get(), 5, 1, 1));
 	}
 
 	public GladiladEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -229,8 +229,12 @@ public class GladiladEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.GLADILAD.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.GLADILAD.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfNightReturnTrueProcedure.execute(world);
+		});
 		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.GLADILAD.get(), 180);
 	}
 

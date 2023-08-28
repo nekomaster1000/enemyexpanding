@@ -50,7 +50,6 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -64,6 +63,7 @@ import net.mcreator.enemyexpproofofconcept.procedures.KelpieTickProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieDiesProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -86,7 +86,7 @@ public class KelpieEntity extends Monster implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.KELPIE.get(), 10, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.KELPIE.get(), 1, 1, 1));
 	}
 
 	public KelpieEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -245,8 +245,12 @@ public class KelpieEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.KELPIE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.KELPIE.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfNightReturnTrueProcedure.execute(world);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

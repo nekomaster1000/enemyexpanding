@@ -24,6 +24,10 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.animal.Pig;
+import net.minecraft.world.entity.animal.Cow;
+import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -43,7 +47,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -52,6 +55,10 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.PersonalSpaceHostilityProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.DirewolfSheepHostilityProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.DirewolfCowHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DireJumpProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -86,7 +93,6 @@ public class DirewolfEntity extends Monster implements IAnimatable {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -124,17 +130,56 @@ public class DirewolfEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
 		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, true, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, true, false) {
+			@Override
+			public boolean canUse() {
+				double x = DirewolfEntity.this.getX();
+				double y = DirewolfEntity.this.getY();
+				double z = DirewolfEntity.this.getZ();
+				Entity entity = DirewolfEntity.this;
+				Level world = DirewolfEntity.this.level;
+				return super.canUse() && IfNightReturnTrueProcedure.execute(world);
+			}
+		});
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Chicken.class, true, false));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, Pig.class, true, false) {
+			@Override
+			public boolean canUse() {
+				double x = DirewolfEntity.this.getX();
+				double y = DirewolfEntity.this.getY();
+				double z = DirewolfEntity.this.getZ();
+				Entity entity = DirewolfEntity.this;
+				Level world = DirewolfEntity.this.level;
+				return super.canUse() && DirewolfSheepHostilityProcedure.execute();
+			}
+		});
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Sheep.class, true, false) {
+			@Override
+			public boolean canUse() {
+				double x = DirewolfEntity.this.getX();
+				double y = DirewolfEntity.this.getY();
+				double z = DirewolfEntity.this.getZ();
+				Entity entity = DirewolfEntity.this;
+				Level world = DirewolfEntity.this.level;
+				return super.canUse() && DirewolfSheepHostilityProcedure.execute();
+			}
+		});
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Cow.class, true, false) {
+			@Override
+			public boolean canUse() {
+				double x = DirewolfEntity.this.getX();
+				double y = DirewolfEntity.this.getY();
+				double z = DirewolfEntity.this.getZ();
+				Entity entity = DirewolfEntity.this;
+				Level world = DirewolfEntity.this.level;
+				return super.canUse() && DirewolfCowHostilityProcedure.execute();
+			}
+		});
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
@@ -179,9 +224,19 @@ public class DirewolfEntity extends Monster implements IAnimatable {
 		return super.getDimensions(p_33597_).scale((float) 1.5);
 	}
 
+	@Override
+	public void playerTouch(Player sourceentity) {
+		super.playerTouch(sourceentity);
+		PersonalSpaceHostilityProcedure.execute(this, sourceentity);
+	}
+
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.DIREWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.DIREWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfNightReturnTrueProcedure.execute(world);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

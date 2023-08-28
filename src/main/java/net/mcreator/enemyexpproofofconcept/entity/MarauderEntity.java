@@ -48,7 +48,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -60,6 +59,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.MarauderTickProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.MarauderKnockedbackProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -80,7 +80,7 @@ public class MarauderEntity extends Monster implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.MARAUDER.get(), 20, 1, 4));
+			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.MARAUDER.get(), 20, 1, 4));
 	}
 
 	public MarauderEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -196,6 +196,8 @@ public class MarauderEntity extends Monster implements IAnimatable {
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		MarauderKnockedbackProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		if (source.isExplosion())
+			return false;
 		return super.hurt(source, amount);
 	}
 
@@ -227,8 +229,12 @@ public class MarauderEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.MARAUDER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.MARAUDER.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfNightReturnTrueProcedure.execute(world);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

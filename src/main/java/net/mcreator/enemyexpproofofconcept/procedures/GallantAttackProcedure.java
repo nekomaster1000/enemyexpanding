@@ -68,22 +68,24 @@ public class GallantAttackProcedure {
 
 				private void run() {
 					if (sourceentity.isAlive()) {
-						{
-							Entity _shootFrom = sourceentity;
-							Level projectileLevel = _shootFrom.level;
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new GallantSwingsEntity(EnemyexpansionModEntities.GALLANT_SWINGS.get(), level);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, 2, (int) 1.5);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, (float) Mth.nextDouble(new Random(), 0, 10));
-								projectileLevel.addFreshEntity(_entityToSpawn);
+						for (int index0 = 0; index0 < (int) (10); index0++) {
+							{
+								Entity _shootFrom = sourceentity;
+								Level projectileLevel = _shootFrom.level;
+								if (!projectileLevel.isClientSide()) {
+									Projectile _entityToSpawn = new Object() {
+										public Projectile getArrow(Level level, float damage, int knockback) {
+											AbstractArrow entityToSpawn = new GallantSwingsEntity(EnemyexpansionModEntities.GALLANT_SWINGS.get(), level);
+											entityToSpawn.setBaseDamage(damage);
+											entityToSpawn.setKnockback(knockback);
+											entityToSpawn.setSilent(true);
+											return entityToSpawn;
+										}
+									}.getArrow(projectileLevel, 6, (int) 1.5);
+									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, (float) Mth.nextDouble(new Random(), 0, 180));
+									projectileLevel.addFreshEntity(_entityToSpawn);
+								}
 							}
 						}
 						if (world instanceof Level _level) {
@@ -115,7 +117,7 @@ public class GallantAttackProcedure {
 						}
 
 						private void run() {
-							if (sourceentity.isAlive()) {
+							for (int index1 = 0; index1 < (int) (10); index1++) {
 								{
 									Entity _shootFrom = sourceentity;
 									Level projectileLevel = _shootFrom.level;
@@ -128,18 +130,18 @@ public class GallantAttackProcedure {
 												entityToSpawn.setSilent(true);
 												return entityToSpawn;
 											}
-										}.getArrow(projectileLevel, 2, (int) 1.5);
+										}.getArrow(projectileLevel, 6, (int) 1.5);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, (float) Mth.nextDouble(new Random(), 0, 10));
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, (float) Mth.nextDouble(new Random(), 0, 180));
 										projectileLevel.addFreshEntity(_entityToSpawn);
 									}
 								}
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0, false);
-									}
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.HOSTILE, 1, 0, false);
 								}
 							}
 							MinecraftForge.EVENT_BUS.unregister(this);

@@ -58,7 +58,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 20,
-    "health": 32,
+    "health": 40,
     "xpAmount": 12,
     "waterMob": false,
     "flyingMob": false,
@@ -106,7 +106,7 @@
       "name": "GhoulBreakBlock"
     },
     "onInitialSpawn": {
-      "name": "NoBabies"
+      "name": "GhoulSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -185,6 +185,9 @@
       },
       {
         "value": "deep_cold_ocean"
+      },
+      {
+        "value": "deep_frozen_ocean"
       }
     ],
     "spawnInDungeons": false

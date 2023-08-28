@@ -76,6 +76,7 @@ import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
 import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
+import net.mcreator.enemyexpproofofconcept.entity.EyestalkerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ErrantEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 import net.mcreator.enemyexpproofofconcept.entity.EnemyMeleeProjectileEntity;
@@ -233,7 +234,7 @@ public class EnemyexpansionModEntities {
 
 					.sized(1.3f, 3.85f));
 	public static final RegistryObject<EntityType<GladiladEntity>> GLADILAD = register("gladilad",
-			EntityType.Builder.<GladiladEntity>of(GladiladEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GladiladEntity::new)
+			EntityType.Builder.<GladiladEntity>of(GladiladEntity::new, MobCategory.UNDERGROUND_WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GladiladEntity::new)
 
 					.sized(1.3f, 2.5f));
 	public static final RegistryObject<EntityType<CockatriceEntity>> COCKATRICE = register("cockatrice",
@@ -250,6 +251,10 @@ public class EnemyexpansionModEntities {
 					.sized(1.5f, 1.1f));
 	public static final RegistryObject<EntityType<WaspEntity>> WASP = register("wasp",
 			EntityType.Builder.<WaspEntity>of(WaspEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WaspEntity::new)
+
+					.sized(0.45f, 1.6f));
+	public static final RegistryObject<EntityType<HornetEntity>> HORNET = register("hornet",
+			EntityType.Builder.<HornetEntity>of(HornetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HornetEntity::new)
 
 					.sized(0.45f, 1.6f));
 	public static final RegistryObject<EntityType<PheromoneSummonEntity>> PHEROMONE_SUMMON = register("pheromone_summon",
@@ -288,6 +293,10 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<RamshearedEntity>of(RamshearedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RamshearedEntity::new)
 
 					.sized(1.3f, 1.55f));
+	public static final RegistryObject<EntityType<DirewolfEntity>> DIREWOLF = register("direwolf",
+			EntityType.Builder.<DirewolfEntity>of(DirewolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DirewolfEntity::new)
+
+					.sized(0.9f, 0.75f));
 	public static final RegistryObject<EntityType<GoblinFearEntity>> GOBLIN_FEAR = register("goblin_fear",
 			EntityType.Builder.<GoblinFearEntity>of(GoblinFearEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(GoblinFearEntity::new)
 
@@ -297,11 +306,11 @@ public class EnemyexpansionModEntities {
 
 					.sized(0f, 0f));
 	public static final RegistryObject<EntityType<AnglerEntity>> ANGLER = register("angler",
-			EntityType.Builder.<AnglerEntity>of(AnglerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerEntity::new)
+			EntityType.Builder.<AnglerEntity>of(AnglerEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerEntity::new)
 
 					.sized(0.95f, 0.95f));
 	public static final RegistryObject<EntityType<KelpieEntity>> KELPIE = register("kelpie",
-			EntityType.Builder.<KelpieEntity>of(KelpieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KelpieEntity::new)
+			EntityType.Builder.<KelpieEntity>of(KelpieEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KelpieEntity::new)
 
 					.sized(1.95f, 2.45f));
 	public static final RegistryObject<EntityType<PiecrabEntity>> PIECRAB = register("piecrab",
@@ -329,7 +338,7 @@ public class EnemyexpansionModEntities {
 
 					.sized(2.1f, 0.95f));
 	public static final RegistryObject<EntityType<MarauderEntity>> MARAUDER = register("marauder",
-			EntityType.Builder.<MarauderEntity>of(MarauderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarauderEntity::new)
+			EntityType.Builder.<MarauderEntity>of(MarauderEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarauderEntity::new)
 
 					.sized(1.6f, 1.3f));
 	public static final RegistryObject<EntityType<SputterEntity>> SPUTTER = register("sputter",
@@ -342,14 +351,8 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<DragonflyEntity>of(DragonflyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonflyEntity::new)
 
 					.sized(2f, 1.6f));
-	public static final RegistryObject<EntityType<HornetEntity>> HORNET = register("hornet",
-			EntityType.Builder.<HornetEntity>of(HornetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HornetEntity::new)
-
-					.sized(0.45f, 1.6f));
-	public static final RegistryObject<EntityType<DirewolfEntity>> DIREWOLF = register("direwolf",
-			EntityType.Builder.<DirewolfEntity>of(DirewolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DirewolfEntity::new)
-
-					.sized(0.9f, 0.75f));
+	public static final RegistryObject<EntityType<EyestalkerEntity>> EYESTALKER = register("eyestalker", EntityType.Builder.<EyestalkerEntity>of(EyestalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(EyestalkerEntity::new).fireImmune().sized(0.8f, 1.95f));
 	public static final RegistryObject<EntityType<PheromoneProjectileEntity>> PHEROMONE_PROJECTILE = register("projectile_pheromone_projectile", EntityType.Builder.<PheromoneProjectileEntity>of(PheromoneProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(PheromoneProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HuntsmanPunchEntity>> HUNTSMAN_PUNCH = register("projectile_huntsman_punch",
@@ -437,6 +440,7 @@ public class EnemyexpansionModEntities {
 			TarantulaEntity.init();
 			ScorpionEntity.init();
 			WaspEntity.init();
+			HornetEntity.init();
 			PheromoneSummonEntity.init();
 			LadybugEntity.init();
 			ZadybugEntity.init();
@@ -446,6 +450,7 @@ public class EnemyexpansionModEntities {
 			RoosterEntity.init();
 			RamEntity.init();
 			RamshearedEntity.init();
+			DirewolfEntity.init();
 			GoblinFearEntity.init();
 			InvisicreeperEntity.init();
 			AnglerEntity.init();
@@ -460,8 +465,7 @@ public class EnemyexpansionModEntities {
 			SputterEntity.init();
 			FishCarrierEntity.init();
 			DragonflyEntity.init();
-			HornetEntity.init();
-			DirewolfEntity.init();
+			EyestalkerEntity.init();
 		});
 	}
 
@@ -506,6 +510,7 @@ public class EnemyexpansionModEntities {
 		event.put(TARANTULA.get(), TarantulaEntity.createAttributes().build());
 		event.put(SCORPION.get(), ScorpionEntity.createAttributes().build());
 		event.put(WASP.get(), WaspEntity.createAttributes().build());
+		event.put(HORNET.get(), HornetEntity.createAttributes().build());
 		event.put(PHEROMONE_SUMMON.get(), PheromoneSummonEntity.createAttributes().build());
 		event.put(LADYBUG.get(), LadybugEntity.createAttributes().build());
 		event.put(ZADYBUG.get(), ZadybugEntity.createAttributes().build());
@@ -515,6 +520,7 @@ public class EnemyexpansionModEntities {
 		event.put(ROOSTER.get(), RoosterEntity.createAttributes().build());
 		event.put(RAM.get(), RamEntity.createAttributes().build());
 		event.put(RAMSHEARED.get(), RamshearedEntity.createAttributes().build());
+		event.put(DIREWOLF.get(), DirewolfEntity.createAttributes().build());
 		event.put(GOBLIN_FEAR.get(), GoblinFearEntity.createAttributes().build());
 		event.put(INVISICREEPER.get(), InvisicreeperEntity.createAttributes().build());
 		event.put(ANGLER.get(), AnglerEntity.createAttributes().build());
@@ -529,7 +535,6 @@ public class EnemyexpansionModEntities {
 		event.put(SPUTTER.get(), SputterEntity.createAttributes().build());
 		event.put(FISH_CARRIER.get(), FishCarrierEntity.createAttributes().build());
 		event.put(DRAGONFLY.get(), DragonflyEntity.createAttributes().build());
-		event.put(HORNET.get(), HornetEntity.createAttributes().build());
-		event.put(DIREWOLF.get(), DirewolfEntity.createAttributes().build());
+		event.put(EYESTALKER.get(), EyestalkerEntity.createAttributes().build());
 	}
 }

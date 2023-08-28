@@ -142,8 +142,11 @@
     "height": 0.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 30,
-    "mobSpawningType": "monster",
+    "spawningCondition": {
+      "name": "IfNightReturnTrue"
+    },
+    "spawningProbability": 5,
+    "mobSpawningType": "undergroundWaterCreature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [

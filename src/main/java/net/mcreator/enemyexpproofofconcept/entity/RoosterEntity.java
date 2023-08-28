@@ -22,12 +22,14 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.animal.Ocelot;
 import net.minecraft.world.entity.animal.Fox;
-import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -39,15 +41,18 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -60,9 +65,10 @@ import net.mcreator.enemyexpproofofconcept.procedures.RoosterFlapProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
+import java.util.List;
 
 @Mod.EventBusSubscriber
-public class RoosterEntity extends Chicken implements IAnimatable {
+public class RoosterEntity extends Animal implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(RoosterEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(RoosterEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(RoosterEntity.class, EntityDataSerializers.STRING);
@@ -176,6 +182,18 @@ public class RoosterEntity extends Chicken implements IAnimatable {
 	@Override
 	public EntityDimensions getDimensions(Pose p_33597_) {
 		return super.getDimensions(p_33597_).scale((float) 1);
+	}
+
+	@Override
+	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
+		RoosterEntity retval = EnemyexpansionModEntities.ROOSTER.get().create(serverWorld);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
+		return retval;
+	}
+
+	@Override
+	public boolean isFood(ItemStack stack) {
+		return List.of(Items.WHEAT_SEEDS).contains(stack.getItem());
 	}
 
 	@Override
