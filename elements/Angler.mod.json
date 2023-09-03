@@ -148,7 +148,7 @@
     "spawningCondition": {
       "name": "IfNightReturnTrue"
     },
-    "spawningProbability": 100,
+    "spawningProbability": 40,
     "mobSpawningType": "waterCreature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 4,

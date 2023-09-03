@@ -1,0 +1,39 @@
+{
+    "replace": false,
+    "values": [
+        "enemyexpansion:sprinter",
+        "enemyexpansion:slugger",
+        "enemyexpansion:senior",
+        "enemyexpansion:meature",
+        "enemyexpansion:huntsmanskeleton",
+        "enemyexpansion:marksman",
+        "enemyexpansion:frigid",
+        "enemyexpansion:ghoul",
+
+        "enemyexpansion:goblin",
+        "enemyexpansion:baker",
+        "enemyexpansion:bouncer",
+        "enemyexpansion:rancher",
+        "enemyexpansion:errant",
+        "enemyexpansion:caster",
+        "enemyexpansion:zobgoblin",
+
+        "enemyexpansion:wasp",
+        "enemyexpansion:hornet",
+        "enemyexpansion:ladybug",
+        "enemyexpansion:zadybug",
+        "enemyexpansion:tarantula",
+        "enemyexpansion:scorpion",
+
+        "enemyexpansion:silverking",
+        "enemyexpansion:cockatrice",
+        "enemyexpansion:crawler",
+        "enemyexpansion:intruder",
+        "enemyexpansion:troll",
+
+        "enemyexpansion:cinder",
+        "enemyexpansion:gallant",
+
+        "enemyexpansion:eyestalker"
+    ]
+  }

@@ -8,12 +8,14 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.Registry;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.FlyEntity;
@@ -39,7 +41,7 @@ public class FlyFromZombieProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Zombie) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:fly_spawns_from")))) {
 			if (Math.random() < (double) BetterConfigConfiguration.FLIESFROMZOMBIES.get()) {
 				new Object() {
 					private int ticks = 0;

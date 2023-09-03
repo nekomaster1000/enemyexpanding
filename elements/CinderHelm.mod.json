@@ -21,7 +21,11 @@
     "bodyName": "",
     "leggingsName": "",
     "bootsName": "",
-    "helmetSpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Run faster and jump higher when burning",
+      "Perform a Super Jump when touching lava",
+      "Disintegrates in water"
+    ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],

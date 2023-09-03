@@ -14,14 +14,9 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -36,17 +31,14 @@ import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -59,11 +51,9 @@ import net.mcreator.enemyexpproofofconcept.procedures.FlyHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.FlyErraticFlightProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
 import java.util.Random;
 import java.util.EnumSet;
 
-@Mod.EventBusSubscriber
 public class FlyEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(FlyEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(FlyEntity.class, EntityDataSerializers.STRING);
@@ -73,18 +63,6 @@ public class FlyEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("stony_shore"), new ResourceLocation("sunflower_plains"), new ResourceLocation("sparse_jungle"),
-			new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("bamboo_jungle"), new ResourceLocation("dark_forest"), new ResourceLocation("plains"), new ResourceLocation("savanna"),
-			new ResourceLocation("stony_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"), new ResourceLocation("savanna_plateau"), new ResourceLocation("dripstone_caves"), new ResourceLocation("taiga"),
-			new ResourceLocation("jagged_peaks"), new ResourceLocation("swamp"), new ResourceLocation("eroded_badlands"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("windswept_hills"),
-			new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"), new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"), new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"),
-			new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"), new ResourceLocation("desert"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.FLY.get(), 40, 1, 5));
-	}
 
 	public FlyEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.FLY.get(), world);
@@ -251,8 +229,6 @@ public class FlyEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.FLY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

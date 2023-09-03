@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:zombie",
+        "minecraft:husk",
+        "minecraft:drowned",
+        "minecraft:skeleton",
+        "enemyexpansion:sprinter",
+        "enemyexpansion:slugger",
+        "enemyexpansion:senior",
+        "enemyexpansion:huntsmanskeleton",
+        "enemyexpansion:marksman",
+        "enemyexpansion:frigid",
+        "enemyexpansion:ghoul",
+        "enemyexpansion:zobgoblin"
+    ]
+  }

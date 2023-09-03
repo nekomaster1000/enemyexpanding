@@ -18,8 +18,12 @@
     "bodyName": "Spectral Cloak",
     "leggingsName": "",
     "bootsName": "",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Attacks inflict momentary Blindness"
+    ],
+    "bodySpecialInfo": [
+      "Attacks inflict momentary Weakness"
+    ],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
     "helmetModelName": "Default",
@@ -50,9 +54,9 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 4,
+    "maxDamage": 8,
     "damageValueHelmet": 1,
-    "damageValueBody": 2,
+    "damageValueBody": 3,
     "damageValueLeggings": 0,
     "damageValueBoots": 0,
     "enchantability": 20,

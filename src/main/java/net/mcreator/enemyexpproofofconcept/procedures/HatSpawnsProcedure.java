@@ -7,11 +7,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
@@ -19,7 +21,8 @@ public class HatSpawnsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:can_display_armor")))) {
+		double randomlevel = 0;
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:armor_wearer")))) {
 			if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hat_appropriate")))) {
 				if (Math.random() < (double) BetterConfigConfiguration.MEATHEADWEARERSPAWNING.get()) {
 					{
@@ -31,6 +34,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.MEATHEAD_ARMOR_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.HEADBITTENWEARERSPAWNING.get()) {
 					{
@@ -42,6 +46,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.HEADBITER_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.SLIMEHEADWEARERSPAWNING.get()) {
 					{
@@ -53,6 +58,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.SLIMEHEAD_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.SPIDERLATCHWEARERSPAWNING.get()) {
 					{
@@ -64,6 +70,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.SPIDERLATCH_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.SILVERHEADWEARERSPAWNING.get()) {
 					{
@@ -75,6 +82,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.SILVERHAT_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.HORSEHEADWEARERSPAWNING.get()) {
 					{
@@ -86,6 +94,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.HORSEHEAD_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.MINIWITHERWEARERSPAWNING.get()) {
 					{
@@ -97,6 +106,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.MINI_WITHER_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.FLUTTERFLIERSWEARERSPAWNING.get()) {
 					{
@@ -108,6 +118,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.FLUTTERFLIERS_CHESTPLATE.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.BANEMASKWEARERSPAWNING.get()) {
 					{
@@ -119,6 +130,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.BANEMASK_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.GLADLINGWEARERSPAWNING.get()) {
 					{
@@ -130,6 +142,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.GLADLING_HELMET.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.GUARDSMASKWEARERSPAWNING.get()) {
 					{
@@ -150,6 +163,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.GUARDSMASK_CHESTPLATE.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.PHANTASMWEARERSPAWNING.get()) {
 					{
@@ -170,6 +184,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.PHANTASM_CHESTPLATE.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.SPECTRALWEARERSPAWNING.get()) {
 					{
@@ -190,6 +205,7 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPECTRAL_CHESTPLATE.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
 				}
 				if (Math.random() < (double) BetterConfigConfiguration.BRUTISHGARMENTWEARERSPAWNING.get()) {
 					{
@@ -201,6 +217,17 @@ public class HatSpawnsProcedure {
 							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.BRUTISH_CHESTPLATE.get()));
 						}
 					}
+					ChampionSpawnProcedure.execute(entity);
+				}
+				if (Math.random() < (double) BetterConfigConfiguration.RESTINGVIGORWEARERSPAWNING.get()) {
+					{
+						Entity _ent = entity;
+						if (!_ent.level.isClientSide() && _ent.getServer() != null)
+							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+									"/data merge entity @s {ArmorItems:[{},{},{},{id:\"enemyexpansion:resting_vigor_helmet\",Count:1b}]}");
+					}
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.VIGOR_EFFECT.get(), 50000, 2, (false), (false)));
 				}
 			}
 			if (world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_armor_appropriate")))) {

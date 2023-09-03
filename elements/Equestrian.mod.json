@@ -146,7 +146,7 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
-      "name": "EquestrianSpawning"
+      "name": "SkyAndNightTrue"
     },
     "spawningProbability": 15,
     "mobSpawningType": "monster",
@@ -157,118 +157,16 @@
         "value": "plains"
       },
       {
-        "value": "badlands"
-      },
-      {
-        "value": "badlands_plateau"
-      },
-      {
-        "value": "beaches"
-      },
-      {
-        "value": "birch_forest"
-      },
-      {
-        "value": "birch_forest_hills"
-      },
-      {
-        "value": "roofed_forest"
-      },
-      {
-        "value": "mutated_roofed_forest"
-      },
-      {
-        "value": "mutated_mesa"
-      },
-      {
-        "value": "mutated_forest"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "forest_hills"
-      },
-      {
-        "value": "jagged_peaks"
-      },
-      {
-        "value": "lush_caves"
-      },
-      {
-        "value": "meadow"
-      },
-      {
-        "value": "mutated_mesa_clear_rock"
-      },
-      {
-        "value": "mutated_extreme_hills_with_trees"
-      },
-      {
-        "value": "mutated_mesa_rock"
-      },
-      {
-        "value": "smaller_extreme_hills"
-      },
-      {
-        "value": "mutated_birch_forest"
-      },
-      {
-        "value": "mutated_birch_forest_hills"
-      },
-      {
-        "value": "redwood_taiga"
-      },
-      {
-        "value": "redwood_taiga_hills"
-      },
-      {
-        "value": "mutated_redwood_taiga"
-      },
-      {
-        "value": "mutated_redwood_taiga_hills"
-      },
-      {
-        "value": "savanna"
-      },
-      {
-        "value": "savanna_rock"
-      },
-      {
-        "value": "mutated_savanna_rock"
-      },
-      {
-        "value": "stony_peaks"
-      },
-      {
-        "value": "stone_beach"
+        "value": "snowy_tundra"
       },
       {
         "value": "mutated_plains"
       },
       {
-        "value": "taiga"
+        "value": "jungle_edge"
       },
       {
-        "value": "taiga_hills"
-      },
-      {
-        "value": "mutated_taiga"
-      },
-      {
-        "value": "extreme_hills_with_trees"
-      },
-      {
-        "value": "mutated_extreme_hills"
-      },
-      {
-        "value": "mountains"
-      },
-      {
-        "value": "mutated_savanna"
-      },
-      {
-        "value": "wooded_badlands_plateau"
+        "value": "meadow"
       }
     ],
     "spawnInDungeons": false

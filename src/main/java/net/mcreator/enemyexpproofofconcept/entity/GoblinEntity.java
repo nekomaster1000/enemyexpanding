@@ -79,12 +79,8 @@ public class GoblinEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("stony_shore"), new ResourceLocation("sunflower_plains"), new ResourceLocation("sparse_jungle"),
-			new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("lush_caves"), new ResourceLocation("snowy_slopes"), new ResourceLocation("bamboo_jungle"), new ResourceLocation("ice_spikes"),
-			new ResourceLocation("dark_forest"), new ResourceLocation("plains"), new ResourceLocation("stony_peaks"), new ResourceLocation("frozen_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"),
-			new ResourceLocation("snowy_beach"), new ResourceLocation("dripstone_caves"), new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"), new ResourceLocation("jagged_peaks"), new ResourceLocation("snowy_taiga"),
-			new ResourceLocation("swamp"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("grove"), new ResourceLocation("windswept_hills"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"),
-			new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"), new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("forest"), new ResourceLocation("dark_forest"), new ResourceLocation("old_growth_pine_taiga"),
+			new ResourceLocation("taiga"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("windswept_forest"), new ResourceLocation("snowy_taiga"), new ResourceLocation("old_growth_spruce_taiga"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {

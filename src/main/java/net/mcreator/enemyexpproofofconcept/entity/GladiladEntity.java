@@ -57,8 +57,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GladiladBounceProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.AnglerSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -80,7 +80,7 @@ public class GladiladEntity extends Monster implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.UNDERGROUND_WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADILAD.get(), 5, 1, 1));
+			event.getSpawns().getSpawner(MobCategory.UNDERGROUND_WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADILAD.get(), 10, 1, 1));
 	}
 
 	public GladiladEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -233,7 +233,7 @@ public class GladiladEntity extends Monster implements IAnimatable {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return IfNightReturnTrueProcedure.execute(world);
+			return AnglerSpawningProcedure.execute(world);
 		});
 		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.GLADILAD.get(), 180);
 	}

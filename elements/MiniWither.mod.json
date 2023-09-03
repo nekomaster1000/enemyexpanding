@@ -18,7 +18,9 @@
     "bodyName": "",
     "leggingsName": "",
     "bootsName": "",
-    "helmetSpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Attacks inflict a brief bout of Wither III"
+    ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
@@ -50,8 +52,8 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 9,
-    "damageValueHelmet": 2,
+    "maxDamage": 15,
+    "damageValueHelmet": 3,
     "damageValueBody": 0,
     "damageValueLeggings": 0,
     "damageValueBoots": 0,

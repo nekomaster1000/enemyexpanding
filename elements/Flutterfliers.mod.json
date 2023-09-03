@@ -19,7 +19,10 @@
     "leggingsName": "",
     "bootsName": "",
     "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
+    "bodySpecialInfo": [
+      "Provides brief Regeneration when hurt whilst worn by the living",
+      "Creates a Harming potion cloud when hurt whilst worn by the undead"
+    ],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
     "helmetModelName": "Default",
@@ -50,9 +53,9 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 4,
+    "maxDamage": 10,
     "damageValueHelmet": 0,
-    "damageValueBody": 1,
+    "damageValueBody": 4,
     "damageValueLeggings": 0,
     "damageValueBoots": 0,
     "enchantability": 15,

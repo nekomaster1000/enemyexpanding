@@ -31,7 +31,7 @@ public class VaryingSpeedProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:varying_speed")))) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:varying_speed")))) {
 			if (Math.random() < (double) BetterConfigConfiguration.VARYINGSPEED.get()) {
 				{
 					Entity _ent = entity;

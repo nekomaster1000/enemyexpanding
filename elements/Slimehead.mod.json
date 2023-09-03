@@ -18,7 +18,9 @@
     "bodyName": "",
     "leggingsName": "",
     "bootsName": "",
-    "helmetSpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Knocks attackers back"
+    ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],

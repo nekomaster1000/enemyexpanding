@@ -1,0 +1,70 @@
+{
+  "_fv": 39,
+  "_type": "animatedarmor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "restingvigor",
+    "enableBody": false,
+    "textureBody": "",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": false,
+    "textureBoots": "",
+    "onHelmetTick": {
+      "name": "RestingVigorTick"
+    },
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "restingvigor_item.png",
+    "model": "restingvigor.geo.json",
+    "idle": "idle",
+    "head": "armorHead",
+    "chest": "armorBody",
+    "rightArm": "armorRightArm",
+    "leftArm": "armorLeftArm",
+    "rightLeg": "armorRightLeg",
+    "leftLeg": "armorLeftLeg",
+    "rightBoot": "armorRightBoot",
+    "leftBoot": "armorLeftBoot",
+    "helmetName": "Resting Vigor",
+    "bodyName": "Resting Vigor Body",
+    "leggingsName": "Resting Vigor Leggings",
+    "bootsName": "Resting Vigor Boots",
+    "helmetSpecialInfo": [
+      "Heals all nearby undead whilst worn"
+    ],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "fullyEquipped": false,
+    "maxDamage": 3,
+    "damageValueHelmet": 1,
+    "damageValueBody": 0,
+    "damageValueLeggings": 0,
+    "damageValueBoots": 0,
+    "enchantability": 30,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "entity.vex.ambient"
+    },
+    "repairItems": [
+      {
+        "value": "Items.AMETHYST_SHARD"
+      }
+    ]
+  }
+}

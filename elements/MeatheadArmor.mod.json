@@ -10,9 +10,6 @@
     "textureLeggings": "meathead_leggings",
     "enableBoots": false,
     "textureBoots": "meathead_boots",
-    "onHelmetTick": {
-      "name": "MeatheadTick"
-    },
     "creativeTab": {
       "value": "COMBAT"
     },
@@ -21,7 +18,10 @@
     "bodyName": "Meathead Chestplate",
     "leggingsName": "Meathead Leggings",
     "bootsName": "Meathead Boots",
-    "helmetSpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Gain 5 seconds of Speed II; Strength II; and Hunger II when hurt",
+      "Can be cooked into a meatball"
+    ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
@@ -53,7 +53,7 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 15,
+    "maxDamage": 10,
     "damageValueHelmet": 2,
     "damageValueBody": 5,
     "damageValueLeggings": 6,

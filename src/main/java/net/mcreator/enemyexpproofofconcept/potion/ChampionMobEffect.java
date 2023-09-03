@@ -19,7 +19,7 @@ public class ChampionMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ChampionActiveProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		ChampionActiveProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ());
 	}
 
 	@Override

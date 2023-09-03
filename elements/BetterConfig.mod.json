@@ -470,7 +470,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.06,
+            "numberField": 0.03,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Skeleton Horseman Addition",
@@ -642,7 +642,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.005,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Spiderlatch Wearer Spawning",
@@ -660,7 +660,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.005,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Silverhead Wearer Spawning",
@@ -678,7 +678,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.005,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Horsehead Wearer Spawning",
@@ -696,7 +696,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.001,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Miniwither Wearer Spawning",
@@ -714,7 +714,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.003,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Flutterfliers Wearer Spawning",
@@ -732,7 +732,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.005,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Phantasm Wearer Spawning",
@@ -768,7 +768,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.001,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Brutish Garment Wearer Spawning",
@@ -822,7 +822,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.005,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Gladling Wearer Spawning",
@@ -840,12 +840,48 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.005,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Guardsmask Wearer Spawning",
             "varname": "guardsmaskwearerspawning",
             "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Champion Mobs Wearing Hats are different from regular Champion spawns, in that they can spawn at different levels and also come with Absorption as a permanent effect",
+            "vardisplay": "Headwear-wearing mobs always spawn as Champions",
+            "varname": "hattedmobsarechampions",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.01,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Resting Vigor Wearers Spawning",
+            "varname": "restingvigorwearerspawning",
+            "enablecomment": true,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
           }
@@ -863,7 +899,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.03,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Leather Wearer Spawning",
@@ -881,7 +917,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.02,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Chainmail Wearer Spawning",
@@ -1012,7 +1048,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.2,
+            "numberField": 0.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Burning Undead mobs gain Speed III Chance",
@@ -1066,7 +1102,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.05,
+            "numberField": 0.025,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Flies Spawn From Killed Zombies Chance",
@@ -1326,6 +1362,24 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Eyestalkers are Hostile by default",
+            "varname": "eyestalkerhostility",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:A"
           }
         ]
       },
@@ -1431,7 +1485,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.01,
+            "numberField": 0.0,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Chance of a mob being a Champion upon spawning",

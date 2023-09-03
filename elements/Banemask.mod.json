@@ -18,7 +18,9 @@
     "bodyName": "",
     "leggingsName": "",
     "bootsName": "",
-    "helmetSpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Compulsively leap forwards when hurt"
+    ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
@@ -50,7 +52,7 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 5,
+    "maxDamage": 12,
     "damageValueHelmet": 2,
     "damageValueBody": 0,
     "damageValueLeggings": 0,

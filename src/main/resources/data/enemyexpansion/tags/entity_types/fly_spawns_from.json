@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:zombie",
+        "minecraft:husk",
+        "enemyexpansion:sprinter",
+        "enemyexpansion:slugger",
+        "enemyexpansion:senior",
+        "enemyexpansion:frigid",
+        "enemyexpansion:equestrian"
+    ]
+  }

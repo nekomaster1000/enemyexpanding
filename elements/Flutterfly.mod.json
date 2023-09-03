@@ -155,69 +155,6 @@
       },
       {
         "value": "mutated_plains"
-      },
-      {
-        "value": "plains"
-      },
-      {
-        "value": "birch_forest"
-      },
-      {
-        "value": "birch_forest_hills"
-      },
-      {
-        "value": "roofed_forest"
-      },
-      {
-        "value": "mutated_roofed_forest"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "forest_hills"
-      },
-      {
-        "value": "mutated_birch_forest"
-      },
-      {
-        "value": "jungle_hills"
-      },
-      {
-        "value": "mutated_birch_forest_hills"
-      },
-      {
-        "value": "redwood_taiga_hills"
-      },
-      {
-        "value": "mutated_redwood_taiga_hills"
-      },
-      {
-        "value": "taiga_cold_hills"
-      },
-      {
-        "value": "mutated_swampland"
-      },
-      {
-        "value": "taiga_hills"
-      },
-      {
-        "value": "mutated_extreme_hills"
-      },
-      {
-        "value": "mountains"
-      },
-      {
-        "value": "snowy_mountains"
-      },
-      {
-        "value": "snowy_tundra"
-      },
-      {
-        "value": "taiga_cold"
-      },
-      {
-        "value": "mutated_taiga_cold"
       }
     ],
     "spawnInDungeons": false

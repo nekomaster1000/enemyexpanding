@@ -26,7 +26,6 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -40,6 +39,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
@@ -65,7 +65,7 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
-public class MarauderEntity extends Monster implements IAnimatable {
+public class MarauderEntity extends PathfinderMob implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(MarauderEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(MarauderEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(MarauderEntity.class, EntityDataSerializers.STRING);
@@ -74,13 +74,12 @@ public class MarauderEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("deep_cold_ocean"), new ResourceLocation("frozen_ocean"), new ResourceLocation("ocean"), new ResourceLocation("cold_ocean"), new ResourceLocation("deep_ocean"),
-			new ResourceLocation("deep_frozen_ocean"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_ocean"), new ResourceLocation("deep_frozen_ocean"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.MARAUDER.get(), 20, 1, 4));
+			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.MARAUDER.get(), 10, 1, 3));
 	}
 
 	public MarauderEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -226,6 +225,12 @@ public class MarauderEntity extends Monster implements IAnimatable {
 	@Override
 	public boolean isPushedByFluid() {
 		return false;
+	}
+
+	@Override
+	public void aiStep() {
+		super.aiStep();
+		this.updateSwingTime();
 	}
 
 	public static void init() {

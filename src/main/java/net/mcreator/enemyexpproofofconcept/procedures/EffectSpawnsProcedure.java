@@ -32,7 +32,7 @@ public class EffectSpawnsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:effective")))) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:effective")))) {
 			if (Math.random() < (double) BetterConfigConfiguration.STRENGTH.get()) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50000, 0, (false), (true)));

@@ -6,6 +6,7 @@ import net.minecraftforge.client.IItemRenderProperties;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
@@ -26,6 +29,7 @@ import net.mcreator.enemyexpproofofconcept.procedures.SpiderlatchTickProcedure;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelspiderlatch;
 
 import java.util.Map;
+import java.util.List;
 import java.util.Collections;
 
 public abstract class SpiderlatchItem extends ArmorItem {
@@ -38,7 +42,7 @@ public abstract class SpiderlatchItem extends ArmorItem {
 
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{2, 3, 3, 0}[slot.getIndex()];
+				return new int[]{2, 2, 2, 1}[slot.getIndex()];
 			}
 
 			@Override
@@ -93,6 +97,12 @@ public abstract class SpiderlatchItem extends ArmorItem {
 					return armorModel;
 				}
 			});
+		}
+
+		@Override
+		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+			super.appendHoverText(itemstack, world, list, flag);
+			list.add(new TextComponent("Attacks inflict Poison"));
 		}
 
 		@Override

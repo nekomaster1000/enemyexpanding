@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.enemyexpproofofconcept.potion.VigorEffectMobEffect;
 import net.mcreator.enemyexpproofofconcept.potion.SwiftFlightMobEffect;
 import net.mcreator.enemyexpproofofconcept.potion.SuperhealingMobEffect;
 import net.mcreator.enemyexpproofofconcept.potion.StreakMobEffect;
@@ -28,4 +29,5 @@ public class EnemyexpansionModMobEffects {
 	public static final RegistryObject<MobEffect> CHAMPION = REGISTRY.register("champion", () -> new ChampionMobEffect());
 	public static final RegistryObject<MobEffect> STREAK = REGISTRY.register("streak", () -> new StreakMobEffect());
 	public static final RegistryObject<MobEffect> IRREPLACABLE = REGISTRY.register("irreplacable", () -> new IrreplacableMobEffect());
+	public static final RegistryObject<MobEffect> VIGOR_EFFECT = REGISTRY.register("vigor_effect", () -> new VigorEffectMobEffect());
 }

@@ -4,8 +4,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -51,37 +49,8 @@ public class HeadbiterHarmingProcedure {
 							"/summon area_effect_cloud ~ ~.75 ~ {CustomName:\"\\\"Headbiter\\\"\",Radius:0.7f,Duration:30,Effects:[{Id:7b,Amplifier:1b}]}");
 			}
 			if (!(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMobType() == MobType.UNDEAD : false)) {
-				if (!(sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.REGENERATION) : false)) {
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-								"/summon area_effect_cloud ~ ~.75 ~ {Radius:0.7f,Duration:30,Effects:[{Id 6b,Amplifier:1b}]}");
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							if (sourceentity instanceof LivingEntity _entity)
-								_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 3, (false), (true)));
-							MinecraftForge.EVENT_BUS.unregister(this);
-						}
-					}.start(world, 2);
-				}
+				if (sourceentity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 3, (false), (true)));
 			}
 		}
 	}

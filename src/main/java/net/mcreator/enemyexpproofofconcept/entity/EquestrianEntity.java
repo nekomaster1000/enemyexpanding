@@ -57,8 +57,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.SkyAndNightTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.EquestrianSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.EquestrianEntityIsHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -76,11 +76,8 @@ public class EquestrianEntity extends Zombie implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("stony_shore"), new ResourceLocation("sunflower_plains"), new ResourceLocation("birch_forest"),
-			new ResourceLocation("flower_forest"), new ResourceLocation("lush_caves"), new ResourceLocation("dark_forest"), new ResourceLocation("plains"), new ResourceLocation("savanna"), new ResourceLocation("stony_peaks"),
-			new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"), new ResourceLocation("savanna_plateau"), new ResourceLocation("taiga"), new ResourceLocation("jagged_peaks"), new ResourceLocation("eroded_badlands"),
-			new ResourceLocation("badlands"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("windswept_hills"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"),
-			new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"), new ResourceLocation("windswept_forest"), new ResourceLocation("windswept_gravelly_hills"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("sunflower_plains"), new ResourceLocation("snowy_plains"), new ResourceLocation("sparse_jungle"), new ResourceLocation("plains"),
+			new ResourceLocation("meadow"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -197,7 +194,7 @@ public class EquestrianEntity extends Zombie implements IAnimatable {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return EquestrianSpawningProcedure.execute(world, x, y, z);
+			return SkyAndNightTrueProcedure.execute(world, x, y, z);
 		});
 	}
 

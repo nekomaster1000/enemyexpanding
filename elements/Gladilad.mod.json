@@ -143,9 +143,9 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
-      "name": "IfNightReturnTrue"
+      "name": "AnglerSpawning"
     },
-    "spawningProbability": 5,
+    "spawningProbability": 10,
     "mobSpawningType": "undergroundWaterCreature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,

@@ -100,7 +100,7 @@
       "value": "entity.wolf.step"
     },
     "whenMobIsHurt": {
-      "name": "DireJump"
+      "name": "DireJumpActivate"
     },
     "onPlayerCollidesWith": {
       "name": "PersonalSpaceHostility"

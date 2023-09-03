@@ -45,7 +45,7 @@ public class DragonflyDodgePatternProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 300, 0, (false), (false)));
 				if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.DIG_SPEED) : false) {
-					entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 0.7), (-0.3), (Math.cos(Math.toRadians(entity.getYRot())) * 0.7)));
+					entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1), (-0.3), (Math.cos(Math.toRadians(entity.getYRot())) * 1)));
 					for (int index0 = 0; index0 < (int) (10); index0++) {
 						new Object() {
 							private int ticks = 0;
@@ -68,7 +68,7 @@ public class DragonflyDodgePatternProcedure {
 							}
 
 							private void run() {
-								entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + Mth.nextDouble(new Random(), 90, 270))) * 0.4), 0, (Math.cos(Math.toRadians(entity.getYRot())) * 0.4)));
+								entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + Mth.nextDouble(new Random(), 90, 270))) * 0.6), 0, (Math.cos(Math.toRadians(entity.getYRot())) * 0.6)));
 								MinecraftForge.EVENT_BUS.unregister(this);
 							}
 						}.start(world, (int) Mth.nextDouble(new Random(), 20, 300));
@@ -94,9 +94,9 @@ public class DragonflyDodgePatternProcedure {
 
 							private void run() {
 								if (Math.random() < 0.5) {
-									entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + Mth.nextDouble(new Random(), 90, 100))) * 0.6), 0, (Math.cos(Math.toRadians(entity.getYRot())) * 0.3)));
+									entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + Mth.nextDouble(new Random(), 90, 100))) * 0.8), 0, (Math.cos(Math.toRadians(entity.getYRot())) * 0.4)));
 								} else {
-									entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + Mth.nextDouble(new Random(), 260, 270))) * 0.6), 0, (Math.cos(Math.toRadians(entity.getYRot())) * 0.3)));
+									entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + Mth.nextDouble(new Random(), 260, 270))) * 0.6), 0, (Math.cos(Math.toRadians(entity.getYRot())) * 0.6)));
 								}
 								MinecraftForge.EVENT_BUS.unregister(this);
 							}

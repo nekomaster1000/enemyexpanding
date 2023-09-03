@@ -77,9 +77,7 @@ public class FlutterflyEntity extends PathfinderMob implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("sunflower_plains"), new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"), new ResourceLocation("flower_forest"),
-			new ResourceLocation("birch_forest"), new ResourceLocation("snowy_taiga"), new ResourceLocation("swamp"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("windswept_hills"), new ResourceLocation("dark_forest"),
-			new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("plains"), new ResourceLocation("jungle"), new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("old_growth_spruce_taiga"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("sunflower_plains"), new ResourceLocation("flower_forest"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {

@@ -59,7 +59,7 @@ import net.mcreator.enemyexpproofofconcept.procedures.PersonalSpaceHostilityProc
 import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DirewolfSheepHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DirewolfCowHostilityProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.DireJumpProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.DireJumpActivateProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -209,7 +209,7 @@ public class DirewolfEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		DireJumpProcedure.execute(this.level, this);
+		DireJumpActivateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		return super.hurt(source, amount);
 	}
 

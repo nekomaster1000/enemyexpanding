@@ -24,8 +24,12 @@
     "bodyName": "Phantasm Cape",
     "leggingsName": "Phantasm Leggings",
     "bootsName": "Phantasm Boots",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Provides Night Vision when worn in the dark"
+    ],
+    "bodySpecialInfo": [
+      "Crouching in the dark provides a Super Jump and Slow Falling"
+    ],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
     "helmetModelName": "Default",
@@ -57,8 +61,8 @@
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
     "maxDamage": 12,
-    "damageValueHelmet": 1,
-    "damageValueBody": 5,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
     "damageValueLeggings": 5,
     "damageValueBoots": 2,
     "enchantability": 9,

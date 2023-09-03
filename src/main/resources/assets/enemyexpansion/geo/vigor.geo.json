@@ -1,0 +1,112 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "all",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [-2.5, 4.01, -2.5], "size": [5, 5, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "halo",
+					"parent": "head",
+					"pivot": [0, 10, 0]
+				},
+				{
+					"name": "halospin",
+					"parent": "halo",
+					"pivot": [0, 10, 0],
+					"cubes": [
+						{"origin": [-3, 10, -3], "size": [6, 1, 6], "uv": [8, 12]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "all",
+					"pivot": [0, 4, 0]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, 4, -1],
+					"rotation": [22.5, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, -1, -1], "size": [3, 5, 2], "inflate": -0.2, "uv": [0, 19]},
+						{"origin": [-1.5, 0, -1], "size": [3, 4, 2], "uv": [0, 11]}
+					]
+				},
+				{
+					"name": "wings",
+					"parent": "torso",
+					"pivot": [0, 3, 1]
+				},
+				{
+					"name": "left_wing",
+					"parent": "wings",
+					"pivot": [1.5, 3, 1],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [1.5, -2, 1], "size": [0, 5, 8], "uv": [0, 19], "mirror": true},
+						{"origin": [1.5, 3, 3], "size": [0, 5, 8], "uv": [16, 19], "mirror": true}
+					]
+				},
+				{
+					"name": "right_wing",
+					"parent": "wings",
+					"pivot": [-1.5, 3, 1],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-1.5, -2, 1], "size": [0, 5, 8], "uv": [0, 19]},
+						{"origin": [-1.5, 3, 3], "size": [0, 5, 8], "uv": [16, 19]}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "body",
+					"pivot": [0, -1, -2],
+					"rotation": [-80, 0, 0]
+				},
+				{
+					"name": "botharms",
+					"parent": "body",
+					"pivot": [-0.25, 3.5, 0],
+					"rotation": [-22.5, 0, 0]
+				},
+				{
+					"name": "left_arm",
+					"parent": "botharms",
+					"pivot": [1.75, 3.5, 0],
+					"rotation": [0, 0, -22.5],
+					"cubes": [
+						{"origin": [1.5, 0, -1], "size": [1, 4, 2], "uv": [20, 0]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "botharms",
+					"pivot": [-1.75, 3.5, 0],
+					"rotation": [0, 0, 22.5],
+					"cubes": [
+						{"origin": [-2.5, 0, -1], "size": [1, 4, 2], "uv": [26, 0]}
+					]
+				}
+			]
+		}
+	]
+}

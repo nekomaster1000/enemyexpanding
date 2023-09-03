@@ -4,6 +4,8 @@
  */
 package net.mcreator.enemyexpproofofconcept.init;
 
+import org.checkerframework.checker.units.qual.A;
+
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,6 +23,7 @@ import net.mcreator.enemyexpproofofconcept.entity.ZadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WolfsbaneEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspStingProjectileEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
+import net.mcreator.enemyexpproofofconcept.entity.VigorEntity;
 import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollSpitEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollInvincibleEntity;
@@ -100,6 +103,7 @@ import net.mcreator.enemyexpproofofconcept.entity.BiterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BanedasherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BakerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
+import net.mcreator.enemyexpproofofconcept.entity.AEntity;
 import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -329,6 +333,10 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<OrbEntity>of(OrbEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OrbEntity::new)
 
 					.sized(0.35f, 0.35f));
+	public static final RegistryObject<EntityType<VigorEntity>> VIGOR = register("vigor",
+			EntityType.Builder.<VigorEntity>of(VigorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VigorEntity::new)
+
+					.sized(0.8f, 0.8f));
 	public static final RegistryObject<EntityType<ReaverEntity>> REAVER = register("reaver",
 			EntityType.Builder.<ReaverEntity>of(ReaverEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReaverEntity::new)
 
@@ -353,6 +361,10 @@ public class EnemyexpansionModEntities {
 					.sized(2f, 1.6f));
 	public static final RegistryObject<EntityType<EyestalkerEntity>> EYESTALKER = register("eyestalker", EntityType.Builder.<EyestalkerEntity>of(EyestalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(EyestalkerEntity::new).fireImmune().sized(0.8f, 1.95f));
+	public static final RegistryObject<EntityType<AEntity>> A = register("a",
+			EntityType.Builder.<AEntity>of(AEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AEntity::new)
+
+					.sized(0.95f, 0.95f));
 	public static final RegistryObject<EntityType<PheromoneProjectileEntity>> PHEROMONE_PROJECTILE = register("projectile_pheromone_projectile", EntityType.Builder.<PheromoneProjectileEntity>of(PheromoneProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(PheromoneProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HuntsmanPunchEntity>> HUNTSMAN_PUNCH = register("projectile_huntsman_punch",
@@ -459,6 +471,7 @@ public class EnemyexpansionModEntities {
 			FlyEntity.init();
 			DreadnoughtEntity.init();
 			OrbEntity.init();
+			VigorEntity.init();
 			ReaverEntity.init();
 			StarvedEntity.init();
 			MarauderEntity.init();
@@ -466,6 +479,7 @@ public class EnemyexpansionModEntities {
 			FishCarrierEntity.init();
 			DragonflyEntity.init();
 			EyestalkerEntity.init();
+			AEntity.init();
 		});
 	}
 
@@ -529,6 +543,7 @@ public class EnemyexpansionModEntities {
 		event.put(FLY.get(), FlyEntity.createAttributes().build());
 		event.put(DREADNOUGHT.get(), DreadnoughtEntity.createAttributes().build());
 		event.put(ORB.get(), OrbEntity.createAttributes().build());
+		event.put(VIGOR.get(), VigorEntity.createAttributes().build());
 		event.put(REAVER.get(), ReaverEntity.createAttributes().build());
 		event.put(STARVED.get(), StarvedEntity.createAttributes().build());
 		event.put(MARAUDER.get(), MarauderEntity.createAttributes().build());
@@ -536,5 +551,6 @@ public class EnemyexpansionModEntities {
 		event.put(FISH_CARRIER.get(), FishCarrierEntity.createAttributes().build());
 		event.put(DRAGONFLY.get(), DragonflyEntity.createAttributes().build());
 		event.put(EYESTALKER.get(), EyestalkerEntity.createAttributes().build());
+		event.put(A.get(), AEntity.createAttributes().build());
 	}
 }

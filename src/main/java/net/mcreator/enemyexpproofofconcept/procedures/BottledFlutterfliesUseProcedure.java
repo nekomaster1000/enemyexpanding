@@ -2,10 +2,6 @@ package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
@@ -26,22 +22,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 
-import javax.annotation.Nullable;
-
-@Mod.EventBusSubscriber
 public class BottledFlutterfliesUseProcedure {
-	@SubscribeEvent
-	public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
-		if (event.getHand() != event.getPlayer().getUsedItemHand())
-			return;
-		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getPlayer());
-	}
-
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.BOTTLED_FLUTTERFLIES.get()) {

@@ -23,6 +23,7 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -49,6 +50,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.enemyexpproofofconcept.procedures.PersonalSpaceHostilityProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.EyestalkerTickProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.EyestalkerHostileConfigCheckProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import java.util.Set;
@@ -114,7 +116,18 @@ public class EyestalkerEntity extends Monster implements IAnimatable {
 		});
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = EyestalkerEntity.this.getX();
+				double y = EyestalkerEntity.this.getY();
+				double z = EyestalkerEntity.this.getZ();
+				Entity entity = EyestalkerEntity.this;
+				Level world = EyestalkerEntity.this.level;
+				return super.canUse() && EyestalkerHostileConfigCheckProcedure.execute();
+			}
+		});
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 	}
 
 	@Override
@@ -167,7 +180,7 @@ public class EyestalkerEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.42);
 		builder = builder.add(Attributes.MAX_HEALTH, 50);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 9);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;

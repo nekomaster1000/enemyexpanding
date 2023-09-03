@@ -8,6 +8,7 @@ import net.mcreator.enemyexpproofofconcept.entity.ZobgoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.ZadybugEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WolfsbaneEntity;
 import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
+import net.mcreator.enemyexpproofofconcept.entity.VigorEntity;
 import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 import net.mcreator.enemyexpproofofconcept.entity.TarantulaEntity;
@@ -66,6 +67,7 @@ import net.mcreator.enemyexpproofofconcept.entity.BiterEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BanedasherEntity;
 import net.mcreator.enemyexpproofofconcept.entity.BakerEntity;
 import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
+import net.mcreator.enemyexpproofofconcept.entity.AEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -457,6 +459,13 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
+			if (event.getEntity() instanceof VigorEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
 			if (event.getEntity() instanceof ReaverEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
@@ -500,6 +509,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof EyestalkerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

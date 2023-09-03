@@ -22,9 +22,14 @@ import net.mcreator.enemyexpproofofconcept.entity.DirewolfEntity;
 import java.util.Random;
 
 public class DireJumpProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		if (entity instanceof DirewolfEntity) {
+			((DirewolfEntity) entity).setAnimation("leap");
+		}
+		if (entity instanceof LivingEntity _entity)
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 4, 3, (false), (false)));
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
@@ -46,54 +51,25 @@ public class DireJumpProcedure {
 			}
 
 			private void run() {
-				if (entity instanceof DirewolfEntity) {
-					((DirewolfEntity) entity).setAnimation("leap");
+				if (entity.isAlive() && entity.isOnGround()) {
+					{
+						Entity _ent = entity;
+						if (!_ent.level.isClientSide() && _ent.getServer() != null)
+							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "tp @s ~ ~0.2 ~");
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.HOSTILE, (float) 0.7, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.HOSTILE, (float) 0.7, 1, false);
+						}
+					}
+					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * Mth.nextDouble(new Random(), 1.25, 2)), (Mth.nextDouble(new Random(), 0.3, 0.6)), (entity.getLookAngle().z * Mth.nextDouble(new Random(), 1.25, 2))));
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 50, 0, (false), (true)));
 				}
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 4, 3, (false), (true)));
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						if (entity.isAlive() && entity.isOnGround()) {
-							{
-								Entity _ent = entity;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "tp @s ~ ~0.2 ~");
-							}
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.HOSTILE, (float) 0.7, 1);
-								} else {
-									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wolf.growl")), SoundSource.HOSTILE, (float) 0.7, 1, false);
-								}
-							}
-							entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * Mth.nextDouble(new Random(), 1.25, 2)), (Mth.nextDouble(new Random(), 0.3, 0.6)), (entity.getLookAngle().z * Mth.nextDouble(new Random(), 1.25, 2))));
-							if (entity instanceof LivingEntity _entity)
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 50, 0, (false), (true)));
-						}
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, 5);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, 20);
+		}.start(world, 5);
 	}
 }

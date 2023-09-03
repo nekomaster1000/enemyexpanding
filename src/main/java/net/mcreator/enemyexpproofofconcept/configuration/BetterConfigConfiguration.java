@@ -51,6 +51,8 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> BANEMASKWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> GLADLINGWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> GUARDSMASKWEARERSPAWNING;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> HATTEDMOBSARECHAMPIONS;
+	public static final ForgeConfigSpec.ConfigValue<Double> RESTINGVIGORWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> LEATHERWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> CHAINMAILWEARERSPAWNING;
 	public static final ForgeConfigSpec.ConfigValue<Double> IRONWEARERSPAWNING;
@@ -77,6 +79,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> PHANTOMGROUNDBINDING;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> RANDOMPHANTOMSIZE;
 	public static final ForgeConfigSpec.ConfigValue<Double> SKELETONDEATHKILLSSKELETONHORSES;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> EYESTALKERHOSTILITY;
 	public static final ForgeConfigSpec.ConfigValue<Double> STRENGTH;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> RESISTANCE;
@@ -112,7 +115,7 @@ public class BetterConfigConfiguration {
 		RAVAGERMARAUDERREPLACEMENT = BUILDER.comment("Ravagers are replaced with Marauders on spawn, but only if they spawn in water").define("Ravager Marauder Replacement", (double) 1);
 		SPUTTERSTRIDERREPLACEMENT = BUILDER.comment("(This is the only way in which Sputters naturally spawn - Disable at your own risk!)").define("Sputter Strider Addition", (double) 0.35);
 		HORNETVEXREPLACEMENT = BUILDER.define("Hornet Vex Replacement", (double) 0);
-		SKELETALHORSERIDERADDITION = BUILDER.define("Skeleton Horseman Addition", (double) 0.06);
+		SKELETALHORSERIDERADDITION = BUILDER.define("Skeleton Horseman Addition", (double) 0.03);
 		BUILDER.pop();
 		BUILDER.push("mobReplacementDepth");
 		PETRIMANZOMBIEREPLACEMENTDEPTH = BUILDER.define("Petriman Zombie Replacement Depth", (double) 55);
@@ -125,22 +128,25 @@ public class BetterConfigConfiguration {
 		MEATHEADWEARERSPAWNING = BUILDER.comment("Some Zombies and Skeletons will spawn wearing certain special gear. edit the minecraft:is_meatury tag to choose what biomes these mobs spawn in.").define("Meat Head Wearer Spawning", (double) 0.01);
 		HEADBITTENWEARERSPAWNING = BUILDER.define("Headbitten Wearer Spawning", (double) 0.01);
 		SLIMEHEADWEARERSPAWNING = BUILDER.define("Slimehead Wearer Spawning", (double) 0.01);
-		SPIDERLATCHWEARERSPAWNING = BUILDER.define("Spiderlatch Wearer Spawning", (double) 0.01);
-		SILVERHEADWEARERSPAWNING = BUILDER.define("Silverhead Wearer Spawning", (double) 0.01);
-		HORSEHEADWEARERSPAWNING = BUILDER.define("Horsehead Wearer Spawning", (double) 0.01);
-		MINIWITHERWEARERSPAWNING = BUILDER.define("Miniwither Wearer Spawning", (double) 0.01);
-		FLUTTERFLIERSWEARERSPAWNING = BUILDER.define("Flutterfliers Wearer Spawning", (double) 0.01);
-		PHANTASMWEARERSPAWNING = BUILDER.define("Phantasm Wearer Spawning", (double) 0.01);
+		SPIDERLATCHWEARERSPAWNING = BUILDER.define("Spiderlatch Wearer Spawning", (double) 0.005);
+		SILVERHEADWEARERSPAWNING = BUILDER.define("Silverhead Wearer Spawning", (double) 0.005);
+		HORSEHEADWEARERSPAWNING = BUILDER.define("Horsehead Wearer Spawning", (double) 0.005);
+		MINIWITHERWEARERSPAWNING = BUILDER.define("Miniwither Wearer Spawning", (double) 0.001);
+		FLUTTERFLIERSWEARERSPAWNING = BUILDER.define("Flutterfliers Wearer Spawning", (double) 0.003);
+		PHANTASMWEARERSPAWNING = BUILDER.define("Phantasm Wearer Spawning", (double) 0.005);
 		SPECTRALWEARERSPAWNING = BUILDER.define("Spectral Wearer Spawning", (double) 0.01);
-		BRUTISHGARMENTWEARERSPAWNING = BUILDER.define("Brutish Garment Wearer Spawning", (double) 0.01);
+		BRUTISHGARMENTWEARERSPAWNING = BUILDER.define("Brutish Garment Wearer Spawning", (double) 0.001);
 		BULLSKULLWEARERSPAWNING = BUILDER.define("Bull Skull Wearer Spawning", (double) 0.01);
 		BANEMASKWEARERSPAWNING = BUILDER.define("Bane Mask Wearer Spawning", (double) 0.01);
-		GLADLINGWEARERSPAWNING = BUILDER.define("Gladling Wearer Spawning", (double) 0.01);
-		GUARDSMASKWEARERSPAWNING = BUILDER.define("Guardsmask Wearer Spawning", (double) 0.01);
+		GLADLINGWEARERSPAWNING = BUILDER.define("Gladling Wearer Spawning", (double) 0.005);
+		GUARDSMASKWEARERSPAWNING = BUILDER.define("Guardsmask Wearer Spawning", (double) 0.005);
+		HATTEDMOBSARECHAMPIONS = BUILDER.comment("Champion Mobs Wearing Hats are different from regular Champion spawns, in that they can spawn at different levels and also come with Absorption as a permanent effect")
+				.define("Headwear-wearing mobs always spawn as Champions", true);
+		RESTINGVIGORWEARERSPAWNING = BUILDER.comment("").define("Resting Vigor Wearers Spawning", (double) 0.01);
 		BUILDER.pop();
 		BUILDER.push("armorWearerSpawning");
-		LEATHERWEARERSPAWNING = BUILDER.define("Leather Wearer Spawning", (double) 0.01);
-		CHAINMAILWEARERSPAWNING = BUILDER.define("Chainmail Wearer Spawning", (double) 0.01);
+		LEATHERWEARERSPAWNING = BUILDER.define("Leather Wearer Spawning", (double) 0.03);
+		CHAINMAILWEARERSPAWNING = BUILDER.define("Chainmail Wearer Spawning", (double) 0.02);
 		IRONWEARERSPAWNING = BUILDER.define("Iron Wearer Spawning", (double) 0.01);
 		GOLDWEARERSPAWNING = BUILDER.define("Gold Wearer Spawning", (double) 0.007);
 		DIAMONDWEARERSPAWNING = BUILDER.define("Diamond Wearer Spawning", (double) 0.004);
@@ -149,10 +155,10 @@ public class BetterConfigConfiguration {
 		BUILDER.push("miscOptions");
 		PUNCHINGRAMDROPSWOOLCHANCE = BUILDER.define("Punching Ram Drops Wool Chance", (double) 0);
 		WANDERINGTRADERBECOMESILLUSIONERONHITCHANCE = BUILDER.define("Wandering Trader becomes Illusioner on-death Chance", (double) 0.95);
-		BURNINGUNDEADSPEEDUP = BUILDER.define("Burning Undead mobs gain Speed III Chance", (double) 0.2);
+		BURNINGUNDEADSPEEDUP = BUILDER.define("Burning Undead mobs gain Speed III Chance", (double) 0);
 		VARYINGSPEED = BUILDER.define("Mobs Sometimes Spawn With Varying Speed Chance", (double) 0.5);
 		SKELETONSWITCHUP = BUILDER.define("Skeletons Switch Weapons Mid-Fight Chance", (double) 0.2);
-		FLIESFROMZOMBIES = BUILDER.define("Flies Spawn From Killed Zombies Chance", (double) 0.05);
+		FLIESFROMZOMBIES = BUILDER.define("Flies Spawn From Killed Zombies Chance", (double) 0.025);
 		PILLAGERWITHREAVER = BUILDER.define("Pillagers Spawn with Reaver Chance", (double) 0.16);
 		BABYZOMBIESPAWNING = BUILDER.comment("0 fully disables it, 1 fully enables it, and an inbetween acts as a percentage chance for it to work (0.13 being 13%, for example.)").define("Baby Zombie Spawning", (double) 0.13);
 		BABYZOMBIEHEALTH = BUILDER.define("Baby Zombie Health Amount", (double) 2);
@@ -168,6 +174,7 @@ public class BetterConfigConfiguration {
 		PHANTOMGROUNDBINDING = BUILDER.define("Phantom's Get Groundbound When Hurt Duration (In Seconds)", (double) 3);
 		RANDOMPHANTOMSIZE = BUILDER.comment("Phantoms spawn bigger than normal, making them easier to hit (but allowing them to deal more damage, too.)").define("Random Phantom Size", true);
 		SKELETONDEATHKILLSSKELETONHORSES = BUILDER.define("Skeleton Death Kills Skeleton Horses Chance", (double) 0.95);
+		EYESTALKERHOSTILITY = BUILDER.define("Eyestalkers are Hostile by default", false);
 		BUILDER.pop();
 		BUILDER.push("effectSpawning");
 		STRENGTH = BUILDER.define("Chance of Strength effect applied on mob-spawn", (double) 0.01);
@@ -175,7 +182,7 @@ public class BetterConfigConfiguration {
 		RESISTANCE = BUILDER.define("Chance of Resistance effect applied on mob-spawn", (double) 0.01);
 		HASTE = BUILDER.define("Chance of Haste effect applied on mob-spawn", (double) 0.01);
 		FIRERES = BUILDER.define("Chance of Fire Resistance effect applied on mob-spawn", (double) 0.01);
-		CHAMPION = BUILDER.define("Chance of a mob being a Champion upon spawning", (double) 0.01);
+		CHAMPION = BUILDER.define("Chance of a mob being a Champion upon spawning", (double) 0);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

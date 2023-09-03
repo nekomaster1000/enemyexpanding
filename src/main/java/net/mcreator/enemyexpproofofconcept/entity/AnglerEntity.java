@@ -80,7 +80,7 @@ public class AnglerEntity extends Monster implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.ANGLER.get(), 100, 1, 4));
+			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.ANGLER.get(), 40, 1, 4));
 	}
 
 	public AnglerEntity(PlayMessages.SpawnEntity packet, Level world) {

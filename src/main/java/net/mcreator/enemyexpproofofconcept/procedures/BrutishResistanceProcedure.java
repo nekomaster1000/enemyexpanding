@@ -34,9 +34,9 @@ public class BrutishResistanceProcedure {
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.BRUTISH_CHESTPLATE.get()) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 110, 2, (true), (true)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 50, 2, (true), (true)));
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 210, 2, (true), (true)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 110, 2, (true), (true)));
 		}
 	}
 }

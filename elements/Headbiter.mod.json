@@ -21,7 +21,9 @@
     "bodyName": "Phantasm Cape",
     "leggingsName": "Phantasm Leggings",
     "bootsName": "Phantasm Boots",
-    "helmetSpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Gain brief Speed and Regeneration when attacking enemies"
+    ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],

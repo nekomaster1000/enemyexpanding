@@ -145,28 +145,31 @@
     "spawningCondition": {
       "name": "IfNightReturnTrue"
     },
-    "spawningProbability": 35,
+    "spawningProbability": 100,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 5,
     "restrictionBiomes": [
       {
-        "value": "birch_forest"
+        "value": "bamboo_jungle"
       },
       {
-        "value": "roofed_forest"
+        "value": "bamboo_jungle_hills"
       },
       {
-        "value": "mutated_forest"
+        "value": "jungle"
       },
       {
-        "value": "forest"
+        "value": "jungle_hills"
       },
       {
-        "value": "mutated_birch_forest"
+        "value": "mutated_jungle"
       },
       {
-        "value": "extreme_hills_with_trees"
+        "value": "mutated_jungle_edge"
+      },
+      {
+        "value": "jungle_edge"
       }
     ],
     "spawnInDungeons": true

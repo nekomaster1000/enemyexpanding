@@ -33,7 +33,7 @@ public class BurningSpeedUpProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("minecraft:burning_speed_up")))) {
+		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:burning_boost")))) {
 			if (entity.isOnFire()) {
 				if (Math.random() < (double) BetterConfigConfiguration.BURNINGUNDEADSPEEDUP.get()) {
 					if (entity instanceof LivingEntity _entity)

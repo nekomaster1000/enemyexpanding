@@ -19,7 +19,9 @@
     "leggingsName": "",
     "bootsName": "",
     "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
+    "bodySpecialInfo": [
+      "Gain Resistance III and Hunger III briefly when hurt"
+    ],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
     "helmetModelName": "Default",
@@ -52,7 +54,7 @@
     "bootsImmuneToFire": false,
     "maxDamage": 4,
     "damageValueHelmet": 0,
-    "damageValueBody": 1,
+    "damageValueBody": 3,
     "damageValueLeggings": 0,
     "damageValueBoots": 0,
     "enchantability": 15,

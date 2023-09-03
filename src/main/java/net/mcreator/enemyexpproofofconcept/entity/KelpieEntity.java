@@ -34,6 +34,7 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -59,6 +60,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.enemyexpproofofconcept.procedures.PlayerOnLandTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieTickProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieSpawnProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.KelpieHurtProcedure;
@@ -80,8 +82,7 @@ public class KelpieEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("deep_cold_ocean"), new ResourceLocation("frozen_ocean"), new ResourceLocation("warm_ocean"), new ResourceLocation("lukewarm_ocean"),
-			new ResourceLocation("ocean"), new ResourceLocation("deep_lukewarm_ocean"), new ResourceLocation("cold_ocean"), new ResourceLocation("deep_ocean"), new ResourceLocation("deep_frozen_ocean"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("deep_cold_ocean"), new ResourceLocation("deep_lukewarm_ocean"), new ResourceLocation("deep_ocean"), new ResourceLocation("deep_frozen_ocean"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -161,16 +162,27 @@ public class KelpieEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
+		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, Player.class, (float) 6, 1, 1.2) {
+			@Override
+			public boolean canUse() {
+				double x = KelpieEntity.this.getX();
+				double y = KelpieEntity.this.getY();
+				double z = KelpieEntity.this.getZ();
+				Entity entity = KelpieEntity.this;
+				Level world = KelpieEntity.this.level;
+				return super.canUse() && PlayerOnLandTrueProcedure.execute(world, x, y, z);
+			}
+		});
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 1, 40));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1, 40));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 	}
 
 	@Override

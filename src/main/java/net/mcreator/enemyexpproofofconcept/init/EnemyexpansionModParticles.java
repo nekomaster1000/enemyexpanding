@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.enemyexpproofofconcept.client.particle.VigorParticleParticle;
 import net.mcreator.enemyexpproofofconcept.client.particle.ResistenceParticleParticle;
 import net.mcreator.enemyexpproofofconcept.client.particle.FeatherParticleParticle;
 
@@ -21,5 +22,6 @@ public class EnemyexpansionModParticles {
 	public static void registerParticles(ParticleFactoryRegisterEvent event) {
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EnemyexpansionModParticleTypes.RESISTENCE_PARTICLE.get(), ResistenceParticleParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EnemyexpansionModParticleTypes.FEATHER_PARTICLE.get(), FeatherParticleParticle::provider);
+		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EnemyexpansionModParticleTypes.VIGOR_PARTICLE.get(), VigorParticleParticle::provider);
 	}
 }

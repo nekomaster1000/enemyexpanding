@@ -4,6 +4,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -36,14 +38,38 @@ public class FlutterfliersSpawningProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.FLUTTERFLIERS_CHESTPLATE.get()) {
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new FlutterflyEntity(EnemyexpansionModEntities.FLUTTERFLY.get(), _level);
-				entityToSpawn.moveTo(x, (y + 0.5), z, world.getRandom().nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private LevelAccessor world;
+
+			public void start(LevelAccessor world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
 			}
-		}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.FLUTTERFLIERS_CHESTPLATE.get()) {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = new FlutterflyEntity(EnemyexpansionModEntities.FLUTTERFLY.get(), _level);
+						entityToSpawn.moveTo(x, (y + 0.5), z, world.getRandom().nextFloat() * 360F, 0);
+						if (entityToSpawn instanceof Mob _mobToSpawn)
+							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+						world.addFreshEntity(entityToSpawn);
+					}
+				}
+				MinecraftForge.EVENT_BUS.unregister(this);
+			}
+		}.start(world, 20);
 	}
 }

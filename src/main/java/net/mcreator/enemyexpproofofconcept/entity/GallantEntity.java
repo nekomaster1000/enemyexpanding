@@ -43,7 +43,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -52,6 +51,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.SkyAndNightTrueProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GallantWaterHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.GallantHurtAnimationProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
@@ -69,12 +70,11 @@ public class GallantEntity extends Monster implements IAnimatable {
 	private long lastSwing;
 	public String animationprocedure = "empty";
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_river"), new ResourceLocation("forest"), new ResourceLocation("stony_shore"), new ResourceLocation("sunflower_plains"),
-			new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("lush_caves"), new ResourceLocation("snowy_slopes"), new ResourceLocation("ice_spikes"),
-			new ResourceLocation("dark_forest"), new ResourceLocation("plains"), new ResourceLocation("stony_peaks"), new ResourceLocation("frozen_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"),
-			new ResourceLocation("snowy_beach"), new ResourceLocation("dripstone_caves"), new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"), new ResourceLocation("jagged_peaks"), new ResourceLocation("snowy_taiga"),
-			new ResourceLocation("swamp"), new ResourceLocation("eroded_badlands"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("grove"), new ResourceLocation("windswept_hills"),
-			new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"), new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"), new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"),
-			new ResourceLocation("windswept_gravelly_hills"));
+			new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("snowy_slopes"), new ResourceLocation("ice_spikes"), new ResourceLocation("dark_forest"),
+			new ResourceLocation("plains"), new ResourceLocation("stony_peaks"), new ResourceLocation("frozen_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"), new ResourceLocation("snowy_beach"),
+			new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"), new ResourceLocation("jagged_peaks"), new ResourceLocation("snowy_taiga"), new ResourceLocation("swamp"), new ResourceLocation("eroded_badlands"),
+			new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("grove"), new ResourceLocation("windswept_hills"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("wooded_badlands"),
+			new ResourceLocation("windswept_savanna"), new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"), new ResourceLocation("windswept_gravelly_hills"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -116,16 +116,26 @@ public class GallantEntity extends Monster implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = GallantEntity.this.getX();
+				double y = GallantEntity.this.getY();
+				double z = GallantEntity.this.getZ();
+				Entity entity = GallantEntity.this;
+				Level world = GallantEntity.this.level;
+				return super.canUse() && IfNightReturnTrueProcedure.execute(world);
+			}
+		});
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Villager.class, false, false));
 	}
 
@@ -188,8 +198,12 @@ public class GallantEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.GALLANT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.GALLANT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return SkyAndNightTrueProcedure.execute(world, x, y, z);
+		});
 		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.GALLANT.get(), 180);
 	}
 

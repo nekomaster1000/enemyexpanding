@@ -76,13 +76,12 @@ public class WaspEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("forest"), new ResourceLocation("dark_forest"), new ResourceLocation("birch_forest"),
-			new ResourceLocation("flower_forest"), new ResourceLocation("windswept_forest"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("bamboo_jungle"), new ResourceLocation("sparse_jungle"), new ResourceLocation("jungle"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.WASP.get(), 35, 1, 5));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.WASP.get(), 100, 1, 5));
 	}
 
 	public WaspEntity(PlayMessages.SpawnEntity packet, Level world) {

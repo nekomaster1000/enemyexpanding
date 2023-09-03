@@ -18,8 +18,12 @@
     "bodyName": "Guardscloak",
     "leggingsName": "Guard",
     "bootsName": "Guard",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
+    "helmetSpecialInfo": [
+      "Gain Speed when shot with an arrow"
+    ],
+    "bodySpecialInfo": [
+      "Gain Speed when shot with an arrow"
+    ],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
     "helmetModelName": "Default",
