@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:gladling_helmet"
+    },
+    "title": {
+      "translate": "advancements.youre_all_free.title"
+    },
+    "description": {
+      "translate": "advancements.youre_all_free.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "youre_all_free": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

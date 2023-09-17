@@ -146,20 +146,13 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
-      "name": "IfNightReturnTrue"
+      "name": "DragonflySpawning"
     },
     "spawningProbability": 35,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 5,
-    "restrictionBiomes": [
-      {
-        "value": "mangrove_swamp"
-      },
-      {
-        "value": "swamp"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false
   }
 }

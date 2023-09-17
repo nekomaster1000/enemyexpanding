@@ -18,14 +18,19 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.ZobgoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CastSpellEntity;
+
+import java.util.Iterator;
 
 public class CastSpellRandomEffectProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
@@ -117,6 +122,24 @@ public class CastSpellRandomEffectProcedure {
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+			}
+			if (entity instanceof ServerPlayer _player) {
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:story/deflect_arrow"));
+				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (!_ap.isDone()) {
+					Iterator _iterator = _ap.getRemainingCriteria().iterator();
+					while (_iterator.hasNext())
+						_player.getAdvancements().award(_adv, (String) _iterator.next());
+				}
+			}
+			if (entity instanceof ServerPlayer _player) {
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:cast_away"));
+				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (!_ap.isDone()) {
+					Iterator _iterator = _ap.getRemainingCriteria().iterator();
+					while (_iterator.hasNext())
+						_player.getAdvancements().award(_adv, (String) _iterator.next());
 				}
 			}
 		} else {

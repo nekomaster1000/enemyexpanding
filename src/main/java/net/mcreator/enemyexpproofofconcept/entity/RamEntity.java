@@ -94,7 +94,6 @@ public class RamEntity extends Animal implements IAnimatable {
 		super(type, world);
 		xpReward = 1;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -138,11 +137,6 @@ public class RamEntity extends Animal implements IAnimatable {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

@@ -5,7 +5,7 @@
     "achievementName": "Vampire Slayer",
     "achievementDescription": "Slay a Vampire before it turns into a Biter",
     "achievementIcon": {
-      "value": "CUSTOM:Phantasm.helmet"
+      "value": "CUSTOM:Headbiter.helmet"
     },
     "background": "Default",
     "disableDisplay": false,
@@ -16,9 +16,9 @@
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 100,
-    "achievementType": "challenge",
+    "achievementType": "goal",
     "parent": {
-      "value": "story/root"
+      "value": "CUSTOM:EnemyExpansionAdvancements"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"53\" y=\"43\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "enemyexpansion:phantasm_helmet"
+      "item": "enemyexpansion:headbiter_helmet"
     },
     "title": {
       "translate": "advancements.vampire_slayer.title"
@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.vampire_slayer.descr"
     },
-    "frame": "challenge",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
@@ -22,5 +22,5 @@
   "rewards": {
     "experience": 100
   },
-  "parent": "minecraft:story/root"
+  "parent": "enemyexpansion:enemy_expansion_advancements"
 }

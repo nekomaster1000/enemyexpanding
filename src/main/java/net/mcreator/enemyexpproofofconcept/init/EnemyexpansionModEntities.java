@@ -62,6 +62,7 @@ import net.mcreator.enemyexpproofofconcept.entity.HuntsmanskeletonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.HuntsmanPunchEntity;
 import net.mcreator.enemyexpproofofconcept.entity.HornetEntity;
 import net.mcreator.enemyexpproofofconcept.entity.HealingGooEntity;
+import net.mcreator.enemyexpproofofconcept.entity.HalflifeEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GuardsmanEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinFearEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinEntity;
@@ -131,6 +132,10 @@ public class EnemyexpansionModEntities {
 					.sized(0.9f, 2.5f));
 	public static final RegistryObject<EntityType<FrigidEntity>> FRIGID = register("frigid",
 			EntityType.Builder.<FrigidEntity>of(FrigidEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FrigidEntity::new).fireImmune().sized(0.8f, 0.95f));
+	public static final RegistryObject<EntityType<HalflifeEntity>> HALFLIFE = register("halflife",
+			EntityType.Builder.<HalflifeEntity>of(HalflifeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HalflifeEntity::new)
+
+					.sized(0.6f, 1.9f));
 	public static final RegistryObject<EntityType<HuntsmanskeletonEntity>> HUNTSMANSKELETON = register("huntsmanskeleton",
 			EntityType.Builder.<HuntsmanskeletonEntity>of(HuntsmanskeletonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HuntsmanskeletonEntity::new)
 
@@ -278,7 +283,7 @@ public class EnemyexpansionModEntities {
 
 					.sized(0.6f, 2.8f));
 	public static final RegistryObject<EntityType<BoarEntity>> BOAR = register("boar",
-			EntityType.Builder.<BoarEntity>of(BoarEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BoarEntity::new)
+			EntityType.Builder.<BoarEntity>of(BoarEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BoarEntity::new)
 
 					.sized(0.95f, 0.65f));
 	public static final RegistryObject<EntityType<BullEntity>> BULL = register("bull",
@@ -419,6 +424,7 @@ public class EnemyexpansionModEntities {
 			SeniorEntity.init();
 			EquestrianEntity.init();
 			FrigidEntity.init();
+			HalflifeEntity.init();
 			HuntsmanskeletonEntity.init();
 			GuardsmanEntity.init();
 			SpectreEntity.init();
@@ -491,6 +497,7 @@ public class EnemyexpansionModEntities {
 		event.put(SENIOR.get(), SeniorEntity.createAttributes().build());
 		event.put(EQUESTRIAN.get(), EquestrianEntity.createAttributes().build());
 		event.put(FRIGID.get(), FrigidEntity.createAttributes().build());
+		event.put(HALFLIFE.get(), HalflifeEntity.createAttributes().build());
 		event.put(HUNTSMANSKELETON.get(), HuntsmanskeletonEntity.createAttributes().build());
 		event.put(GUARDSMAN.get(), GuardsmanEntity.createAttributes().build());
 		event.put(SPECTRE.get(), SpectreEntity.createAttributes().build());

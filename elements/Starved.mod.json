@@ -157,12 +157,6 @@
     "maxNumberOfMobsPerGroup": 3,
     "restrictionBiomes": [
       {
-        "value": "badlands"
-      },
-      {
-        "value": "badlands_plateau"
-      },
-      {
         "value": "desert"
       },
       {
@@ -170,15 +164,6 @@
       },
       {
         "value": "mutated_desert"
-      },
-      {
-        "value": "mutated_mesa"
-      },
-      {
-        "value": "mutated_mesa_clear_rock"
-      },
-      {
-        "value": "wooded_badlands_plateau"
       }
     ],
     "spawnInDungeons": false

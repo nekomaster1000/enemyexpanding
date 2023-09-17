@@ -49,8 +49,10 @@ public class HeadbiterHarmingProcedure {
 							"/summon area_effect_cloud ~ ~.75 ~ {CustomName:\"\\\"Headbiter\\\"\",Radius:0.7f,Duration:30,Effects:[{Id:7b,Amplifier:1b}]}");
 			}
 			if (!(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMobType() == MobType.UNDEAD : false)) {
-				if (sourceentity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 3, (false), (true)));
+				if (!sourceentity.isOnGround() && sourceentity.getDeltaMovement().y() < 0) {
+					if (sourceentity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 12, 2, (false), (true)));
+				}
 			}
 		}
 	}

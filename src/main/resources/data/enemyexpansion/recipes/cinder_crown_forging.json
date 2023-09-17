@@ -1,0 +1,38 @@
+{
+    "type":"miningmaster:forging_recipe",
+    "gems":[
+        {
+      "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+      "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+      "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+         "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+         "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+         "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+      "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+      "item": "enemyexpansion:cinder_scrap"
+        },
+        {
+      "item": "enemyexpansion:cinder_scrap"
+        }
+    ],
+    "catalyst":{
+       "item":"minecraft:netherite_helmet"
+    },
+    "result":{
+       "item":"enemyexpansion:cinder_helm_helmet"
+    }
+}

@@ -16,6 +16,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -108,6 +109,7 @@ public class FuseTouchProcedure {
 													.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null)
 															.withSuppressedOutput(), "/summon enemyexpansion:invisicreeper ~ ~ ~ {Silent:1b,NoAI:1b,Health:1f,Fuse:1,ignited:1b,ExplosionRadius:2b,CustomName:'{\"text\":\"Crawler\"}'}");
 									} else if (entity instanceof IntruderEntity && !world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), 8, 8, 8), e -> true).isEmpty()) {
+										entity.hurt((new DamageSource("explosion")), 12);
 										entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -0.25, 0.25)), 0.6, (Mth.nextDouble(new Random(), -0.25, 0.25))));
 										if (world instanceof ServerLevel _level)
 											_level.getServer().getCommands()

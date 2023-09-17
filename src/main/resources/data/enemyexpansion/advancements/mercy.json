@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:flutterfliers_chestplate"
+    },
+    "title": {
+      "translate": "advancements.mercy.title"
+    },
+    "description": {
+      "translate": "advancements.mercy.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mercy": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

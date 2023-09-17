@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Bro Think He Carti",
-    "achievementDescription": "Wear a Headbiter",
+    "achievementDescription": "Obtain a Headbiter",
     "achievementIcon": {
       "value": "CUSTOM:Headbiter.helmet"
     },
@@ -18,8 +18,8 @@
     "rewardXP": 10,
     "achievementType": "task",
     "parent": {
-      "value": "story/root"
+      "value": "CUSTOM:VampireSlayer"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"53\" y=\"43\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"90\" y=\"73\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Headbiter.helmet</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

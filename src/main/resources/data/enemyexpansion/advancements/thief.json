@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:bull_skull_helmet"
+    },
+    "title": {
+      "translate": "advancements.thief.title"
+    },
+    "description": {
+      "translate": "advancements.thief.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "thief": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

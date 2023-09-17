@@ -48,6 +48,7 @@ import net.mcreator.enemyexpproofofconcept.client.renderer.InvisicreeperRenderer
 import net.mcreator.enemyexpproofofconcept.client.renderer.IntruderRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.HuntsmanskeletonRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.HornetRenderer;
+import net.mcreator.enemyexpproofofconcept.client.renderer.HalflifeRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GuardsmanRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GoblinRenderer;
 import net.mcreator.enemyexpproofofconcept.client.renderer.GoblinFearRenderer;
@@ -91,6 +92,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.SENIOR.get(), SeniorRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.EQUESTRIAN.get(), EquestrianRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.FRIGID.get(), FrigidRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.HALFLIFE.get(), HalflifeRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HUNTSMANSKELETON.get(), HuntsmanskeletonRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.GUARDSMAN.get(), GuardsmanRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SPECTRE.get(), SpectreRenderer::new);

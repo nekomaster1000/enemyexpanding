@@ -12,7 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -24,7 +23,6 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.enemyexpproofofconcept.procedures.CartiSlayerProcedure;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelheadbiter;
 
 import java.util.Map;
@@ -101,17 +99,12 @@ public abstract class HeadbiterItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(new TextComponent("Gain brief Speed and Regeneration when attacking enemies"));
+			list.add(new TextComponent("Gain brief Speed and Regeneration when attacking and killing enemies"));
 		}
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "enemyexpansion:textures/entities/headbiter.png";
-		}
-
-		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			CartiSlayerProcedure.execute(entity);
 		}
 	}
 }

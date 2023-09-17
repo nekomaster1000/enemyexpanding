@@ -10,11 +10,17 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
+
+import java.util.Iterator;
 
 public class BottledFlutterflyReleaseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -36,6 +42,15 @@ public class BottledFlutterflyReleaseProcedure {
 				if (entityToSpawn instanceof Mob _mobToSpawn)
 					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 				world.addFreshEntity(entityToSpawn);
+			}
+			if (entity instanceof ServerPlayer _player) {
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:mercy"));
+				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (!_ap.isDone()) {
+					Iterator _iterator = _ap.getRemainingCriteria().iterator();
+					while (_iterator.hasNext())
+						_player.getAdvancements().award(_adv, (String) _iterator.next());
+				}
 			}
 		}
 	}

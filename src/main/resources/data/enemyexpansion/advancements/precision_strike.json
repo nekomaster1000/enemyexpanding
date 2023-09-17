@@ -22,5 +22,5 @@
   "rewards": {
     "experience": 20
   },
-  "parent": "minecraft:story/root"
+  "parent": "enemyexpansion:enemy_expansion_advancements"
 }

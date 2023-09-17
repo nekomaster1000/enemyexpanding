@@ -145,39 +145,14 @@
     "height": 0.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "FrigidSpawning"
+    },
     "spawningProbability": 120,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
-    "restrictionBiomes": [
-      {
-        "value": "snowy_slopes"
-      },
-      {
-        "value": "cold_beach"
-      },
-      {
-        "value": "snowy_mountains"
-      },
-      {
-        "value": "snowy_tundra"
-      },
-      {
-        "value": "taiga_cold"
-      },
-      {
-        "value": "taiga_cold_hills"
-      },
-      {
-        "value": "mutated_taiga_cold"
-      },
-      {
-        "value": "grove"
-      },
-      {
-        "value": "frozen_peaks"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": true
   }
 }

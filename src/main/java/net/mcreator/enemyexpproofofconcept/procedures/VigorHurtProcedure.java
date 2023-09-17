@@ -62,7 +62,7 @@ public class VigorHurtProcedure {
 									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0, (false), (false)));
 								entityiterator.hurt((new DamageSource("even_more_magic")), 8);
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.5, 0.5, 0.5, 0.2);
+									_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 1, 0.5, 0.5, 0.5, 0.2);
 							}
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}

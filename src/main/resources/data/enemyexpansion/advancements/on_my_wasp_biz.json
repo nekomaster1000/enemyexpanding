@@ -12,7 +12,7 @@
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": true
+    "hidden": false
   },
   "criteria": {
     "on_my_wasp_biz": {
@@ -22,5 +22,5 @@
   "rewards": {
     "experience": 10
   },
-  "parent": "minecraft:story/root"
+  "parent": "enemyexpansion:enemy_expansion_advancements"
 }

@@ -13,12 +13,17 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
+
+import java.util.Iterator;
 
 public class SuspiciousSliceEatenProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -153,6 +158,15 @@ public class SuspiciousSliceEatenProcedure {
 											_level.sendParticles(ParticleTypes.LARGE_SMOKE, x, (y + 0.5), z, 10, 0.2, 0.2, 0.2, 0.2);
 										if (entity instanceof LivingEntity _entity)
 											_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 201, 0, (false), (true)));
+										if (entity instanceof ServerPlayer _player) {
+											Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:goblin_roulette"));
+											AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+											if (!_ap.isDone()) {
+												Iterator _iterator = _ap.getRemainingCriteria().iterator();
+												while (_iterator.hasNext())
+													_player.getAdvancements().award(_adv, (String) _iterator.next());
+											}
+										}
 									}
 								}
 								MinecraftForge.EVENT_BUS.unregister(this);

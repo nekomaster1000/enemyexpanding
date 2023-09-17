@@ -99,9 +99,6 @@
     "stepSound": {
       "value": "CUSTOM:silentstep"
     },
-    "whenMobDies": {
-      "name": "CartiSlayer"
-    },
     "onMobTickUpdate": {
       "name": "VampRegen"
     },

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:banemask_helmet"
+    },
+    "title": {
+      "translate": "advancements.bane_banished.title"
+    },
+    "description": {
+      "translate": "advancements.bane_banished.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bane_banished": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

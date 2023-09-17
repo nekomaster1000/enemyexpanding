@@ -219,7 +219,7 @@ public class KelpieEntity extends Monster implements IAnimatable {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		KelpieDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		KelpieDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), source.getEntity());
 	}
 
 	@Override

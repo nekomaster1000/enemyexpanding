@@ -10,9 +10,6 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "onHelmetTick": {
-      "name": "CartiSlayer"
-    },
     "creativeTab": {
       "value": "COMBAT"
     },
@@ -22,7 +19,7 @@
     "leggingsName": "Phantasm Leggings",
     "bootsName": "Phantasm Boots",
     "helmetSpecialInfo": [
-      "Gain brief Speed and Regeneration when attacking enemies"
+      "Gain brief Speed and Regeneration when attacking and killing enemies"
     ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],

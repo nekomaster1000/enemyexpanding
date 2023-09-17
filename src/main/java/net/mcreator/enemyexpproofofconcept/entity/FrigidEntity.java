@@ -26,7 +26,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -47,7 +46,6 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -57,12 +55,11 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.FrigidSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.FrigidHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
-
-import java.util.Set;
 
 @Mod.EventBusSubscriber
 public class FrigidEntity extends Zombie implements IAnimatable {
@@ -74,13 +71,10 @@ public class FrigidEntity extends Zombie implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("grove"), new ResourceLocation("windswept_hills"), new ResourceLocation("snowy_plains"), new ResourceLocation("snowy_slopes"),
-			new ResourceLocation("frozen_peaks"), new ResourceLocation("snowy_taiga"), new ResourceLocation("snowy_beach"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.FRIGID.get(), 120, 1, 2));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.FRIGID.get(), 120, 1, 2));
 	}
 
 	public FrigidEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -181,8 +175,12 @@ public class FrigidEntity extends Zombie implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.FRIGID.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.FRIGID.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return FrigidSpawningProcedure.execute(world, x, y, z);
+		});
 		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.FRIGID.get(), 180);
 	}
 

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:headbiter_helmet"
+    },
+    "title": {
+      "translate": "advancements.pinned_to_the_wall.title"
+    },
+    "description": {
+      "translate": "advancements.pinned_to_the_wall.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pinned_to_the_wall": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:bro_think_he_carti"
+}

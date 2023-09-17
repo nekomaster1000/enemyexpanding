@@ -45,7 +45,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.VampRegenProcedure;
-import net.mcreator.enemyexpproofofconcept.procedures.CartiSlayerProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.BiterTimerProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
@@ -156,12 +155,6 @@ public class BiterEntity extends Bat implements IAnimatable {
 		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		CartiSlayerProcedure.execute(this);
 	}
 
 	@Override

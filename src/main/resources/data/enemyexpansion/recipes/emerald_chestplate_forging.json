@@ -1,0 +1,35 @@
+{
+    "type":"miningmaster:forging_recipe",
+    "gems":[
+        {
+      "item": "spelunkery:rough_emerald"
+        },
+        {
+      "item": "spelunkery:rough_emerald"
+        },
+        {
+      "item": "spelunkery:rough_emerald"
+        },
+        {
+         "item": "spelunkery:rough_emerald"
+        },
+        {
+         "item": "spelunkery:rough_emerald"
+        },
+        {
+          "item": "spelunkery:rough_emerald"
+         },
+         {
+          "item": "spelunkery:rough_emerald"
+         },
+         {
+          "item": "spelunkery:rough_emerald"
+         }
+    ],
+    "catalyst":{
+       "item":"minecraft:diamond_chestplate"
+    },
+    "result":{
+       "item":"enemyexpansion:polished_emerald_chestplate"
+    }
+}

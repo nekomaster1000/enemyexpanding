@@ -149,7 +149,7 @@
             "numberField": 1.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Petriman Zombie Replacement",
+            "vardisplay": "Petriman Spawns Alongside Zombie",
             "varname": "petrimanzombiereplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -167,7 +167,7 @@
             "numberField": 0.4,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Silverking Spider Replacement",
+            "vardisplay": "Silverking Spawns Alongside Spider",
             "varname": "silverkingspiderreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -185,7 +185,7 @@
             "numberField": 0.3,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Crawler/Intruder Creeper Replacement",
+            "vardisplay": "Crawler/Intruder Spawns Alongside Creeper",
             "varname": "creepsreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -203,7 +203,7 @@
             "numberField": 0.75,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Vampire Skeleton Replacement",
+            "vardisplay": "Vampire Spawns Alongside Skeleton",
             "varname": "vampireskeletonreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -221,7 +221,7 @@
             "numberField": 1.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Troll Enderman Replacement",
+            "vardisplay": "Troll Spawns Alongside Enderman",
             "varname": "trollendermanreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -239,81 +239,9 @@
             "numberField": 0.2,
             "textDefault": "",
             "comment": "(This is the only way in which Cinders will ever spawn - Disable at your own risk!)",
-            "vardisplay": "Cinder Blaze Replacement",
+            "vardisplay": "Cinder Replaces Blaze",
             "varname": "cinderblazereplacement",
             "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.65,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Boar Pig Replacement",
-            "varname": "pigboarreplacement",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.75,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Bull Cow Replacement",
-            "varname": "cowbullreplacement",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.35,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Ram Sheep Replacement",
-            "varname": "sheepramreplacement",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.55,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Rooster Chicken Replacement",
-            "varname": "chickenroosterreplacement",
-            "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
           },
@@ -329,7 +257,7 @@
             "numberField": 1.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Tarantula Spider Replacement",
+            "vardisplay": "Tarantula Replaces Dripstone Caves Mobs",
             "varname": "spidertarantulareplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -347,7 +275,7 @@
             "numberField": 1.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Scorpion Spider Replacement",
+            "vardisplay": "Scorpion Replaces Desert Spider",
             "varname": "spiderscorpionreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -383,7 +311,7 @@
             "numberField": 0.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Illager Villager Replacement",
+            "vardisplay": "Illagers Replace Villagers",
             "varname": "illagervillagerreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -401,7 +329,7 @@
             "numberField": 0.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Iron Golem Ravager Replacement",
+            "vardisplay": "Ravagers Replace Iron Golems",
             "varname": "irongolemravagerreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -419,7 +347,7 @@
             "numberField": 1.0,
             "textDefault": "",
             "comment": "Ravagers are replaced with Marauders on spawn, but only if they spawn in water",
-            "vardisplay": "Ravager Marauder Replacement",
+            "vardisplay": "Marauders Replace Water-bound Ravagers",
             "varname": "ravagermarauderreplacement",
             "enablecomment": true,
             "onlyComment": false,
@@ -437,7 +365,7 @@
             "numberField": 0.35,
             "textDefault": "",
             "comment": "(This is the only way in which Sputters naturally spawn - Disable at your own risk!)",
-            "vardisplay": "Sputter Strider Addition",
+            "vardisplay": "Sputter Spawns Alongside Strider",
             "varname": "sputterstriderreplacement",
             "enablecomment": true,
             "onlyComment": false,
@@ -455,7 +383,7 @@
             "numberField": 0.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Hornet Vex Replacement",
+            "vardisplay": "Hornet Replaces Vex",
             "varname": "hornetvexreplacement",
             "enablecomment": false,
             "onlyComment": false,
@@ -496,7 +424,7 @@
             "numberField": 55.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Petriman Zombie Replacement Depth",
+            "vardisplay": "Petriman Spawns Alongside Zombie Depth",
             "varname": "petrimanzombiereplacementdepth",
             "enablecomment": false,
             "onlyComment": false,
@@ -514,7 +442,7 @@
             "numberField": -10.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Silverking Spider Replacement Depth",
+            "vardisplay": "Silverking Spawns Alongside Spider Depth",
             "varname": "silverkingspiderreplacementdepth",
             "enablecomment": false,
             "onlyComment": false,
@@ -532,7 +460,7 @@
             "numberField": -10.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Crawler/Intruder Creeper Replacement Depth",
+            "vardisplay": "Crawler/Intruder Spawns Alongside Creeper Depth",
             "varname": "creepsreplacementdepth",
             "enablecomment": false,
             "onlyComment": false,
@@ -550,7 +478,7 @@
             "numberField": -10.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Vampire Skeleton Replacement Depth",
+            "vardisplay": "Vampire Spawns Alongside Skeleton Depth",
             "varname": "vampireskeletonreplacementdepth",
             "enablecomment": false,
             "onlyComment": false,
@@ -568,7 +496,7 @@
             "numberField": -10.0,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Troll Enderman Replacement Depth",
+            "vardisplay": "Troll Spawns Alongside Enderman Depth",
             "varname": "trollendermanreplacementdepth",
             "enablecomment": false,
             "onlyComment": false,
@@ -879,11 +807,29 @@
             "numberField": 0.01,
             "textDefault": "",
             "comment": "",
-            "vardisplay": "Resting Vigor Wearers Spawning",
+            "vardisplay": "Resting Vigor Wearer Spawning",
             "varname": "restingvigorwearerspawning",
-            "enablecomment": true,
+            "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Angler"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.001,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Cockatrice Head Wearer Spawning",
+            "varname": "cockatricewearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:A"
           }
         ]
       },
@@ -997,6 +943,42 @@
             "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Baker"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.007,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Emerald Wearer Spawning",
+            "varname": "emeraldwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:A"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.007,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Amethyst Wearer Spawning",
+            "varname": "amethystwearerspawning",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:A"
           }
         ]
       },
@@ -1048,24 +1030,6 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "",
-            "vardisplay": "Burning Undead mobs gain Speed III Chance",
-            "varname": "burningundeadspeedup",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Baker"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
             "numberField": 0.5,
             "textDefault": "",
             "comment": "",
@@ -1102,7 +1066,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 0.025,
+            "numberField": 0.02,
             "textDefault": "",
             "comment": "",
             "vardisplay": "Flies Spawn From Killed Zombies Chance",

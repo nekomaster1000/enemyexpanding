@@ -1,0 +1,26 @@
+{
+  "type":"miningmaster:forging_recipe",
+  "gems":[
+      {
+       "item":"miningmaster:spirit_garnet"
+      },
+      {
+        "item":"miningmaster:spirit_garnet"
+      },
+      {
+        "item":"miningmaster:spirit_garnet"
+      },
+      {
+        "item":"miningmaster:spirit_garnet"
+      },
+      {
+        "item":"miningmaster:spirit_garnet"
+      }
+  ],
+  "catalyst":{
+     "item":"enemyexpansion:headbiter_helmet"
+  },
+  "result":{
+     "item":"enemyexpansion:vampiric_crown_helmet"
+  }
+}

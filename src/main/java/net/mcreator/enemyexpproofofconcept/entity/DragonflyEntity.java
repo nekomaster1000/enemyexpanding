@@ -56,11 +56,11 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.IfNightReturnTrueProcedure;
+import net.mcreator.enemyexpproofofconcept.procedures.DragonflySpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DragonflyErraticFlightProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.DragonflyDodgePatternProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
@@ -73,12 +73,10 @@ public class DragonflyEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("plains"), new ResourceLocation("swamp"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.DRAGONFLY.get(), 35, 1, 5));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.DRAGONFLY.get(), 35, 1, 5));
 	}
 
 	public DragonflyEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -231,7 +229,7 @@ public class DragonflyEntity extends Monster implements IAnimatable {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return IfNightReturnTrueProcedure.execute(world);
+			return DragonflySpawningProcedure.execute(world, x, y, z);
 		});
 	}
 

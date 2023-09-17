@@ -72,7 +72,7 @@ public class StarvedGUISlotMessage {
 			return;
 		if (slotID == 0 && changeType == 1) {
 
-			StarvedStolenFromProcedure.execute(world, x, y, z);
+			StarvedStolenFromProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

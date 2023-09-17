@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
@@ -37,42 +38,46 @@ public class RestingVigorTickProcedure {
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMobType() == MobType.UNDEAD : false) {
-						if (entityiterator instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.VIGOR_EFFECT.get(), 200, 0, (false), (false)));
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.ambient")), SoundSource.HOSTILE, 1, 1);
-							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.ambient")), SoundSource.HOSTILE, 1, 1, false);
+						if (!(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.SLOW_FALLING) : false)) {
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.VIGOR_EFFECT.get(), 200, 0, (false), (false)));
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 0, (false), (false)));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.ambient")), SoundSource.HOSTILE, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.ambient")), SoundSource.HOSTILE, 1, 1, false);
+								}
 							}
-						}
-						for (int index0 = 0; index0 < (int) (5); index0++) {
-							new Object() {
-								private int ticks = 0;
-								private float waitTicks;
-								private LevelAccessor world;
+							for (int index0 = 0; index0 < (int) (5); index0++) {
+								new Object() {
+									private int ticks = 0;
+									private float waitTicks;
+									private LevelAccessor world;
 
-								public void start(LevelAccessor world, int waitTicks) {
-									this.waitTicks = waitTicks;
-									MinecraftForge.EVENT_BUS.register(this);
-									this.world = world;
-								}
-
-								@SubscribeEvent
-								public void tick(TickEvent.ServerTickEvent event) {
-									if (event.phase == TickEvent.Phase.END) {
-										this.ticks += 1;
-										if (this.ticks >= this.waitTicks)
-											run();
+									public void start(LevelAccessor world, int waitTicks) {
+										this.waitTicks = waitTicks;
+										MinecraftForge.EVENT_BUS.register(this);
+										this.world = world;
 									}
-								}
 
-								private void run() {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (EnemyexpansionModParticleTypes.VIGOR_PARTICLE.get()), x, (y + 2), z, 1, 0.5, 0.5, 0.5, 0.2);
-									MinecraftForge.EVENT_BUS.unregister(this);
-								}
-							}.start(world, (int) Mth.nextDouble(new Random(), 1, 10));
+									@SubscribeEvent
+									public void tick(TickEvent.ServerTickEvent event) {
+										if (event.phase == TickEvent.Phase.END) {
+											this.ticks += 1;
+											if (this.ticks >= this.waitTicks)
+												run();
+										}
+									}
+
+									private void run() {
+										if (world instanceof ServerLevel _level)
+											_level.sendParticles((SimpleParticleType) (EnemyexpansionModParticleTypes.VIGOR_PARTICLE.get()), x, (y + 2), z, 1, 0.5, 0.5, 0.5, 0.2);
+										MinecraftForge.EVENT_BUS.unregister(this);
+									}
+								}.start(world, (int) Mth.nextDouble(new Random(), 1, 10));
+							}
 						}
 					}
 				}

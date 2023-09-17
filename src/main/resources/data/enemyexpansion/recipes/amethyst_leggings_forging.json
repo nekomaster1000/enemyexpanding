@@ -1,0 +1,32 @@
+{
+    "type":"miningmaster:forging_recipe",
+    "gems":[
+        {
+          "item": "minecraft:amethyst_shard"
+            },
+            {
+              "item": "minecraft:amethyst_shard"
+                },
+                {
+                  "item": "minecraft:amethyst_shard"
+                    },
+                            {
+                              "item": "minecraft:budding_amethyst"
+                                },
+                        {
+                          "item": "minecraft:amethyst_shard"
+                            },
+                            {
+                                "item": "minecraft:amethyst_shard"
+                                  },
+                                  {
+                                    "item": "minecraft:amethyst_shard"
+                                      }
+    ],                              
+    "catalyst":{
+       "item":"minecraft:golden_leggings"
+    },
+    "result":{
+       "item":"enemyexpansion:sparkling_amethyst_leggings"
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:suspicious_slice"
+    },
+    "title": {
+      "translate": "advancements.goblin_roulette.title"
+    },
+    "description": {
+      "translate": "advancements.goblin_roulette.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "goblin_roulette": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:enemy_expansion_advancements"
+}

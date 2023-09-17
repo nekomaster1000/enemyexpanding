@@ -52,6 +52,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpproofofconcept.procedures.TrollKilledProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.TrollInvincibleParticlesProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.TrollHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.NoBabiesProcedure;
@@ -164,6 +165,12 @@ public class TrollEntity extends Monster implements IAnimatable {
 		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TrollKilledProcedure.execute(source.getEntity());
 	}
 
 	@Override

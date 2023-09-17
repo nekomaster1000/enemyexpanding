@@ -11,6 +11,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.enemyexpproofofconcept.entity.PiecrabEntity;
 import net.mcreator.enemyexpproofofconcept.entity.MarauderEntity;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
+import net.mcreator.enemyexpproofofconcept.entity.HalflifeEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
 import net.mcreator.enemyexpproofofconcept.entity.AnglerEntity;
 
@@ -40,6 +41,8 @@ public class SwimSpeedProcedure {
 			((PiecrabEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(5.5);
 		} else if (entity instanceof MarauderEntity) {
 			((MarauderEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(8.0);
+		} else if (entity instanceof HalflifeEntity) {
+			((HalflifeEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(8.0);
 		}
 	}
 }

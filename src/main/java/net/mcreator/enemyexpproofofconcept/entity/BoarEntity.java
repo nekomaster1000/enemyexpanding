@@ -77,7 +77,7 @@ public class BoarEntity extends Animal implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.BOAR.get(), 10, 1, 5));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.BOAR.get(), 10, 1, 5));
 	}
 
 	public BoarEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -88,7 +88,6 @@ public class BoarEntity extends Animal implements IAnimatable {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -131,11 +130,6 @@ public class BoarEntity extends Animal implements IAnimatable {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

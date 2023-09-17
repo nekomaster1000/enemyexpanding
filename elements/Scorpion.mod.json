@@ -145,6 +145,9 @@
     "height": 0.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "ScorpionSpawning"
+    },
     "spawningProbability": 80,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

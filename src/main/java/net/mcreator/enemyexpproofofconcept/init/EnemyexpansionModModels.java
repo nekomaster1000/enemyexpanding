@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.enemyexpproofofconcept.client.model.meathat;
+import net.mcreator.enemyexpproofofconcept.client.model.Modelvampiric_crown;
 import net.mcreator.enemyexpproofofconcept.client.model.Modeltrollface;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelsteve;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelsprinter_zombie;
@@ -30,6 +31,7 @@ import net.mcreator.enemyexpproofofconcept.client.model.Modelgladling;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelfrigid_zombie;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelflutterfliers;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelequestrian_zombie;
+import net.mcreator.enemyexpproofofconcept.client.model.Modelcockatrice_head;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelcinderhelmet;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelbull_skull;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelbrutish_garment;
@@ -45,6 +47,7 @@ public class EnemyexpansionModModels {
 		event.registerLayerDefinition(Modelequestrian_zombie.LAYER_LOCATION, Modelequestrian_zombie::createBodyLayer);
 		event.registerLayerDefinition(Modelbrutish_garment.LAYER_LOCATION, Modelbrutish_garment::createBodyLayer);
 		event.registerLayerDefinition(Modelguardsman_cloak.LAYER_LOCATION, Modelguardsman_cloak::createBodyLayer);
+		event.registerLayerDefinition(Modelcockatrice_head.LAYER_LOCATION, Modelcockatrice_head::createBodyLayer);
 		event.registerLayerDefinition(Modelflutterfliers.LAYER_LOCATION, Modelflutterfliers::createBodyLayer);
 		event.registerLayerDefinition(Modelcinderhelmet.LAYER_LOCATION, Modelcinderhelmet::createBodyLayer);
 		event.registerLayerDefinition(Modelslimehead.LAYER_LOCATION, Modelslimehead::createBodyLayer);
@@ -61,6 +64,7 @@ public class EnemyexpansionModModels {
 		event.registerLayerDefinition(Modelminiwither.LAYER_LOCATION, Modelminiwither::createBodyLayer);
 		event.registerLayerDefinition(Modelspectral_cloak.LAYER_LOCATION, Modelspectral_cloak::createBodyLayer);
 		event.registerLayerDefinition(Modelsprinter_zombie.LAYER_LOCATION, Modelsprinter_zombie::createBodyLayer);
+		event.registerLayerDefinition(Modelvampiric_crown.LAYER_LOCATION, Modelvampiric_crown::createBodyLayer);
 		event.registerLayerDefinition(Modeltrollface.LAYER_LOCATION, Modeltrollface::createBodyLayer);
 		event.registerLayerDefinition(Modelhuntsman.LAYER_LOCATION, Modelhuntsman::createBodyLayer);
 		event.registerLayerDefinition(Modelmeatman.LAYER_LOCATION, Modelmeatman::createBodyLayer);

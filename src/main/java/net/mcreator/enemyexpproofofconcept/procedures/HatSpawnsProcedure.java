@@ -219,6 +219,18 @@ public class HatSpawnsProcedure {
 					}
 					ChampionSpawnProcedure.execute(entity);
 				}
+				if (Math.random() < (double) BetterConfigConfiguration.COCKATRICEWEARERSPAWNING.get()) {
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.COCK_HELMET.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.COCK_HELMET.get()));
+						}
+					}
+					ChampionSpawnProcedure.execute(entity);
+				}
 				if (Math.random() < (double) BetterConfigConfiguration.RESTINGVIGORWEARERSPAWNING.get()) {
 					{
 						Entity _ent = entity;
@@ -456,6 +468,82 @@ public class HatSpawnsProcedure {
 							_player.getInventory().setChanged();
 						} else if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
+						}
+					}
+				}
+				if (Math.random() < (double) BetterConfigConfiguration.EMERALDWEARERSPAWNING.get()) {
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_HELMET.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_HELMET.get()));
+						}
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_CHESTPLATE.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_CHESTPLATE.get()));
+						}
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(1, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_LEGGINGS.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_LEGGINGS.get()));
+						}
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(0, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_BOOTS.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EnemyexpansionModItems.POLISHED_EMERALD_BOOTS.get()));
+						}
+					}
+				}
+				if (Math.random() < (double) BetterConfigConfiguration.EMERALDWEARERSPAWNING.get()) {
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(3, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_HELMET.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_HELMET.get()));
+						}
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(2, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_CHESTPLATE.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_CHESTPLATE.get()));
+						}
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(1, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_LEGGINGS.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_LEGGINGS.get()));
+						}
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(0, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_BOOTS.get()));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EnemyexpansionModItems.SPARKLING_AMETHYST_BOOTS.get()));
 						}
 					}
 				}

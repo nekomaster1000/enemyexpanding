@@ -99,6 +99,9 @@
     "stepSound": {
       "value": "block.tuff.step"
     },
+    "whenMobDies": {
+      "name": "TrollKilled"
+    },
     "whenMobIsHurt": {
       "name": "TrollHurt"
     },

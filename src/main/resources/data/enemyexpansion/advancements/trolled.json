@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "enemyexpansion:trollface_helmet"
+    },
+    "title": {
+      "translate": "advancements.trolled.title"
+    },
+    "description": {
+      "translate": "advancements.trolled.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trolled": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "enemyexpansion:meathead_obtained"
+}
