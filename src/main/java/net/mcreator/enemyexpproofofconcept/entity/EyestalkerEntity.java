@@ -14,12 +14,8 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -33,7 +29,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -53,9 +48,6 @@ import net.mcreator.enemyexpproofofconcept.procedures.EyestalkerTickProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.EyestalkerHostileConfigCheckProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
-
-@Mod.EventBusSubscriber
 public class EyestalkerEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(EyestalkerEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(EyestalkerEntity.class, EntityDataSerializers.STRING);
@@ -65,14 +57,6 @@ public class EyestalkerEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("warped_forest"), new ResourceLocation("small_end_islands"), new ResourceLocation("sunflower_plains"), new ResourceLocation("end_midlands"),
-			new ResourceLocation("plains"), new ResourceLocation("the_end"), new ResourceLocation("end_highlands"), new ResourceLocation("end_barrens"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.EYESTALKER.get(), 1, 1, 1));
-	}
 
 	public EyestalkerEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.EYESTALKER.get(), world);

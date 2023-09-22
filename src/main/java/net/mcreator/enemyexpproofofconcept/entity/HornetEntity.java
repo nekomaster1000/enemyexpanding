@@ -43,6 +43,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -53,8 +54,6 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.procedures.HornetDodgePatternProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-
-import java.util.Random;
 
 public class HornetEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(HornetEntity.class, EntityDataSerializers.BOOLEAN);
@@ -116,7 +115,7 @@ public class HornetEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = HornetEntity.this.getRandom();
+				RandomSource random = HornetEntity.this.getRandom();
 				double dir_x = HornetEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_y = HornetEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_z = HornetEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);

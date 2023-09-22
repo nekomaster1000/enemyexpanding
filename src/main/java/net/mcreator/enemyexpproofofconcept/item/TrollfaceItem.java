@@ -2,7 +2,7 @@
 package net.mcreator.enemyexpproofofconcept.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
@@ -21,6 +21,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.enemyexpproofofconcept.client.model.Modeltrollface;
 
+import java.util.function.Consumer;
 import java.util.Map;
 import java.util.Collections;
 
@@ -74,10 +75,11 @@ public abstract class TrollfaceItem extends ArmorItem {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 		}
 
-		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
-			consumer.accept(new IItemRenderProperties() {
+		@Override
+		public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+			consumer.accept(new IClientItemExtensions() {
 				@Override
-				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
+				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
 							Map.of("head", new Modeltrollface(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltrollface.LAYER_LOCATION)).trolled, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",

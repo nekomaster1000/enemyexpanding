@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.WolfsbaneEntity;
 
 public class WolfsbaneModel extends AnimatedGeoModel<WolfsbaneEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(WolfsbaneEntity entity) {
+	public ResourceLocation getAnimationResource(WolfsbaneEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/wolfsbane.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(WolfsbaneEntity entity) {
+	public ResourceLocation getModelResource(WolfsbaneEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/wolfsbane.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(WolfsbaneEntity entity) {
+	public ResourceLocation getTextureResource(WolfsbaneEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

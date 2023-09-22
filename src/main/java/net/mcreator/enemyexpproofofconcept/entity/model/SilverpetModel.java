@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.SilverpetEntity;
 
 public class SilverpetModel extends AnimatedGeoModel<SilverpetEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(SilverpetEntity entity) {
+	public ResourceLocation getAnimationResource(SilverpetEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/silverpet.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(SilverpetEntity entity) {
+	public ResourceLocation getModelResource(SilverpetEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/silverpet.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SilverpetEntity entity) {
+	public ResourceLocation getTextureResource(SilverpetEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

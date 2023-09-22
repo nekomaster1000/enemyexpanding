@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.BanedasherEntity;
 
 public class BanedasherModel extends AnimatedGeoModel<BanedasherEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(BanedasherEntity entity) {
+	public ResourceLocation getAnimationResource(BanedasherEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/banedasher.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(BanedasherEntity entity) {
+	public ResourceLocation getModelResource(BanedasherEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/banedasher.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BanedasherEntity entity) {
+	public ResourceLocation getTextureResource(BanedasherEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

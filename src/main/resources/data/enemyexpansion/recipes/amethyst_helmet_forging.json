@@ -2,7 +2,7 @@
     "type":"miningmaster:forging_recipe",
     "gems":[
         {
-      "item": "minecraft:budding_amethyst"
+      "item": "miningmaster:heart_rhodonite"
         },
         {
           "item": "minecraft:amethyst_shard"
@@ -20,7 +20,7 @@
                           "item": "minecraft:amethyst_shard"
                             },
                             {
-                              "item": "minecraft:budding_amethyst"
+                              "item": "miningmaster:heart_rhodonite"
                                 }
     ],
     "catalyst":{

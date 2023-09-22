@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.SprinterEntity;
 
 public class SprinterModel extends AnimatedGeoModel<SprinterEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(SprinterEntity entity) {
+	public ResourceLocation getAnimationResource(SprinterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/sprinter.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(SprinterEntity entity) {
+	public ResourceLocation getModelResource(SprinterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/sprinter.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SprinterEntity entity) {
+	public ResourceLocation getTextureResource(SprinterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

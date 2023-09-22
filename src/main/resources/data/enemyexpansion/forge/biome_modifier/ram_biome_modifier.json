@@ -1,0 +1,19 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "windswept_hills",
+    "taiga",
+    "stony_peaks",
+    "snowy_slopes",
+    "windswept_gravelly_hills",
+    "frozen_peaks",
+    "snowy_taiga",
+    "jagged_peaks"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:ram",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 5
+  }
+}

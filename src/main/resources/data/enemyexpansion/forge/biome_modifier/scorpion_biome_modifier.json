@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "badlands",
+    "wooded_badlands",
+    "desert",
+    "eroded_badlands"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:scorpion",
+    "weight": 80,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

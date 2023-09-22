@@ -3,7 +3,7 @@ package net.mcreator.enemyexpproofofconcept.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.monster.ZombieVillager;
@@ -16,8 +16,8 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class NoBabyZombiesCallProcedure {
 	@SubscribeEvent
-	public static void onEntitySpawned(EntityJoinWorldEvent event) {
-		execute(event, event.getWorld(), event.getEntity());
+	public static void onEntitySpawned(EntityJoinLevelEvent event) {
+		execute(event, event.getLevel(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, Entity entity) {

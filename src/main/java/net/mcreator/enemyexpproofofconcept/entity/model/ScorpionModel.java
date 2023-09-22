@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.ScorpionEntity;
 
 public class ScorpionModel extends AnimatedGeoModel<ScorpionEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(ScorpionEntity entity) {
+	public ResourceLocation getAnimationResource(ScorpionEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/scorpion.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(ScorpionEntity entity) {
+	public ResourceLocation getModelResource(ScorpionEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/scorpion.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(ScorpionEntity entity) {
+	public ResourceLocation getTextureResource(ScorpionEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

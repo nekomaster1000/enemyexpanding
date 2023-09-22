@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.BiterEntity;
 
 public class BiterModel extends AnimatedGeoModel<BiterEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(BiterEntity entity) {
+	public ResourceLocation getAnimationResource(BiterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/biter.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(BiterEntity entity) {
+	public ResourceLocation getModelResource(BiterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/biter.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BiterEntity entity) {
+	public ResourceLocation getTextureResource(BiterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

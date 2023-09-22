@@ -2,7 +2,7 @@
 package net.mcreator.enemyexpproofofconcept.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -19,7 +19,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
@@ -27,6 +26,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.enemyexpproofofconcept.client.model.Modelflutterfliers;
 
+import java.util.function.Consumer;
 import java.util.Map;
 import java.util.List;
 import java.util.Collections;
@@ -81,11 +81,12 @@ public abstract class FlutterfliersItem extends ArmorItem {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 		}
 
-		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
-			consumer.accept(new IItemRenderProperties() {
+		@Override
+		public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+			consumer.accept(new IClientItemExtensions() {
 				@Override
 				@OnlyIn(Dist.CLIENT)
-				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
+				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).all, "left_arm",
 							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).leftarm, "right_arm",
 							new Modelflutterfliers(Minecraft.getInstance().getEntityModels().bakeLayer(Modelflutterfliers.LAYER_LOCATION)).rightarm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
@@ -101,8 +102,8 @@ public abstract class FlutterfliersItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(new TextComponent("Provides brief Regeneration when hurt whilst worn by the living"));
-			list.add(new TextComponent("Creates a Harming potion cloud when hurt whilst worn by the undead"));
+			list.add(Component.literal("Provides brief Regeneration when hurt whilst worn by the living"));
+			list.add(Component.literal("Creates a Harming potion cloud when hurt whilst worn by the undead"));
 		}
 
 		@Override

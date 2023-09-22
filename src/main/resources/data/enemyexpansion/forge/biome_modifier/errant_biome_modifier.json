@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "dark_forest",
+    "swamp",
+    "mangrove_swamp"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:errant",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

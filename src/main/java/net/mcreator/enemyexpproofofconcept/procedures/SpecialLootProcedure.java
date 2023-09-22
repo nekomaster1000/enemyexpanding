@@ -13,14 +13,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 
 import javax.annotation.Nullable;
-
-import java.util.Random;
 
 @Mod.EventBusSubscriber
 public class SpecialLootProcedure {
@@ -45,7 +44,7 @@ public class SpecialLootProcedure {
 								.getTag(ItemTags.create(new ResourceLocation((("enemyexpansion:champion_"
 										+ ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.CHAMPION.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.CHAMPION.get()).getAmplifier() : 0) + 1)))
 										.toLowerCase(java.util.Locale.ENGLISH))))
-								.getRandomElement(new Random()).orElseGet(() -> Items.AIR))));
+								.getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}

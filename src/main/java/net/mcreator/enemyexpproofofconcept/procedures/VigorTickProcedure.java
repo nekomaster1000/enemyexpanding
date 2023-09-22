@@ -8,6 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -16,7 +17,6 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModParticleTypes;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 
 import java.util.stream.Collectors;
-import java.util.Random;
 import java.util.List;
 import java.util.Comparator;
 
@@ -28,7 +28,7 @@ public class VigorTickProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), 30, 0, (false), (false)));
 		} else if (Math.random() < 0.05) {
-			entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -0.4, 0.4)), (Mth.nextDouble(new Random(), -0.4, 0.2)), (Mth.nextDouble(new Random(), -0.4, 0.4))));
+			entity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -0.4, 0.4)), (Mth.nextDouble(RandomSource.create(), -0.4, 0.2)), (Mth.nextDouble(RandomSource.create(), -0.4, 0.4))));
 		}
 		if (Math.random() < 0.01) {
 			{

@@ -14,16 +14,12 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -41,7 +37,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -61,9 +56,6 @@ import net.mcreator.enemyexpproofofconcept.procedures.GladiladBounceProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.AnglerSpawningProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
-
-@Mod.EventBusSubscriber
 public class GladiladEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GladiladEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GladiladEntity.class, EntityDataSerializers.STRING);
@@ -73,15 +65,6 @@ public class GladiladEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_ocean"), new ResourceLocation("frozen_river"), new ResourceLocation("warm_ocean"), new ResourceLocation("deep_lukewarm_ocean"),
-			new ResourceLocation("cold_ocean"), new ResourceLocation("deep_ocean"), new ResourceLocation("deep_frozen_ocean"), new ResourceLocation("deep_cold_ocean"), new ResourceLocation("lukewarm_ocean"), new ResourceLocation("ocean"),
-			new ResourceLocation("beach"), new ResourceLocation("river"), new ResourceLocation("snowy_beach"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.UNDERGROUND_WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADILAD.get(), 10, 1, 1));
-	}
 
 	public GladiladEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.GLADILAD.get(), world);

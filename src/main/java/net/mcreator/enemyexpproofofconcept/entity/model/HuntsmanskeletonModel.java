@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.HuntsmanskeletonEntity;
 
 public class HuntsmanskeletonModel extends AnimatedGeoModel<HuntsmanskeletonEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(HuntsmanskeletonEntity entity) {
+	public ResourceLocation getAnimationResource(HuntsmanskeletonEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/huntsman.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(HuntsmanskeletonEntity entity) {
+	public ResourceLocation getModelResource(HuntsmanskeletonEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/huntsman.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(HuntsmanskeletonEntity entity) {
+	public ResourceLocation getTextureResource(HuntsmanskeletonEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.DragonflyEntity;
 
 public class DragonflyModel extends AnimatedGeoModel<DragonflyEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(DragonflyEntity entity) {
+	public ResourceLocation getAnimationResource(DragonflyEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/dragonfly.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(DragonflyEntity entity) {
+	public ResourceLocation getModelResource(DragonflyEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/dragonfly.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(DragonflyEntity entity) {
+	public ResourceLocation getTextureResource(DragonflyEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

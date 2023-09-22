@@ -2,7 +2,7 @@
 package net.mcreator.enemyexpproofofconcept.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -19,7 +19,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
@@ -28,6 +27,7 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.enemyexpproofofconcept.procedures.SpiderlatchTickProcedure;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelspiderlatch;
 
+import java.util.function.Consumer;
 import java.util.Map;
 import java.util.List;
 import java.util.Collections;
@@ -82,10 +82,11 @@ public abstract class SpiderlatchItem extends ArmorItem {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 		}
 
-		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
-			consumer.accept(new IItemRenderProperties() {
+		@Override
+		public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+			consumer.accept(new IClientItemExtensions() {
 				@Override
-				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
+				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
 							Map.of("head", new Modelspiderlatch(Minecraft.getInstance().getEntityModels().bakeLayer(Modelspiderlatch.LAYER_LOCATION)).spiderhat, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
@@ -102,7 +103,7 @@ public abstract class SpiderlatchItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(new TextComponent("Attacks inflict Poison"));
+			list.add(Component.literal("Attacks inflict Poison"));
 		}
 
 		@Override

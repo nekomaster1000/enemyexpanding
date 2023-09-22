@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.GladiusEntity;
 
 public class GladiusModel extends AnimatedGeoModel<GladiusEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(GladiusEntity entity) {
+	public ResourceLocation getAnimationResource(GladiusEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/gladius.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(GladiusEntity entity) {
+	public ResourceLocation getModelResource(GladiusEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/gladius.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GladiusEntity entity) {
+	public ResourceLocation getTextureResource(GladiusEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

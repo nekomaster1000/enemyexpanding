@@ -1,9 +1,6 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -16,6 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
@@ -25,9 +23,9 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.OrbEntity;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 import java.util.stream.Collectors;
-import java.util.Random;
 import java.util.List;
 import java.util.Comparator;
 
@@ -37,32 +35,10 @@ public class DreadSpawnProcedure {
 			if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 				Entity _entityForSpawning = new OrbEntity(EnemyexpansionModEntities.ORB.get(), _serverLevelForEntitySpawn);
 				_entityForSpawning.moveTo(x, (y + 1), z, world.getRandom().nextFloat() * 360F, 0);
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						if (!_entityForSpawning.level.isClientSide())
-							_entityForSpawning.discard();
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, (int) Mth.nextDouble(new Random(), 60, 200));
+				EnemyexpansionMod.queueServerWork((int) Mth.nextDouble(RandomSource.create(), 60, 200), () -> {
+					if (!_entityForSpawning.level.isClientSide())
+						_entityForSpawning.discard();
+				});
 				if (_entityForSpawning instanceof Mob _mobForSpawning)
 					_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 				world.addFreshEntity(_entityForSpawning);
@@ -74,7 +50,7 @@ public class DreadSpawnProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 					if (entityiterator instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 1, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 400, 0, (false), (false)));
 				}
 			}
 		}

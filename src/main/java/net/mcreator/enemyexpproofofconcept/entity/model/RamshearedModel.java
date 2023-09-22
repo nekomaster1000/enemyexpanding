@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 
 public class RamshearedModel extends AnimatedGeoModel<RamshearedEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(RamshearedEntity entity) {
+	public ResourceLocation getAnimationResource(RamshearedEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/ramsheared.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(RamshearedEntity entity) {
+	public ResourceLocation getModelResource(RamshearedEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/ramsheared.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(RamshearedEntity entity) {
+	public ResourceLocation getTextureResource(RamshearedEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

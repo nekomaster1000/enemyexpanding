@@ -1,0 +1,41 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "forest",
+    "stony_shore",
+    "sunflower_plains",
+    "sparse_jungle",
+    "birch_forest",
+    "flower_forest",
+    "mangrove_swamp",
+    "bamboo_jungle",
+    "dark_forest",
+    "plains",
+    "savanna",
+    "stony_peaks",
+    "meadow",
+    "old_growth_spruce_taiga",
+    "savanna_plateau",
+    "dripstone_caves",
+    "taiga",
+    "jagged_peaks",
+    "swamp",
+    "eroded_badlands",
+    "old_growth_birch_forest",
+    "windswept_hills",
+    "old_growth_pine_taiga",
+    "beach",
+    "wooded_badlands",
+    "windswept_savanna",
+    "windswept_forest",
+    "jungle",
+    "windswept_gravelly_hills",
+    "river"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:tarantula",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

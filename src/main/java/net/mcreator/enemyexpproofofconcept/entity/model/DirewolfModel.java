@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.DirewolfEntity;
 
 public class DirewolfModel extends AnimatedGeoModel<DirewolfEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(DirewolfEntity entity) {
+	public ResourceLocation getAnimationResource(DirewolfEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/direwolf.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(DirewolfEntity entity) {
+	public ResourceLocation getModelResource(DirewolfEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/direwolf.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(DirewolfEntity entity) {
+	public ResourceLocation getTextureResource(DirewolfEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

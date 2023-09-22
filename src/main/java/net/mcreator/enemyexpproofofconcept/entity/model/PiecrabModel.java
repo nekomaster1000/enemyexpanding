@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.PiecrabEntity;
 
 public class PiecrabModel extends AnimatedGeoModel<PiecrabEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(PiecrabEntity entity) {
+	public ResourceLocation getAnimationResource(PiecrabEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/piecrab.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(PiecrabEntity entity) {
+	public ResourceLocation getModelResource(PiecrabEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/piecrab.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PiecrabEntity entity) {
+	public ResourceLocation getTextureResource(PiecrabEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

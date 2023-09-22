@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.LadybugEntity;
 
 public class LadybugModel extends AnimatedGeoModel<LadybugEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(LadybugEntity entity) {
+	public ResourceLocation getAnimationResource(LadybugEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/ladybug.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(LadybugEntity entity) {
+	public ResourceLocation getModelResource(LadybugEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/ladybug.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(LadybugEntity entity) {
+	public ResourceLocation getTextureResource(LadybugEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

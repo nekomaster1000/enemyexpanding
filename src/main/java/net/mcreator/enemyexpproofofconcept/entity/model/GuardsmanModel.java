@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.GuardsmanEntity;
 
 public class GuardsmanModel extends AnimatedGeoModel<GuardsmanEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(GuardsmanEntity entity) {
+	public ResourceLocation getAnimationResource(GuardsmanEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/guardsman.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(GuardsmanEntity entity) {
+	public ResourceLocation getModelResource(GuardsmanEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/guardsman.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GuardsmanEntity entity) {
+	public ResourceLocation getTextureResource(GuardsmanEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

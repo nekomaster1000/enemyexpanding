@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.GladiladEntity;
 
 public class GladiladModel extends AnimatedGeoModel<GladiladEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(GladiladEntity entity) {
+	public ResourceLocation getAnimationResource(GladiladEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/gladilad.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(GladiladEntity entity) {
+	public ResourceLocation getModelResource(GladiladEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/gladilad.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GladiladEntity entity) {
+	public ResourceLocation getTextureResource(GladiladEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -47,7 +47,6 @@ public class SputterFireChargeItem extends Item {
 				SputterFireChargeEntity entityarrow = SputterFireChargeEntity.shoot(world, entity, world.getRandom(), 0.4f, 3, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				SputterSpitsProcedure.execute(world, x, y, z);
 			}
 		}

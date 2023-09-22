@@ -9,6 +9,7 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 
@@ -17,15 +18,13 @@ import net.mcreator.enemyexpproofofconcept.entity.RamshearedEntity;
 import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
 
-import java.util.Random;
-
 public class RamHurtWoolDropProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (Math.random() < (double) BetterConfigConfiguration.PUNCHINGRAMDROPSWOOLCHANCE.get()) {
 			if (entity instanceof RamEntity) {
-				for (int index0 = 0; index0 < (int) (Mth.nextDouble(new Random(), 1, 3)); index0++) {
+				for (int index0 = 0; index0 < (int) (Mth.nextDouble(RandomSource.create(), 1, 3)); index0++) {
 					if (world instanceof Level _level && !_level.isClientSide()) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.WHITE_WOOL));
 						entityToSpawn.setPickUpDelay(10);

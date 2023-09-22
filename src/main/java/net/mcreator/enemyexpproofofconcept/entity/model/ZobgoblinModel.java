@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.ZobgoblinEntity;
 
 public class ZobgoblinModel extends AnimatedGeoModel<ZobgoblinEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(ZobgoblinEntity entity) {
+	public ResourceLocation getAnimationResource(ZobgoblinEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/zobgoblin.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(ZobgoblinEntity entity) {
+	public ResourceLocation getModelResource(ZobgoblinEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/zobgoblin.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(ZobgoblinEntity entity) {
+	public ResourceLocation getTextureResource(ZobgoblinEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

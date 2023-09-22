@@ -1,0 +1,21 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "old_growth_birch_forest",
+    "forest",
+    "dark_forest",
+    "old_growth_pine_taiga",
+    "taiga",
+    "birch_forest",
+    "flower_forest",
+    "windswept_forest",
+    "snowy_taiga",
+    "old_growth_spruce_taiga"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:goblin",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 5
+  }
+}

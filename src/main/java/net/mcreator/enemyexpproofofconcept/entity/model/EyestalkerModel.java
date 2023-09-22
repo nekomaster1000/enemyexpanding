@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.EyestalkerEntity;
 
 public class EyestalkerModel extends AnimatedGeoModel<EyestalkerEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(EyestalkerEntity entity) {
+	public ResourceLocation getAnimationResource(EyestalkerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/eyestalker.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(EyestalkerEntity entity) {
+	public ResourceLocation getModelResource(EyestalkerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/eyestalker.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(EyestalkerEntity entity) {
+	public ResourceLocation getTextureResource(EyestalkerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

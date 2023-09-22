@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.WaspEntity;
 
 public class WaspModel extends AnimatedGeoModel<WaspEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(WaspEntity entity) {
+	public ResourceLocation getAnimationResource(WaspEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/wasp.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(WaspEntity entity) {
+	public ResourceLocation getModelResource(WaspEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/wasp.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(WaspEntity entity) {
+	public ResourceLocation getTextureResource(WaspEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -4,8 +4,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
@@ -19,6 +17,7 @@ import net.minecraft.world.InteractionHand;
 import net.mcreator.enemyexpproofofconcept.entity.HuntsmanskeletonEntity;
 import net.mcreator.enemyexpproofofconcept.entity.GuardsmanEntity;
 import net.mcreator.enemyexpproofofconcept.configuration.BetterConfigConfiguration;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 import javax.annotation.Nullable;
 
@@ -86,41 +85,19 @@ public class SkeletonSwitchupProcedure {
 						animatable.setTexture("huntsman_bowless");
 					if (sourceentity instanceof GuardsmanEntity animatable)
 						animatable.setTexture("guardsman_bowless");
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
+					EnemyexpansionMod.queueServerWork(200, () -> {
+						if (sourceentity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(Items.BOW);
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
 						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							if (sourceentity instanceof LivingEntity _entity) {
-								ItemStack _setstack = new ItemStack(Items.BOW);
-								_setstack.setCount(1);
-								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-								if (_entity instanceof Player _player)
-									_player.getInventory().setChanged();
-							}
-							if (sourceentity instanceof HuntsmanskeletonEntity animatable)
-								animatable.setTexture("huntsman");
-							if (sourceentity instanceof GuardsmanEntity animatable)
-								animatable.setTexture("guardsman");
-							MinecraftForge.EVENT_BUS.unregister(this);
-						}
-					}.start(world, 200);
+						if (sourceentity instanceof HuntsmanskeletonEntity animatable)
+							animatable.setTexture("huntsman");
+						if (sourceentity instanceof GuardsmanEntity animatable)
+							animatable.setTexture("guardsman");
+					});
 				}
 			}
 		}

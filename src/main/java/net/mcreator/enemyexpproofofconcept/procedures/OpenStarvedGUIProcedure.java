@@ -2,9 +2,6 @@ package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -18,13 +15,13 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.world.inventory.StarvedGUIMenu;
 import net.mcreator.enemyexpproofofconcept.entity.StarvedEntity;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 import io.netty.buffer.Unpooled;
 
@@ -35,10 +32,10 @@ public class OpenStarvedGUIProcedure {
 		{
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = new BlockPos(x, y, z);
-				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return new TextComponent("StarvedGUI");
+						return Component.literal("StarvedGUI");
 					}
 
 					@Override
@@ -58,31 +55,9 @@ public class OpenStarvedGUIProcedure {
 		if (entity instanceof StarvedEntity) {
 			((StarvedEntity) entity).setAnimation("opened");
 		}
-		new Object() {
-			private int ticks = 0;
-			private float waitTicks;
-			private LevelAccessor world;
-
-			public void start(LevelAccessor world, int waitTicks) {
-				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
-				this.world = world;
-			}
-
-			@SubscribeEvent
-			public void tick(TickEvent.ServerTickEvent event) {
-				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
-						run();
-				}
-			}
-
-			private void run() {
-				if (entity instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
-					_entity.setTarget(_ent);
-				MinecraftForge.EVENT_BUS.unregister(this);
-			}
-		}.start(world, 20);
+		EnemyexpansionMod.queueServerWork(20, () -> {
+			if (entity instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
+				_entity.setTarget(_ent);
+		});
 	}
 }

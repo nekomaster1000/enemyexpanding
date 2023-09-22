@@ -9,9 +9,12 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.tags.TagKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
@@ -234,9 +237,10 @@ public class HatSpawnsProcedure {
 				if (Math.random() < (double) BetterConfigConfiguration.RESTINGVIGORWEARERSPAWNING.get()) {
 					{
 						Entity _ent = entity;
-						if (!_ent.level.isClientSide() && _ent.getServer() != null)
-							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-									"/data merge entity @s {ArmorItems:[{},{},{},{id:\"enemyexpansion:resting_vigor_helmet\",Count:1b}]}");
+						if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+									_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/data merge entity @s {ArmorItems:[{},{},{},{id:\"enemyexpansion:resting_vigor_helmet\",Count:1b}]}");
+						}
 					}
 					if (entity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.VIGOR_EFFECT.get(), 50000, 2, (false), (false)));

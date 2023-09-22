@@ -39,6 +39,7 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -55,8 +56,6 @@ import net.mcreator.enemyexpproofofconcept.procedures.VigorDiesProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
-
-import java.util.Random;
 
 public class VigorEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(VigorEntity.class, EntityDataSerializers.BOOLEAN);
@@ -113,7 +112,7 @@ public class VigorEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = VigorEntity.this.getRandom();
+				RandomSource random = VigorEntity.this.getRandom();
 				double dir_x = VigorEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_y = VigorEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_z = VigorEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);

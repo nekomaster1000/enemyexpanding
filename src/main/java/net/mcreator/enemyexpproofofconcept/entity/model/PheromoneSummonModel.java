@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.PheromoneSummonEntity;
 
 public class PheromoneSummonModel extends AnimatedGeoModel<PheromoneSummonEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(PheromoneSummonEntity entity) {
+	public ResourceLocation getAnimationResource(PheromoneSummonEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/drone.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(PheromoneSummonEntity entity) {
+	public ResourceLocation getModelResource(PheromoneSummonEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/drone.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PheromoneSummonEntity entity) {
+	public ResourceLocation getTextureResource(PheromoneSummonEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.PropellerEntity;
 
 public class PropellerModel extends AnimatedGeoModel<PropellerEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(PropellerEntity entity) {
+	public ResourceLocation getAnimationResource(PropellerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/propeller.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(PropellerEntity entity) {
+	public ResourceLocation getModelResource(PropellerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/propeller.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PropellerEntity entity) {
+	public ResourceLocation getTextureResource(PropellerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

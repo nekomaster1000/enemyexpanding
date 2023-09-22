@@ -72,7 +72,7 @@ import net.mcreator.enemyexpproofofconcept.entity.AEntity;
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingUpdateEvent event) {
+	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
 		if (event != null && event.getEntity() != null) {
 			if (event.getEntity() instanceof MeatureEntity syncable) {
 				String animation = syncable.getSyncedAnimation();

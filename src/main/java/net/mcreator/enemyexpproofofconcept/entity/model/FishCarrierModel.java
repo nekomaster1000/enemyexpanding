@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.FishCarrierEntity;
 
 public class FishCarrierModel extends AnimatedGeoModel<FishCarrierEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(FishCarrierEntity entity) {
+	public ResourceLocation getAnimationResource(FishCarrierEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/orb.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(FishCarrierEntity entity) {
+	public ResourceLocation getModelResource(FishCarrierEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/orb.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(FishCarrierEntity entity) {
+	public ResourceLocation getTextureResource(FishCarrierEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

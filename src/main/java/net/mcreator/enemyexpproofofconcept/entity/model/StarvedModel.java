@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.StarvedEntity;
 
 public class StarvedModel extends AnimatedGeoModel<StarvedEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(StarvedEntity entity) {
+	public ResourceLocation getAnimationResource(StarvedEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/starved.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(StarvedEntity entity) {
+	public ResourceLocation getModelResource(StarvedEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/starved.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(StarvedEntity entity) {
+	public ResourceLocation getTextureResource(StarvedEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "frozen_ocean",
+    "deep_frozen_ocean"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:marauder",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

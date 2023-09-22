@@ -39,6 +39,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -51,7 +52,6 @@ import net.mcreator.enemyexpproofofconcept.procedures.FlyHurtProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.FlyErraticFlightProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Random;
 import java.util.EnumSet;
 
 public class FlyEntity extends Monster implements IAnimatable {
@@ -146,7 +146,7 @@ public class FlyEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = FlyEntity.this.getRandom();
+				RandomSource random = FlyEntity.this.getRandom();
 				double dir_x = FlyEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_y = FlyEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_z = FlyEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);

@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "swamp",
+    "mangrove_swamp"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:rancher",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

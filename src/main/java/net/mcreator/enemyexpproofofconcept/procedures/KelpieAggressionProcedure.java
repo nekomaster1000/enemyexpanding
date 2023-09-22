@@ -5,8 +5,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -23,6 +21,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 import javax.annotation.Nullable;
 
@@ -34,7 +33,7 @@ import java.util.Comparator;
 public class KelpieAggressionProcedure {
 	@SubscribeEvent
 	public static void onEntitySetsAttackTarget(LivingSetAttackTargetEvent event) {
-		execute(event, event.getEntityLiving().level, event.getEntityLiving().getX(), event.getEntityLiving().getY(), event.getEntityLiving().getZ(), event.getEntityLiving());
+		execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
@@ -52,63 +51,19 @@ public class KelpieAggressionProcedure {
 					}
 					if (sourceentity instanceof LivingEntity _entity)
 						_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 162, 0, (false), (false)));
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
+					EnemyexpansionMod.queueServerWork(6, () -> {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ravager.roar")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ravager.roar")), SoundSource.HOSTILE, 1, 1, false);
 							}
 						}
-
-						private void run() {
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ravager.roar")), SoundSource.HOSTILE, 1, 1);
-								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ravager.roar")), SoundSource.HOSTILE, 1, 1, false);
-								}
-							}
-							new Object() {
-								private int ticks = 0;
-								private float waitTicks;
-								private LevelAccessor world;
-
-								public void start(LevelAccessor world, int waitTicks) {
-									this.waitTicks = waitTicks;
-									MinecraftForge.EVENT_BUS.register(this);
-									this.world = world;
-								}
-
-								@SubscribeEvent
-								public void tick(TickEvent.ServerTickEvent event) {
-									if (event.phase == TickEvent.Phase.END) {
-										this.ticks += 1;
-										if (this.ticks >= this.waitTicks)
-											run();
-									}
-								}
-
-								private void run() {
-									if (sourceentity instanceof LivingEntity _entity)
-										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 15, 0, (false), (false)));
-									MinecraftForge.EVENT_BUS.unregister(this);
-								}
-							}.start(world, 6);
-							MinecraftForge.EVENT_BUS.unregister(this);
-						}
-					}.start(world, 6);
+						EnemyexpansionMod.queueServerWork(6, () -> {
+							if (sourceentity instanceof LivingEntity _entity)
+								_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 15, 0, (false), (false)));
+						});
+					});
 				}
 			}
 			if (sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.LUCK) : false) {

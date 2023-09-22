@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.FlutterflyEntity;
 
 public class FlutterflyModel extends AnimatedGeoModel<FlutterflyEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(FlutterflyEntity entity) {
+	public ResourceLocation getAnimationResource(FlutterflyEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/flutterfly.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(FlutterflyEntity entity) {
+	public ResourceLocation getModelResource(FlutterflyEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/flutterfly.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(FlutterflyEntity entity) {
+	public ResourceLocation getTextureResource(FlutterflyEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

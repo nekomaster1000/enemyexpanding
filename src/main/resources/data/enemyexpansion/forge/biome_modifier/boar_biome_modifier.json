@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "snowy_plains",
+    "old_growth_pine_taiga",
+    "taiga",
+    "snowy_taiga",
+    "old_growth_spruce_taiga"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:boar",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 5
+  }
+}

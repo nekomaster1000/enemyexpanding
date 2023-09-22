@@ -12,6 +12,8 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.enemyexpproofofconcept.entity.MeatureEntity;
 
@@ -41,8 +43,10 @@ public class MeatureLevelingProcedure {
 				attribute_command = "/attribute @s minecraft:generic.max_health base set (max_health)".replace("(max_health)", max_health);
 				{
 					Entity _ent = sourceentity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), attribute_command);
+					if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), attribute_command);
+					}
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.HEART, (sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), 5, 3, 3, 3, 1);

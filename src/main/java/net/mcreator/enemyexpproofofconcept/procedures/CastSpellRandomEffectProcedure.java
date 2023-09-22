@@ -1,9 +1,6 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
@@ -29,6 +26,7 @@ import net.minecraft.advancements.Advancement;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.ZobgoblinEntity;
 import net.mcreator.enemyexpproofofconcept.entity.CastSpellEntity;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 import java.util.Iterator;
 
@@ -42,68 +40,24 @@ public class CastSpellRandomEffectProcedure {
 			VillagerGoblinTransformationProcedure.execute(world, x, y, z, entity);
 		}
 		if (entity instanceof ZombieVillager) {
-			new Object() {
-				private int ticks = 0;
-				private float waitTicks;
-				private LevelAccessor world;
-
-				public void start(LevelAccessor world, int waitTicks) {
-					this.waitTicks = waitTicks;
-					MinecraftForge.EVENT_BUS.register(this);
-					this.world = world;
-				}
-
-				@SubscribeEvent
-				public void tick(TickEvent.ServerTickEvent event) {
-					if (event.phase == TickEvent.Phase.END) {
-						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
-							run();
+			EnemyexpansionMod.queueServerWork(2, () -> {
+				if (!entity.level.isClientSide())
+					entity.discard();
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.EFFECT, x, y, z, 20, 3, 3, 3, 0.5);
+				EnemyexpansionMod.queueServerWork(1, () -> {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = new ZobgoblinEntity(EnemyexpansionModEntities.ZOBGOBLIN.get(), _level);
+						entityToSpawn.moveTo(x, y, z, 0, 0);
+						entityToSpawn.setYBodyRot(0);
+						entityToSpawn.setYHeadRot(0);
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+						if (entityToSpawn instanceof Mob _mobToSpawn)
+							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+						world.addFreshEntity(entityToSpawn);
 					}
-				}
-
-				private void run() {
-					if (!entity.level.isClientSide())
-						entity.discard();
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.EFFECT, x, y, z, 20, 3, 3, 3, 0.5);
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
-							}
-						}
-
-						private void run() {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = new ZobgoblinEntity(EnemyexpansionModEntities.ZOBGOBLIN.get(), _level);
-								entityToSpawn.moveTo(x, y, z, 0, 0);
-								entityToSpawn.setYBodyRot(0);
-								entityToSpawn.setYHeadRot(0);
-								entityToSpawn.setDeltaMovement(0, 0, 0);
-								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-								world.addFreshEntity(entityToSpawn);
-							}
-							MinecraftForge.EVENT_BUS.unregister(this);
-						}
-					}.start(world, 1);
-					MinecraftForge.EVENT_BUS.unregister(this);
-				}
-			}.start(world, 2);
+				});
+			});
 		}
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.isBlocking() : false) {
 			{
@@ -167,156 +121,24 @@ public class CastSpellRandomEffectProcedure {
 				entity.setDeltaMovement(new Vec3((-1.5), 1.2, (-1.5)));
 			} else if (Math.random() < 0.75) {
 				entity.setDeltaMovement(new Vec3(0, 0.5, 0));
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						entity.setDeltaMovement(new Vec3(1.5, 0.5, 0));
-						new Object() {
-							private int ticks = 0;
-							private float waitTicks;
-							private LevelAccessor world;
-
-							public void start(LevelAccessor world, int waitTicks) {
-								this.waitTicks = waitTicks;
-								MinecraftForge.EVENT_BUS.register(this);
-								this.world = world;
-							}
-
-							@SubscribeEvent
-							public void tick(TickEvent.ServerTickEvent event) {
-								if (event.phase == TickEvent.Phase.END) {
-									this.ticks += 1;
-									if (this.ticks >= this.waitTicks)
-										run();
-								}
-							}
-
-							private void run() {
-								entity.setDeltaMovement(new Vec3(0, 0.5, 1.5));
-								new Object() {
-									private int ticks = 0;
-									private float waitTicks;
-									private LevelAccessor world;
-
-									public void start(LevelAccessor world, int waitTicks) {
-										this.waitTicks = waitTicks;
-										MinecraftForge.EVENT_BUS.register(this);
-										this.world = world;
-									}
-
-									@SubscribeEvent
-									public void tick(TickEvent.ServerTickEvent event) {
-										if (event.phase == TickEvent.Phase.END) {
-											this.ticks += 1;
-											if (this.ticks >= this.waitTicks)
-												run();
-										}
-									}
-
-									private void run() {
-										entity.setDeltaMovement(new Vec3((-1.5), 0.5, 0));
-										new Object() {
-											private int ticks = 0;
-											private float waitTicks;
-											private LevelAccessor world;
-
-											public void start(LevelAccessor world, int waitTicks) {
-												this.waitTicks = waitTicks;
-												MinecraftForge.EVENT_BUS.register(this);
-												this.world = world;
-											}
-
-											@SubscribeEvent
-											public void tick(TickEvent.ServerTickEvent event) {
-												if (event.phase == TickEvent.Phase.END) {
-													this.ticks += 1;
-													if (this.ticks >= this.waitTicks)
-														run();
-												}
-											}
-
-											private void run() {
-												entity.setDeltaMovement(new Vec3(0, 0.5, (-1.5)));
-												new Object() {
-													private int ticks = 0;
-													private float waitTicks;
-													private LevelAccessor world;
-
-													public void start(LevelAccessor world, int waitTicks) {
-														this.waitTicks = waitTicks;
-														MinecraftForge.EVENT_BUS.register(this);
-														this.world = world;
-													}
-
-													@SubscribeEvent
-													public void tick(TickEvent.ServerTickEvent event) {
-														if (event.phase == TickEvent.Phase.END) {
-															this.ticks += 1;
-															if (this.ticks >= this.waitTicks)
-																run();
-														}
-													}
-
-													private void run() {
-														entity.setDeltaMovement(new Vec3(1.5, 0.5, 1.5));
-														new Object() {
-															private int ticks = 0;
-															private float waitTicks;
-															private LevelAccessor world;
-
-															public void start(LevelAccessor world, int waitTicks) {
-																this.waitTicks = waitTicks;
-																MinecraftForge.EVENT_BUS.register(this);
-																this.world = world;
-															}
-
-															@SubscribeEvent
-															public void tick(TickEvent.ServerTickEvent event) {
-																if (event.phase == TickEvent.Phase.END) {
-																	this.ticks += 1;
-																	if (this.ticks >= this.waitTicks)
-																		run();
-																}
-															}
-
-															private void run() {
-																entity.setDeltaMovement(new Vec3((-1.5), 0.5, (-1.5)));
-																MinecraftForge.EVENT_BUS.unregister(this);
-															}
-														}.start(world, 10);
-														MinecraftForge.EVENT_BUS.unregister(this);
-													}
-												}.start(world, 10);
-												MinecraftForge.EVENT_BUS.unregister(this);
-											}
-										}.start(world, 10);
-										MinecraftForge.EVENT_BUS.unregister(this);
-									}
-								}.start(world, 10);
-								MinecraftForge.EVENT_BUS.unregister(this);
-							}
-						}.start(world, 10);
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, 10);
+				EnemyexpansionMod.queueServerWork(10, () -> {
+					entity.setDeltaMovement(new Vec3(1.5, 0.5, 0));
+					EnemyexpansionMod.queueServerWork(10, () -> {
+						entity.setDeltaMovement(new Vec3(0, 0.5, 1.5));
+						EnemyexpansionMod.queueServerWork(10, () -> {
+							entity.setDeltaMovement(new Vec3((-1.5), 0.5, 0));
+							EnemyexpansionMod.queueServerWork(10, () -> {
+								entity.setDeltaMovement(new Vec3(0, 0.5, (-1.5)));
+								EnemyexpansionMod.queueServerWork(10, () -> {
+									entity.setDeltaMovement(new Vec3(1.5, 0.5, 1.5));
+									EnemyexpansionMod.queueServerWork(10, () -> {
+										entity.setDeltaMovement(new Vec3((-1.5), 0.5, (-1.5)));
+									});
+								});
+							});
+						});
+					});
+				});
 			} else if (Math.random() < 0.99) {
 				entity.setDeltaMovement(new Vec3(0, 1.5, 0));
 			}

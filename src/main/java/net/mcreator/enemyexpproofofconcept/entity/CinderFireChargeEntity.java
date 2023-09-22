@@ -16,6 +16,7 @@ import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
@@ -24,8 +25,6 @@ import net.mcreator.enemyexpproofofconcept.procedures.CinderSliceHitProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.CinderFireExplodeProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.CinderFireChargeAntigravityProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-
-import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class CinderFireChargeEntity extends AbstractArrow implements ItemSupplier {
@@ -87,7 +86,7 @@ public class CinderFireChargeEntity extends AbstractArrow implements ItemSupplie
 			this.discard();
 	}
 
-	public static CinderFireChargeEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
+	public static CinderFireChargeEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		CinderFireChargeEntity entityarrow = new CinderFireChargeEntity(EnemyexpansionModEntities.CINDER_FIRE_CHARGE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
@@ -112,7 +111,7 @@ public class CinderFireChargeEntity extends AbstractArrow implements ItemSupplie
 		entityarrow.setCritArrow(false);
 		entityarrow.setSecondsOnFire(100);
 		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

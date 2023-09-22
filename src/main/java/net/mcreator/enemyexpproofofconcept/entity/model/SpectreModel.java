@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.SpectreEntity;
 
 public class SpectreModel extends AnimatedGeoModel<SpectreEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(SpectreEntity entity) {
+	public ResourceLocation getAnimationResource(SpectreEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/spectre.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(SpectreEntity entity) {
+	public ResourceLocation getModelResource(SpectreEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/spectre.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SpectreEntity entity) {
+	public ResourceLocation getTextureResource(SpectreEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

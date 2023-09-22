@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.KelpieEntity;
 
 public class KelpieModel extends AnimatedGeoModel<KelpieEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(KelpieEntity entity) {
+	public ResourceLocation getAnimationResource(KelpieEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/kelpie.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(KelpieEntity entity) {
+	public ResourceLocation getModelResource(KelpieEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/kelpie.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(KelpieEntity entity) {
+	public ResourceLocation getTextureResource(KelpieEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

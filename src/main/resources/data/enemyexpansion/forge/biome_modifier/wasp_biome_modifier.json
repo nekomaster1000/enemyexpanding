@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "bamboo_jungle",
+    "sparse_jungle",
+    "jungle"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:wasp",
+    "weight": 100,
+    "minCount": 1,
+    "maxCount": 5
+  }
+}

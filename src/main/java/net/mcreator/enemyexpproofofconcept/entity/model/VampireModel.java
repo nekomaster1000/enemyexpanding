@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.VampireEntity;
 
 public class VampireModel extends AnimatedGeoModel<VampireEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(VampireEntity entity) {
+	public ResourceLocation getAnimationResource(VampireEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/vampire.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(VampireEntity entity) {
+	public ResourceLocation getModelResource(VampireEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/vampire.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(VampireEntity entity) {
+	public ResourceLocation getTextureResource(VampireEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -14,14 +14,10 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -40,7 +36,6 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -64,10 +59,8 @@ import net.mcreator.enemyexpproofofconcept.procedures.RamShearingProcedure;
 import net.mcreator.enemyexpproofofconcept.procedures.RamHurtWoolDropProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
 import java.util.List;
 
-@Mod.EventBusSubscriber
 public class RamEntity extends Animal implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(RamEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(RamEntity.class, EntityDataSerializers.STRING);
@@ -77,14 +70,6 @@ public class RamEntity extends Animal implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("taiga"), new ResourceLocation("stony_peaks"), new ResourceLocation("snowy_slopes"),
-			new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("frozen_peaks"), new ResourceLocation("snowy_taiga"), new ResourceLocation("jagged_peaks"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.RAM.get(), 10, 1, 5));
-	}
 
 	public RamEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.RAM.get(), world);

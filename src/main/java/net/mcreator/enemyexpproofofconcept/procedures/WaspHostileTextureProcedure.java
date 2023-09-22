@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public class WaspHostileTextureProcedure {
 	@SubscribeEvent
 	public static void onEntitySetsAttackTarget(LivingSetAttackTargetEvent event) {
-		execute(event, event.getEntityLiving());
+		execute(event, event.getEntity());
 	}
 
 	public static void execute(Entity sourceentity) {

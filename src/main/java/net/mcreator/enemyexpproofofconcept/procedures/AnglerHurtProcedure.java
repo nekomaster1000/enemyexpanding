@@ -8,19 +8,18 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.GoblinFearEntity;
 
-import java.util.Random;
-
 public class AnglerHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.setDeltaMovement(new Vec3((Mth.nextDouble(new Random(), -2, 2)), (Mth.nextDouble(new Random(), 0.6, 1.2)), (Mth.nextDouble(new Random(), -2, 2))));
+		entity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -2, 2)), (Mth.nextDouble(RandomSource.create(), 0.6, 1.2)), (Mth.nextDouble(RandomSource.create(), -2, 2))));
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 120, 0, (false), (false)));
 		if (world instanceof ServerLevel _level) {

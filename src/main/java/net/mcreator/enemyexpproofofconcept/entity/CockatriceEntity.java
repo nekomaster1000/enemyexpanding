@@ -14,13 +14,9 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -38,7 +34,6 @@ import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -63,9 +58,6 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
 
-import java.util.Set;
-
-@Mod.EventBusSubscriber
 public class CockatriceEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CockatriceEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CockatriceEntity.class, EntityDataSerializers.STRING);
@@ -75,20 +67,6 @@ public class CockatriceEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_river"), new ResourceLocation("mushroom_fields"), new ResourceLocation("warm_ocean"), new ResourceLocation("forest"),
-			new ResourceLocation("stony_shore"), new ResourceLocation("sunflower_plains"), new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"), new ResourceLocation("lush_caves"),
-			new ResourceLocation("snowy_slopes"), new ResourceLocation("cold_ocean"), new ResourceLocation("bamboo_jungle"), new ResourceLocation("ice_spikes"), new ResourceLocation("lukewarm_ocean"), new ResourceLocation("dark_forest"),
-			new ResourceLocation("plains"), new ResourceLocation("savanna"), new ResourceLocation("stony_peaks"), new ResourceLocation("frozen_peaks"), new ResourceLocation("meadow"), new ResourceLocation("old_growth_spruce_taiga"),
-			new ResourceLocation("snowy_beach"), new ResourceLocation("frozen_ocean"), new ResourceLocation("savanna_plateau"), new ResourceLocation("dripstone_caves"), new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"),
-			new ResourceLocation("jagged_peaks"), new ResourceLocation("snowy_taiga"), new ResourceLocation("swamp"), new ResourceLocation("eroded_badlands"), new ResourceLocation("badlands"), new ResourceLocation("old_growth_birch_forest"),
-			new ResourceLocation("grove"), new ResourceLocation("windswept_hills"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("beach"), new ResourceLocation("wooded_badlands"), new ResourceLocation("windswept_savanna"),
-			new ResourceLocation("windswept_forest"), new ResourceLocation("jungle"), new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("river"), new ResourceLocation("desert"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.COCKATRICE.get(), 35, 1, 1));
-	}
 
 	public CockatriceEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.COCKATRICE.get(), world);

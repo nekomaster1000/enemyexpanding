@@ -14,14 +14,10 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -36,7 +32,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -55,9 +50,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.enemyexpproofofconcept.procedures.GladiusTransformProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
-
-@Mod.EventBusSubscriber
 public class GladiusEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GladiusEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GladiusEntity.class, EntityDataSerializers.STRING);
@@ -67,15 +59,6 @@ public class GladiusEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_ocean"), new ResourceLocation("frozen_river"), new ResourceLocation("warm_ocean"), new ResourceLocation("deep_lukewarm_ocean"),
-			new ResourceLocation("cold_ocean"), new ResourceLocation("deep_ocean"), new ResourceLocation("deep_frozen_ocean"), new ResourceLocation("deep_cold_ocean"), new ResourceLocation("lukewarm_ocean"), new ResourceLocation("ocean"),
-			new ResourceLocation("beach"), new ResourceLocation("river"), new ResourceLocation("snowy_beach"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.GLADIUS.get(), 10, 1, 1));
-	}
 
 	public GladiusEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.GLADIUS.get(), world);

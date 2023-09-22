@@ -3,7 +3,7 @@ package net.mcreator.enemyexpproofofconcept.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.monster.Strider;
@@ -23,8 +23,8 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class ConfigAdditionerProcedure {
 	@SubscribeEvent
-	public static void onEntitySpawned(EntityJoinWorldEvent event) {
-		execute(event, event.getWorld(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+	public static void onEntitySpawned(EntityJoinLevelEvent event) {
+		execute(event, event.getLevel(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -43,8 +43,7 @@ public class ConfigAdditionerProcedure {
 		}
 		if (Math.random() < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENT.get() && y < (double) BetterConfigConfiguration.SILVERKINGSPIDERREPLACEMENTDEPTH.get()) {
 			if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:silverkingreplaces")))) {
-				if (!new ResourceLocation("dripstone_caves").equals(world.getBiome(new BlockPos(x, y, z)).value().getRegistryName())
-						&& !world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
+				if (!world.getBiome(new BlockPos(x, y, z)).is(new ResourceLocation("dripstone_caves")) && !world.getBiome(new BlockPos(x, y, z)).is(TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("minecraft:is_hot")))) {
 					ReplacewithSilverkingProcedure.execute(world, x, y, z, entity);
 				}
 			}

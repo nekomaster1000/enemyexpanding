@@ -44,6 +44,7 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -60,7 +61,6 @@ import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
 
-import java.util.Random;
 import java.util.EnumSet;
 
 public class ReaverEntity extends Monster implements IAnimatable {
@@ -155,7 +155,7 @@ public class ReaverEntity extends Monster implements IAnimatable {
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = ReaverEntity.this.getRandom();
+				RandomSource random = ReaverEntity.this.getRandom();
 				double dir_x = ReaverEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_y = ReaverEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_z = ReaverEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);

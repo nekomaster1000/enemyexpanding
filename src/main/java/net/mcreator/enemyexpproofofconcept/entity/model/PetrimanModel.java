@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.PetrimanEntity;
 
 public class PetrimanModel extends AnimatedGeoModel<PetrimanEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(PetrimanEntity entity) {
+	public ResourceLocation getAnimationResource(PetrimanEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/petriman.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(PetrimanEntity entity) {
+	public ResourceLocation getModelResource(PetrimanEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/petriman.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PetrimanEntity entity) {
+	public ResourceLocation getTextureResource(PetrimanEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

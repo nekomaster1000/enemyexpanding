@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "frozen_river",
+    "snowy_taiga"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:zobgoblin",
+    "weight": 30,
+    "minCount": 1,
+    "maxCount": 5
+  }
+}

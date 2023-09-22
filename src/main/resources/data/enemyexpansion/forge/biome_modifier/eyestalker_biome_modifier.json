@@ -1,0 +1,19 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "warped_forest",
+    "small_end_islands",
+    "sunflower_plains",
+    "end_midlands",
+    "plains",
+    "the_end",
+    "end_highlands",
+    "end_barrens"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:eyestalker",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

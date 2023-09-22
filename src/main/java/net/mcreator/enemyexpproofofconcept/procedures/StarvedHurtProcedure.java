@@ -1,7 +1,7 @@
 package net.mcreator.enemyexpproofofconcept.procedures;
 
 import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +18,7 @@ public class StarvedHurtProcedure {
 			final int _slotid = 0;
 			final ItemStack _setstack = new ItemStack(Blocks.SAND);
 			_setstack.setCount(1);
-			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 				if (capability instanceof IItemHandlerModifiable _modHandler)
 					_modHandler.setStackInSlot(_slotid, _setstack);
 			});

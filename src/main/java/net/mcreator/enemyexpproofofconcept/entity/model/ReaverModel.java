@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.ReaverEntity;
 
 public class ReaverModel extends AnimatedGeoModel<ReaverEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(ReaverEntity entity) {
+	public ResourceLocation getAnimationResource(ReaverEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/reaver.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(ReaverEntity entity) {
+	public ResourceLocation getModelResource(ReaverEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/reaver.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(ReaverEntity entity) {
+	public ResourceLocation getTextureResource(ReaverEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

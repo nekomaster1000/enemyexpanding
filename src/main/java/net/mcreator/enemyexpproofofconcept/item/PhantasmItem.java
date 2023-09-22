@@ -2,7 +2,7 @@
 package net.mcreator.enemyexpproofofconcept.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -21,7 +21,6 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
@@ -31,6 +30,7 @@ import net.mcreator.enemyexpproofofconcept.procedures.PhantasmCowlEventProcedure
 import net.mcreator.enemyexpproofofconcept.procedures.PhantasmCapeTickProcedure;
 import net.mcreator.enemyexpproofofconcept.client.model.Modelphantasm;
 
+import java.util.function.Consumer;
 import java.util.Map;
 import java.util.List;
 import java.util.Collections;
@@ -88,7 +88,7 @@ public abstract class PhantasmItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(new TextComponent("Provides Night Vision when worn in the dark"));
+			list.add(Component.literal("Provides Night Vision when worn in the dark"));
 		}
 
 		@Override
@@ -107,11 +107,12 @@ public abstract class PhantasmItem extends ArmorItem {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 		}
 
-		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
-			consumer.accept(new IItemRenderProperties() {
+		@Override
+		public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+			consumer.accept(new IClientItemExtensions() {
 				@Override
 				@OnlyIn(Dist.CLIENT)
-				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
+				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).Body, "left_arm",
 							new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).LeftArm, "right_arm",
 							new Modelphantasm(Minecraft.getInstance().getEntityModels().bakeLayer(Modelphantasm.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
@@ -127,7 +128,7 @@ public abstract class PhantasmItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(new TextComponent("Crouching in the dark provides a Super Jump and Slow Falling"));
+			list.add(Component.literal("Crouching in the dark provides a Super Jump and Slow Falling"));
 		}
 
 		@Override

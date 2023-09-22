@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.FrigidEntity;
 
 public class FrigidModel extends AnimatedGeoModel<FrigidEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(FrigidEntity entity) {
+	public ResourceLocation getAnimationResource(FrigidEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/frigid.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(FrigidEntity entity) {
+	public ResourceLocation getModelResource(FrigidEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/frigid.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(FrigidEntity entity) {
+	public ResourceLocation getTextureResource(FrigidEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

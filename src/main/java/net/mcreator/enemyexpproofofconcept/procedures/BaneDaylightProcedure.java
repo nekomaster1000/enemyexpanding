@@ -22,6 +22,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
@@ -58,15 +60,20 @@ public class BaneDaylightProcedure {
 						_toTame.tame(_owner);
 					{
 						Entity _ent = _entityForSpawning;
-						if (!_ent.level.isClientSide() && _ent.getServer() != null)
-							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+						if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
+											_ent.level.getServer(), _ent),
 									("/data merge entity @s[type=wolf] {PersistenceRequired:1b,Health:38f,Sitting:1b,CollarColor:10b,ActiveEffects:[{Id:1b,Amplifier:0b,Duration:50000},{Id:5b,Amplifier:0b,Duration:3600},{Id:8b,Amplifier:0b,Duration:3600},{Id:11b,Amplifier:0b,Duration:3600},{Id:25b,Amplifier:0b,Duration:60}],Attributes:[{Name:generic.max_health,Base:40},{Name:generic.attack_damage,Base:10},{Name:generic.armor,Base:10}]}"
 											.replace("38", "" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1))));
+						}
 					}
 					{
 						Entity _ent = _entityForSpawning;
-						if (!_ent.level.isClientSide() && _ent.getServer() != null)
-							_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4), "/attribute @s minecraft:generic.max_health base set 40");
+						if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
+									_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/attribute @s minecraft:generic.max_health base set 40");
+						}
 					}
 					if (entity instanceof LivingEntity _entity)
 						_entity.setHealth(entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);

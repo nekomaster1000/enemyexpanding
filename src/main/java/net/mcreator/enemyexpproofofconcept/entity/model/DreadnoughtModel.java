@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.DreadnoughtEntity;
 
 public class DreadnoughtModel extends AnimatedGeoModel<DreadnoughtEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(DreadnoughtEntity entity) {
+	public ResourceLocation getAnimationResource(DreadnoughtEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/dreadnought.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(DreadnoughtEntity entity) {
+	public ResourceLocation getModelResource(DreadnoughtEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/dreadnought.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(DreadnoughtEntity entity) {
+	public ResourceLocation getTextureResource(DreadnoughtEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

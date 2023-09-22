@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.RoosterEntity;
 
 public class RoosterModel extends AnimatedGeoModel<RoosterEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(RoosterEntity entity) {
+	public ResourceLocation getAnimationResource(RoosterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/rooster.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(RoosterEntity entity) {
+	public ResourceLocation getModelResource(RoosterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/rooster.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(RoosterEntity entity) {
+	public ResourceLocation getTextureResource(RoosterEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

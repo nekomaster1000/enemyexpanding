@@ -14,14 +14,13 @@ import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.enemyexpproofofconcept.procedures.TrollParticlesProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-
-import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class TrollInvincibleEntity extends AbstractArrow implements ItemSupplier {
@@ -71,7 +70,7 @@ public class TrollInvincibleEntity extends AbstractArrow implements ItemSupplier
 			this.discard();
 	}
 
-	public static TrollInvincibleEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
+	public static TrollInvincibleEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		TrollInvincibleEntity entityarrow = new TrollInvincibleEntity(EnemyexpansionModEntities.TROLL_INVINCIBLE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
@@ -94,7 +93,7 @@ public class TrollInvincibleEntity extends AbstractArrow implements ItemSupplier
 		entityarrow.setKnockback(0);
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:silentstep")), SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("enemyexpansion:silentstep")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

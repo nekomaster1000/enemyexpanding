@@ -48,7 +48,6 @@ public class PheromoneProjectileItem extends Item {
 				PheromoneProjectileEntity entityarrow = PheromoneProjectileEntity.shoot(world, entity, world.getRandom(), 1f, 1, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
-
 				PheromoneThrownProcedure.execute(world, entity, itemstack);
 			}
 		}

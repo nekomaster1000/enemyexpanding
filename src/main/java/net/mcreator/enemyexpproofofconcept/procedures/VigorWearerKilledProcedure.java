@@ -4,8 +4,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
@@ -17,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpproofofconcept.entity.VigorEntity;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
 import javax.annotation.Nullable;
 
@@ -38,40 +37,18 @@ public class VigorWearerKilledProcedure {
 			return;
 		if (!(entity instanceof VigorEntity)) {
 			if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EnemyexpansionModMobEffects.VIGOR_EFFECT.get()) ? _livEnt.getEffect(EnemyexpansionModMobEffects.VIGOR_EFFECT.get()).getAmplifier() : 0) == 2) {
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
+				EnemyexpansionMod.queueServerWork(20, () -> {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = new VigorEntity(EnemyexpansionModEntities.VIGOR.get(), _level);
+						entityToSpawn.moveTo(x, y, z, 0, 0);
+						entityToSpawn.setYBodyRot(0);
+						entityToSpawn.setYHeadRot(0);
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+						if (entityToSpawn instanceof Mob _mobToSpawn)
+							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+						world.addFreshEntity(entityToSpawn);
 					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = new VigorEntity(EnemyexpansionModEntities.VIGOR.get(), _level);
-							entityToSpawn.moveTo(x, y, z, 0, 0);
-							entityToSpawn.setYBodyRot(0);
-							entityToSpawn.setYHeadRot(0);
-							entityToSpawn.setDeltaMovement(0, 0, 0);
-							if (entityToSpawn instanceof Mob _mobToSpawn)
-								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-							world.addFreshEntity(entityToSpawn);
-						}
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, 20);
+				});
 			}
 		}
 	}

@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.ZadybugEntity;
 
 public class ZadybugModel extends AnimatedGeoModel<ZadybugEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(ZadybugEntity entity) {
+	public ResourceLocation getAnimationResource(ZadybugEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/zadybug.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(ZadybugEntity entity) {
+	public ResourceLocation getModelResource(ZadybugEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/zadybug.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(ZadybugEntity entity) {
+	public ResourceLocation getTextureResource(ZadybugEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

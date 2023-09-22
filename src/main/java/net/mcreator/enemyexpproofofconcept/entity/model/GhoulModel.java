@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.GhoulEntity;
 
 public class GhoulModel extends AnimatedGeoModel<GhoulEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(GhoulEntity entity) {
+	public ResourceLocation getAnimationResource(GhoulEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/ghoul.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(GhoulEntity entity) {
+	public ResourceLocation getModelResource(GhoulEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/ghoul.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GhoulEntity entity) {
+	public ResourceLocation getTextureResource(GhoulEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

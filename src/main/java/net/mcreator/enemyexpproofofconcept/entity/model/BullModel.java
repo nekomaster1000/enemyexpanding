@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.BullEntity;
 
 public class BullModel extends AnimatedGeoModel<BullEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(BullEntity entity) {
+	public ResourceLocation getAnimationResource(BullEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/bull.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(BullEntity entity) {
+	public ResourceLocation getModelResource(BullEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/bull.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BullEntity entity) {
+	public ResourceLocation getTextureResource(BullEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

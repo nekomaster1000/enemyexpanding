@@ -18,6 +18,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -30,15 +31,14 @@ import net.mcreator.enemyexpproofofconcept.entity.EyestalkerEntity;
 import javax.annotation.Nullable;
 
 import java.util.stream.Collectors;
-import java.util.Random;
 import java.util.List;
 import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class StaredAtHostilityProcedure {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingUpdateEvent event) {
-		execute(event, event.getEntityLiving().level, event.getEntityLiving().getX(), event.getEntityLiving().getY(), event.getEntityLiving().getZ(), event.getEntityLiving());
+	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+		execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -61,15 +61,14 @@ public class StaredAtHostilityProcedure {
 				}
 			}.checkGamemode(entity)) {
 				{
-					final Vec3 _center = new Vec3(
-							(entity.level
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((Mth.nextDouble(new Random(), 1, 20)))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
-							(entity.level
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((Mth.nextDouble(new Random(), 1, 20)))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+					final Vec3 _center = new Vec3((entity.level
+							.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((Mth.nextDouble(RandomSource.create(), 1, 20)))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+							.getBlockPos().getX()),
+							(entity.level.clip(
+									new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((Mth.nextDouble(RandomSource.create(), 1, 20)))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
-							(entity.level
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((Mth.nextDouble(new Random(), 1, 20)))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+							(entity.level.clip(
+									new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((Mth.nextDouble(RandomSource.create(), 1, 20)))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()));
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 							.collect(Collectors.toList());

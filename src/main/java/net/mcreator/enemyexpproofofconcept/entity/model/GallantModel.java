@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.GallantEntity;
 
 public class GallantModel extends AnimatedGeoModel<GallantEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(GallantEntity entity) {
+	public ResourceLocation getAnimationResource(GallantEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/gallant.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(GallantEntity entity) {
+	public ResourceLocation getModelResource(GallantEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/gallant.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GallantEntity entity) {
+	public ResourceLocation getTextureResource(GallantEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

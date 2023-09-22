@@ -1,0 +1,21 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "frozen_ocean",
+    "deep_cold_ocean",
+    "grove",
+    "windswept_hills",
+    "snowy_plains",
+    "ice_spikes",
+    "snowy_slopes",
+    "snowy_taiga",
+    "deep_frozen_ocean",
+    "snowy_beach"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:ghoul",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

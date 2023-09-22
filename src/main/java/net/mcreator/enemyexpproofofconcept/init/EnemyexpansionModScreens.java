@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package net.mcreator.enemyexpproofofconcept.init;
 
@@ -18,7 +18,7 @@ public class EnemyexpansionModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(EnemyexpansionModMenus.STARVED_GUI, StarvedGUIScreen::new);
+			MenuScreens.register(EnemyexpansionModMenus.STARVED_GUI.get(), StarvedGUIScreen::new);
 		});
 	}
 }

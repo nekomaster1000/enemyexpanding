@@ -2409,7 +2409,8 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GabbleRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GabbleEntity.java",
-          "src/main/resources/assets/enemyexpansion/models/item/gabble_spawn_egg.json"
+          "src/main/resources/assets/enemyexpansion/models/item/gabble_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/gabble_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Goblins"
@@ -6425,7 +6426,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/MeatureEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/MeatureModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/meature_spawn_egg.json",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/MeatureRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/MeatureRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/meature_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/ZombieGuys"
@@ -6442,6 +6444,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/SprinterModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SprinterRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SprinterEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/sprinter_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/sprinter_spawn_egg.json"
         ]
       },
@@ -6458,6 +6461,7 @@
         "files": [
           "src/main/resources/assets/enemyexpansion/models/item/slugger_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SluggerRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/slugger_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/SluggerModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SluggerEntity.java"
         ]
@@ -6476,7 +6480,8 @@
           "src/main/resources/assets/enemyexpansion/models/item/senior_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SeniorEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/SeniorModel.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SeniorRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SeniorRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/senior_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/ZombieGuys"
@@ -6490,6 +6495,7 @@
       "registry_name": "equestrian",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/equestrian_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/EquestrianEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/EquestrianRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/EquestrianModel.java",
@@ -6510,6 +6516,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/FrigidEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/FrigidModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/frigid_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/frigid_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/FrigidRenderer.java"
         ]
       },
@@ -6525,6 +6532,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/PropellerRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/propeller_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/propeller_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/PropellerModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/PropellerEntity.java"
@@ -6543,6 +6551,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SpectreEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/SpectreModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/spectre_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/spectre_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SpectreRenderer.java"
         ]
@@ -6561,6 +6570,7 @@
           "src/main/resources/assets/enemyexpansion/models/item/ghoul_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GhoulEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GhoulRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/ghoul_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/GhoulModel.java"
         ]
       },
@@ -6593,6 +6603,7 @@
       "registry_name": "gallant",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/gallant_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GallantEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/GallantModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GallantRenderer.java",
@@ -6611,6 +6622,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GoblinEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/goblin_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/GoblinModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GoblinRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/GoblinLayer.java",
@@ -6645,6 +6657,7 @@
       "registry_name": "rancher",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/rancher_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/RancherRenderer.java",
           "src/main/resources/assets/enemyexpansion/models/item/rancher_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/RancherEntity.java",
@@ -6697,6 +6710,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/ErrantRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/errant_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/errant_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/ErrantEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/ErrantModel.java"
@@ -6715,6 +6729,7 @@
         "files": [
           "src/main/resources/assets/enemyexpansion/models/item/caster_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/CasterRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/caster_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/CasterEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/CasterModel.java"
         ]
@@ -6733,6 +6748,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/CrawlerModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/CrawlerRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/CrawlerEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/crawler_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/crawler_spawn_egg.json"
         ]
       },
@@ -6747,6 +6763,7 @@
       "registry_name": "zobgoblin",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/zobgoblin_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/ZobgoblinModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/ZobgoblinEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/zobgoblin_spawn_egg.json",
@@ -6767,7 +6784,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/IntruderEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/intruder_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/IntruderModel.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/IntruderRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/IntruderRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/intruder_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/UndergroundGuys"
@@ -6781,6 +6799,7 @@
       "registry_name": "petriman",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/petriman_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/PetrimanEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/PetrimanModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/petriman_spawn_egg.json",
@@ -6801,6 +6820,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/SilverkingRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/SilverkingModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/SilverkingLayer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/silverking_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/SilverkingEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/silverking_spawn_egg.json"
         ]
@@ -6868,6 +6888,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/VampireEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/VampireModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/vampire_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/VampireRenderer.java",
           "src/main/resources/assets/enemyexpansion/models/item/vampire_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/VampireLayer.java"
@@ -6906,7 +6927,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/WolfsbaneRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/WolfsbaneLayer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/WolfsbaneModel.java",
-          "src/main/resources/assets/enemyexpansion/models/item/wolfsbane_spawn_egg.json"
+          "src/main/resources/assets/enemyexpansion/models/item/wolfsbane_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/wolfsbane_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Transformers"
@@ -6938,6 +6960,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GladiusEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/gladius_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/gladius_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GladiusRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/GladiusModel.java"
@@ -6954,6 +6977,7 @@
       "registry_name": "gladilad",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/gladilad_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GladiladRenderer.java",
           "src/main/resources/assets/enemyexpansion/models/item/gladilad_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GladiladEntity.java",
@@ -6974,7 +6998,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/TarantulaEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/TarantulaModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/TarantulaRenderer.java",
-          "src/main/resources/assets/enemyexpansion/models/item/tarantula_spawn_egg.json"
+          "src/main/resources/assets/enemyexpansion/models/item/tarantula_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/tarantula_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Arthropods"
@@ -6988,6 +7013,7 @@
       "registry_name": "scorpion",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/scorpion_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/ScorpionEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/ScorpionRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/ScorpionModel.java",
@@ -7009,7 +7035,8 @@
           "src/main/resources/assets/enemyexpansion/models/item/wasp_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/WaspModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/WaspRenderer.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/WaspEntity.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/entity/WaspEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/wasp_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Arthropods"
@@ -7042,7 +7069,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/LadybugEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/ladybug_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/LadybugModel.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/LadybugRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/LadybugRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/ladybug_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Arthropods"
@@ -7059,7 +7087,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/ZadybugModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/zadybug_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/ZadybugEntity.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/ZadybugRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/ZadybugRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/zadybug_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Arthropods"
@@ -7075,6 +7104,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/FlutterflyRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/FlutterflyEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/flutterfly_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/flutterfly_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/FlutterflyModel.java"
         ]
@@ -7091,6 +7121,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/BoarEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/boar_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/BoarModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/boar_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/BoarRenderer.java"
@@ -7110,7 +7141,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/BullEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/bull_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/BullModel.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/BullRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/BullRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/bull_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Animals"
@@ -7127,6 +7159,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/RoosterEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/rooster_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/RoosterModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/rooster_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/RoosterRenderer.java"
         ]
       },
@@ -7144,7 +7177,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/RamModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/ram_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/RamEntity.java",
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/RamRenderer.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/RamRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/ram_biome_modifier.json"
         ]
       },
       "path": "~/Monsters/Animals"
@@ -7247,6 +7281,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/CockatriceModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/cockatrice_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/CockatriceEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/CockatriceRenderer.java",
           "src/main/resources/assets/enemyexpansion/models/item/cockatrice_spawn_egg.json"
@@ -7511,6 +7546,7 @@
         "files": [
           "src/main/resources/assets/enemyexpansion/models/item/angler_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/AnglerRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/angler_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/AnglerModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/AnglerLayer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/AnglerEntity.java"
@@ -7677,6 +7713,7 @@
         "files": [
           "src/main/resources/assets/enemyexpansion/models/item/kelpie_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/KelpieEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/kelpie_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/KelpieModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/KelpieLayer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/KelpieRenderer.java"
@@ -8006,7 +8043,7 @@
       "registry_name": "kelpie_tongue_wrap",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/enemyexpproofofconcept/client/gui/KelpieTongueWrapOverlay.java"
+          "src/main/java/net/mcreator/enemyexpproofofconcept/client/screens/KelpieTongueWrapOverlay.java"
         ]
       },
       "path": "~/Monsters/Marine"
@@ -8047,6 +8084,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/PiecrabModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/PiecrabEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/PiecrabRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/piecrab_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/piecrab_spawn_egg.json"
         ]
       },
@@ -8584,6 +8622,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/DreadnoughtRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/DreadnoughtModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/dreadnought_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/DreadnoughtEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/dreadnought_spawn_egg.json"
         ]
@@ -9786,6 +9825,7 @@
       "registry_name": "starved",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/starved_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/starved_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/StarvedEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/StarvedRenderer.java",
@@ -9968,6 +10008,7 @@
           "src/main/resources/assets/enemyexpansion/models/item/marauder_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/MarauderRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/MarauderModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/marauder_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/MarauderEntity.java"
         ]
       },
@@ -10418,6 +10459,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/DragonflyRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/dragonfly_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/DragonflyModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/DragonflyEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/dragonfly_spawn_egg.json"
@@ -10819,6 +10861,7 @@
       "registry_name": "direwolf",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/direwolf_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/DirewolfRenderer.java",
           "src/main/resources/assets/enemyexpansion/models/item/direwolf_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/DirewolfEntity.java",
@@ -11045,6 +11088,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/GuardsmanRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/guardsman_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/GuardsmanModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/GuardsmanEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/guardsman_spawn_egg.json"
@@ -11120,6 +11164,7 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/HuntsmanskeletonRenderer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/HuntsmanskeletonModel.java",
           "src/main/resources/assets/enemyexpansion/models/item/huntsmanskeleton_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/huntsmanskeleton_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/HuntsmanskeletonEntity.java"
         ]
       },
@@ -11465,7 +11510,8 @@
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/EyestalkerModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/layer/EyestalkerLayer.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/EyestalkerEntity.java",
-          "src/main/resources/assets/enemyexpansion/models/item/eyestalker_spawn_egg.json"
+          "src/main/resources/assets/enemyexpansion/models/item/eyestalker_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/eyestalker_biome_modifier.json"
         ]
       },
       "path": "~/Monsters"
@@ -11757,6 +11803,7 @@
       "registry_name": "a",
       "metadata": {
         "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/a_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/AEntity.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/model/AModel.java",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/ARenderer.java"
@@ -12373,6 +12420,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpproofofconcept/entity/HalflifeEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/halflife_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/halflife_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpproofofconcept/client/renderer/HalflifeRenderer.java"
         ]
       },
@@ -12878,8 +12926,8 @@
       "item.enemyexpansion.polished_emerald_boots": "Emerald Boots",
       "advancements.enter_the_zombie.descr": "The undead rise!",
       "death.attack.dread.player": "%1$s couldn\u0027t escape the dread",
-      "advancements.enemy_expansion_advancements.descr": "This fight just got a whole lot bigger...",
       "gamerule.crawler_replacement_rule": "intruderReplacementRule",
+      "advancements.enemy_expansion_advancements.descr": "This fight just got a whole lot bigger...",
       "entity.enemyexpansion.fly": "Fly",
       "advancements.enter_the_ghoul.title": "Enter The Ghoul",
       "advancements.enter_the_wolfsbane.title": "Enter The Wolfsbane",
@@ -12888,9 +12936,9 @@
       "subtitles.bane.idle": "Wolfsbane snorts",
       "entity.enemyexpansion.hornet": "Hornet",
       "item.enemyexpansion.direwolf_spawn_egg": "Direwolf Spawn Egg",
-      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
-      "item.enemyexpansion.cinder_helm_chestplate": "",
       "entity.enemyexpansion.spectre": "Spectre",
+      "item.enemyexpansion.cinder_helm_chestplate": "",
+      "gamerule.crawler_dont_spawn_above_deepslate_rule": "silverkingDontSpawnAboveDeepslateRule",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "entity.enemyexpansion.direwolf": "Direwolf",
       "advancements.enter_the_gladius.title": "Enter The Gladius",
@@ -12929,8 +12977,8 @@
       "advancements.cast_away.descr": "Deflect a Goblin Caster\u0027s anti-gravity spell back at them!",
       "gamerule.blazes_do_cinder_jump": "cindersoccasionallyreplaceblazes",
       "advancements.enter_the_dreadnought.descr": "Dark, darker, yet darker...",
-      "entity.enemyexpansion.kelpie": "Kelpie",
       "subtitles.kelpie.reinforcement": "Kelpie calls for help",
+      "entity.enemyexpansion.kelpie": "Kelpie",
       "gamerule.silverking_dont_spawn_above_ground_rule.description": "Petrimen will not spawn above Y25.",
       "item.enemyexpansion.hornet_spawn_egg": "Hornet Spawn Egg",
       "advancements.enter_the_crawler.title": "Enter The Crawler",
@@ -12938,14 +12986,14 @@
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
       "gamerule.scorpion_replacement_rule.description": "Enables Tarantulas to replace 2/3rds of Spider spawns in Dripstone Caves",
       "gamerule.troll_dont_spawn_above_deepslate_rule.description": "Crawlers will not spawn above Y-15.",
-      "advancements.precision_strike.descr": "Shoot a Propeller out of the air with an arrow",
       "item.enemyexpansion.pheromone_summon_spawn_egg": "Wasp Drone Spawn Egg",
+      "advancements.precision_strike.descr": "Shoot a Propeller out of the air with an arrow",
       "item.enemyexpansion.trollface_boots": "Phantasm Boots",
       "entity.enemyexpansion.frigid": "Frigid",
       "item.enemyexpansion.frigid_touch_projectile": "Frigid Touch",
       "advancements.enter_the_zadybug.descr": "They\u0027re infected! Put \u0027em down!",
-      "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
       "advancements.friendship_heals_all_wounds.descr": "Obtain and create Healing Goo Stew from your time feeding Ladybugs Spider Eyes",
+      "item.enemyexpansion.bouncer_kick_projectile": "Goblin Theft",
       "advancements.enter_the_slime.descr": "Oooh, squishy!",
       "advancements.enter_the_wasp.title": "Enter The Wasp",
       "entity.enemyexpansion.cockatrice": "Cockatrice",
@@ -12982,8 +13030,8 @@
       "item.enemyexpansion.piecrab_spawn_egg": "Piecrab Spawn Egg",
       "item.enemyexpansion.crawler_spawn_egg": "Crawler Spawn Egg",
       "item.enemyexpansion.bull_skull_chestplate": "",
-      "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
       "advancements.pinned_to_the_wall.title": "Pinned To The Wall",
+      "item.enemyexpansion.boar_spawn_egg": "Boar Spawn Egg",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
       "item.enemyexpansion.cock_chestplate": "",
       "item.enemyexpansion.bull_spawn_egg": "Bull Spawn Egg",
@@ -12994,29 +13042,29 @@
       "item.enemyexpansion.bull_skull_leggings": "",
       "advancements.enter_the_petrimen.title": "Enter The Petrimen",
       "gamerule.silverking_dont_spawn_above_deepslate_rule": "petrimanDontSpawnAboveGroundRule",
-      "item.enemyexpansion.cinder_helm_leggings": "",
       "item.enemyexpansion.cock_helmet": "Cockatrice Head",
+      "item.enemyexpansion.cinder_helm_leggings": "",
       "death.attack.dread": "%1$s was consumed by dread",
       "item.enemyexpansion.slimehead_helmet": "Slimehead",
       "entity.enemyexpansion.petriman": "Petriman",
       "advancements.enter_the_spider.descr": "Creepy Crawlies!",
       "item.enemyexpansion.phantasm_chestplate": "Phantasm Cape",
-      "item.enemyexpansion.cakerover_spawn_egg": "Goblin Cake Rover Spawn Egg",
       "advancements.enter_the_slime.title": "Enter The Slime",
+      "item.enemyexpansion.cakerover_spawn_egg": "Goblin Cake Rover Spawn Egg",
       "advancements.on_my_wasp_biz.title": "\"I\u0027m on my Wasp Bizz\"",
       "gamerule.no_baby_zombies": "cindersoccasionallyreplaceblazes",
       "item.enemyexpansion.resting_vigor_chestplate": "Resting Vigor Body",
       "item.minecraft.splash_potion.effect.groundbound_potion": "Splash Potion of Groundbinding",
       "entity.enemyexpansion.eyestalker": "Eyestalker",
-      "entity.enemyexpansion.ghoul": "Ghoul",
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
+      "entity.enemyexpansion.ghoul": "Ghoul",
       "subtitles.troll.roar": "Troll roars",
       "item.enemyexpansion.kelpie_spawn_egg": "Kelpie Spawn Egg",
       "advancements.enter_the_witch.title": "Enter The Witch",
       "advancements.enter_the_huntsman.title": "Enter The Huntsman",
       "item.enemyexpansion.vampiric_crown_helmet": "Vampiric Crown",
-      "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
       "item.enemyexpansion.resting_vigor_leggings": "Resting Vigor Leggings",
+      "item.enemyexpansion.meathead_armor_boots": "Meathead Boots",
       "advancements.enter_the_drowned.descr": "They\u0027re sopping wet!",
       "item.enemyexpansion.headbiter_chestplate": "Phantasm Cape",
       "advancements.enter_the_reaver.title": "Enter The Reaver",
@@ -13027,15 +13075,15 @@
       "entity.enemyexpansion.starved": "Starved",
       "advancements.bro_think_he_carti.descr": "Obtain a Headbiter",
       "item.enemyexpansion.spiderlatch_boots": "Phantasm Boots",
-      "item.enemyexpansion.halflife_spawn_egg": "Half-Life Spawn Egg",
       "item.enemyexpansion.guardsmask_helmet": "Guardsmask",
+      "item.enemyexpansion.halflife_spawn_egg": "Half-Life Spawn Egg",
       "item.enemyexpansion.intruder_spawn_egg": "Intruder Spawn Egg",
       "advancements.cast_away.title": "Cast Away",
-      "entity.enemyexpansion.projectile_huntsman_punch": "Huntsman\u0027s punch",
       "item.enemyexpansion.headbiter_leggings": "Phantasm Leggings",
+      "entity.enemyexpansion.projectile_huntsman_punch": "Huntsman\u0027s punch",
       "item.enemyexpansion.flutterfly_spawn_egg": "Flutterfly Spawn Egg",
-      "entity.enemyexpansion.piecrab": "Piecrab",
       "item.minecraft.tipped_arrow.effect.groundbound_potion": "Arrow of Groundbinding",
+      "entity.enemyexpansion.piecrab": "Piecrab",
       "entity.enemyexpansion.bouncer": "Goblin Bouncer",
       "item.minecraft.splash_potion.effect.champion_potion": "Splash Potion of Championship",
       "item.enemyexpansion.ghoul_slash": "Slash",
@@ -13450,7 +13498,7 @@
       "geckolib",
       "allmods"
     ],
-    "currentGenerator": "forge-1.18.2",
+    "currentGenerator": "forge-1.19.2",
     "credits": "Nekomaster, FoshyJoshy, EB Mario, NotJustGavin",
     "modElementsPackage": "net.mcreator.enemyexpproofofconcept",
     "lockBaseModFiles": false

@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.SluggerEntity;
 
 public class SluggerModel extends AnimatedGeoModel<SluggerEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(SluggerEntity entity) {
+	public ResourceLocation getAnimationResource(SluggerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/slugger.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(SluggerEntity entity) {
+	public ResourceLocation getModelResource(SluggerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/slugger.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SluggerEntity entity) {
+	public ResourceLocation getTextureResource(SluggerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.BouncerEntity;
 
 public class BouncerModel extends AnimatedGeoModel<BouncerEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(BouncerEntity entity) {
+	public ResourceLocation getAnimationResource(BouncerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/bouncer.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(BouncerEntity entity) {
+	public ResourceLocation getModelResource(BouncerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/bouncer.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BouncerEntity entity) {
+	public ResourceLocation getTextureResource(BouncerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

@@ -14,13 +14,9 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -40,7 +36,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -62,9 +57,6 @@ import net.mcreator.enemyexpproofofconcept.procedures.DirewolfCowHostilityProced
 import net.mcreator.enemyexpproofofconcept.procedures.DireJumpActivateProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
 
-import java.util.Set;
-
-@Mod.EventBusSubscriber
 public class DirewolfEntity extends Monster implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(DirewolfEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(DirewolfEntity.class, EntityDataSerializers.STRING);
@@ -74,16 +66,6 @@ public class DirewolfEntity extends Monster implements IAnimatable {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("snowy_plains"), new ResourceLocation("taiga"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"),
-			new ResourceLocation("snowy_slopes"), new ResourceLocation("snowy_taiga"), new ResourceLocation("jagged_peaks"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("grove"), new ResourceLocation("windswept_hills"),
-			new ResourceLocation("dark_forest"), new ResourceLocation("old_growth_pine_taiga"), new ResourceLocation("stony_peaks"), new ResourceLocation("plains"), new ResourceLocation("windswept_forest"),
-			new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("frozen_peaks"), new ResourceLocation("old_growth_spruce_taiga"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(EnemyexpansionModEntities.DIREWOLF.get(), 50, 1, 4));
-	}
 
 	public DirewolfEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EnemyexpansionModEntities.DIREWOLF.get(), world);

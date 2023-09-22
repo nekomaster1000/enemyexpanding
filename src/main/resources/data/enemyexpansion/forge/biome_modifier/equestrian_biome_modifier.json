@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "sunflower_plains",
+    "snowy_plains",
+    "sparse_jungle",
+    "plains",
+    "meadow"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:equestrian",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

@@ -8,17 +8,17 @@ import net.mcreator.enemyexpproofofconcept.entity.CrawlerEntity;
 
 public class CrawlerModel extends AnimatedGeoModel<CrawlerEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(CrawlerEntity entity) {
+	public ResourceLocation getAnimationResource(CrawlerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/crawler.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(CrawlerEntity entity) {
+	public ResourceLocation getModelResource(CrawlerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/crawler.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CrawlerEntity entity) {
+	public ResourceLocation getTextureResource(CrawlerEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

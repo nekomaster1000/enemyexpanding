@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.RancherEntity;
 
 public class RancherModel extends AnimatedGeoModel<RancherEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(RancherEntity entity) {
+	public ResourceLocation getAnimationResource(RancherEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/rancher.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(RancherEntity entity) {
+	public ResourceLocation getModelResource(RancherEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/rancher.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(RancherEntity entity) {
+	public ResourceLocation getTextureResource(RancherEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

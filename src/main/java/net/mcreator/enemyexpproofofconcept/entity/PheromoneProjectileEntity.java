@@ -15,6 +15,7 @@ import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
@@ -22,8 +23,6 @@ import net.minecraft.network.protocol.Packet;
 import net.mcreator.enemyexpproofofconcept.procedures.PheromoneHitsProcedure;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpproofofconcept.init.EnemyexpansionModEntities;
-
-import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class PheromoneProjectileEntity extends AbstractArrow implements ItemSupplier {
@@ -84,7 +83,7 @@ public class PheromoneProjectileEntity extends AbstractArrow implements ItemSupp
 			this.discard();
 	}
 
-	public static PheromoneProjectileEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
+	public static PheromoneProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		PheromoneProjectileEntity entityarrow = new PheromoneProjectileEntity(EnemyexpansionModEntities.PHEROMONE_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
@@ -107,7 +106,7 @@ public class PheromoneProjectileEntity extends AbstractArrow implements ItemSupp
 		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.egg.throw")), SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.egg.throw")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

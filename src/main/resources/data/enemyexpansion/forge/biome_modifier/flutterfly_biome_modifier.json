@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "sunflower_plains",
+    "flower_forest"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:flutterfly",
+    "weight": 5,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

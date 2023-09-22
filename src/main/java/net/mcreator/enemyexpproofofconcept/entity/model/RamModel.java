@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.RamEntity;
 
 public class RamModel extends AnimatedGeoModel<RamEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(RamEntity entity) {
+	public ResourceLocation getAnimationResource(RamEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/ram.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(RamEntity entity) {
+	public ResourceLocation getModelResource(RamEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/ram.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(RamEntity entity) {
+	public ResourceLocation getTextureResource(RamEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

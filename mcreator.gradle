@@ -5,12 +5,12 @@ repositories {
 }
 
 dependencies {
-  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.57')
+  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
 }
 
-def extraModsDir = 'extra-mods-1.18.2'
+def extraModsDir = 'extra-mods-1.19.2'
 task addnewfoldersmods(type: DefaultTask){
-  ant.mkdir(dir: 'extra-mods-1.18.2/');
+  ant.mkdir(dir: 'extra-mods-1.19.2/');
 }
 repositories {
   flatDir {
@@ -29,9 +29,8 @@ dependencies
   def version = basename.substring(versionSep + 1)
   runtimeOnly fg.deobf("extra-mods:$artifactId:$version")}
 }
-
 minecraft {
- mappings channel: 'official', version: '1.18.2'
+ mappings channel: 'official', version: '1.19.2'
   accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
  runs {
   client {
@@ -59,5 +58,5 @@ minecraft {
       }
         }
       }
-          }
+         }
 

@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.EquestrianEntity;
 
 public class EquestrianModel extends AnimatedGeoModel<EquestrianEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(EquestrianEntity entity) {
+	public ResourceLocation getAnimationResource(EquestrianEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/equestrian.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(EquestrianEntity entity) {
+	public ResourceLocation getModelResource(EquestrianEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/equestrian.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(EquestrianEntity entity) {
+	public ResourceLocation getTextureResource(EquestrianEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

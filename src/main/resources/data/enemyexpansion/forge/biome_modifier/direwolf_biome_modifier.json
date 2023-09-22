@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "forest",
+    "snowy_plains",
+    "taiga",
+    "birch_forest",
+    "flower_forest",
+    "snowy_slopes",
+    "snowy_taiga",
+    "jagged_peaks",
+    "old_growth_birch_forest",
+    "grove",
+    "windswept_hills",
+    "dark_forest",
+    "old_growth_pine_taiga",
+    "stony_peaks",
+    "plains",
+    "windswept_forest",
+    "windswept_gravelly_hills",
+    "frozen_peaks",
+    "old_growth_spruce_taiga"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:direwolf",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

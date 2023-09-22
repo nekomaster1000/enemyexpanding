@@ -4,39 +4,29 @@
  */
 package net.mcreator.enemyexpproofofconcept.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-import java.util.Map;
-import java.util.HashMap;
+import net.mcreator.enemyexpproofofconcept.EnemyexpansionMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EnemyexpansionModSounds {
-	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
-	static {
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "silentstep"), new SoundEvent(new ResourceLocation("enemyexpansion", "silentstep")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "troll.roar"), new SoundEvent(new ResourceLocation("enemyexpansion", "troll.roar")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "troll.hurt.2"), new SoundEvent(new ResourceLocation("enemyexpansion", "troll.hurt.2")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "troll.death"), new SoundEvent(new ResourceLocation("enemyexpansion", "troll.death")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "troll.idle.1"), new SoundEvent(new ResourceLocation("enemyexpansion", "troll.idle.1")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "troll.hurt.1"), new SoundEvent(new ResourceLocation("enemyexpansion", "troll.hurt.1")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "kelpie_idle"), new SoundEvent(new ResourceLocation("enemyexpansion", "kelpie_idle")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "kelpie.reinforcement"), new SoundEvent(new ResourceLocation("enemyexpansion", "kelpie.reinforcement")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "dreadnought.idle"), new SoundEvent(new ResourceLocation("enemyexpansion", "dreadnought.idle")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "dreadnought.hurt"), new SoundEvent(new ResourceLocation("enemyexpansion", "dreadnought.hurt")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "dreadnought.death"), new SoundEvent(new ResourceLocation("enemyexpansion", "dreadnought.death")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "starved.chomp"), new SoundEvent(new ResourceLocation("enemyexpansion", "starved.chomp")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "bane.hurt"), new SoundEvent(new ResourceLocation("enemyexpansion", "bane.hurt")));
-		REGISTRY.put(new ResourceLocation("enemyexpansion", "bane.idle"), new SoundEvent(new ResourceLocation("enemyexpansion", "bane.idle")));
-	}
-
-	@SubscribeEvent
-	public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
-		for (Map.Entry<ResourceLocation, SoundEvent> sound : REGISTRY.entrySet())
-			event.getRegistry().register(sound.getValue().setRegistryName(sound.getKey()));
-	}
+	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, EnemyexpansionMod.MODID);
+	public static final RegistryObject<SoundEvent> SILENTSTEP = REGISTRY.register("silentstep", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "silentstep")));
+	public static final RegistryObject<SoundEvent> TROLL_ROAR = REGISTRY.register("troll.roar", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "troll.roar")));
+	public static final RegistryObject<SoundEvent> TROLL_HURT_2 = REGISTRY.register("troll.hurt.2", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "troll.hurt.2")));
+	public static final RegistryObject<SoundEvent> TROLL_DEATH = REGISTRY.register("troll.death", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "troll.death")));
+	public static final RegistryObject<SoundEvent> TROLL_IDLE_1 = REGISTRY.register("troll.idle.1", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "troll.idle.1")));
+	public static final RegistryObject<SoundEvent> TROLL_HURT_1 = REGISTRY.register("troll.hurt.1", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "troll.hurt.1")));
+	public static final RegistryObject<SoundEvent> KELPIE_IDLE = REGISTRY.register("kelpie_idle", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "kelpie_idle")));
+	public static final RegistryObject<SoundEvent> KELPIE_REINFORCEMENT = REGISTRY.register("kelpie.reinforcement", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "kelpie.reinforcement")));
+	public static final RegistryObject<SoundEvent> DREADNOUGHT_IDLE = REGISTRY.register("dreadnought.idle", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "dreadnought.idle")));
+	public static final RegistryObject<SoundEvent> DREADNOUGHT_HURT = REGISTRY.register("dreadnought.hurt", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "dreadnought.hurt")));
+	public static final RegistryObject<SoundEvent> DREADNOUGHT_DEATH = REGISTRY.register("dreadnought.death", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "dreadnought.death")));
+	public static final RegistryObject<SoundEvent> STARVED_CHOMP = REGISTRY.register("starved.chomp", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "starved.chomp")));
+	public static final RegistryObject<SoundEvent> BANE_HURT = REGISTRY.register("bane.hurt", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "bane.hurt")));
+	public static final RegistryObject<SoundEvent> BANE_IDLE = REGISTRY.register("bane.idle", () -> new SoundEvent(new ResourceLocation("enemyexpansion", "bane.idle")));
 }

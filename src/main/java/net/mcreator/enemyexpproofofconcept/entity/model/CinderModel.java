@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.CinderEntity;
 
 public class CinderModel extends AnimatedGeoModel<CinderEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(CinderEntity entity) {
+	public ResourceLocation getAnimationResource(CinderEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/cinder.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(CinderEntity entity) {
+	public ResourceLocation getModelResource(CinderEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/cinder.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CinderEntity entity) {
+	public ResourceLocation getTextureResource(CinderEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 

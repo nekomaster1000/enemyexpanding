@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpproofofconcept.client.gui;
 
 import net.minecraft.world.level.Level;

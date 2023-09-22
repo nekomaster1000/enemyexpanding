@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "badlands",
+    "savanna_plateau",
+    "wooded_badlands",
+    "savanna",
+    "windswept_savanna",
+    "desert",
+    "eroded_badlands"
+  ],
+  "spawners": {
+    "type": "enemyexpansion:bull",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 5
+  }
+}

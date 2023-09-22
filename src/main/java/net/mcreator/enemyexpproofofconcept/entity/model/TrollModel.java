@@ -13,17 +13,17 @@ import net.mcreator.enemyexpproofofconcept.entity.TrollEntity;
 
 public class TrollModel extends AnimatedGeoModel<TrollEntity> {
 	@Override
-	public ResourceLocation getAnimationFileLocation(TrollEntity entity) {
+	public ResourceLocation getAnimationResource(TrollEntity entity) {
 		return new ResourceLocation("enemyexpansion", "animations/troll.animation.json");
 	}
 
 	@Override
-	public ResourceLocation getModelLocation(TrollEntity entity) {
+	public ResourceLocation getModelResource(TrollEntity entity) {
 		return new ResourceLocation("enemyexpansion", "geo/troll.geo.json");
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(TrollEntity entity) {
+	public ResourceLocation getTextureResource(TrollEntity entity) {
 		return new ResourceLocation("enemyexpansion", "textures/entities/" + entity.getTexture() + ".png");
 	}
 
